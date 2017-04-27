@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="author" content="Z.M. Mark">
+  <title>BMP地图导航</title>
+
+  <link href="css/maincss.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bmp-common.js"></script>
+
+</head>
+<body>
+  <!--BMP地图导航 Starts-->
+  <div class="bmp-mapnav">
+    <!--侧栏导航链接 Starts-->
+    <ul class="bmp-asdie-nav">
+      <li>
+        <a class="bmp-btn bmp-btn-default" href="http://youdemo.landray.com.cn:8299/sys/portal/demo-industry-pool/industry-pool.html" target="_blank" title="DEMO入口">Demo入口</a>
+      </li>
+      <li>
+        <a class="bmp-btn bmp-btn-default" href="http://java.landray.com.cn/landray/attendance/zcfy/index.html" target="_blank" title="项目资产复用">项目资产复用</a>
+      </li>
+      <li class="bmp-dropdown">
+        <span class="bmp-btn bmp-btn-default bmp-dropdown-toggle" href="#" title="更多">更多 <i>+</i></span>
+        <div class="bmp-dropdown-meun">
+          <a href="http://ekp.landray.com.cn/lks4/koa/lks_bargainmng.nsf" target="_blank" title="原合同系统">原合同系统</a>
+          <a href="http://ekp.landray.com.cn/lks4/yj/lks_bargainmng.nsf" target="_blank" title="原渠道合同">原渠道合同</a>
+          <a href="http://service.landray.com.cn/lks/koa/lks_prohourmng.nsf" target="_blank" title="原工时管理">原工时管理</a>
+        </div>
+      </li>
+    </ul>
+    <!--侧栏导航链接 Ends-->
+    <!--背景图片 Starts-->
+    <div class="bmp-bg-box"></div>
+    <!--背景图片 Ends-->
+
+    <!--选项卡 Starts-->
+    <div class="bmp-tabs">
+      <!--选项卡头部 Starts-->
+      <ul class="bmp-tab-heading">
+        <li class="active" role="presentation">
+          <a class="bmp-btn bmp-btn-default" href="#tab-pane-1" id="tab-head-1" role="tab" data-toggle="tab" aria-controls="tab-pane-1" aria-expanded="true" title="合伙人">合伙人</a>
+        </li>
+        <li>
+          <a class="bmp-btn bmp-btn-default" href="#tab-pane-2" id="tab-head-2" role="tab" data-toggle="tab" aria-controls="tab-pane-2" aria-expanded="false" title="销售人员">销售人员</a>
+        </li>
+        <li>
+          <a class="bmp-btn bmp-btn-default" href="#tab-pane-3" id="tab-head-3" role="tab" data-toggle="tab" aria-controls="tab-pane-3" aria-expanded="false" title="项目经理">项目经理</a>
+        </li>
+        <li class="last-child">
+          <a class="bmp-btn bmp-btn-default" href="#tab-pane-4" id="tab-head-4" role="tab" data-toggle="tab" aria-controls="tab-pane-4" aria-expanded="false" title="专家">专家</a>
+        </li>
+      </ul>
+      <!--选项卡头部 Ends-->
+      <!--选项卡内容 Starts-->
+      <div class="bmp-tab-content">
+        <div class="bmp-tab-pane bmp-tab-pane-1 active in" id="tab-pane-1">
+          <!--驻点一 Starts-->
+          <div class="bmp-post bmp-post-one">
+            <h2 class="bmp-post-title"><span>团队客户</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/crm/index.jsp" target="_blank" title="客户信息">客户信息</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/crm/opportunity/index.jsp" target="_blank" title="商机信息">商机信息</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/crm/visit/index.jsp" target="_blank" title="拜访记录">拜访记录</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/crm/project/index.jsp" target="_blank" title="销售立项">销售立项</a></li>
+                <li><a href="http://bmp.landray.com.cn/moduleindex.jsp?nav=/landray/dev/tree.jsp" target="_blank" title="销售周报">销售周报</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/tender" target="_blank" title="投标管理">投标管理</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点一 Ends-->
+          <!--驻点二 Starts-->
+          <div class="bmp-post bmp-post-two">
+            <h2 class="bmp-post-title"><span>团队合同</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_main/kmEcontractMain.do?method=add" target="_blank" title="团队的合同信息">合同申请</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/index.jsp#cri.q=mydoc:approval" target="_blank" title="合同审批">合同审批</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/index.jsp" target="_blank" title="合同查询">合同查询</a></li>
+                <li><a href="http://ekp.landray.com.cn/lks4/koa/lks_bargainmng.nsf/$$ViewTemplate+For+VD_ContBySort?OpenForm&amp;css=workplace/red&amp;Info=%E5%A4%96%E5%8C%85%E9%A1%B9%E7%9B%AE%E5%90%88%E5%90%8C&amp;Path=%E6%8C%89%E7%B1%BB%E5%88%AB%3E%3E%E5%A4%96%E5%8C%85%E9%A1%B9%E7%9B%AE%E5%90%88%E5%90%8C" target="_blank" title="外包合同">外包合同</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_bad_debt/index.jsp" target="_blank" title="坏帐记录">坏帐记录</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_over_amount/index.jsp" target="_blank" title="超标记录">超标记录</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/purchase/index.jsp" target="_blank" title="我的采购">我的采购</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点二 Ends-->
+          <!--驻点三 Starts-->
+          <div class="bmp-post bmp-post-three">
+            <h2 class="bmp-post-title"><span>团队项目</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_execu_plan/index.jsp" target="_blank" title="合同执行计划">合同执行计划</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_main/index.jsp" target="_blank" title="工程立项申请">工程立项申请</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_maintain/index.jsp" target="_blank" title="项目信息">项目信息</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_payable/index.jsp" target="_blank" title="项目开票">项目开票</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_receivable/index.jsp" target="_blank" title="项目回款">项目回款</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_product_out/index.jsp" target="_blank" title="产品出库申请">产品出库申请</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点三 Ends-->
+          <!--驻点四 Starts-->
+          <div class="bmp-post bmp-post-four">
+            <h2 class="bmp-post-title"><span>团队业绩</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/achievement/contract/km_achievement_main/kmAchievementMain.do?method=marginQuery" target="_blank" title="团队合同总额">团队合同总额</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/achievement/contract/km_achievement_main/kmAchievementMain.do?method=marginQuery" target="_blank" title="团队销售毛利">团队销售毛利</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_receivable_detail/indexPay.jsp" target="_blank" title="团队已收款">团队已收款</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/achievement/eaccount/km_eproject_milestone_audit/kmAchievementReceivableExport.jsp" target="_blank" title="团队应收款">团队应收款</a></li>
+                <li><a href="http://bmp.landray.com.cn/third/finereport/third_fr_report/thirdFrReport.do?method=navFineReport" target="_blank" title="中心报表">中心报表</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/achievement/contract/km_achievement_contract/kmAchievementShowQuery.jsp" target="_blank" title="我的业绩">合伙业绩看板</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点四 Ends-->
+        </div>
+        <div class="bmp-tab-pane bmp-tab-pane-2" id="tab-pane-2">
+          <!--驻点一 Starts-->
+          <div class="bmp-post bmp-post-one">
+            <h2 class="bmp-post-title"><span>我的客户</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/crm/index.jsp" target="_blank" title="客户信息">客户信息</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/crm/opportunity/index.jsp" target="_blank" title="商机信息">商机信息</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/crm/visit/index.jsp" target="_blank" title="拜访记录">拜访记录</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/crm/project/index.jsp" target="_blank" title="销售立项">销售立项</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/tender" target="_blank" title="投标管理">投标管理</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点一 Ends-->
+          <!--驻点二 Starts-->
+          <div class="bmp-post bmp-post-two">
+            <h2 class="bmp-post-title"><span>我的合同</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_main/kmEcontractMain.do?method=add" target="_blank" title="我要起草合同">我要起草合同</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/index.jsp" target="_blank" title="我要查询合同">我要查询合同</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/purchase/index.jsp" target="_blank" title="我的采购">我的采购</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点二 Ends-->
+          <!--驻点三 Starts-->
+          <div class="bmp-post bmp-post-three">
+            <h2 class="bmp-post-title"><span>我的项目</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_main/index.jsp#&amp;cri.q=mydoc:create" target="_blank" title="我要申请工程立项">工程立项申请</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_maintain/index.jsp" target="_blank" title="我的项目信息">我的工程项目</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_payable/index.jsp#&amp;cri.q=mydoc:create" target="_blank" title="我的项目开票">我要开票</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_product_out/index.jsp#&amp;cri.q=mydoc:create" target="_blank" title="我的产品出库申请">产品出库申请</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_apply_out/kmEprojectApplyOut.do?method=add&amp;s_css=default" target="_blank" title="我要发包">我要发包</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_apply_dispatch/kmEprojectApplyDispatch.do?method=add&amp;s_css=default" target="_blank" title="我要派工">我要派工</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_memo/kmEprojectMemo.do?method=add&amp;s_css=default" target="_blank" title="我要提项目备忘">我要提项目备忘</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点三 Ends-->
+          <!--驻点四 Starts-->
+          <div class="bmp-post bmp-post-four">
+            <h2 class="bmp-post-title"><span>我的业绩</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/achievement/contract/km_achievement_main/kmAchievementMain.do?method=marginQuery" target="_blank" title="我的合同额">我的合同额</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/achievement/contract/km_achievement_main/kmAchievementMain.do?method=marginQuery" target="_blank" title="我的毛利额">我的毛利额</a></li>
+                <li><a onclick="alert('建设中');" target="_blank" title="建设中">业绩完成率</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_receivable_detail/indexPay.jsp" target="_blank" title="我的已收款">我的已收款</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/achievement/eaccount/km_eproject_milestone_audit/kmAchievementReceivableExport.jsp" target="_blank" title="我的应收款">我的应收款</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点四 Ends-->
+        </div>
+        <div class="bmp-tab-pane bmp-tab-pane-3" id="tab-pane-3">
+          <!--驻点一 Starts-->
+          <div class="bmp-post bmp-post-one">
+            <h2 class="bmp-post-title"><span>我的产能</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/capacity/#&amp;cri.q=mydoc:create" target="_blank" title="我的产能填报">我的产能填报</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_weekly/kmEprojectWeekly.do?method=add&amp;s_css=default" target="_blank" title="我要提项目周报">我要提项目周报</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点一 Ends-->
+          <!--驻点二 Starts-->
+          <div class="bmp-post bmp-post-two">
+            <h2 class="bmp-post-title"><span>我的业绩</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/capacity/km_capacity_main/kmCapacityMain.do?method=summerQuery&amp;fdTime=" target="_blank" title="我的产能">我的产能</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/achievement/eaccount/km_eproject_milestone_audit/kmAchievementReceivableExport.jsp" target="_blank" title="我的应收款">我的应收款</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_receivable_detail/indexPay.jsp" target="_blank" title="我的已收款">我的已收款</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点二 Ends-->
+          <!--驻点三 Starts-->
+          <div class="bmp-post bmp-post-three">
+            <h2 class="bmp-post-title"><span>我的项目</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_maintain/index.jsp" target="_blank" title="我的项目信息">我的项目信息</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_plan_budget/index.jsp#&amp;cri.q=mydoc:create" target="_blank" title="我的项目计划和预算">我的项目计划和预算</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_product_out/index.jsp#cri.q=mydoc:create" target="_blank" title="我的产品出库申请记录">我的产品出库申请记录</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_finish_confirm/kmEprojectFinishConfirm.do?method=add&amp;s_css=default" target="_blank" title="我要上传完工证明">我要上传完工证明</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_apply_out/kmEprojectApplyOut.do?method=add&amp;s_css=default" target="_blank" title="我要发包">我要发包</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_apply_dispatch/kmEprojectApplyDispatch.do?method=add&amp;s_css=default" target="_blank" title="我要派工">我要派工</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_memo/kmEprojectMemo.do?method=add&amp;s_css=default" target="_blank" title="我要提项目备忘">我要提项目备忘</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_payable/kmEaccountPayable.do?method=add&amp;s_css=default" target="_blank" title="我要开票">我要开票</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_baddebt_main/kmEcontractBaddebtMain.do?method=add&amp;s_css=default" target="_blank" title="我要开票">我要提坏账</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/purchase/index.jsp" target="_blank" title="我的采购">我的采购</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点三 Ends-->
+          <!--驻点四 Starts-->
+          <div class="bmp-post bmp-post-four bmp-post-null">
+            <h2 class="bmp-post-title"><span>空置</span></h2>
+            <div class="bmp-post-content">
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点四 Ends-->
+        </div>
+        <div class="bmp-tab-pane bmp-tab-pane-4" id="tab-pane-4">
+          <!--驻点一 Starts-->
+          <div class="bmp-post bmp-post-one">
+            <h2 class="bmp-post-title"><span>工作安排</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_apply_dispatch/index.jsp#cri.q=mydoc:create" target="_blank" title="我的派工单">我的派工单</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点一 Ends-->
+          <!--驻点二 Starts-->
+          <div class="bmp-post bmp-post-two">
+            <h2 class="bmp-post-title"><span>我的产能</span></h2>
+            <div class="bmp-post-content">
+              <ul class="bmp-post-list">
+                <li><a href="http://bmp.landray.com.cn/km/capacity/index.jsp#" target="_blank" title="产能填报">产能填报</a></li>
+                <li><a href="http://bmp.landray.com.cn/km/capacity/km_capacity_detail/index.jsp#cri.q=mydoc:create" target="_blank" title="产能查询">产能查询</a></li>
+              </ul>
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点二 Ends-->
+          <!--驻点三 Starts-->
+          <div class="bmp-post bmp-post-three bmp-post-buliding">
+            <h2 class="bmp-post-title"><span>建设中</span></h2>
+            <div class="bmp-post-content">
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点三 Ends-->
+          <!--驻点四 Starts-->
+          <div class="bmp-post bmp-post-four bmp-post-null">
+            <h2 class="bmp-post-title"><span>空置</span></h2>
+            <div class="bmp-post-content">
+              <div class="bmp-post-platform"></div>
+              <div class="bmp-post-icon"></div>
+            </div>
+          </div>
+          <!--驻点四 Ends-->
+        </div>
+      </div>
+      <!--选项卡内容 Ends-->
+    </div>
+    <!--选项卡 Ends-->
+  </div>
+  <!--BMP地图导航 Ends-->
+
+</body>
+</html>
