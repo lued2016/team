@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>登录页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#containter').fullpage(
+            { continuousVertical: true,
+                menu: '#menu',
+                navigation: true,
+                css3: true,
+                touchSensitivity: 200,
+                afterLoad: function (anchorLink, index) {
+                    if (index == 1) {
+                        $(".login_header .btn_login").css("display", "none");
+                    }
+                    else { $(".login_header .btn_login").css("display", "block"); }
+                }
+            });
+            /*** 浏览器兼容性处理 ***/
+            var ie = document.documentMode; /*** 文档模式 ***/
+            if ($.browser.msie && ie < 10) {
+                $('body').addClass('ltie10');
+            }
+            if ($.browser.msie && ie < 9) {
+                $('body').addClass('ltie9');
+                $(".section").css("background", "none");
+                var h = $(".section").height();
+                $(".section_Bg").css({ "height": h, "display": "inline-block" });
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        (function ($) {
+            $.fn.hoverDelay = function (options) {
+                var defaults = {
+                    hoverDuring: 200,
+                    outDuring: 200,
+                    hoverEvent: function () {
+                        $.noop();
+                    },
+                    outEvent: function () {
+                        $.noop();
+                    }
+                };
+                var sets = $.extend(defaults, options || {});
+                var hoverTimer, outTimer;
+                return $(this).each(function () {
+                    $(this).hover(function () {
+                        clearTimeout(outTimer);
+                        hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+                    }, function () {
+                        clearTimeout(hoverTimer);
+                        outTimer = setTimeout(sets.outEvent, sets.outDuring);
+                    });
+                });
+            }
+        })(jQuery);
+        //二维码框
+        $(function () {
+            var oDiv = document.createElement("div");
+            oDiv.id = "lui_common_divlayout";
+            oDiv.className = "lui_common_divlayout"; //动态增加类名
+            $(".login_code").hoverDelay({
+                outDuring: 1000,
+                hoverEvent: function () {
+                    document.body.appendChild(oDiv);
+                    $(".login_code_wapper").css("display", "block").addClass("zoomIn");
+                },
+                outEvent: function () {
+                    document.body.removeChild(oDiv);
+                    $(".login_code_wapper").css("display", "none").removeClass("zoomIn");
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        //显示遮罩层
+        function show_shade(id) {
+            if ($(".btn_login").attr("status") == "off") {
+                var oDiv = document.createElement("div");
+                oDiv.id = "lui_common_divlayout";
+                oDiv.className = "lui_common_divlayout"; //动态增加类名
+                $("." + id).addClass("zoomIn");
+                document.body.appendChild(oDiv);
+                $(".btn_login").attr("status", "on").css("cursor", "default");
+            }
+        }
+
+        //关闭遮罩层
+        function close_shade(id) {
+            if ($(".btn_login").attr("status") == "on") {
+                var divlayout = document.getElementById("lui_common_divlayout");
+                if (divlayout) {
+                    document.body.removeChild(divlayout);
+                    $("." + id).removeClass("zoomIn");
+                }
+                $(".btn_login").attr("status", "off").css("cursor", "pointer");
+            }
+        }
+
+        $(function () { });
+    </script>
+</head>
+<body>
+    <!-- 页眉 开始 -->
+    <div class="login_header">
+        <div class="main_content">
+            <div class="login_logo">
+            </div>
+            <div class="login_info">
+                <a class="btn_login" status="off" onclick="show_shade('login_popup_wapper')">登录</a>
+                <div class="login_code" id="test">
+                </div>
+                <!-- 二维码 -->
+                <div class="login_code_wapper">
+                    <i></i>
+                    <ul>
+                        <li>
+                            <h3>
+                                KK5.0
+                            </h3>
+                            <div class="icon_code code_kk5">
+                            </div>
+                            <p>
+                                下载KK5客户端 (IOS/Android)
+                            </p>
+                        </li>
+                        <li>
+                            <h3>
+                                KK
+                            </h3>
+                            <div class="icon_code code_kk">
+                            </div>
+                            <p>
+                                下载KK客户端 (IOS/Android)
+                            </p>
+                        </li>
+                        <li>
+                            <h3>
+                                蓝凌微云
+                            </h3>
+                            <div class="icon_code code_wy">
+                            </div>
+                            <p>
+                                开启微信移动办公之旅
+                            </p>
+                        </li>
+                        <li>
+                            <h3>
+                                微服务平台
+                            </h3>
+                            <div class="icon_code code_wf">
+                            </div>
+                            <p>
+                                获得蓝凌实时在线服务
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页眉 结束 -->
+    <div id="containter">
+        <!-- 首屏 大连接 -->
+        <div class="section section1">
+            <img alt="背景" src="images/login_bg_01.jpg" class="section_Bg" />
+            <div class="main_content">
+                <div class="animate_bgW">
+                    <div class="animate_bg bg1_1">
+                    </div>
+                    <div class="animate_bg bg1_2">
+                    </div>
+                </div>
+                <div class="login_modern">
+                    <h2 class="login_title">
+                        登录系统</h2>
+                    <div class="login_form_item">
+                        <label for="input_user" title="用户名" class="icon_user">
+                            <span>用户名：</span></label>
+                        <input id="input_user" type="text" placeholder="请输入用户名" class="login_input" />
+                    </div>
+                    <div class="login_form_item">
+                        <label for="input_pwd" title="密码" class="icon_pwd">
+                            <span>密码：</span></label>
+                        <input id="input_pwd" type="password" placeholder="请输入密码" class="login_input" />
+                    </div>
+                    <div class="login_form_item">
+                        <div class="form_input input_verity">
+                            <input type="text" class="login_input" /></div>
+                        <div class="verity_pic">
+                            <img src="images/verity_pic.png" alt="" />
+                            <a class="btn_flush" title="点击切换验证码"></a>
+                        </div>
+                    </div>
+                    <p class="error_tips">
+                        提示：您输入的用户名或密码错误！</p>
+                    <div class="login_form_item submit_item">
+                        <a class="btn_submit">登录</a>
+                    </div>
+                    <p class="login_form_other">
+                        <a class="forget">忘记密码</a><em>|</em><a class="alter">修改密码</a></p>
+                </div>
+                <a class="godown" data="1"><span></span></a>
+            </div>
+        </div>
+        <!-- 协同运营平台 -->
+        <div class="section section2">
+            <img alt="背景" src="images/login_bg_02.jpg" class="section_Bg" />
+            <div class="main_content">
+                <div class="animate_bgW">
+                    <div class="animate_bg bg2_1">
+                    </div>
+                    <div class="animate_bg bg2_2">
+                        <a>流程</a><em>|</em><a>报表</a><em>|</em><a>数据</a><em>|</em><a>知识</a>
+                    </div>
+                </div>
+                <a class="godown" data="2"><span></span></a>
+            </div>
+            <div class="footer_nav">
+                <div class="main_content">
+                    <ul>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon1"></em>人性化
+                                <p>
+                                    精心打造专属你的平台</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon2"></em>移动化
+                                <p>
+                                    拥抱互联，全新体验，事不宜迟</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon3"></em>云端化
+                                <p>
+                                    低成本，易操作，高效能</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon4"></em>整合化
+                                <p>
+                                    聚合所有，清晰定位</p>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- KMS -->
+        <div class="section section3">
+            <img src="images/login_bg_03.jpg" class="section_Bg" />
+            <div class="main_content">
+                <div class="animate_bgW">
+                    <div class="animate_bg bg3_1">
+                    </div>
+                    <div class="animate_bg bg3_2">
+                    </div>
+                </div>
+                <div class="animate_bg bg3_4">
+                </div>
+            </div>
+            <div class="footer_nav">
+                <div class="main_content">
+                    <ul>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon11"></em>移动化
+                                <p>
+                                    多端应用，全新的移动互联应用体验</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon12"></em>资产化
+                                <p>
+                                    积累、传播和应用“组织记忆”</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon13"></em>场景化
+                                <p>
+                                    让“知识+”无处不在</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon14"></em>智慧化
+                                <p>
+                                    “连接+发展”的知识发现
+                                </p>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <a class="godown" data="3"><span></span></a>
+        </div>
+        <!-- 蓝凌KK -->
+        <div class="section section4">
+            <img alt="背景" src="images/login_bg_04.jpg" class="section_Bg" />
+            <div class="main_content">
+                <div class="animate_bgW">
+                    <div class="animate_bg bg4_1">
+                    </div>
+                    <div class="animate_bg bg4_2">
+                    </div>
+                    <div class="animate_bg bg4_3">
+                    </div>
+                </div>
+            </div>
+            <div class="footer_nav">
+                <div class="main_content">
+                    <ul>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon5"></em>移动门户
+                                <p>
+                                    企业微信，随时处理工作</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon6"></em>应用集成
+                                <p>
+                                    支持企业公共号及应用快速发布</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon7"></em>即时通讯
+                                <p>
+                                    线上线下，随时随地</p>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <a class="godown" data="5"><span></span></a>
+        </div>
+        <!-- 蓝凌微云 -->
+        <div class="section section5">
+            <img src="images/login_bg_05.jpg" class="section_Bg" />
+            <div class="main_content">
+                <div class="animate_bgW">
+                    <div class="animate_bg bg5_1">
+                    </div>
+                    <div class="animate_bg bg5_2">
+                    </div>
+                </div>
+                <div class="animate_bg bg5_4">
+                </div>
+            </div>
+            <div class="footer_nav">
+                <div class="main_content">
+                    <ul>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon8"></em>蓝凌微云
+                                <p>
+                                    免费使用，免安装，关注即可使用。</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon9"></em>LWE平台
+                                <p>
+                                   为企业提供微信企业号、服务号的统一管理平台。</p>
+                            </div>
+                        </a></li>
+                        <li><a>
+                            <div class="link-text-wrapper">
+                                <em class="link-icon footerNav_icon10"></em>钉钉组件
+                                <p>
+                                    对接钉钉，让工作使命必达，一DING到底。</p>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <a class="godown" data="0"><span></span></a>
+        </div>
+    </div>
+    <!-- 登录弹出框 -->
+    <div class="login_popup_wapper" style="display: none; width: 280px; height: 290px;
+        position: fixed; left: 50%; top: 50%; margin-left: -140px; margin-top: -145px;">
+        <div class="popup_btnClose" onclick="close_shade('login_popup_wapper')">
+            <span></span>
+        </div>
+        <div class="login_modern">
+            <h2 class="login_title">
+                登录系统</h2>
+            <div class="login_form_item">
+                <label for="input_user" title="用户名" class="icon_user">
+                    <span>用户名：</span></label><div class="form_input">
+                        <input id="Text1" type="text" placeholder="请输入用户名" class="login_input" />
+                    </div>
+            </div>
+            <div class="login_form_item">
+                <label for="input_pwd" title="密码" class="icon_pwd">
+                    <span>密码：</span></label><div class="form_input">
+                        <input id="Password1" type="password" placeholder="请输入密码" class="login_input" /></div>
+            </div>
+            <div class="login_form_item">
+                <div class="form_input input_verity">
+                    <input type="text" class="login_input" /></div>
+                <div class="verity_pic">
+                    <img src="images/verity_pic.png" alt="" />
+                    <a class="btn_flush" title="点击切换验证码"></a>
+                </div>
+            </div>
+            <p class="error_tips">
+                提示：您输入的用户名或密码错误！</p>
+            <div class="login_form_item submit_item">
+                <a class="btn_submit">登录</a>
+            </div>
+            <p class="login_form_other">
+                <a class="forget">忘记密码</a><em>|</em><a class="alter">修改密码</a></p>
+        </div>
+    </div>
+</body>
+</html>
