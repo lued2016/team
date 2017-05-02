@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>demo引导页</title>
+    <link type="text/css" href="css/index.css" rel="Stylesheet" />
+</head>
+<body class="guid_body">
+    <div class="main_content">
+        <img src="images/page.png" alt="" class="guid_bodyImg" />
+        <div class="guide_new" id="yindao2014" style="top: 0px; left: 0px;">
+            <div class="guide_main">
+                <ul>
+                    <li class="guide_1 current">
+                        <div class="guide_img">
+                        </div>
+                        <div class="guide_close" op="close">
+                            <a href="javascript:;">跳过引导</a>
+                        </div>
+                        <div class="btn_next" yindao="1">下一步</div>
+                        <dl class="page"><dd class="current" yindao="1">1</dd><dd yindao="2">2</dd><dd yindao="3">3</dd><dd yindao="4">4</dd><dd yindao="5">5</dd></dl>
+                    </li>
+                    <li class="guide_2">
+                        <div class="guide_img">
+                        </div><div class="guide_close" op="close">
+                            <a href="javascript:;">跳过引导</a>
+                        </div>
+                        <dl class="page"><dd yindao="1">1</dd><dd class="current" yindao="2">2</dd><dd yindao="3">3</dd><dd yindao="4">4</dd><dd yindao="5">5</dd></dl>
+                        <a class="btn_next" href="javascript:;" yindao="2">下一步</a>
+                    </li>
+                    <li class="guide_3">
+                        <div class="guide_img">
+                        </div><div class="guide_close" op="close">
+                            <a href="javascript:;">跳过引导</a>
+                        </div>
+                        <dl class="page"><dd yindao="1">1</dd><dd yindao="2">2</dd><dd class="current" yindao="3">3</dd><dd yindao="4">4</dd><dd yindao="5">5</dd></dl>
+                        <a class="btn_next" href="javascript:;" yindao="3">下一步</a>
+                    </li>
+                    <li class="guide_4">
+                        <div class="guide_img">
+                        </div><div class="guide_close" op="close">
+                            <a href="javascript:;">跳过引导</a>
+                        </div>
+                        <dl class="page"><dd yindao="1">1</dd><dd yindao="2">2</dd><dd yindao="3">3</dd><dd class="current" yindao="4">4</dd><dd yindao="5">5</dd></dl>
+                        <a class="btn_next" href="javascript:;" yindao="4">下一步</a>
+                    </li>
+                    <li class="guide_5">
+                        <div class="guide_img">
+                        </div><div class="guide_close" op="close">
+                            <a href="javascript:;">跳过引导</a>
+                        </div>
+                        <a class="guide_over" href="javascript:;" op="close">进入&gt;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="facebox_overlay">
+    </div>
+    <script type="text/javascript" src="js/jquery-1.6.js"></script>
+    <script type="text/javascript" src="js/require.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("[op='close']").click(function () { $(".guide_new").hide(); $("#facebox_overlay").hide(); });
+            $(".btn_next").click(function (e) {
+                var step = $(this).attr("yindao");
+                var step_next = parseInt(step) + 1;
+                chage(step_next);
+                $(".guide_" + step).removeClass("current");
+                $(".guide_" + step_next).addClass("current");
+            });
+            $(".guide_main .page dd").click(function (e) {
+                var step;
+                step = $(this).parent("li").html(); $('html').animate({ scrollTop: 80 }, 800);
+                var step_next = $(this).attr("yindao");
+                $("[class^='guide_']").removeClass("current");
+                //chage(step_next);
+                //$(".guide_" + step).removeClass("current");
+                $(".guide_" + step_next).addClass("current");
+            });
+            function chage(step) {
+                //debugger;
+                switch (step) {
+                    case "1": { $(window).scrollTop(0);  break; }
+                    case "2": { $('html').animate({ scrollTop: 800 }, 800); break; }
+                    case "3": { $(window).scrollTop("92px"); break; }
+                    case "4": { $(window).scrollTop("80px");  break; }
+                    case "5": { $(window).scrollTop(0); break; }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

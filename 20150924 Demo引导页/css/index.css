@@ -1,0 +1,120 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+/* CSS reset */
+.clrfix{zoom:1;}/* 清除浮动 */
+.clrfix:after{display:block; content:'clear'; clear:both; line-height:0; visibility:hidden;}/* 清除浮动 */
+
+body,td,th,button,div,a{font-family:"微软雅黑", Geneva, "sans-serif" , "微软雅黑" , "宋体"; font-size: 12px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,iieldset,input,textarea,p,blockquote,th,td{ margin:0; padding:0;}
+table{ border-collapse:collapse; border-spacing:0;}
+fieldset,img{ border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{ font-style:normal; font-weight:normal;}
+ol,ul{ list-style:none;}
+a{ text-decoration:none; transition:background-color 0.3s ease 0s, border 0.3s ease 0s, color 0.3s ease 0s, opacity 0.3s ease-in-out 0s;}
+caption,th{ text-align:left;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+q:before,q:after{ content:''}
+abbr,acrnym{ border:0;}
+.textEllipsis{ width:90%; overflow:hidden; display:block; white-space:nowrap; text-overflow:ellipsis; }
+.clr{ clear:both; line-height:0px;}
+body{ margin:0px;}
+
+/************************************ 引导页内容 **********************************************/
+.guid_body{}
+.guid_bodyImg{ position:absolute; left:0px; top:0px; width:100%;}
+.main_content{ width:980px; margin:0px auto; position:relative;}
+
+.guide_main ul{}
+.guide_new { position: relative; z-index: 100; }
+.guide_main { left: 0px; top: 0px; position: absolute; }
+.guide_main ul { left: 0px; top: 0px; position: absolute; }
+.guide_main ul li { position: absolute; display:none; }
+.guide_main ul li.current {display:block;} 
+.guide_main ul li .guide_img { width: 100%; height: 100%; }
+.guide_main ul li.guide_1 .guide_img { background: url("../images/guide01.png") no-repeat left 0px; }
+.guide_main ul li.guide_2 .guide_img { background: url("../images/guide02.png") no-repeat left top; }
+.guide_main ul li.guide_3 .guide_img { background: url("../images/guide03.png") no-repeat left top; }
+.guide_main ul li.guide_4 .guide_img { background: url("../images/guide04.png") no-repeat left top; }
+.guide_main ul li.guide_5 .guide_img { background: url("../images/guide05.png") no-repeat left top; }
+
+.guide_main ul li .page { position:absolute; left:274px; top:477px;}
+.guide_main ul li .btn_next {position:absolute; left:362px; top:418px; font-size:14px;}
+.guide_main ul li .page a { width: 8px; height: 8px; text-indent: -888px; overflow: hidden; margin-top: 10px; margin-right: 7px; border-top-color: #007dae; border-right-color: #007dae; border-bottom-color: #007dae; border-left-color: #007dae; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; float: left; display: inline; border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px; background-color: rgb(224, 245, 253); }
+.guide_main ul li .page a.current,
+.guide_main ul li .page a:hover { background-color: rgb(0, 125, 174); }
+
+.guide_main ul li .guide_list a.guide_start { left: 50px; top: -40px; width: 158px; height: 36px; border-top-color: currentColor; border-right-color: currentColor; border-bottom-color: currentColor; border-left-color: currentColor; border-top-width: medium; border-right-width: medium; border-bottom-width: medium; border-left-width: medium; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; position: absolute; background-image: url("../guide/guide_start.gif"); background-attachment: scroll; background-repeat: no-repeat; background-position-x: 0px; background-position-y: 0px; background-size: auto; background-origin: padding-box; background-clip: border-box; background-color: transparent; }
+.guide_main ul li .guide_list a.guide_over { width: 165px; height: 29px; margin-top: 0px; margin-left: 20px; border-top-color: currentColor; border-right-color: currentColor; border-bottom-color: currentColor; border-left-color: currentColor; border-top-width: medium; border-right-width: medium; border-bottom-width: medium; border-left-width: medium; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background-image: url("../guide/guide_over.gif"); background-attachment: scroll; background-repeat: no-repeat; background-position-x: 0px; background-position-y: 0px; background-size: auto; background-origin: padding-box; background-clip: border-box; background-color: transparent; }
+.guide_main ul li .guide_close { position: absolute; }
+.guide_main ul li .guide_close a { display:inline-block; width: 59px; height: 59px; text-indent: -8888em; overflow: hidden; background:url(../images/close.png) no-repeat left top;}
+
+.guide_1 { width:493px; height:537px; left:242px;}
+.guide_2 { width:746px; height:440px; left:-6px; top:98px;}
+.guide_3 { width:756px; height:557px; left:-9px; top:161px;}
+.guide_4 { width:594px; height:432px; left:163px; top:277px;}
+.guide_5 { width:496px; height:474px; left:250px; top:92px;}
+
+.guide_main ul li.guide_1 .guide_close { left:434px; top:150px;}
+.guide_main ul li .guide_close a { background-position:left top;}
+.guide_main ul li.guide_1 .guide_close:hover a {background-position:-69px top;}
+
+.guide_main ul li.guide_2 .page { left:552px; top:376px;}
+.guide_main ul li.guide_2 .btn_next { left:612px; top:322px; background:#009e96;}
+.guide_main ul li.guide_2 .guide_close { left:685px; top:60px;}
+.guide_main ul li.guide_2 .guide_close a { background-position:left -69px;}
+.guide_main ul li.guide_2 .guide_close:hover a {background-position:-69px -69px;}
+
+.guide_main ul li.guide_3 .page { left:436px; top:322px;}
+.guide_main ul li.guide_3 .btn_next { left:456px; top:268px; background:#556fb5;}
+.guide_main ul li.guide_3 .guide_close { left:690px; top:0px;}
+.guide_main ul li.guide_3 .guide_close a { background-position:left -138px;}
+.guide_main ul li.guide_3 .guide_close:hover a {background-position:-69px -138px;}
+
+.guide_main ul li.guide_4 .page { left:348px; top:462px;}
+.guide_main ul li.guide_4 .btn_next { left:472px; top:450px; background:#ec6941;}
+.guide_main ul li.guide_4 .guide_close { right:-12px; top:-15px;}
+.guide_main ul li.guide_4 .guide_close a { background-position:left -207px;}
+.guide_main ul li.guide_4 .guide_close:hover a {background-position:-69px -207px;}
+
+.guide_main ul li.guide_5 .page { left:348px; top:462px;}
+.guide_main ul li.guide_5 .guide_over { left:344px; top:358px; background:#ac6a00;}
+.guide_main ul li.guide_5 .guide_close { left:435px; top:89px;}
+.guide_main ul li.guide_5 .guide_close a { background-position:left -207px;}
+.guide_main ul li.guide_5 .guide_close:hover a {background-position:-69px -207px;}
+
+#facebox_overlay { left: 0px; top: 0px; width: 100%; height: 100%; position: fixed; z-index:11; background:#535353;filter:alpha(opacity=50); /*IE滤镜，透明度50%*/-moz-opacity:0.5; /*Firefox私有，透明度50%*/opacity:0.5;/*其他，透明度50%*/ }
+.guide_main .page{}
+.guide_main .page dd{ text-indent:-99999em; cursor:pointer; display: inline-block; width: 7px; height:7px; border:1px solid #fff; border-radius:50%; margin-right:15px;}
+.guide_main .page dd.current,.guide_list .page dd:hover{ background:#fff;}
+.guide_main .btn_next{ text-align: right; margin-bottom:30px;}
+.guide_main .btn_next,.guide_main .guide_over{ position:absolute;  height: 30px; line-height:30px; color:#fff; background:#009944; padding:0 15px; cursor:pointer; display: inline-block;}
+.guide_main .guide_over { font-size:14px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
