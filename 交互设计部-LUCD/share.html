@@ -1,0 +1,489 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Share经验分享</title>
+
+    <link href="css/lucd.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+        <script src="js/ie8-responsive-file-warning.js"></script>
+    <![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/lucd.js"></script>
+    <script src="js/common.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+</head>
+<body>
+    <!--页面头部栏 Starts-->
+    <div class="lucd-header">
+        <div class="lucd-navbar lucd-navbar-default">
+            <div class="lucd-container">
+                <!-- 左侧LOGO Starts -->
+                <div class="lucd-navbar-header">
+                    <a class="lucd-navbar-brand" href="index.html">
+                        <div class="brand-inner">
+                            <span class="logo"><img src="images/Logo.png" /></span>
+                            <span class="logo-vice"><img src="images/Logo-vice.png" /></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- 左侧LOGO Ends -->
+                <!-- 右侧内容 Starts -->
+                <ul class="lucd-nav lucd-navbar-nav lucd-navbar-right">
+                    <li><a href="index.html" title="首页">首页</a></li>
+                    <li><a href="case.html" title="案例">案例</a></li>
+                    <li><a href="data-analysis.html" title="数据分析" >数据分析</a></li>
+                    <li class="active"><a href="share.html" title="分享">分享</a></li>
+                    <li><a href="javascript:void(0);" title="产品攻略">产品攻略</a></li>
+                    <!-- <li><a href="forum.html" title="论坛">论坛</a></li> -->
+                    <li class="lucd-dropdown lucd-header-personInfo">
+                        <a href="javascript:void(0);" class="lucd-dropdown-toggle lucd-avatar lucd-avatar-round" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/avatar_02.png" /></a>
+                        <div class="lucd-dropdown-menu">
+                            <i class="lucd-caret-up"></i>
+                            <i class="lucd-caret-up-cover"></i>
+                            <div class="lucd-header-toptip-card">
+                                <ul class="operationLink">
+                                    <li class="borderR"><a href="javascript:void(0)" title="个人设置">个人设置</a></li>
+                                    <li><a href="javascript:void(0)" title="个人空间">个人空间</a></li>
+                                    <li class="borderR"><a href="javascript:void(0)" title="我的订阅">我的订阅</a></li>
+                                    <li><a href="javascript:void(0)" title="退出系统">退出系统</a></li>
+                                </ul>
+                                <div class="position"><span>前端开发工程师</span></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 右侧内容 Ends -->
+            </div>
+        </div>
+    </div>
+    <!--页面头部栏 Ends-->
+
+    <!--旋转木马 Starts-->
+    <div class="lucd-share-carousel-area">
+        <div class="lucd-container">
+            <!--内容-->
+            <div class="slider-wrap">
+                <div class="slider">
+                    <img src="images/carousel_img_01.jpg" />
+                    <img src="images/carousel_img_02.jpg" />
+                    <img src="images/carousel_img_03.jpg" />
+                </div>
+            </div>
+
+            <link rel="stylesheet" href="js/share-slider/css/styles.css" media="screen" />
+            <link rel="stylesheet" href="js/share-slider/css/jquery.tiles.min.css" />
+            <script type="text/javascript" src="js/share-slider/js/jquery.min.js"></script>
+            <script type="text/javascript" src="js/share-slider/js/jquery.tiles.js"></script>
+            <script type="text/javascript">
+                var $slider = $('.slider-wrap');
+                var html = $slider.html();
+
+                // Options
+
+                var defaults = {
+                    thumbSize: 20,
+                    onSlideshowEnd: function () {
+                        $('.stop, .start').toggle()
+                    }
+                };
+
+                var effects = {
+                    'default': { x: 6, y: 4, random: true },
+                    simple: { x: 6, y: 4, effect: 'simple', random: true },
+                    left: { x: 1, y: 8, effect: 'left' },
+                    up: { x: 20, y: 1, effect: 'up', rewind: 60, backReverse: true },
+                    leftright: { x: 1, y: 8, effect: 'leftright' },
+                    updown: { x: 20, y: 1, effect: 'updown', cssSpeed: 500, backReverse: true },
+                    switchlr: { x: 20, y: 1, effect: 'switchlr', backReverse: true },
+                    switchud: { x: 1, y: 8, effect: 'switchud' },
+                    fliplr: { x: 20, y: 1, effect: 'fliplr', backReverse: true },
+                    flipud: { x: 20, y: 3, effect: 'flipud', reverse: true, rewind: 75 },
+                    reduce: { x: 6, y: 4, effect: 'reduce' },
+                    360: { x: 1, y: 1, effect: '360', fade: true, cssSpeed: 600 }
+                };
+
+                $('#effects-select').change(function () {
+                    var effect = $(this).val();
+                    $slider.fadeTo(0, 0).html(html);
+                    $('.stop').hide();
+                    $('.start').show();
+
+                    setTimeout(function () {
+                        $('.slider').tilesSlider($.extend({}, defaults, effects[effect]));
+                        $slider.fadeTo(0, 1);
+                        $('body').removeClass('tiles-preload');
+                    }, 100);
+
+                    $('.code').empty().html(function () {
+                        var e = effects[effect], c = [];
+                        for (var i in e) {
+                            if (i !== 'effect') {
+                                c.push('<code>' + i + ': ' + e[i] + '</code>');
+                            }
+                        }
+                        return c.join('');
+                    });
+                });
+
+                $('.start').click(function () {
+                    $(this).hide();
+                    $('.stop').show();
+                    $('.slider').tilesSlider('start');
+                });
+
+                $('.stop').click(function () {
+                    $(this).hide();
+                    $('.start').show();
+                    $('.slider').tilesSlider('stop');
+                });
+
+                $('.slider').tilesSlider($.extend({}, defaults, effects['simple'])).tilesSlider('start');
+
+            </script>
+            <!--内容-->
+
+        </div>
+
+
+
+        <!--<div class="holder">
+            <div id="wowslider-container">
+                <div class="ws_images">
+                    <ul>
+                        <li><img src="images/carousel_img_01.jpg" alt="" title="" /></li>
+                        <li><img src="images/carousel_img_02.jpg" alt="" title="" /></li>
+                        <li><img src="images/carousel_img_03.jpg" alt="" title="" /></li>
+                    </ul>
+                </div>
+                <div class="ws_bullets">
+                    <div>
+                        <a href="#"><img src="images/carousel_img_01.jpg" alt="" /></a>
+                        <a href="#"><img src="images/carousel_img_02.jpg" alt="" /></a>
+                        <a href="#"><img src="images/carousel_img_03.jpg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <link rel="stylesheet" type="text/css" href="js/wowslider/engine/style.css" media="screen" />
+            <script type="text/javascript" src="js/wowslider/engine/wowslider.js"></script>
+            <script type="text/javascript" src="js/wowslider/engine/script.js"></script>
+        </div>-->
+    </div>
+    <!--旋转木马 Ends-->
+    <!--主体内容 Starts-->
+    <div class="lucd-container lucd-viewdata-box">
+        <!--视图头部 Starts-->
+        <div class="lucd-viewdata-heading">
+            <div class="lucd-row">
+                <ul class="lucd-btn-group-inline lucd-viewdata-btnGroup-source lucd-clearfix">
+                    <li>
+                        <button type="button" class="lucd-btn lucd-btn-sm lucd-btn-simple active" title="全部">全部</button>
+                    </li>
+                    <li>
+                        <button type="button" class="lucd-btn lucd-btn-sm lucd-btn-simple" title="原创">原创</button>
+                    </li>
+                    <li>
+                        <button type="button" class="lucd-btn lucd-btn-sm lucd-btn-simple" title="转载">转载</button>
+                    </li>
+                </ul>
+                <div class="lucd-btn-group-inline right lucd-viewdata-btnGroup-sort">
+                    <div class="lucd-btn-group">
+                        <button data-toggle="dropdown" class="lucd-btn lucd-btn-sm lucd-btn-simple lucd-dropdown-toggle" aria-expanded="false">默认排序<i class="lucd-icon lucd-icon-arrLineDn"></i></button>
+                        <ul class="lucd-dropdown-menu lucd-dropdown-menu-right">
+                            <li><a href="javascript:void(0);">浏览最多</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <form class="lucd-input-group lucd-form-search-vice">
+                    <input type="text" class="lucd-form-control" value="请输入关键词">
+                    <span class="lucd-input-group-btn searchBtn">
+                        <button class="lucd-btn lucd-btn-default" type="button"><i class="lucd-icon lucd-icon-search"></i></button>
+                    </span>
+                </form>
+            </div>
+        </div>
+        <!--视图头部 Ends-->
+        <!--视图内容 Starts-->
+        <div class="lucd-viewdata-content">
+            <div>
+                <!-- 一行 Starts -->
+                <div class="lucd-media">
+                    <div class="lucd-media-left">
+                        <a href="share-detail.html" class="imgbox" target="_blank"><img src="images/media_img_01.jpg" /></a>
+                    </div>
+                    <div class="lucd-media-body">
+                        <h4 class="lucd-media-heading">
+                            <a class="title" href="share-detail.html" title="[ISUX译]iOS 9人机界面指南(二)：设计策略" target="_blank"><span class="lucd-label lucd-label-success">置顶</span>[ISUX译]iOS 9人机界面指南(二)：设计策略</a>
+                        </h4>
+                        <p class="lucd-media-depict">译自苹果官方人机界面指南 iOS Human Interface Guidelines (2015年10 月21日)，由腾讯ISUX翻译整理，非发文者一人之作文章索引。</p>
+                        <div class="lucd-meta-info lucd-clearfix">
+                            <div class="lucd-col-9">
+                                <span class="lucd-avatar lucd-avatar-round"><img src="images/avatar_02.png"></span>
+                                <span class="name">王光明</span>
+                                <span>发布于 15-10-27  10:24:21</span>
+                                <span>转载自 UI中国</span>
+                            </div>
+                            <div class="lucd-col-3 lucd-text-right">
+                                <span><i class="lucd-icon lucd-icon-eye"></i>2145</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一行 Ends -->
+                <!-- 一行 Starts -->
+                <div class="lucd-media">
+                    <div class="lucd-media-left">
+                        <a href="share-detail.html" class="imgbox" target="_blank"><img src="images/media_img_01.jpg" /></a>
+                    </div>
+                    <div class="lucd-media-body">
+                        <h4 class="lucd-media-heading">
+                            <a class="title" href="share-detail.html" title="[ISUX译]iOS 9人机界面指南(二)：设计策略" target="_blank">[ISUX译]iOS 9人机界面指南(二)：设计策略人机界面指南(二)：设计策略人机界面指南(二)：设计：设计策略人机界面指南(二)：设计：设计策略人机界面指南(二)：设计</a>
+                        </h4>
+                        <p class="lucd-media-depict">译自苹果官方人机界面指南 iOS Human Interface Guidelines (2015年10 月21日)，由腾讯.</p>
+                        <div class="lucd-meta-info lucd-clearfix">
+                            <div class="lucd-col-9">
+                                <span class="lucd-avatar lucd-avatar-round"><img src="images/avatar_01.png"></span>
+                                <span class="name">王光明</span>
+                                <span>发布于 15-10-27  10:24:21</span>
+                                <span>转载自 UI中国</span>
+                            </div>
+                            <div class="lucd-col-3 lucd-text-right">
+                                <span><i class="lucd-icon lucd-icon-eye"></i>2145</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一行 Ends -->
+                <!-- 一行 Starts -->
+                <div class="lucd-media">
+                    <div class="lucd-media-left">
+                        <a href="share-detail.html" class="imgbox" target="_blank"><img src="images/media_img_01.jpg" /></a>
+                    </div>
+                    <div class="lucd-media-body">
+                        <h4 class="lucd-media-heading">
+                            <a class="title" href="share-detail.html" title="[ISUX译]iOS 9人机界面指南(二)：设计策略" target="_blank">[ISUX译]iOS 9人机界面指南(二)：设计策略</a>
+                        </h4>
+                        <p class="lucd-media-depict">译自苹果官方人机界面指南 iOS Human Interface Guidelines (2015年10 月21日)，由腾讯ISUX翻译整理，非发文者一人之作文章索引。</p>
+                        <div class="lucd-meta-info lucd-clearfix">
+                            <div class="lucd-col-9">
+                                <span class="lucd-avatar lucd-avatar-round"><img src="images/avatar_01.png"></span>
+                                <span class="name">王光明</span>
+                                <span>发布于 15-10-27  10:24:21</span>
+                                <span>转载自 UI中国</span>
+                            </div>
+                            <div class="lucd-col-3 lucd-text-right">
+                                <span><i class="lucd-icon lucd-icon-eye"></i>2145</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一行 Ends -->
+                <!-- 一行 Starts -->
+                <div class="lucd-media">
+                    <div class="lucd-media-left">
+                        <a href="share-detail.html" class="imgbox" target="_blank"><img src="images/media_img_01.jpg" /></a>
+                    </div>
+                    <div class="lucd-media-body">
+                        <h4 class="lucd-media-heading">
+                            <a class="title" href="share-detail.html" title="[ISUX译]iOS 9人机界面指南(二)：设计策略" target="_blank">[ISUX译]iOS 9人机界面指南(二)：设计策略</a>
+                        </h4>
+                        <p class="lucd-media-depict">译自苹果官方人机界面指南 iOS Human Interface Guidelines (2015年10 月21日)，由腾讯ISUX翻译整理，非发文者一人之作文章索引。</p>
+                        <div class="lucd-meta-info lucd-clearfix">
+                            <div class="lucd-col-9">
+                                <span class="lucd-avatar lucd-avatar-round"><img src="images/avatar_01.png"></span>
+                                <span class="name">王光明</span>
+                                <span>发布于 15-10-27  10:24:21</span>
+                                <span>转载自 UI中国</span>
+                            </div>
+                            <div class="lucd-col-3 lucd-text-right">
+                                <span><i class="lucd-icon lucd-icon-eye"></i>2145</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一行 Ends -->
+                <!-- 一行 Starts -->
+                <div class="lucd-media">
+                    <div class="lucd-media-left">
+                        <a href="share-detail.html" class="imgbox" target="_blank"><img src="images/media_img_01.jpg" /></a>
+                    </div>
+                    <div class="lucd-media-body">
+                        <h4 class="lucd-media-heading">
+                            <a class="title" href="share-detail.html" title="[ISUX译]iOS 9人机界面指南(二)：设计策略" target="_blank">[ISUX译]iOS 9人机界面指南(二)：设计策略</a>
+                        </h4>
+                        <p class="lucd-media-depict">译自苹果官方人机界面指南 iOS Human Interface Guidelines (2015年10 月21日)，由腾讯ISUX翻译整理，非发文者一人之作文章索引。</p>
+                        <div class="lucd-meta-info lucd-clearfix">
+                            <div class="lucd-col-9">
+                                <span class="lucd-avatar lucd-avatar-round"><img src="images/avatar_01.png"></span>
+                                <span class="name">王光明</span>
+                                <span>发布于 15-10-27  10:24:21</span>
+                                <span>转载自 UI中国</span>
+                            </div>
+                            <div class="lucd-col-3 lucd-text-right">
+                                <span><i class="lucd-icon lucd-icon-eye"></i>2145</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一行 Ends -->
+                <!-- 一行 Starts -->
+                <div class="lucd-media">
+                    <div class="lucd-media-left">
+                        <a href="share-detail.html" class="imgbox" target="_blank"><img src="images/media_img_01.jpg" /></a>
+                    </div>
+                    <div class="lucd-media-body">
+                        <h4 class="lucd-media-heading">
+                            <a class="title" href="share-detail.html" title="[ISUX译]iOS 9人机界面指南(二)：设计策略" target="_blank">[ISUX译]iOS 9人机界面指南(二)：设计策略</a>
+                        </h4>
+                        <p class="lucd-media-depict">译自苹果官方人机界面指南 iOS Human Interface Guidelines (2015年10 月21日)，由腾讯ISUX翻译整理，非发文者一人之作文章索引。</p>
+                        <div class="lucd-meta-info lucd-clearfix">
+                            <div class="lucd-col-9">
+                                <span class="lucd-avatar lucd-avatar-round"><img src="images/avatar_01.png"></span>
+                                <span class="name">王光明</span>
+                                <span>发布于 15-10-27  10:24:21</span>
+                                <span>转载自 UI中国</span>
+                            </div>
+                            <div class="lucd-col-3 lucd-text-right">
+                                <span><i class="lucd-icon lucd-icon-eye"></i>2145</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一行 Ends -->
+                <!-- 一行 Starts -->
+                <div class="lucd-media">
+                    <div class="lucd-media-left">
+                        <a href="share-detail.html" class="imgbox" target="_blank"><img src="images/media_img_01.jpg" /></a>
+                    </div>
+                    <div class="lucd-media-body">
+                        <h4 class="lucd-media-heading">
+                            <a class="title" href="share-detail.html" title="[ISUX译]iOS 9人机界面指南(二)：设计策略" target="_blank">[ISUX译]iOS 9人机界面指南(二)：设计策略</a>
+                        </h4>
+                        <p class="lucd-media-depict">译自苹果官方人机界面指南 iOS Human Interface Guidelines (2015年10 月21日)，由腾讯ISUX翻译整理，非发文者一人之作文章索引。</p>
+                        <div class="lucd-meta-info lucd-clearfix">
+                            <div class="lucd-col-9">
+                                <span class="lucd-avatar lucd-avatar-round"><img src="images/avatar_01.png"></span>
+                                <span class="name">王光明</span>
+                                <span>发布于 15-10-27  10:24:21</span>
+                                <span>转载自 UI中国</span>
+                            </div>
+                            <div class="lucd-col-3 lucd-text-right">
+                                <span><i class="lucd-icon lucd-icon-eye"></i>2145</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一行 Ends -->
+                <!-- 一行 Starts -->
+                <div class="lucd-media">
+                    <div class="lucd-media-left">
+                        <a href="share-detail.html" class="imgbox" target="_blank"><img src="images/media_img_01.jpg" /></a>
+                    </div>
+                    <div class="lucd-media-body">
+                        <h4 class="lucd-media-heading">
+                            <a class="title" href="share-detail.html" title="[ISUX译]iOS 9人机界面指南(二)：设计策略" target="_blank">[ISUX译]iOS 9人机界面指南(二)：设计策略</a>
+                        </h4>
+                        <p class="lucd-media-depict">译自苹果官方人机界面指南 iOS Human Interface Guidelines (2015年10 月21日)，由腾讯ISUX翻译整理，非发文者一人之作文章索引。</p>
+                        <div class="lucd-meta-info lucd-clearfix">
+                            <div class="lucd-col-9">
+                                <span class="lucd-avatar lucd-avatar-round"><img src="images/avatar_01.png"></span>
+                                <span class="name">王光明</span>
+                                <span>发布于 15-10-27  10:24:21</span>
+                                <span>转载自 UI中国</span>
+                            </div>
+                            <div class="lucd-col-3 lucd-text-right">
+                                <span><i class="lucd-icon lucd-icon-eye"></i>2145</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一行 Ends -->
+                <!-- 分页导航 Starts -->
+                <ul class="lucd-pagination center">
+                    <li class="disabled"><a href="javascript:void(0);" aria-label="Previous"><i class="lucd-icon lucd-icon-arrLineL" aria-hidden="true"></i></a></li>
+                    <li class="active"><a href="javascript:void(0);">1 <span class="lucd-sr-only">(current)</span></a></li>
+                    <li><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                    <li><a href="javascript:void(0);">4</a></li>
+                    <li><a href="javascript:void(0);">...</a></li>
+                    <li><a href="javascript:void(0);">600</a></li>
+                    <li><a href="javascript:void(0);" aria-label="Next"><i class="lucd-icon lucd-icon-arrLineR" aria-hidden="true"></i></a></li>
+                </ul>
+                <!-- 分页导航 Ends -->
+            </div>
+        </div>
+        <!--视图内容 Ends-->
+    </div>
+    <!--主体内容 Ends-->
+
+    <!--页面注脚 Starts-->
+    <div class="lucd-footer">
+        <div class="lucd-footer-innerbox">
+            <div class="lucd-container">
+                <p>蓝凌软件 版权所有</p>
+                <p>
+                    <span>粤ICP备11017824号-4 / 粤ICP证130164号</span>
+                    <span class="lucd-ml-15">深圳市公安局南山分局备案编号:110105000501</span>
+                </p>
+                <p class="copyright">Copyright &copy; 2001-2015</p>
+            </div>
+        </div>
+    </div>
+    <!--页面注脚 Ends-->
+    <!--固定侧边工具栏 Starts-->
+    <div class="lucd-fixed-toolbar">
+        <a href="javascript:void(0);" class="lucd-btn" id="scrollToTop" title="置顶">
+            <div class="innerbar">
+                <i class="lucd-icon lucd-icon-lg lucd-icon-32-top"></i>
+                <span class="text-top">置顶</span>
+            </div>
+        </a>
+    </div>
+    <!--固定侧边工具栏 Ends-->
+    <!--意见反馈栏 Starts-->
+    <div class="lucd-feedback-box">
+        <div class="lucd-feedback-heading">
+            <button class="lucd-btn lucd-btn-default" type="button">
+                <i class="lucd-icon lucd-icon-words"></i>
+                帮助&意见反馈
+                <i class="lucd-icon lucd-icon-arrDotL"></i>
+            </button>
+        </div>
+        <div class="lucd-feedback-content">
+            <form class="lucd-form-comment lucd-form-horizontal">
+                <div class="lucd-form-group">
+                    <textarea class="lucd-form-control" rows="10" placeholder="有任何意见或建议，请告诉我们！"></textarea>
+                </div>
+                <!--<div class="lucd-alert lucd-alert-warning">使用遇到问题？请先进入<a class="lucd-text-primary" href="javascript:void(0);" title="帮助中心">帮助中心</a></div>-->
+                <div class="lucd-form-group lucd-form-comment-footer lucd-text-right">
+                    <button class="lucd-btn lucd-btn-mute" type="button" id="feedback-close">关闭</button>
+                    <button class="lucd-btn lucd-btn-primary" type="button">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--意见反馈栏 Ends-->
+</body>
+</html>
