@@ -314,29 +314,29 @@ th {
 }
 
    /* 16*16 */
-.lucd-icon-dotted{ background-image: url(../icon/_16/icon_16_dotted_666.png);}  /*更多链接箭头*/
-.lucd-icon-link{ background-image: url(../icon/_16/icon_16_arr_o_R_c7c7c7.png);}  /*更多链接箭头*/
-.lucd-icon-freshen{ background-image: url(../icon/_16/icon_16_freshen_c7c7c7.png);}   /*刷新*/
-.lucd-icon-eye{ background-image: url(../icon/_16/icon_16_eye_9f9f9f.png);}   /*关注*/
-.lucd-icon-msg{ background-image: url(../icon/_16/icon_16_msg_9f9f9f.png);}   /*留言*/
-.lucd-icon-download-s{ background-image: url(../icon/_16/icon_16_download_9f9f9f.png);}   /*下载*/
+.lucd-icon-dotted{ background-image: url(../icon/16/icon_16_dotted_666.png);}  /*更多链接箭头*/
+.lucd-icon-link{ background-image: url(../icon/16/icon_16_arr_o_R_c7c7c7.png);}  /*更多链接箭头*/
+.lucd-icon-freshen{ background-image: url(../icon/16/icon_16_freshen_c7c7c7.png);}   /*刷新*/
+.lucd-icon-eye{ background-image: url(../icon/16/icon_16_eye_9f9f9f.png);}   /*关注*/
+.lucd-icon-msg{ background-image: url(../icon/16/icon_16_msg_9f9f9f.png);}   /*留言*/
+.lucd-icon-download-s{ background-image: url(../icon/16/icon_16_download_9f9f9f.png);}   /*下载*/
 
-.lucd-icon-laud{ background-image: url(../icon/_16/icon_16_laud_9f9f9f.png);}   /*点赞*/
-.lucd-icon-laud-warning{ background-image: url(../icon/_16/icon_16_laud_ff8e3b.png);}   /*点赞*/
+.lucd-icon-laud{ background-image: url(../icon/16/icon_16_laud_9f9f9f.png);}   /*点赞*/
+.lucd-icon-laud-warning{ background-image: url(../icon/16/icon_16_laud_ff8e3b.png);}   /*点赞*/
 
-.lucd-icon-arrLineL{ background-image: url(../icon/_16/icon_16_arrLineL_666.png);}   /*箭头向左*/
-.lucd-icon-arrLineR{ background-image: url(../icon/_16/icon_16_arrLineR_666.png);}   /*箭头向右*/
-.lucd-icon-arrLineDn{ background-image: url(../icon/_16/icon_16_arrLineDn_666.png);}   /*箭头向下*/
-.lucd-icon-arrLineUp{ background-image: url(../icon/_16/icon_16_arrLineUp_666.png);}   /*箭头向上*/
-.lucd-icon-arrDotL{ background-image: url(../icon/_16/icon_16_arrDotteL_555.png);}
-.lucd-icon-words{ background-image: url(../icon/_16/icon_16_words_00a086.png);}
-.lucd-icon-preview{ background-image: url(../icon/_16/icon_16_preview_fff.png);}   /*预览*/
-.lucd-icon-download{ background-image: url(../icon/_16/icon_16_download_fff.png);}   /*下载*/
+.lucd-icon-arrLineL{ background-image: url(../icon/16/icon_16_arrLineL_666.png);}   /*箭头向左*/
+.lucd-icon-arrLineR{ background-image: url(../icon/16/icon_16_arrLineR_666.png);}   /*箭头向右*/
+.lucd-icon-arrLineDn{ background-image: url(../icon/16/icon_16_arrLineDn_666.png);}   /*箭头向下*/
+.lucd-icon-arrLineUp{ background-image: url(../icon/16/icon_16_arrLineUp_666.png);}   /*箭头向上*/
+.lucd-icon-arrDotL{ background-image: url(../icon/16/icon_16_arrDotteL_555.png);}
+.lucd-icon-words{ background-image: url(../icon/16/icon_16_words_00a086.png);}
+.lucd-icon-preview{ background-image: url(../icon/16/icon_16_preview_fff.png);}   /*预览*/
+.lucd-icon-download{ background-image: url(../icon/16/icon_16_download_fff.png);}   /*下载*/
 
 
-.lucd-icon-search{ background-image: url(../icon/_16/icon_16_search_666.png);}   /*搜索*/
-.lucd-icon-sex-male{ background-image: url(../icon/_16/icon_16_sex_male.png);}   /*性别-男*/
-.lucd-icon-sex-female{ background-image: url(../icon/_16/icon_16_sex_female.png);}   /*性别-女*/
+.lucd-icon-search{ background-image: url(../icon/16/icon_16_search_666.png);}   /*搜索*/
+.lucd-icon-sex-male{ background-image: url(../icon/16/icon_16_sex_male.png);}   /*性别-男*/
+.lucd-icon-sex-female{ background-image: url(../icon/16/icon_16_sex_female.png);}   /*性别-女*/
 
 
 
@@ -1731,7 +1731,7 @@ select[multiple].lucd-input-lg {
 }
 .lucd-form-search-vice .lucd-btn:hover .lucd-icon-search,
 .lucd-form-search-vice .lucd-btn:focus .lucd-icon-search{
-  background-image: url(../icon/_16/icon_16_search_fff.png);
+  background-image: url(../icon/16/icon_16_search_fff.png);
 }
 
   /*评论输入框*/
@@ -2569,10 +2569,10 @@ fieldset[disabled] .lucd-btn-link {
   background-color: transparent;
 }
 .lucd-btn-link:hover .lucd-icon-link{
-  background-image: url(../icon/_16/icon_16_arr_o_R_00a086.png);
+  background-image: url(../icon/16/icon_16_arr_o_R_00a086.png);
 }
 .lucd-btn-link:hover .lucd-icon-freshen{
-	background-image: url(../icon/_16/icon_16_freshen_00a086.png);
+	background-image: url(../icon/16/icon_16_freshen_00a086.png);
 	-webkit-animation: spin 1.5s linear 0s infinite;
 			animation: spin 1.5s linear 0s infinite;
 }
@@ -3870,7 +3870,7 @@ fieldset[disabled] .lucd-navbar-inverse .lucd-btn-link:focus {
 .lucd-pagination > .active > span:hover .lucd-icon-arrLineL,
 .lucd-pagination > .active > a:focus .lucd-icon-arrLineL,
 .lucd-pagination > .active > span:focus .lucd-icon-arrLineL{
-  background-image: url(../icon/_16/icon_16_arrLineL_fff.png);
+  background-image: url(../icon/16/icon_16_arrLineL_fff.png);
 }
 .lucd-pagination > .disabled > span .lucd-icon-arrLineL,
 .lucd-pagination > .disabled > span:hover .lucd-icon-arrLineL,
@@ -3878,7 +3878,7 @@ fieldset[disabled] .lucd-navbar-inverse .lucd-btn-link:focus {
 .lucd-pagination > .disabled > a .lucd-icon-arrLineL,
 .lucd-pagination > .disabled > a:hover .lucd-icon-arrLineL,
 .lucd-pagination > .disabled > a:focus .lucd-icon-arrLineL {
-  background-image: url(../icon/_16/icon_16_arrLineL_b8b8b8.png);
+  background-image: url(../icon/16/icon_16_arrLineL_b8b8b8.png);
 }
 
 .lucd-pagination > li > a:hover .lucd-icon-arrLineR,
@@ -3891,7 +3891,7 @@ fieldset[disabled] .lucd-navbar-inverse .lucd-btn-link:focus {
 .lucd-pagination > .active > span:hover .lucd-icon-arrLineR,
 .lucd-pagination > .active > a:focus .lucd-icon-arrLineR,
 .lucd-pagination > .active > span:focus .lucd-icon-arrLineR{
-  background-image: url(../icon/_16/icon_16_arrLineR_fff.png);
+  background-image: url(../icon/16/icon_16_arrLineR_fff.png);
 }
 .lucd-pagination > .disabled > span .lucd-icon-arrLineR,
 .lucd-pagination > .disabled > span:hover .lucd-icon-arrLineR,
@@ -3899,7 +3899,7 @@ fieldset[disabled] .lucd-navbar-inverse .lucd-btn-link:focus {
 .lucd-pagination > .disabled > a .lucd-icon-arrLineR,
 .lucd-pagination > .disabled > a:hover .lucd-icon-arrLineR,
 .lucd-pagination > .disabled > a:focus .lucd-icon-arrLineR {
-  background-image: url(../icon/_16/icon_16_arrLineR_b8b8b8.png);
+  background-image: url(../icon/16/icon_16_arrLineR_b8b8b8.png);
 }
 
 .lucd-pagination.center{
@@ -4272,9 +4272,9 @@ a.lucd-thumbnail.active {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-.lucd-thumbnail-footer > li a:hover .lucd-icon-eye{ background-image: url(../icon/_16/icon_16_eye_00a086.png);}
-.lucd-thumbnail-footer > li a:hover .lucd-icon-msg{ background-image: url(../icon/_16/icon_16_msg_00a086.png);}
-.lucd-thumbnail-footer > li a:hover .lucd-icon-laud{ background-image: url(../icon/_16/icon_16_laud_00a086.png);}
+.lucd-thumbnail-footer > li a:hover .lucd-icon-eye{ background-image: url(../icon/16/icon_16_eye_00a086.png);}
+.lucd-thumbnail-footer > li a:hover .lucd-icon-msg{ background-image: url(../icon/16/icon_16_msg_00a086.png);}
+.lucd-thumbnail-footer > li a:hover .lucd-icon-laud{ background-image: url(../icon/16/icon_16_laud_00a086.png);}
 
 	/*图片缩略图 Ends*/
 
@@ -4554,7 +4554,7 @@ a.lucd-thumbnail.active {
     padding-left:18px!important;
 }
 .lucd-list-icon > li a:hover .lucd-icon-dotted{
-	background-image:url(../icon/_16/icon_16_dotted_00a086.png);
+	background-image:url(../icon/16/icon_16_dotted_00a086.png);
 }
 .lucd-list-icon > li .lucd-icon{
 	width:16px;
@@ -6522,16 +6522,16 @@ html {
 .lucd-feedback-heading > .lucd-btn:focus .lucd-icon-words,
 .lucd-feedback-heading > .lucd-btn.active .lucd-icon-words,
 .lucd-feedback-heading > .lucd-btn.active:hover .lucd-icon-words{
-	background-image: url(../icon/_16/icon_16_words_fff.png);
+	background-image: url(../icon/16/icon_16_words_fff.png);
 }
 .lucd-feedback-heading > .lucd-btn:hover .lucd-icon-arrDotL,
 .lucd-feedback-heading > .lucd-btn:active .lucd-icon-arrDotL,
 .lucd-feedback-heading > .lucd-btn:focus .lucd-icon-arrDotL{
-	background-image: url(../icon/_16/icon_16_arrDotteL_fff.png);
+	background-image: url(../icon/16/icon_16_arrDotteL_fff.png);
 }
 .lucd-feedback-heading > .lucd-btn.active .lucd-icon-arrDotL,
 .lucd-feedback-heading > .lucd-btn.active:hover .lucd-icon-arrDotL{
-	background-image: url(../icon/_16/icon_16_arrDotteR_fff.png);
+	background-image: url(../icon/16/icon_16_arrDotteR_fff.png);
 }
 
 
@@ -6691,14 +6691,14 @@ html {
   transition:all .3s ease-in-out;
 }
 .lucd-viewdata-heading .lucd-btn:hover .lucd-icon-arrLineDn{
-  background-image: url(../icon/_16/icon_16_arrLineDn_00a086.png);
+  background-image: url(../icon/16/icon_16_arrLineDn_00a086.png);
 }
 .lucd-viewdata-heading .lucd-open > .lucd-btn .lucd-icon-arrLineDn,
 .lucd-viewdata-heading .lucd-open > .lucd-btn:hover .lucd-icon-arrLineDn,
 .lucd-viewdata-heading .lucd-open > .lucd-btn:focus .lucd-icon-arrLineDn{
   transform:rotate(180deg);
-  background-image: url(../icon/_16/icon_16_arrLineDn_00a086.png);
-  background-image: url(../icon/_16/icon_16_arrLineUp_00a086.png)\9;
+  background-image: url(../icon/16/icon_16_arrLineDn_00a086.png);
+  background-image: url(../icon/16/icon_16_arrLineUp_00a086.png)\9;
 }
 .lucd-viewdata-heading .lucd-open > .lucd-btn{
   margin-bottom: -7px!important;
@@ -8338,11 +8338,11 @@ html {
 }
 .lucd-album-smallMap .btn-prev-small{
   margin-bottom: 6px;
-  background-image: url(../icon/_16/icon_16_arrLineUp_666.png);
+  background-image: url(../icon/16/icon_16_arrLineUp_666.png);
 }
 .lucd-album-smallMap .btn-next-small{
   margin-top: 6px;
-  background-image: url(../icon/_16/icon_16_arrLineDn_666.png);
+  background-image: url(../icon/16/icon_16_arrLineDn_666.png);
 }
 
 .lucd-album-smallMap .btn-prev-small:hover,
@@ -8517,12 +8517,12 @@ html {
 	transition:all .3s ease-in-out;
 }
 .lucd-exhibition-project-info > .lucd-btn:hover .lucd-icon{
-    background-image: url(../icon/_16/icon_16_arrLineDn_00a086.png);
+    background-image: url(../icon/16/icon_16_arrLineDn_00a086.png);
 }
 .lucd-exhibition-project-info.lucd-open > .lucd-btn .lucd-icon{
 	transform:rotate(180deg);
-    background-image: url(../icon/_16/icon_16_arrLineDn_00a086.png);
-    background-image: url(../icon/_16/icon_16_arrLineUp_00a086.png)\9;
+    background-image: url(../icon/16/icon_16_arrLineDn_00a086.png);
+    background-image: url(../icon/16/icon_16_arrLineUp_00a086.png)\9;
 }
 .lucd-exhibition-project-info > .lucd-dropdown-menu{
 	margin-top: 12px;
@@ -8769,13 +8769,13 @@ html {
   width:16px;
   height:16px;
   line-height:16px;
-  background: url(../icon/_16/icon_16_arrLineL_666.png) no-repeat 50%;
+  background: url(../icon/16/icon_16_arrLineL_666.png) no-repeat 50%;
   display: inline-block;
   overflow:hidden;
   cursor:pointer;
 }
 .lucd-leftLoop .hd .next{
-  background-image: url(../icon/_16/icon_16_arrLineR_666.png);
+  background-image: url(../icon/16/icon_16_arrLineR_666.png);
 }
 .lucd-leftLoop .hd ul{
   margin: 0;
