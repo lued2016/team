@@ -1,0 +1,1251 @@
+﻿@charset "utf-8";  
+
+/**
+** 代码制作人: 马泽棉
+** 制作时间：2015-11-12
+** 文件内容描述：调查问卷 引导动画样式
+** 修改日期：无
+** 修改内容：无
+**********************************************/
+
+
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,body {
+	height: 100%;
+	font-size: 62.5%;
+}
+body {
+    margin: 0 auto;
+    width: 640px;
+    text-align: center;
+	font-family: "Microsoft YaHei", Roboto,HelveticaNeue,Helvetica,Arial,sans-serif;
+	color: #333;
+	background-color: #fff;
+}
+
+
+/* 背景颜色
+   ========================================================================== */
+.gu-bg-blue{
+	background-color: #57aced;
+}
+
+
+
+/* 公共
+   ========================================================================== */
+.gu-guide-body{}
+.gu-guide-body .swiper-container{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f8f8f8;
+}
+.gu-page{
+	padding: 20px;
+	overflow: hidden;
+	opacity: 0;
+}
+.gu-box-center{
+	display: -webkit-box;
+	display: box;
+	-webkit-box-orient: vertical;
+			box-orient: vertical;
+	-webkit-box-pack: center;
+			box-pack: center;
+	-webkit-box-align:center;
+			box-align:center;
+}
+
+.gu-footer{
+	width: 100%;
+	padding-bottom: 8px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1000;
+}
+.gu-footer-arrow{
+	margin: 0 auto 15px;
+	width: 42px;
+	height: 20px;
+	background: url(../images/lucd_arrUp_fff.png) no-repeat 50%;
+	background-size: cover;
+}
+.gu-page-footer-txt{
+	margin: 0 0 12px;
+	width: 100%;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	font-size: 2.2rem;
+}
+.gu-btn{
+	width: 180px;
+	height: 74px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 100% auto;
+	display: inline-block;
+	transition:all .3s ease-in-out;
+	-webkit-appearance:none;
+}
+.gu-btn-primary{
+	background-image: url(../images/btn_join.png);
+}
+.gu-btn-primary:active{
+	background-image: url(../images/btn_join_hover.png);
+}
+
+/* 第一页
+   ========================================================================== */
+.gu-page-1{
+	background: #57aced url(../images/P1/P1_bg.png) no-repeat 0 0;
+	background-size: 100% auto;
+}
+.gu-page-1 .gu-footer-arrow{
+	background-image: url(../images/lucd_arrUp.png);
+}
+.gu-page-1 .gu-page-footer-txt{
+	color: #cbcbcb;
+}
+.gu-p1-cloud,
+.gu-p1-cloud-vice,
+.gu-p1-rocket{
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.gu-p1-cloud{
+	height: 165px;
+	background-image: url(../images/P1/P1_cloud.png);
+	z-index: 3;
+}
+.gu-p1-cloud-vice{
+	height: 329px;
+	background-image: url(../images/P1/P1_cloud_vice.png);
+	z-index: 1;
+}
+.gu-p1-rocket{
+	height: 410px;
+	background-image: url(../images/P1/P1_rocket.png);
+	background-position: 50% 0;
+	bottom: 65px;
+	z-index: 2;
+}
+.gu-p1-heading{
+	height: 50%;
+	position: relative;
+}
+.gu-p1-heading img{ display: block;}
+.gu-p1-heading > .img-txt{
+	padding-right: 180px;
+}
+.gu-p1-heading > .img-txt-vice{
+	margin-top: 10px;
+}
+.gu-p1-heading > .img-star{
+	width: 160px;
+	position: absolute;
+	right: 80px;
+	top:0px;
+}
+
+/* 第二页
+   ========================================================================== */
+.gu-page-2{
+	background-color: #f56d31;
+}
+.gu-p2-depict{
+	width: 100%;
+	height: 35px;
+	background: url(../images/P2/P2_bottom_txt.png) no-repeat 50%;
+	position: absolute;
+	left: 0;
+	bottom: 80px;
+}
+.gu-p2-person{
+	width: 100%;
+	height: 100%;
+	background: url(../images/P2/P2_person_2_shade.png) no-repeat 100% 100%;
+	position: absolute;
+	left: 0;
+	bottom: 130px;
+}
+.gu-p2-person img,
+.gu-p2-person-vice img{
+	display: block;
+	position: absolute;
+}
+.gu-p2-person .person-box{
+	width: 50%;
+	position: absolute;
+	right: 70px;
+    bottom: 44px;
+}
+.gu-p2-person .img-person{
+	width: 95%;
+	right: 5px;
+    bottom: 24px;
+}
+.gu-p2-person .img-person-mauley{
+	right: 155px;
+    bottom: 320px;
+    z-index: 1;
+}
+.gu-p2-person .img-comment{
+    right: 80px;
+    bottom: 390px;
+    width: 35%;
+}
+.gu-p2-person .img-txt{
+	right:185px;
+	bottom: 5px;
+}
+.gu-p2-person-vice{
+	width: 55%;
+	height: 48%;
+	background: url(../images/P2/P2_person_1_shade.png) no-repeat 100% 100%;
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
+.gu-p2-person-vice .img-person{
+    left: 96px;
+    bottom: 35px;
+}
+.gu-p2-person-vice .img-txt{
+    left: 108px;
+    bottom: -40px;
+}
+
+/* 第三页
+   ========================================================================== */
+.gu-page-3{
+	background-color: #5eb28a;
+}
+.gu-p3-depict{
+	width: 50%;
+	height: 35px;
+	background: url(../images/P3/P3_bottom_txt.png) no-repeat 50%;
+	position: absolute;
+	left: -20px;
+	bottom: 240px;
+}
+.gu-p3-person{
+	width: 100%;
+	height: 80%;
+	background: url(../images/P3/P3_personage.png) no-repeat 70% 100%;
+	background-size: auto 74%;
+	position: absolute;
+	left: 0;
+	bottom: 218px;
+	z-index: 2;
+}
+.gu-p3-person > img{
+	width: 270px;
+	position: absolute;
+	right: 52%;
+	top: 90px;
+}
+.gu-p3-desk{
+	width: 100%;
+	height: 220px;
+	background: #eed769 url(../images/P3/P3_desk.png) no-repeat 50%;
+	background-size: auto 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 3;
+}
+.gu-p3-desk > img{
+	margin: 22px 0 0 80px;
+}
+
+/* 第四页
+   ========================================================================== */
+.gu-page-4{
+	background-color: #796bdc;
+}
+.gu-p4-topPart{
+	width: 100%;
+	height: 55%;
+	background: url(../images/P4/P4_personage.png) no-repeat 50% 100%;
+	background-size: 70% auto;
+	position: relative;
+}
+.gu-p4-cloud,
+.gu-p4-cloud-vice{
+	width: 102px;
+	height: 53px;
+	background: url(../images/P4/P4_cloud.png) no-repeat 50% 100%;
+	background-size: 100% auto;
+	position: absolute;
+}
+.gu-p4-cloud{
+    left: 52px;
+    top: 50px;
+}
+.gu-p4-cloud-vice{
+	width: 80px;
+    right: 72px;
+    top: 15px;
+}
+.gu-p4-comment{
+	width: 137px;
+	height: 108px;
+	background: url(../images/P4/P4_comment.png) no-repeat 50%;
+	position: absolute;
+    right: 78px;
+    bottom: 155px;
+}
+.gu-p4-comment > img{
+	position: absolute;
+    left: 8px;
+    top: 24px;
+}
+.gu-p4-bottomBG{
+	width: 100%;
+	height: 45%;
+	background-color: #695bbd;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.gu-p4-road{
+	margin-top: 20px;
+	width: 100%;
+	height: 80px;
+	background: #5d50a8 url(../images/P4/P4_road_line.png) repeat 0 50%;
+	position: relative;
+}
+.gu-p4-road > img{
+	width: 230px;
+	position: absolute;
+	left: 50%;
+	bottom: 52%;
+	margin-left: -115px;
+}
+.gu-p4-depict{
+	width: 100%;
+	height: 180px;
+	background: url(../images/P4/P4_bottom_txt.png) no-repeat 50%;
+	background-size: auto 100%;
+	position: absolute;
+	left: 0;
+	bottom: 76px;
+	z-index: 5;
+}
+
+
+/* 第五页
+   ========================================================================== */
+.gu-page-5{
+	background: #958e81 url(../images/P5/P5_bg.png) no-repeat 0 0;
+	background-size: auto 100% ;
+}
+.gu-p5-placard{
+	width: 100%;
+	height: 50%;
+	background: url(../images/P5/P5_placard.png) no-repeat 55% 10%;
+	background-size: auto 80%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 4;
+}
+.gu-p5-person{
+	margin-left: -20px;
+	margin-right: -20px;
+	height: 72%;
+	background: url(../images/P5/P5_pergoup.png) no-repeat 50% 100%;
+	background-size: 100% auto;
+	position: relative;
+	z-index: 5;
+}
+.gu-p5-person > img{
+	position: absolute;
+    right: 209px;
+    bottom: 106px;
+}
+.gu-p5-depict{
+	width: 100%;
+	height: 29%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 4;
+}
+.gu-p5-depict > img:nth-child(1){
+	margin: 10px 0 15px;
+}
+
+.gu-p5-depict > img:nth-child(2){
+	margin: 0 auto;
+	width: 300px;
+	display: block;
+}
+
+
+
+/* 第六页
+   ========================================================================== */
+.gu-page-6{
+	background: #005d7e url(../images/P6/P6_bg.png) no-repeat 50% 0;
+	background-size: cover;
+}
+.gu-p6-heading{
+	width: 340px;
+	height: 219px;
+	background: url(../images/P6/P6_comment.png) no-repeat 50%;
+	background-size: 100% auto;
+	position: absolute;
+	right: 10px;
+    top: 20px;
+}
+.gu-p6-bottomPart{
+	width: 100%;
+	height: 45%;
+	background: url(../images/P6/P6_bottom_bg.png) no-repeat 50% 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 4;
+}
+.gu-p6-bottomPart > img{
+	position: absolute;
+}
+.gu-p6-bottomPart > img:nth-child(1){
+	right: 51%;
+	top: -150px;
+}
+.gu-p6-bottomPart > img:nth-child(2){
+	left: 56%;
+    top: -204px;
+}
+.gu-p6-depict{
+	width: 100%;
+	height: 77px;
+	background: url(../images/P6/P6_bottom_txt.png) no-repeat 50% 25%;
+	position: absolute;
+	left: 0;
+	bottom: 78px;
+}
+.gu-p6-btnbar{
+	width: 100%;
+	height: 77px;
+	position: absolute;
+	left: 0;
+	bottom: 78px;
+	z-index: 10;
+}
+
+.gu-p6-gift{
+	width: 100%;
+	height: 436px;
+	background: url(../images/P6/P6_gift.png) no-repeat 50% 60%;
+	background-size: auto 30%;
+	position: absolute;
+	left: 0;
+	bottom: 40px;
+	z-index:4;
+}
+.gu-p6-gift .ribbon{
+	width: 200px;
+	height: 200px;
+}
+.gu-p6-gift .flycoin{
+	width: 30px;
+	position: absolute;
+}
+.gu-p6-gift .flycoin img{
+	width: 100%;
+}
+.gu-p6-gift .flycoin:nth-child(2) {
+    right: 55%;
+    top: 180px;
+}
+.gu-p6-gift .flycoin:nth-child(3) {
+    left: 55%;
+    top: 150px;
+}
+.gu-p6-gift .flycoin:nth-child(4) {
+    -webkit-transform: scale(0.8);
+   			transform: scale(0.8);
+    left: 65%;
+    top: 240px;
+}
+.gu-p6-gift .flycoin:nth-child(5) {
+    width: 16%;
+    right: 55%;
+    top: 220px;
+}
+.gu-p6-gift .flycoin:nth-child(6) {
+    width: 12%;
+    left: 0;
+    top: 230px;
+}
+.gu-p6-gift .flycoin .inner{
+	position: relative;
+}
+.gu-p6-gift .flycoin .inner>img:nth-child(2) {
+    position: absolute;
+    top: 8px;
+    left: -2px;
+    z-index: -1;
+}
+
+
+
+
+/* 动画效果
+   ========================================================================== */
+.swiper-slide-active.gu-page{
+	opacity: 1;
+}
+.swiper-slide-active .gu-footer{
+	-webkit-animation: fadeInUp .5s ease-in-out .7s 1;
+			animation: fadeInUp .5s ease-in-out .7s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.swiper-slide-active .gu-footer-arrow{
+	-webkit-animation: moveUpDown 1.5s ease-in-out .9s infinite;
+			animation: moveUpDown 1.5s ease-in-out .9s infinite;
+}
+
+	/*第一页*/
+.gu-page-1.swiper-slide-active .gu-p1-cloud,
+.gu-page-1.swiper-slide-active .gu-p1-cloud-vice{
+	-webkit-animation: fadeInUp .5s ease-in-out 0s 1;
+			animation: fadeInUp .5s ease-in-out 0s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-1.swiper-slide-active .gu-p1-cloud-vice{
+	-webkit-animation-duration: .3s;
+	    	animation-duration: .3s;
+	-webkit-animation-delay: .2s;
+			animation-delay: .2s;
+}
+.gu-page-1.swiper-slide-active .gu-p1-rocket{
+	-webkit-animation: bounceInUp .5s ease-in-out .4s 1;
+			animation: bounceInUp .5s ease-in-out .4s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-1.swiper-slide-active .gu-p1-heading > .img-txt{
+	-webkit-animation: fadeInLeft .5s ease-in-out .4s 1;
+			animation: fadeInLeft .5s ease-in-out .4s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-1.swiper-slide-active .gu-p1-heading > .img-txt-vice{
+	-webkit-animation: fadeInRight .5s ease-in-out .6s 1;
+			animation: fadeInRight .5s ease-in-out .6s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-1.swiper-slide-active .gu-p1-heading > .img-star{
+	-webkit-animation: dropInDown .5s ease-in-out .9s 1;
+			animation: dropInDown .5s ease-in-out .9s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+
+	/*第二页*/
+.gu-page-2.swiper-slide-active .gu-p2-person-vice{
+	-webkit-animation: fadeInLeft .5s ease-in-out 0s 1;
+			animation: fadeInLeft .5s ease-in-out 0s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-2.swiper-slide-active .gu-p2-person-vice .img-person{
+	-webkit-animation: dropInDown .5s ease-in-out .3s 1;
+			animation: dropInDown .5s ease-in-out .3s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-2.swiper-slide-active .gu-p2-person-vice .img-txt{
+	-webkit-animation: fadeInUp .5s ease-in-out .5s 1;
+			animation: fadeInUp .5s ease-in-out .5s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-2.swiper-slide-active .gu-p2-person{
+	-webkit-animation: fadeInRight .5s ease-in-out .2s 1;
+			animation: fadeInRight .5s ease-in-out .2s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-2.swiper-slide-active .gu-p2-person .person-box{
+	-webkit-animation: dropInDown .5s ease-in-out .5s 1;
+			animation: dropInDown .5s ease-in-out .5s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-2.swiper-slide-active .gu-p2-person .img-person-mauley{
+	-webkit-animation: tada 1.5s ease-in-out .8s infinite;
+			animation: tada 1.5s ease-in-out .8s infinite;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-2.swiper-slide-active .gu-p2-person .img-comment{
+	-webkit-animation: dropInDown .5s ease-in-out .7s 1;
+			animation: dropInDown .5s ease-in-out .7s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-2.swiper-slide-active .gu-p2-person .img-txt{
+	-webkit-animation: fadeInUp .5s ease-in-out .9s 1;
+			animation: fadeInUp .5s ease-in-out .9s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-2.swiper-slide-active .gu-p2-depict{
+	-webkit-animation: fadeInUp .5s ease-in-out .8s 1;
+			animation: fadeInUp .5s ease-in-out .8s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+
+	/*第三页*/
+.gu-page-3.swiper-slide-active .gu-p3-desk{
+	-webkit-animation: fadeInUp .5s ease-in-out 0s 1;
+			animation: fadeInUp .5s ease-in-out 0s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-3.swiper-slide-active .gu-p3-desk > img{
+	-webkit-animation: tada 2s ease-in-out .4s infinite;
+			animation: tada 2s ease-in-out .4s infinite;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-3.swiper-slide-active .gu-p3-person{
+	-webkit-animation: dropInDown .5s ease-in-out .2s 1;
+			animation: dropInDown .5s ease-in-out .2s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-3.swiper-slide-active .gu-p3-person > img{
+	-webkit-animation: dropInDown .3s ease-in-out .6s 1;
+			animation: dropInDown .3s ease-in-out .6s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-3.swiper-slide-active .gu-p3-depict{
+	-webkit-animation: fadeInLeft .5s ease-in-out .6s 1;
+			animation: fadeInLeft .5s ease-in-out .6s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+
+	/*第四页*/
+.gu-page-4.swiper-slide-active .gu-p4-cloud,
+.gu-page-4.swiper-slide-active .gu-p4-cloud-vice{
+	-webkit-animation: shake 30s ease-in-out 0s infinite;
+		    animation: shake 30s ease-in-out 0s infinite;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-4.swiper-slide-active .gu-p4-cloud-vice{
+	-webkit-animation-duration: 18s;
+		    animation-duration: 18s;
+}
+.gu-page-4.swiper-slide-active .gu-p4-topPart{
+	-webkit-animation: dropInDown .5s ease-in-out .3s 1;
+			animation: dropInDown .5s ease-in-out .3s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-4.swiper-slide-active .gu-p4-comment > img{
+	-webkit-animation: tada 2s ease-in-out .4s infinite;
+			animation: tada 2s ease-in-out .4s infinite;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-4.swiper-slide-active .gu-p4-bottomBG{
+	-webkit-animation: fadeInUp .3s ease-in-out .3s 1;
+			animation: fadeInUp .3s ease-in-out .3s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-4.swiper-slide-active .gu-p4-road > img{
+	-webkit-animation: bounceInLeft 1.5s ease-in-out .5s 1;
+			animation: bounceInLeft 1.5s ease-in-out .5s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-4.swiper-slide-active .gu-p4-depict{
+	-webkit-animation: fadeInUp .5s ease-in-out .7s 1;
+			animation: fadeInUp .5s ease-in-out .7s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+
+	/*第五页*/
+.gu-page-5.swiper-slide-active .gu-p5-placard{
+	-webkit-animation: dropInDown .5s ease-in-out .1s 1;
+			animation: dropInDown .5s ease-in-out .1s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-5.swiper-slide-active .gu-p5-person{
+	-webkit-animation: bounceInUp .8s ease-in-out .3s 1;
+			animation: bounceInUp .8s ease-in-out .3s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-5.swiper-slide-active .gu-p5-person > img{
+	-webkit-animation: tada 1.5s ease-in-out .9s infinite;
+			animation: tada 1.5s ease-in-out .9s infinite;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-5.swiper-slide-active .gu-p5-depict{
+	-webkit-animation: fadeInUp .5s ease-in-out .9s 1;
+			animation: fadeInUp .5s ease-in-out .9s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+
+	/*第六页*/
+.gu-page-6.swiper-slide-active .gu-p6-bottomPart{
+	-webkit-animation: fadeInUp .3s ease-in-out .1s 1;
+			animation: fadeInUp .3s ease-in-out .1s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-6.swiper-slide-active .gu-p6-bottomPart > img:nth-child(1),
+.gu-page-6.swiper-slide-active .gu-p6-bottomPart > img:nth-child(2),
+.gu-page-6.swiper-slide-active .gu-p6-heading{
+	-webkit-animation: dropInDown .6s ease-in-out .3s 1;
+			animation: dropInDown .6s ease-in-out .3s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-6.swiper-slide-active .gu-p6-bottomPart > img:nth-child(2){
+	-webkit-animation-delay: .5s;
+			animation-delay: .5s;
+}
+.gu-page-6.swiper-slide-active .gu-p6-heading{
+	-webkit-animation-delay: .8s;
+			animation-delay: .8s;
+}
+.gu-page-6.swiper-slide-active .gu-p6-depict,
+.gu-page-6.swiper-slide-active .gu-p6-btnbar{
+	-webkit-animation: fadeInUp .3s ease-in-out .9s 1;
+			animation: fadeInUp .3s ease-in-out .9s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-6.swiper-slide-active .gu-p6-gift{
+	-webkit-animation: dropInDown .5s ease-in-out .6s 1;
+			animation: dropInDown .5s ease-in-out .6s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-6.swiper-slide-active .ribbon {
+	-webkit-animation: bounceIn .8s ease-in-out 1.2s 1;
+			animation: bounceIn .8s ease-in-out 1.2s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-6.swiper-slide-active .flycoin {
+	-webkit-animation: fadeInDown .8s ease-in-out 1.3s 1;
+			animation: fadeInDown .8s ease-in-out 1.3s 1;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-6.swiper-slide-active .flycoin .inner {
+	-webkit-animation: floatUpDown 1.5s ease-in-out 1.8s infinite;
+			animation: floatUpDown 1.5s ease-in-out 1.8s infinite;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+.gu-page-6.swiper-slide-active .flycoin .inner > img:nth-child(2) {
+	-webkit-animation: winFly .2s ease-in-out 1.5s infinite;
+			animation: winFly .2s ease-in-out 1.5s infinite;
+	-webkit-animation-fill-mode: both;
+	    	animation-fill-mode: both;		
+}
+
+/* Iphone6及以上适配样式
+   ========================================================================== */
+@media only screen and (min-device-width:375px){
+    .gu-p1-heading > .img-star{
+    	top:40px;
+    }
+    .gu-p2-person{
+    	bottom: 160px;
+    }
+	.gu-p2-person .img-comment{
+		width: 48%;
+		right: 60px;
+		bottom: 420px;
+	}
+    .gu-p3-person > img{
+    	top:40px;
+    }
+    .gu-p4-topPart{
+		background-size: 80% auto;
+    }
+    .gu-p4-comment{
+    	bottom: 170px;
+    }
+    .gu-p4-depict{
+    	bottom: 110px;
+    }
+    .gu-p5-depict > img:nth-child(1){
+    	margin-top: 30px;
+    }
+    .gu-p6-heading{
+    	top: 70px;
+    }
+    .gu-p6-gift{
+    	bottom: 60px;
+    }
+}

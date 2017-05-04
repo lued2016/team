@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>2016年EKP之旅</title>
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=640, user-scalable=no" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/swiper.css" />
+  <link rel="stylesheet" type="text/css" href="css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+  <script type="text/javascript" language="javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" language="javascript" src="js/NoSleep.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      // 禁止手机锁屏
+      var noSleep = new NoSleep();
+
+      function enableNoSleep() {
+        noSleep.enable();
+        document.removeEventListener('touchstart', enableNoSleep, false);
+      }
+
+      // Enable wake lock.
+      // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+      document.addEventListener('touchstart', enableNoSleep, false);
+      // ...
+      // Disable wake lock at some point in the future.
+      // (does not need to be wrapped in any user input event handler)
+      noSleep.disable();
+
+      // setTimeout(function(){
+      //   $("#loading").removeClass("active").addClass("prev").next().addClass("active");
+      // },2600); //2600
+
+      $(".tra-btn-touch").bind("click",function(){
+        animateCount();
+
+        function animateCount(){
+
+          setTimeout(function(){
+            $("#page-1").removeClass("active").addClass("prev touchOn").next().addClass("active");
+          },0);
+          setTimeout(function(){
+            $("#page-1").removeClass("touchOn");
+          },2100);
+          setTimeout(function(){
+            $("#page-2").removeClass("active").addClass("prev").next().addClass("active");
+          },5100);  //5100
+
+          setTimeout(function(){
+            $("#page-3").removeClass("active").addClass("prev").next().addClass("active").end().prev().removeClass("prev");
+          },15500);  //15500
+
+          setTimeout(function(){
+            $("#page-4").removeClass("active").addClass("prev").next().addClass("active").end().prev().removeClass("prev");
+          },24000); //24000
+
+          setTimeout(function(){
+            $("#page-5").removeClass("active").addClass("prev").next().addClass("active").end().prev().removeClass("prev");
+          },32000); //32000
+
+          setTimeout(function(){
+            $("#page-6").removeClass("active").addClass("prev").next().addClass("active").end().prev().removeClass("prev");
+          },40000); //40000
+
+          setTimeout(function(){
+            $("#page-7").removeClass("active").addClass("prev").next().addClass("active").end().prev().removeClass("prev");
+          },47500); //47500
+
+          setTimeout(function(){
+            $("#page-8").removeClass("active").addClass("prev").next().addClass("active").end().prev().removeClass("prev");
+          },54000); //54000
+
+        };
+      });
+
+    })
+  </script>
+
+</head>
+<body class="tra-main-body">
+  <section class="swiper-container">
+    <section class="swiper-wrapper">
+      <!-- 加载页面 Starts -->
+      <!-- <section class="tra-loading active" id="loading"></section> -->
+      <!-- 加载页面 Ends -->
+      <!-- Page1 Starts -->
+      <section class="swiper-slide tra-page-1 active" id="page-1">
+        <div class="tra-heading">
+          <p class="date">1998.10.09</p>
+          <p>两条平行线有了交点</p>
+          <p>成为第<span class="tra-txt-num">2125</span>名员工</p>
+        </div>
+        <div class="page-moon"></div>
+        <div class="page-astronaut-1"></div>
+        <div class="page-astronaut-2"></div>
+
+        <div class="page-planet-1"></div>
+        <div class="page-planet-2"></div>
+        <div class="page-planet-3"></div>
+        <div class="page-planet-4"></div>
+        <div class="tra-btn-touch">
+          <span>开启</span>
+        </div>
+      </section>
+      <!-- Page1 Ends -->
+      <!-- Page2 Starts -->
+      <section class="swiper-slide tra-page-2" id="page-2">
+        <div class="tra-heading">
+          <p class="date">2010.10.19</p>
+          <p>第一条流程</p>
+          <p class="tra-txt-emphasize">开启征途</p>
+        </div>
+        <div class="page-arm-one"></div>
+        <div class="page-arm-two"></div>
+      </section>
+      <!-- Page2 Ends -->
+      <!-- Page3 Starts -->
+      <section class="swiper-slide tra-page-3" id="page-3">
+        <ul class="page-maxBg">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="tra-heading">
+          <p>还记得陪你的第一个好友吗</p>
+          <p>导师</p>
+          <p>是位一直为你在线的人</p>
+        </div>
+        <div class="tra-heading">
+          <p>这一路上还好有他们的陪伴</p>
+          <p>感谢让我遇见了他们</p>
+        </div>
+        <div class="page-paperplane-1"><span></span></div>
+        <div class="page-paperplane-2"></div>
+        <div class="page-paperplane-3"></div>
+        <div class="page-paperplane-4"></div>
+      </section>
+      <!-- Page3 Ends -->
+      <!-- Page4 Starts -->
+      <section class="swiper-slide tra-page-4" id="page-4">
+        <div class="tra-heading">
+          <p>我们一起经历过<span class="tra-txt-num">1222</span>个日夜</p>
+        </div>
+        <div class="page-moon"></div>
+        <div class="page-building">
+          <div class="page-cube-1"></div>
+          <div class="page-cube-2"></div>
+          <div class="page-table">
+            <div class="page-clock"></div>
+            <div class="page-plan"></div>
+            <div class="page-miniascape"></div>
+            <div class="page-computer"></div>
+            <div class="page-chair"></div>
+            <div class="page-paper-1"></div>
+            <div class="page-paper-2"></div>
+            <div class="page-human"></div>
+
+          </div>
+        </div>
+      </section>
+      <!-- Page4 Ends -->
+      <!-- Page5 Starts -->
+      <section class="swiper-slide tra-page-5" id="page-5">
+        <div class="tra-rightBG"></div>
+        <div class="tra-heading">
+          <p>一共处理了<span class="tra-txt-num">3002</span>条工作流程</p>
+          <p>排名公司第<span class="tra-txt-num">30</span>位</p>
+        </div>
+        <div class="page-bottomBG"></div>
+        <div class="page-write-area">
+          <div class="page-write-dot dot-1 active"></div>
+          <div class="page-write-dot dot-2"></div>
+          <div class="page-write-dot dot-3"></div>
+          <div class="page-write-pen"></div>
+        </div>
+        <div class="page-bottom-area">
+          <div class="page-goods flowerpot-1"></div>
+          <div class="page-goods clock"></div>
+          <div class="page-goods notebook"></div>
+          <div class="page-goods PC"></div>
+          <div class="page-goods cup"></div>
+          <div class="page-goods penholder"></div>
+          <div class="page-goods book"></div>
+          <div class="page-goods flowerpot-2"></div>
+        </div>
+      </section>
+      <!-- Page5 Ends -->
+      <!-- Page6 Starts -->
+      <section class="swiper-slide tra-page-6" id="page-6">
+        <div class="tra-heading">
+          <p>每个人都有累的时候</p>
+          <p class="tra-txt-emphasize">每个人都有想停下来休息的时候</p>
+        </div>
+        <div class="page-bottomBG"></div>
+        <div class="page-book"></div>
+        <div class="page-person">
+          <span>Z</span>
+          <span>Z</span>
+          <span>Z...</span>
+        </div>
+        <div class="page-duvet">
+          <div class="page-hands"></div>
+        </div>
+        <div class="page-dialog-1"></div>
+        <div class="page-dialog-2"></div>
+        <div class="page-dialog-3"></div>
+      </section>
+      <!-- Page6 Ends -->
+      <!-- Page7 Starts -->
+      <section class="swiper-slide tra-page-7" id="page-7">
+        <div class="page-moon"></div>
+        <div class="page-tree">
+          <div class="page-leaves"></div>
+          <div class="page-fruit fruit-1">
+            <p>阅读量</p>
+            <p><span class="page-date">180</span>次</p>
+          </div>
+          <div class="page-fruit fruit-2">
+            <p>享受爱关怀</p>
+            <p><span class="page-date">4</span>次</p>
+          </div>
+          <div class="page-fruit fruit-3">
+            <p>积分</p>
+            <p><span class="page-date">400</span></p>
+          </div>
+          <div class="page-fruit fruit-4">
+            <p>论坛等级</p>
+            <p><span class="page-date">LV5</span></p>
+          </div>
+          <div class="page-fruit fruit-5">
+            <p>发帖数</p>
+            <p><span class="page-date">18</span>次</p>
+          </div>
+        </div>
+      </section>
+      <!-- Page7 Ends -->
+      <!-- Page8 Starts -->
+      <section class="swiper-slide tra-page-8" id="page-8">
+        <div class="page-obliqueBG"></div>
+        <!-- <div class="tra-star"></div> -->
+        <div class="tra-heading">
+          <p>最后</p>
+          <p class="tra-txt-emphasize">希望我们一起更高</p>
+        </div>
+        <div class="page-moon"></div>
+        <div class="page-titan">
+          <div class="page-person"></div>
+        </div>
+        <div class="page-shooting-star">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+      <!-- Page8 Ends -->
+      <!-- Page9 Starts -->
+      <section class="swiper-slide tra-page-9" id="page-9">
+        <div class="page-moon"></div>
+        <div class="tra-comment-bar">
+          <input class="tra-comment-input" type="text" name="" placeholder="写下你想说的话..." />
+          <button class="tra-comment-btn">发送</button>
+        </div>
+        <ul class="tra-comment">
+          <li class="comment-item">
+            <div class="comment-left">
+              <div class="comment-imgbox"><img src="images/page9/head-1.png"></div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-body">写下你想说的话...</div>
+            </div>
+          </li>
+          <li class="comment-item">
+            <div class="comment-left">
+              <div class="comment-imgbox"><img src="images/page9/head-2.png"></div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-body">写下你想说的话写下你想说的话写下你想说的话写下你想说的话写下你想说的话...</div>
+            </div>
+          </li>
+          <li class="comment-item">
+            <div class="comment-left">
+              <div class="comment-imgbox"><img src="images/page9/head-3.png"></div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-body">写下你想说的话...</div>
+            </div>
+          </li>
+          <li class="comment-item">
+            <div class="comment-left">
+              <div class="comment-imgbox"><img src="images/page9/head-4.png"></div>
+            </div>
+            <div class="comment-right">
+              <div class="comment-body">写下你想说的话...</div>
+            </div>
+          </li>
+
+        </ul>
+      </section>
+      <!-- Page9 Ends -->
+    </section>
+  </section>
+</body>
+</html>

@@ -1,0 +1,1756 @@
+﻿@charset "utf-8";  
+
+/**
+** 代码制作人: 马泽棉
+** 制作时间：2016-11-18
+** 文件内容描述：2016年蓝凌个人数据报告
+** 修改日期：无
+** 修改内容：无
+**********************************************/
+
+
+
+/*** 公共 Starts ****************************************************/
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  text-align: center;
+  font-family: Microsoft YaHei, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 1.6rem;
+  background-color: #fff;
+}
+h1,h2,h3,h4,h5,h6,p,ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ul{ list-style: none; }
+* {
+  -webkit-tap-highlight-color: rgba(255,0,0,0);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.DR-main-body{
+  margin: 0 auto;
+  width: 640px;
+}
+.DR-main-body .swiper-container{
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(../images/DR-bodyBg.png) no-repeat 50% 0;
+  background-size: cover;
+}
+.DR-main-body .swiper-slide {
+  padding: 1.5rem;
+  font-size: 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  overflow: hidden;
+  transition: opacity .3s ease;
+}
+.DR-main-body .swiper-slide-active { opacity: 1; }
+.DR-main-body .swiper-slide-prev,
+.DR-main-body .swiper-slide-next { opacity: 0; }
+.DR-midst-container{
+  padding: 1.5rem;
+  min-height: 50%;
+  color: #fff;
+  font-size: 2.4rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top:20%;
+}
+.DR-page-downward {
+  width: 34px;
+  height: 18px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -17px;
+}
+.DR-page-downward:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  background: url(../images/DR-bottom-arrowDn.png) no-repeat 50%;
+  background-size: 100% auto;
+  -webkit-animation: arrow 1.2s linear infinite;
+          animation: arrow 1.2s linear infinite;
+}
+.DR-main-body .swiper-slide:last-child .DR-page-downward:after{ display: none; }
+
+.DR-page-1{
+  background-image: url(../images/page1/page1-starry.png);
+  background-position: 100% 50%!important;
+  background-size: auto 100%!important;
+}
+.DR-page-2{ background-image: url(../images/page2/page2-starry.png); }
+.DR-page-3,
+.DR-page-4,
+.DR-page-5,
+.DR-page-6,
+.DR-page-7,
+.DR-page-8,
+.DR-page-9,
+.DR-page-10{
+  background-image: url(../images/starry.png);
+}
+.DR-page-10 {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+          box-orient: vertical;
+  -webkit-box-pack: center;
+          box-pack: center;
+  -webkit-box-align: center;
+          box-align: center;
+}
+
+.DR-heading-title{
+  margin: 1.2em 0 .5em;
+  text-align: center;
+  line-height: 1.2;
+  color: #00b4ff;
+  font-size: 3.6rem;
+  font-weight: normal;
+  position: relative;
+  z-index: 100;
+}
+.DR-text-content{
+  padding: 10px 1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 8rem;
+  left: 0;
+  right: 0;
+
+}
+.DR-text-content > ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+.DR-text-content > ul > li{
+  margin: .3rem 0;
+  text-align: left;
+  vertical-align: baseline;
+  color: #fff;
+  font-size: 2.4rem;
+}
+.DR-text-content > ul > li > .count,
+.DR-text-content > ul > li > .name{
+  margin: 0 8px;
+  color: #ff8400;
+  font-size: 1.6em;
+}
+.DR-text-content > ul.hasIcon > li{
+  padding-left: 28px;
+  background: url(../images/DR-list-item-arrow.png) no-repeat 0 18px;
+  background-size: 16px auto;
+}
+
+
+.DR-honour-board{
+  margin: 0;
+  padding: 10px 25px;
+  list-style: none;
+  min-height: 35%;
+  text-align: center;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+          box-orient: vertical;
+  -webkit-box-pack: center;
+          box-pack: center;
+  -webkit-box-align:center;
+          box-align:center;
+}
+.DR-honour-board:after,
+.DR-honour-board:before{
+  content: '';
+  display: table;
+  visibility: hidden;
+}
+.DR-honour-board:after{
+  clear: both;
+}
+.DR-honour-board > li{
+  width: 160px;
+  height: 160px;
+  margin: 10px 25px;
+  padding: 10px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  display: inline-block;
+  position: relative;
+}
+.DR-honour-board > li.honour-1{ background-image: url(../images/page9/page9-honour-1.png); }
+.DR-honour-board > li.honour-2{ background-image: url(../images/page9/page9-honour-2.png); }
+.DR-honour-board > li.honour-3{ background-image: url(../images/page9/page9-honour-3.png); }
+.DR-honour-board > li.honour-4{ background-image: url(../images/page9/page9-honour-4.png); }
+.DR-honour-board > li > span{
+  color: #fff;
+  font-size: 2.2rem;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+.DR-honour-board > li.honour-5{
+  width: 280px;
+  height: 280px;
+  background-image: url(../images/page10/page10-honour-1.png);
+}
+.DR-honour-board > li .avatarBox{
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,.75);
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: 58px;
+  margin-left: -30px;
+}
+.DR-honour-board > li .avatarBox > img{ max-width: 100%; }
+.DR-honour-content{
+  margin-top: 10rem;
+  width: 100%;
+  text-align: center;
+}
+.DR-honour-heading{
+  margin-bottom: 60px;
+  height: 50px;
+  background: url(../images/honour-txt-heading.png) no-repeat 50%;
+  background-size: auto 100%;
+}
+.DR-honour-txt{
+  margin: 10px 0 15px;
+  vertical-align: baseline;
+  color: #fff;
+  font-size: 2.8rem;
+}
+.DR-honour-txt > span{
+  margin: 0 10px;
+  color: #ff8400;
+}
+.DR-honour-txt > span.count{ font-size: 1.6em; }
+.DR-honour-share{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 10px;
+  text-align: center;
+}
+.DR-honour-share-title{
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 2.2rem;
+  position: relative;
+}
+.DR-honour-share-title:after,
+.DR-honour-share-title:before{
+  width: 35%;
+  content: '';
+  border-top: 1px solid #fff;
+  position: absolute;
+  top: 50%;
+}
+.DR-honour-share-title:before{ left: 0; }
+.DR-honour-share-title:after{ right: 0; }
+.DR-honour-share-btn{
+  margin: 0 25px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 55% auto;
+  display: inline-block;
+}
+.DR-honour-share-btn:active{ opacity: .55; }
+.DR-honour-share-btn.zone{
+  background-color: #eda200;
+  background-image: url(../images/share-icon-zone.png);
+}
+.DR-honour-share-btn.group{
+  background-color: #41ce28;
+  background-image: url(../images/share-icon-group.png);
+}
+
+
+
+/*** 公共 Ends ******************************************************/
+
+/*** 各页内容 Starts ******************************************************/
+
+/*第一页*/
+.DR-page-1 > .sphere{
+  width: 550px;
+  height: 550px;
+  background: url(../images/page1/page1-sphere.png) no-repeat 50%;
+  background-size: 75% auto;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -275px;
+}
+.DR-page-1 .rotating-clockwise{
+  width: 100%;
+  height: 100%;
+  background: url(../images/page1/page1-planet.png) no-repeat 50%;
+  background-size: 100% auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: rotating-clockwise 12s linear infinite;
+          animation: rotating-clockwise 12s linear infinite;
+}
+.DR-page-1 .rotating-anticlockwise{
+  width: 80%;
+  height: 80%;
+  background: url(../images/page1/page1-inner-planet.png) no-repeat 50%;
+  background-size: cover;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  -webkit-animation: rotating-anticlockwise 18s linear infinite;
+          animation: rotating-anticlockwise 18s linear infinite;
+}
+.DR-page-1 .rotating-clockwise:after,
+.DR-page-1 .rotating-anticlockwise:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(83,193,239,.85);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.DR-page-1 .rotating-clockwise:after{
+  width: 510px;
+  height: 520px;
+  left: 20px;
+  top: 15px;
+}
+.DR-page-1 .sphere-astronaut {
+  position: absolute;
+  bottom: -36px;
+  left: 64%;
+  width: 66px;
+  height: 74px;
+  z-index: 6;
+}
+.DR-page-1 .sphere-astronaut:after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/page1/page1-astronaut.png) no-repeat 50%;
+  background-size: 100% auto;
+  -webkit-animation: astronaut-float 8s linear infinite;
+          animation: astronaut-float 8s linear infinite;
+}
+.DR-page-1 .sphere-astronaut-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 96px;
+  z-index: 6;
+}
+.DR-page-1 .sphere-astronaut-2:after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/page1/page1-astronaut-2.png) no-repeat 50%;
+  background-size: 100% auto;
+  -webkit-animation: astronaut-float2 15s linear infinite;
+          animation: astronaut-float2 15s linear infinite;
+}
+.DR-page-1 .sphere-title{
+  margin: 140px auto 0;
+  width: 468px;
+  height: 264px;
+  background: url(../images/page1/page1-heading.png) no-repeat 50% 0;
+  background-size: 100% auto;
+  position: relative;
+  z-index: 10;
+}
+
+/*第二页*/
+.DR-page-2 .celestial-body{
+  width: 65%;
+  background: url(../images/page2/page2-planet.png) no-repeat 0 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  bottom: 0;
+}
+.DR-page-2 .sun{
+  width: 150px;
+  height: 150px;
+  background: url(../images/page2/page2-sun.png) no-repeat 50%;
+  background-size: 100% auto;
+  position: absolute;
+  right: -180px;
+  top: 260px;
+}
+.DR-page-2 .board{
+  padding: 15px 25px;
+  line-height: 1.3;
+  text-align: left;
+  color: #fff;
+  font-size: 2rem;
+  background-color: #38344d;
+  position: absolute;
+  left: 0;
+  top: 160px;
+}
+.DR-page-2 .board:after,
+.DR-page-2 .board:before{
+  content: '';
+  background-color: #38344d;
+  display: block;
+  position: absolute;
+}
+.DR-page-2 .board:before{
+  width: 98%;
+  height: 12px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  left: 0;
+  top: -20px;
+}
+.DR-page-2 .board:after{
+  width: 8px;
+  height: 15px;
+  right: 20px;
+  top: -15px;
+}
+.DR-page-2 .board .board-heading{
+  color: #fff000;
+  font-size: 1.5em;
+}
+.DR-page-2 .crowd-1,
+.DR-page-2 .crowd-2,
+.DR-page-2 .crowd-3,
+.DR-page-2 .passerby-1,
+.DR-page-2 .passerby-2{
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: auto 100%;
+  position: absolute;
+}
+.DR-page-2 .crowd-1{
+  width: 340px;
+  height: 88px;
+  background-image: url(../images/page2/page2-crowd-1.png);
+  top: 320px;
+  right: 52px;
+}
+.DR-page-2 .crowd-2{
+  width: 268px;
+  height: 63px;
+  background-image: url(../images/page2/page2-crowd-2.png);
+  top: 357px;
+  right: 88px;
+}
+.DR-page-2 .crowd-3{
+  width: 381px;
+  height: 106px;
+  background-image: url(../images/page2/page2-crowd-3.png);
+  top: 385px;
+  right: 18px;
+}
+.DR-page-2 .passerby-1{
+  width: 132px;
+  height: 171px;
+  background-image: url(../images/page2/page2-passerby-1.png);
+  top: 430px;
+  left: 45px;
+}
+.DR-page-2 .passerby-2{
+  width: 132px;
+  height: 171px;
+  background-image: url(../images/page2/page2-passerby-2.png);
+  top: 430px;
+  right: 82px;
+}
+.DR-page-2 .dialog{
+  padding: 15px 10px;
+  color: #5557a7;
+  font-size: 2rem;
+  white-space: nowrap;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,.95);
+  position: absolute;
+}
+.DR-page-2 .dialog:after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 10px;
+  border-color: transparent;
+  position: absolute;
+}
+.DR-page-2 .passerby-1 .dialog{
+  top: -70px;
+  left: 0;
+}
+.DR-page-2 .passerby-1 .dialog:after{
+  border-style: solid dashed dashed;
+  border-color: rgba(255,255,255,.95) transparent transparent;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -10px;
+}
+.DR-page-2 .passerby-2 .dialog{
+  border-bottom-left-radius: 0;
+  top: -30px;
+  right: -214px;
+}
+.DR-page-2 .passerby-2 .dialog:after{
+  border-width: 4px 6px;
+  border-style: solid dashed dashed solid;
+  border-color: rgba(255,255,255,.95) transparent transparent rgba(255,255,255,.95);
+  bottom: -7px;
+  left: 0;
+}
+
+/*第三页*/
+.DR-page-3 .DR-midst-container{
+  width: 600px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -300px;
+}
+.DR-page-3 .graph-grid{
+  width: 100%;
+  height: 100%;
+  background: url(../images/page3/page3-graph-grid.png) no-repeat 50% 0;
+  background-size: 90% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.DR-page-3 .graph-line{
+  width: 442px;
+  width: 0;
+  height: 299px;
+  background: url(../images/page3/page3-graph-line.png) no-repeat 0 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -221px;
+  z-index: 9;
+}
+.DR-page-3 .graph-rocket {
+  width: 66px;
+  height: 33px;
+  position: absolute;
+  left: 50%;
+  top: 145px;
+  z-index: 10;
+}
+
+.DR-page-3 .graph-rocket .orbit-3 {
+  width: 66px;
+  height: 33px;
+  background: url(../images/page3/page3-graph-rocket.png) no-repeat 50%;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.DR-page-3 .graph-rocket .orbit-2{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+.DR-page-3 .graph-list{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 160px;
+}
+.DR-page-3 .graph-list > li{
+  margin: 0 30px;
+  width: 102px;
+  background: url(../images/page3/page3-graph-columnar.png) no-repeat;
+  display: inline-block;
+}
+.DR-page-3 .graph-list > li:nth-child(1){
+  height: 142px;
+  background-position: 0 100%;
+}
+.DR-page-3 .graph-list > li:nth-child(2){
+  height: 216px;
+  background-position: -102px 100%;
+}
+.DR-page-3 .graph-list > li:nth-child(3){
+  height: 310px;
+  background-position: -204px 100%;
+}
+
+/*第四页*/
+.DR-page-4 .DR-midst-container{
+  min-height: auto;
+  top: 45%;
+  left: 50%;
+  right: auto;
+  margin-left: -284px;
+  margin-top: -238px;
+  width: 567px;
+  height: 476px;
+  padding: 0;
+}
+.DR-page-4 .earth{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: url(../images/page4/page4-earth.png) repeat-y 0 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+.DR-page-4 .site-group{
+  background: url(../images/page4/page4-map.png) no-repeat 50% 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.DR-page-4 .site{
+  width: 21px;
+  height: 21px;
+  background: url(../images/page4/page4-site.png) no-repeat 50%;
+  display: block;
+  position: absolute;
+}
+.DR-page-4 .site-1 {
+  right: 98px;
+  top: 370px;
+}
+.DR-page-4 .site-2 {
+  right: 77px;
+  top: 323px;
+}
+.DR-page-4 .site-3 {
+  right: 141px;
+  top: 367px;
+}
+.DR-page-4 .site-4 {
+  right: 141px;
+  top: 260px;
+}
+.DR-page-4 .site-5 {
+  right: 172px;
+  top: 319px;
+}
+.DR-page-4 .site-6 {
+  right: 182px;
+  top: 374px;
+}
+.DR-page-4 .site-7 {
+  right: 283px;
+  top: 385px;
+}
+.DR-page-4 .site-8 {
+  right: 239px;
+  top: 303px;
+}
+.DR-page-4 .site-9 {
+  right: 151px;
+  top: 183px;
+}
+.DR-page-4 .site-10 {
+  right: 57px;
+  top: 134px;
+}
+.DR-page-4 .site-11 {
+  right: 51px;
+  top: 84px;
+}
+.DR-page-4 .site-12 {
+  right: 98px;
+  top: 53px;
+}
+.DR-page-4 .site-13 {
+  right: 204px;
+  top: 205px;
+}
+.DR-page-4 .site-14 {
+  right: 327px;
+  top: 224px;
+}
+.DR-page-4 .site-15 {
+  left: 240px;
+  top: 274px;
+}
+.DR-page-4 .site-16 {
+  left: 147px;
+  top: 232px;
+}
+.DR-page-4 .site-17 {
+  left: 116px;
+  top: 296px;
+}
+.DR-page-4 .site-18 {
+  left: 168px;
+  top: 187px;
+}
+.DR-page-4 .site-19 {
+  left: 116px;
+  top: 137px;
+}
+.DR-page-4 .line{
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: block;
+  position: absolute;
+}
+.DR-page-4 .line-1 {
+  width: 64px;
+  height: 113px;
+  background-image: url(../images/page4/page4-line-1.png);
+  right: 88px;
+  top: 270px;
+}
+.DR-page-4 .line-2 {
+  width: 300px;
+  height: 138px;
+  background-image: url(../images/page4/page4-line-2.png);
+  right: 109px;
+  top: 243px;
+}
+.DR-page-4 .line-3 {
+  width: 115px;
+  height: 87px;
+  background-image: url(../images/page4/page4-line-3.png);
+  right: 182px;
+  top: 308px;
+}
+.DR-page-4 .line-4 {
+  width: 109px;
+  height: 135px;
+  background-image: url(../images/page4/page4-line-4.png);
+  right: 57px;
+  top: 62px;
+}
+.DR-page-4 .line-5 {
+  width: 178px;
+  height: 43px;
+  background-image: url(../images/page4/page4-line-5.png);
+  right: 161px;
+  top: 186px;
+}
+.DR-page-4 .line-6 {
+  width: 59px;
+  height: 161px;
+  background-image: url(../images/page4/page4-line-6.png);
+  left: 121px;
+  top: 144px;
+}
+
+
+
+
+/*第五页*/
+.DR-page-5 .DR-midst-container{
+  width: 600px;
+  height: 500px;
+  min-height: auto;
+  top: 48%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -250px;
+  background-image: url(../images/page5/page5-planetary-ring.png);
+  background-size: 100% auto;
+}
+.DR-page-5 .item{
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+          box-orient: vertical;
+  -webkit-box-pack: center;
+          box-pack: center;
+  -webkit-box-align: center;
+          box-align: center;
+  position: absolute;
+}
+.DR-page-5 .txt{
+  padding: 2px 15px;
+  color: #fff;
+  font-size: 2.8rem;
+  position: relative;
+  z-index: 10;
+}
+.DR-page-5 .datebar{
+  padding: 2px 8px;
+  position: absolute;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.DR-page-5 .datebar:after{
+  content: '';
+  display: block;
+  width: 20px;
+  border-bottom: 2px solid transparent;
+  position: absolute;
+  bottom: -9px;
+}
+.DR-page-5 .date > i{
+  margin-left: 5px;
+  font-style: normal;
+}
+.DR-page-5 .item:after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.DR-page-5 .item.one{
+  width: 206px;
+  height: 146px;
+  top: 210px;
+  left: 35px;
+}
+.DR-page-5 .item.one:after{ background-image: url(../images/page5/page5-planet-1.png); }
+.DR-page-5 .item.two{
+  width: 277px;
+  height: 191px;
+  right: 5px;
+  top: 110px;
+}
+.DR-page-5 .item.two:after{ background-image: url(../images/page5/page5-planet-2.png);}
+.DR-page-5 .item.one .txt{
+  background-color: rgba(232,139,51,.9);
+}
+.DR-page-5 .item.two .txt{
+  background-color: rgba(91,99,249,.9);
+}
+.DR-page-5 .item.one .datebar{
+  border-bottom-color: #fedf63;
+  left: 62%;
+  top: -56px;
+}
+.DR-page-5 .item.one .datebar:after{
+  border-bottom-color: #fedf63;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: -16px;
+}
+.DR-page-5 .item.two .datebar{
+  border-bottom-color: #53bcff;
+  right: 58%;
+  top: -60px;
+}
+.DR-page-5 .item.two .datebar:after{
+  border-bottom-color: #53bcff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: -16px;
+}
+.DR-page-5 .item.one .date > i{ color: #fedf63; }
+.DR-page-5 .item.two .date > i{ color: #53bcff; }
+
+
+/*第六页*/
+.DR-page-6 .DR-midst-container{
+  width: 600px;
+  height: 500px;
+  top: 45%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -250px;
+}
+.DR-page-6 .item-heading{
+  padding: .5rem 1.5rem;
+  color: #fff;
+  white-space: nowrap;
+  background-color: #f8f8f8;
+  position: absolute;
+  z-index: 2;
+}
+.DR-page-6 .item-heading:before{
+  content: '';
+  display: block;
+  width: 6px;
+  height: 70px;
+  background-color: #515152;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  z-index: 0;
+}
+.DR-page-6 .item-num{
+  text-indent: 8px;
+  letter-spacing: 2px;
+  font-family: Arial;
+  font-style: italic;
+}
+.DR-page-6 .item {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+          box-orient: vertical;
+  -webkit-box-pack: center;
+          box-pack: center;
+  -webkit-box-align: center;
+          box-align: center;
+  position: absolute;
+}
+.DR-page-6 .item.one{
+  width: 225px;
+  height: 225px;
+  background-image: url(../images/page6/page6-planet-1.png);
+  left: 0;
+  top: 10px;
+}
+.DR-page-6 .item.one .item-heading{
+  font-size: 2.4rem;
+  background-color: #ff9537;
+  left: 80px;
+  top: -68px;
+}
+.DR-page-6 .item.one .item-num{ margin-top: 7px; }
+.DR-page-6 .item.two{
+  width: 142px;
+  height: 142px;
+  background-image: url(../images/page6/page6-planet-2.png);
+  right: 35px;
+  top: 20px;
+}
+.DR-page-6 .item.two .item-heading{
+  font-size: 2rem;
+  background-color: #3eaab0;
+  left: 40px;
+  top: -56px;
+}
+.DR-page-6 .item.two .item-heading:before{
+  height: 50px;
+  top: 35px;
+}
+.DR-page-6 .item.two .item-num{ font-size: .8em; }
+.DR-page-6 .item.three{
+  width: 335px;
+  height: 334px;
+  background-image: url(../images/page6/page6-planet-3.png);
+  left: 50%;
+  bottom: -10px;
+  margin-left: -158px;
+}
+.DR-page-6 .item.three .item-heading {
+  font-size: 2.8rem;
+  background-color: #6656ff;
+  left: 110px;
+  top: -82px;
+}
+.DR-page-6 .item.three .item-heading:before {
+  height: 100px;
+  top: 45px;
+}
+.DR-page-6 .item.three .item-num{ font-size: 1.3em; }
+.DR-page-6 .item.three .astronaut{
+  width: 59px;
+  height: 103px;
+  background: url(../images/page6/page6-astronaut.png) no-repeat 50%;
+  background-size: 100% auto;
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  margin-left: -10px;
+}
+/*第七页*/
+.DR-page-7 .DR-midst-container{ 
+  width: 600px;
+  height: 500px;
+  top: 40%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -250px;
+}
+.DR-page-7 .item {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  position: absolute;
+}
+.DR-page-7 .item:after{
+  content: '';
+  display: block;
+  width: 260px;
+  border-bottom: 2px solid #5a6bb3;
+  position: absolute;
+  z-index: 0;
+}
+.DR-page-7 .planet-1{
+  width: 289px;
+  height: 288px;
+  background-image: url(../images/page7/page7-planet-1.png);
+  left: 40%;
+  top: 50%;
+  margin-left: -145px;
+  margin-top: -144px;
+  z-index: 10;
+}
+.DR-page-7 .planet-1:after{ display: none; }
+.DR-page-7 .planet-1 > .aHey{
+  width: 237px;
+  height: 231px;
+  background-image: url(../images/page7/page7-AHey.png);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -105px;
+  margin-top: -116px;
+}
+.DR-page-7 .planet-1 > .astronaut{
+  width: 192px;
+  height: 264px;
+  background-image: url(../images/page7/page7-astronaut.png);
+  position: absolute;
+  right: -184px;
+  top: 0%;
+}
+.DR-page-7 .planet-2{
+  width: 73px;
+  height: 73px;
+  background-image: url(../images/page7/page7-planet-2.png);
+  left: 14%;
+  top: 0;
+}
+.DR-page-7 .planet-2:after {
+  -webkit-transform: rotate(61deg);
+          transform: rotate(61deg);
+  top: 184px;
+  left: -18px;
+}
+.DR-page-7 .planet-3{
+  width: 57px;
+  height: 57px;
+  background-image: url(../images/page7/page7-planet-3.png);
+  right: 12%;
+  top: -40px;
+}
+.DR-page-7 .planet-3:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 140px;
+  right: 8px;
+}
+.DR-page-7 .planet-4{
+  width: 105px;
+  height: 105px;
+  background-image: url(../images/page7/page7-planet-4.png);
+  left: 25%;
+  top: 505px;
+}
+.DR-page-7 .planet-4:after {
+  -webkit-transform: rotate(-78deg);
+          transform: rotate(-78deg);
+  top: -126px;
+  left: -42px;
+}
+.DR-page-7 .planet-5{
+  width: 153px;
+  height: 153px;
+  background-image: url(../images/page7/page7-planet-5.png);
+  right: 5%;
+  top: 540px;
+}
+.DR-page-7 .planet-5:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -72px;
+  right: 80px;
+}
+.DR-page-7 .planet-group{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-animation: planet-group 25s linear .8s infinite;
+          animation: planet-group 25s linear .8s infinite;
+
+}
+/*第八页*/
+.DR-page-8 .DR-midst-container{
+  background-image: url(../images/page8/page8-airship.png);
+  background-position: 50% 95%;
+  top: 27%;
+}
+.DR-page-8 .item {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  position: absolute;
+}
+.DR-page-8 .item:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.DR-page-8 .light{
+  width: 332px;
+  height: 203px;
+  background-image: url(../images/page8/page8-airship-light.png);
+  left: 50%;
+  bottom: 27%;
+  margin-left: -174px;
+}
+.DR-page-8 .treasure-1 {
+  width: 17px;
+  height: 18px;
+  right: 80px;
+  top: 0;
+}
+.DR-page-8 .treasure-1:after{
+  background-image: url(../images/page8/page8-treasure-1.png);
+  -webkit-animation: treasureTrade 12s linear infinite;
+          animation: treasureTrade 12s linear infinite;
+}
+.DR-page-8 .treasure-2 {
+  width: 68px;
+  height: 72px;
+  left: 14%;
+  top: 15%;
+}
+.DR-page-8 .treasure-2:after{
+  background-image: url(../images/page8/page8-treasure-2.png);
+  -webkit-animation: treasureTrade 14s linear infinite;
+          animation: treasureTrade 14s linear infinite;
+}
+.DR-page-8 .treasure-3 {
+  width: 133px;
+  height: 111px;
+  right: 14%;
+  top: 18%;
+}
+.DR-page-8 .treasure-3:after{
+  background-image: url(../images/page8/page8-treasure-3.png);
+  -webkit-animation: treasureTrade 20s linear infinite;
+          animation: treasureTrade 20s linear infinite;
+}
+.DR-page-8 .treasure-4 {
+  width: 105px;
+  height: 104px;
+  left: 30%;
+  top: 7%;
+}
+.DR-page-8 .treasure-4:after{
+  background-image: url(../images/page8/page8-treasure-4.png);
+  -webkit-animation: treasureTrade 10s linear infinite;
+          animation: treasureTrade 10s linear infinite;
+}
+.DR-page-8 .treasure-5 {
+  width: 69px;
+  height: 55px;
+  left: 43%;
+  top: 32%;
+}
+.DR-page-8 .treasure-5:after{
+  background-image: url(../images/page8/page8-treasure-5.png);
+  -webkit-animation: treasureTrade 30s linear infinite;
+          animation: treasureTrade 30s linear infinite;
+}
+
+/*第九页*/
+/*第十页*/
+
+/*** 各页内容 Ends ******************************************************/
+
+/*** 动画效果 Starts ******************************************************/
+.swiper-slide-active .DR-page-downward{
+  -webkit-animation: fadeInDown .5s ease-in-out .5s 1 both;
+          animation: fadeInDown .5s ease-in-out .5s 1 both;
+}
+.swiper-slide-active .DR-text-content{
+  -webkit-animation: fadeInDown .3s ease-in-out .8s 1 both;
+          animation: fadeInDown .3s ease-in-out .8s 1 both;
+}
+.swiper-slide-active .DR-heading-title{
+  -webkit-animation: fadeInDown .3s ease-in-out .3s 1 both;
+          animation: fadeInDown .3s ease-in-out .3s 1 both;
+}
+
+
+.swiper-slide-active.DR-page-1 > .sphere{
+  -webkit-animation: scale-big .3s ease-in-out .1s 1 both;
+          animation: scale-big .3s ease-in-out .1s 1 both;
+}
+.swiper-slide-active.DR-page-1 .sphere-title{
+  -webkit-animation: sphere-title .3s ease-in-out .3s 1 both;
+          animation: sphere-title .3s ease-in-out .3s 1 both;
+}
+.swiper-slide-active.DR-page-1 .sphere-astronaut{
+  -webkit-animation: fadeIn 1s ease-in-out .5s 1 both;
+          animation: fadeIn 1s ease-in-out .5s 1 both;
+}
+.swiper-slide-active.DR-page-1 .sphere-astronaut-2{
+  -webkit-animation: fadeIn 1s ease-in-out .6s 1 both;
+          animation: fadeIn 1s ease-in-out .6s 1 both;
+}
+
+.swiper-slide-active.DR-page-2 .celestial-body{
+  -webkit-animation: fadeInLeft .3s ease-in-out 0s 1 both;
+          animation: fadeInLeft .3s ease-in-out 0s 1 both;
+}
+.swiper-slide-active.DR-page-2 .sun{
+  -webkit-animation: celestial-sun .8s linear .2s 1 both;
+          animation: celestial-sun .8s linear .2s 1 both;
+}
+.swiper-slide-active.DR-page-2 .board{
+  -webkit-animation: rotateInDownLeft .3s linear .3s 1 both;
+          animation: rotateInDownLeft .3s linear .3s 1 both;
+}
+.swiper-slide-active.DR-page-2 .crowd-1{
+  -webkit-animation: fadeInDown .1s linear .5s 1 both;
+          animation: fadeInDown .1s linear .5s 1 both;
+}
+.swiper-slide-active.DR-page-2 .crowd-2{
+  -webkit-animation: fadeInDown .1s linear .6s 1 both;
+          animation: fadeInDown .1s linear .6s 1 both;
+}
+.swiper-slide-active.DR-page-2 .crowd-3{
+  -webkit-animation: fadeInDown .1s linear .7s 1 both;
+          animation: fadeInDown .1s linear .7s 1 both;
+}
+.swiper-slide-active.DR-page-2 .passerby-1{
+  -webkit-animation: fadeInUp .1s linear .8s 1 both;
+          animation: fadeInUp .1s linear .8s 1 both;
+}
+.swiper-slide-active.DR-page-2 .passerby-2{
+  -webkit-animation: fadeInUp .1s linear .9s 1 both;
+          animation: fadeInUp .1s linear .9s 1 both;
+}
+.swiper-slide-active.DR-page-2 .passerby-1 .dialog{
+  -webkit-animation: fadeInUp .2s linear 1.3s 1 both;
+          animation: fadeInUp .2s linear 1.3s 1 both;
+}
+.swiper-slide-active.DR-page-2 .passerby-2 .dialog{
+  -webkit-animation: fadeInUp .2s linear 1.1s 1 both;
+          animation: fadeInUp .2s linear 1.1s 1 both;
+}
+
+
+.swiper-slide-active.DR-page-3 .orbit-1{
+  -webkit-transform-origin: -25px 200px;
+          transform-origin: -25px 200px;
+  -webkit-animation: rocket-orbit-1 1.5s linear 0s forwards;
+          animation: rocket-orbit-1 1.5s linear 0s forwards;
+}
+.swiper-slide-active.DR-page-3 .orbit-2{
+  -webkit-animation: rocket-orbit-2 .5s linear 1.5s forwards;
+          animation: rocket-orbit-2 .5s linear 1.5s forwards;
+}
+.swiper-slide-active.DR-page-3 .orbit-3{
+  -webkit-animation: rocket-orbit-3 .5s linear 2s forwards;
+          animation: rocket-orbit-3 .5s linear 2s forwards;
+}
+
+
+.swiper-slide-active.DR-page-3 .graph-line{
+  width: 442px;
+  transition: width 1s linear 1.6s;
+}
+.swiper-slide-active.DR-page-3 .graph-grid{
+  -webkit-animation: fadeInUp .5s linear 1.5s both;
+          animation: fadeInUp .5s linear 1.5s both;
+}
+.swiper-slide-active.DR-page-3 .graph-list > li{
+  -webkit-animation: fadeInUp .3s ease 1s 1 both;
+          animation: fadeInUp .3s ease 1s 1 both;
+}
+.swiper-slide-active.DR-page-3 .graph-list > li:nth-child(1){
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.swiper-slide-active.DR-page-3 .graph-list > li:nth-child(2){
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.swiper-slide-active.DR-page-3 .graph-list > li:nth-child(3){
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.swiper-slide-active.DR-page-3 .DR-heading-title{
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.swiper-slide-active.DR-page-3 .DR-text-content{
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.swiper-slide-active.DR-page-3 .DR-page-downward{
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+
+.swiper-slide-active.DR-page-4 .earth{
+  -webkit-animation: earth-animate 1.8s ease 0s 1 both;
+          animation: earth-animate 1.8s ease 0s 1 both;
+}
+.swiper-slide-active.DR-page-4 .site-group{
+  -webkit-animation: scale-big .6s ease 1.6s 1 both;
+          animation: scale-big .6s ease 1.6s 1 both;
+}
+.swiper-slide-active.DR-page-4 .site{
+  -webkit-animation: scale-big .1s ease 2.1s 1 both;
+          animation: scale-big .1s ease 2.1s 1 both;
+}
+.swiper-slide-active.DR-page-4 .line{
+  -webkit-animation: scale-big .3s ease 2.2s 1 both;
+          animation: scale-big .3s ease 2.2s 1 both;
+}
+.swiper-slide-active.DR-page-4 .site-1{
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.swiper-slide-active.DR-page-4 .site-2{
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.swiper-slide-active.DR-page-4 .site-3{
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.swiper-slide-active.DR-page-4 .site-4{
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.swiper-slide-active.DR-page-4 .line-1{
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.swiper-slide-active.DR-page-4 .site-5{
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.swiper-slide-active.DR-page-4 .site-6{
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+.swiper-slide-active.DR-page-4 .site-7{
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.swiper-slide-active.DR-page-4 .site-8{
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.swiper-slide-active.DR-page-4 .line-2{
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.swiper-slide-active.DR-page-4 .line-3{
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+.swiper-slide-active.DR-page-4 .site-9{
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.swiper-slide-active.DR-page-4 .site-10{
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.swiper-slide-active.DR-page-4 .site-11{
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+.swiper-slide-active.DR-page-4 .site-12{
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.swiper-slide-active.DR-page-4 .site-13{
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.swiper-slide-active.DR-page-4 .site-14{
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+}
+.swiper-slide-active.DR-page-4 .site-15{
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.swiper-slide-active.DR-page-4 .site-16{
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+}
+.swiper-slide-active.DR-page-4 .site-17{
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.swiper-slide-active.DR-page-4 .site-18{
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+.swiper-slide-active.DR-page-4 .site-19{
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+.swiper-slide-active.DR-page-4 .line-4{
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.swiper-slide-active.DR-page-4 .line-5{
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+.swiper-slide-active.DR-page-4 .line-6{
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+.swiper-slide-active.DR-page-4 .DR-heading-title{
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+.swiper-slide-active.DR-page-4 .DR-text-content {
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
+}
+.swiper-slide-active.DR-page-4 .DR-page-downward{
+  -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s;
+}
+
+.swiper-slide-active.DR-page-5 .DR-midst-container{
+  -webkit-animation: scale-big .5s ease-in-out .1s 1 both;
+          animation: scale-big .5s ease-in-out .1s 1 both;
+}
+.swiper-slide-active.DR-page-5 .item.one{
+  -webkit-animation: speedLeft .8s ease-in-out .5s 1 both;
+          animation: speedLeft .8s ease-in-out .5s 1 both;
+}
+.swiper-slide-active.DR-page-5 .item.two{
+  -webkit-animation: speedRight .8s ease-in-out .6s 1 both;
+          animation: speedRight .8s ease-in-out .6s 1 both;
+}
+.swiper-slide-active.DR-page-5 .item.one:after,
+.swiper-slide-active.DR-page-5 .item.two:after{
+  -webkit-animation: trade-scale .2s ease-in-out 1.4s 5 both;
+          animation: trade-scale .2s ease-in-out 1.4s 5 both;
+}
+.swiper-slide-active.DR-page-5 .item.one .datebar{
+  -webkit-animation: scale-big .5s ease-in-out 1s 1 both;
+          animation: scale-big .5s ease-in-out 1s 1 both;
+}
+.swiper-slide-active.DR-page-5 .item.two .datebar{
+  -webkit-animation: scale-big .5s ease-in-out 1.2s 1 both;
+          animation: scale-big .5s ease-in-out 1.2s 1 both;
+}
+.swiper-slide-active.DR-page-5 .DR-heading-title{
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.swiper-slide-active.DR-page-5 .DR-text-content{
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.swiper-slide-active.DR-page-5 .DR-page-downward{
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.swiper-slide-active.DR-page-6 .item.one{
+  -webkit-animation: speedLeft .8s ease-in-out 0s 1 both;
+          animation: speedLeft .8s ease-in-out 0s 1 both;
+}
+.swiper-slide-active.DR-page-6 .item.two{
+  -webkit-animation: speedRight .8s ease-in-out .1s 1 both;
+          animation: speedRight .8s ease-in-out .1s 1 both;
+}
+.swiper-slide-active.DR-page-6 .item.three{
+  -webkit-animation: speedRight .8s ease-in-out .1s 1 both;
+          animation: speedRight .8s ease-in-out .1s 1 both;
+}
+.swiper-slide-active.DR-page-6 .item.one .item-heading{
+  -webkit-animation: fadeInDown .1s ease-in-out 1s 1 both;
+          animation: fadeInDown .1s ease-in-out 1s 1 both;
+}
+.swiper-slide-active.DR-page-6 .item.two .item-heading{
+  -webkit-animation: fadeInDown .1s ease-in-out 1.2s 1 both;
+          animation: fadeInDown .1s ease-in-out 1.2s 1 both;
+}
+.swiper-slide-active.DR-page-6 .item.three .item-heading{
+  -webkit-animation: fadeInDown .1s ease-in-out 1.4s 1 both;
+          animation: fadeInDown .1s ease-in-out 1.4s 1 both;
+}
+.swiper-slide-active.DR-page-6 .item.three .astronaut{
+  -webkit-animation: zoomIn .5s ease-in-out 1.6s 1 both;
+          animation: zoomIn .5s ease-in-out 1.6s 1 both;
+}
+.swiper-slide-active.DR-page-6 .DR-heading-title {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.swiper-slide-active.DR-page-6 .DR-text-content{
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.swiper-slide-active.DR-page-6 .DR-page-downward{
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+
+.swiper-slide-active.DR-page-7 .planet-1{
+  -webkit-animation: zoomIn .3s ease-in-out 0s 1 both;
+          animation: zoomIn .3s ease-in-out 0s 1 both;
+}
+.swiper-slide-active.DR-page-7 .planet-2{
+  -webkit-animation: zoomIn .3s ease-in-out .1s 1 both;
+          animation: zoomIn .3s ease-in-out .1s 1 both;
+}
+.swiper-slide-active.DR-page-7 .planet-3{
+  -webkit-animation: zoomIn .3s ease-in-out .2s 1 both;
+          animation: zoomIn .3s ease-in-out .2s 1 both;
+}
+.swiper-slide-active.DR-page-7 .planet-4{
+  -webkit-animation: zoomIn .3s ease-in-out .3s 1 both;
+          animation: zoomIn .3s ease-in-out .3s 1 both;
+}
+.swiper-slide-active.DR-page-7 .planet-5{
+  -webkit-animation: zoomIn .3s ease-in-out .4s 1 both;
+          animation: zoomIn .3s ease-in-out .4s 1 both;
+}
+.swiper-slide-active.DR-page-7 .aHey{
+  -webkit-animation: fadeInDown .5s ease-in-out .6s 1 both;
+          animation: fadeInDown .5s ease-in-out .6s 1 both;
+}
+.swiper-slide-active.DR-page-7 .astronaut{
+  -webkit-animation: fadeInRight .5s ease-in-out .9s 1 both;
+          animation: fadeInRight .5s ease-in-out .9s 1 both;
+}
+.swiper-slide-active.DR-page-7 .DR-heading-title {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.swiper-slide-active.DR-page-7 .DR-text-content{
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.swiper-slide-active.DR-page-7 .DR-page-downward{
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.swiper-slide-active.DR-page-8 .DR-midst-container{
+  -webkit-animation: rotateIn .5s ease-in-out 0s 1 both;
+          animation: rotateIn .5s ease-in-out 0s 1 both;
+}
+.swiper-slide-active.DR-page-8 .light{
+  -webkit-animation: fadeInUp .2s ease-in-out .5s 1 both;
+          animation: fadeInUp .2s ease-in-out .5s 1 both;
+}
+.swiper-slide-active.DR-page-8 .treasure-1{
+  -webkit-animation: treasure-1 .1s linear .6s 1 both;
+          animation: treasure-1 .1s linear .6s 1 both;
+}
+.swiper-slide-active.DR-page-8 .treasure-2{
+  -webkit-animation: treasure-2 .1s linear .7s 1 both;
+          animation: treasure-2 .1s linear .7s 1 both;
+}
+.swiper-slide-active.DR-page-8 .treasure-3{
+  -webkit-animation: treasure-3 .1s linear .8s 1 both;
+          animation: treasure-3 .1s linear .8s 1 both;
+}
+.swiper-slide-active.DR-page-8 .treasure-4{
+  -webkit-animation: treasure-4 .1s linear .9s 1 both;
+          animation: treasure-4 .1s linear .9s 1 both;
+}
+.swiper-slide-active.DR-page-8 .treasure-5{
+  -webkit-animation: treasure-5 .1s linear 1s 1 both;
+          animation: treasure-5 .1s linear 1s 1 both;
+}
+.swiper-slide-active.DR-page-8 .DR-heading-title {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.swiper-slide-active.DR-page-8 .DR-text-content{
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.swiper-slide-active.DR-page-8 .DR-page-downward{
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.swiper-slide-active.DR-page-9 .DR-honour-board{
+  -webkit-animation: fadeInDown .3s ease-in-out 0s 1 both;
+          animation: fadeInDown .3s ease-in-out 0s 1 both;
+}
+.swiper-slide-active.DR-page-9 .honour-1{
+  -webkit-animation: bounceIn .3s ease-in-out .3s 1 both;
+          animation: bounceIn .3s ease-in-out .3s 1 both;
+}
+.swiper-slide-active.DR-page-9 .honour-2{
+  -webkit-animation: bounceIn .3s ease-in-out .5s 1 both;
+          animation: bounceIn .3s ease-in-out .5s 1 both;
+}
+.swiper-slide-active.DR-page-9 .honour-3{
+  -webkit-animation: bounceIn .3s ease-in-out .7s 1 both;
+          animation: bounceIn .3s ease-in-out .7s 1 both;
+}
+.swiper-slide-active.DR-page-9 .honour-4{
+  -webkit-animation: bounceIn .3s ease-in-out .9s 1 both;
+          animation: bounceIn .3s ease-in-out .9s 1 both;
+}
+.swiper-slide-active.DR-page-9 .DR-honour-content{
+  -webkit-animation: fadeInUp .3s ease-in-out .8s 1 both;
+          animation: fadeInUp .3s ease-in-out .8s 1 both;
+}
+
+.swiper-slide-active.DR-page-10 .DR-honour-board{
+  -webkit-animation: fadeInDown .3s ease-in-out 0s 1 both;
+          animation: fadeInDown .3s ease-in-out 0s 1 both;
+}
+.swiper-slide-active.DR-page-10 .honour-5{
+  -webkit-animation: bounceIn .3s ease-in-out .5s 1 both;
+          animation: bounceIn .3s ease-in-out .5s 1 both;
+}
+.swiper-slide-active.DR-page-10 .DR-honour-content{
+  -webkit-animation: fadeInUp .3s ease-in-out .8s 1 both;
+          animation: fadeInUp .3s ease-in-out .8s 1 both;
+}
+
+/*** 动画效果 Ends ******************************************************/
+
+
+/*** 翻页指航 Starts ******************************************************/
+.DR-main-body .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #1869b2;
+  opacity: 1;
+}
+.DR-main-body .swiper-container-vertical > .swiper-pagination {
+  left: 14px;
+  top: 42%;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+}
+.DR-main-body .swiper-container-vertical > .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 0 10px -7px;
+}
+.DR-main-body .swiper-container-vertical > .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin: 0 0 0 -7px;
+}
+.DR-main-body .swiper-pagination-bullet-active {
+  background: #fff;
+}
+/*** 翻页指航 Ends ******************************************************/
+
+
+/*** 针对 Iphone 4/4s 适配 Starts ******************************************************/
+@media (device-width:320px) and (-webkit-min-device-pixel-ratio:2){
+  .DR-heading-title{ margin: .2em 0 .2em; }
+  .DR-text-content{ bottom: 5rem; }
+  .DR-text-content > ul > li{ margin: 0; line-height: 1; }
+  .DR-honour-board{ padding: 0 25px; }
+  .DR-honour-content{ margin-top: 5rem; }
+  .DR-honour-heading{
+    margin-bottom: 20px;
+    height: 40px;
+  }
+  .DR-honour-txt{ margin: 10px 0 0;}
+  .DR-honour-share{ width: 65%; }
+  .DR-honour-share-title{ margin-bottom: 15px; }
+  .DR-page-1 > .sphere{ top: 50%; }
+  .DR-page-2 .celestial-body{
+    top: 10px;
+    bottom: 0;
+    height: auto;
+  }
+  .DR-page-4 .DR-midst-container{}
+  .DR-page-5 .DR-midst-container{ top: 55%; }
+  .DR-page-5 .item.one{ top: 150px; }
+  .DR-page-5 .item.two{ top: 90px; }
+  .DR-page-8 .DR-midst-container{ top: 30%; }
+}
+/*** 针对 Iphone 4/4s 适配 Ends ******************************************************/
+
+
+/*** 针对 Iphone 6 适配 Starts ******************************************************/
+@media (device-width:375px) and (-webkit-min-device-pixel-ratio:2){
+  .DR-heading-title{ margin-top: 1em; }
+  .DR-text-content > ul.hasIcon > li{ background-position: 0 22px; }
+  .DR-page-2 .celestial-body{
+    top: 40px;
+  }
+  .DR-page-2 .passerby-2 .dialog:after{ bottom: -7px; z-index: 2}
+  .DR-page-5 .DR-midst-container{ top: 52%; }
+  .DR-page-5 .item.one{ top: 175px; }
+  .DR-page-5 .item.two{ top: 80px; }
+  .DR-page-5 .item.one .datebar{ top: -66px;}
+  .DR-page-5 .item.two .datebar{ top: -66px;}
+  .DR-page-6 .item.three{ left: 53%;}
+  .DR-page-6 .DR-midst-container{ top: 48%; }
+  .DR-page-6 .DR-text-content{ bottom: 6rem; }
+
+}
+
+/*** 针对 Iphone 6 适配 Ends ******************************************************/

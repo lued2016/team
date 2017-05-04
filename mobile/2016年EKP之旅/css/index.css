@@ -1,0 +1,2154 @@
+﻿@charset "utf-8";  
+
+/**
+** 代码制作人: 马泽棉
+** 制作时间：2016-12-08
+** 文件内容描述：2016年EKP之旅
+** 修改日期：无
+** 备    注：tra 为 travel前三字母
+**********************************************/
+
+
+
+/*** 公共 Starts ****************************************************/
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  text-align: center;
+  font-family: "Heiti SC", Droidsansfallback, Dengxian, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 1.6rem;
+  background-color: #fff;
+}
+h1,h2,h3,h4,h5,h6,p,ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ul{ list-style: none; }
+* {
+  /*-webkit-transform:  translate3d(0, 0, 0);
+          transform:  translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
+          perspective: 1000;*/
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; /*开启硬件加速*/
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'testFont2';
+  src: url('../fonts/testFont.otf');
+  src: url('../fonts/testFont.eot?v=4.3.0');
+  src: url('../fonts/testFont.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+       url('../fonts/testFont.woff2?v=4.3.0') format('woff2'), 
+       url('../fonts/testFont.woff?v=4.3.0') format('woff'), 
+       url('../fonts/testFont.ttf?v=4.3.0') format('truetype'), 
+       url('../fonts/testFont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* webkit浏览器滚动条样式修改 Starts */
+::-webkit-scrollbar{
+  width:3px;
+  height:8px;
+  border-radius: 5px;
+  background-color: transparent;
+  -webkit-transition: background-color .3s ease-in-out;
+          transition: background-color .3s ease-in-out;
+}
+::-webkit-scrollbar:hover{
+  background-color:#f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#dbdbdb;
+  height:50px;
+  outline-offset:-1px;
+  outline:1px solid #fff;
+  -webkit-border-radius:5px;
+          border-radius:5px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transition: background-color .3s ease-in-out;
+          transition: background-color .3s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active{
+  background-color:#9c9c9c;
+  border-right: 1px solid #f1f1f1;
+  border-left: 1px solid #f1f1f1;
+}
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+::-webkit-scrollbar-track:hover{
+  background-color:#f1f1f1;
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.15);
+          box-shadow: inset 0 0 3px rgba(0,0,0,.15);
+}
+/* webkit浏览器滚动条样式修改 Ends */
+
+.tra-main-body {
+  margin: 0 auto;
+  width: 640px;
+}
+.tra-main-body .swiper-container{
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #1c2026 url(../images/tra-rightBG.png) no-repeat 100% 0;
+  background-size: auto 100%;
+}
+.tra-main-body .swiper-container:after,
+.tra-main-body .swiper-container:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100% auto;
+}
+
+.tra-main-body .swiper-container:before {
+  width: 300px;
+  height: 367px;
+  background-image: url(../images/tra-star-A.png);
+  right: 10px;
+  top: 2%;
+  -webkit-animation: flash 8s linear 0s infinite both, shake 40s linear .3s infinite both;
+  animation: flash 8s linear 0s infinite both, shake 40s linear .3s infinite both;
+}
+.tra-main-body .swiper-container:after {
+  width: 540px;
+  height: 560px;
+  background-image: url(../images/tra-star-B.png);
+  background-position: 0 50%;
+  left: 12%;
+  top: 22%;
+  -webkit-animation: flash 6s linear .2s infinite both, shake 50s linear 0s infinite both;
+  animation: flash 6s linear .2s infinite both, shake 50s linear 0s infinite both;
+}
+.tra-main-body .swiper-slide {
+  padding: 1.5rem;
+  font-size: 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  overflow: hidden;
+  transition: opacity .3s ease;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+}
+.swiper-slide.active {
+  z-index: 11;
+  -webkit-animation: fadeIn .3s ease-in-out 0s 1 both;
+          animation: fadeIn .3s ease-in-out 0s 1 both;
+}
+.swiper-slide.prev {
+  z-index: 10;
+  -webkit-animation: fadeOut .5s ease-in-out 0s 1 both;
+          animation: fadeOut .5s ease-in-out 0s 1 both;
+}
+.tra-rightBG{
+  background-image: url(../images/tra-rightBG.png);
+  background-position: 100% 0!important;
+  background-size: auto 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.tra-obliqueBG{
+  background: url(../images/tra-obliqueBG.png) no-repeat 100% 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.tra-star,
+.tra-star:after,
+.tra-star:before{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100% auto;
+}
+.tra-star{
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.tra-star:before {
+  width: 310px;
+  height: 367px;
+  background-image: url(../images/tra-star-A.png);
+  right: 10px;
+  top: 2%;
+  -webkit-animation: flash 8s linear 0s infinite both,
+                     shake 40s linear .3s infinite both;
+          animation: flash 8s linear 0s infinite both,
+                     shake 40s linear .3s infinite both;
+}
+.tra-star:after{
+  width: 570px;
+  height: 578px;
+  background-image: url(../images/tra-star-B.png);
+  background-position: 0 50%;
+  left: 12%;
+  top: 22%;
+  -webkit-animation: flash 6s linear .2s infinite both,
+                     shake 50s linear 0s infinite both;
+          animation: flash 6s linear .2s infinite both,
+                     shake 50s linear 0s infinite both;
+}
+.tra-obliqueMoon{
+  width: 149px;
+  height: 125px;
+  background: url(../images/tra-obliqueMoon.png) no-repeat 50%;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.tra-heading{
+  margin: 1.2em 0 .5em;
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  position: relative;
+  z-index: 20;
+}
+.tra-heading > p{ margin: 18px 0; }
+
+.tra-txt-num,
+.tra-txt-emphasize {
+  color: #ffc961;
+}
+.tra-txt-num{
+  margin: 0 5px;
+  font-size: 1.4em;
+}
+.tra-main-body .swiper-slide-active { opacity: 1; }
+.tra-main-body .swiper-slide-prev,
+.tra-main-body .swiper-slide-next { opacity: 0; }
+.tra-btn-touch {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+.tra-btn-touch > span{
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.75);
+  white-space: nowrap;
+  border-radius: 50%;
+  background-color: rgba(255, 92, 92, .85);
+  background-clip: content-box;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-btn-touch:after,
+.tra-btn-touch:before{
+  content: '';
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: rgba(255, 92, 92, .4);
+  background-clip: content-box;
+  -webkit-box-shadow: 0 0 5px rgba(255, 92, 92, .75);
+          box-shadow: 0 0 5px rgba(255, 92, 92, .75);
+  display: block;
+  position: absolute;
+  left: -25px;
+  top: -25px;
+  -webkit-animation: ring-touch 2s linear .3s infinite both;
+          animation: ring-touch 2s linear .3s infinite both;
+}
+.tra-btn-touch:before{
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+.tra-btn-touch:active{ opacity: .65; }
+
+.tra-page-1 > *,
+.tra-page-2 > *,
+.tra-page-3 > *,
+.tra-page-4 > *,
+.tra-page-5 > *,
+.tra-page-6 > *,
+.tra-page-7 > *,
+.tra-page-8 > *,
+.tra-page-9 > *{
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+/*.tra-main-body .swiper-slide.tra-page-1{ opacity: 1; }*/
+
+/*** 公共 Ends ******************************************************/
+
+/*** 各页内容 Starts ******************************************************/
+.tra-loading{
+  background: #1c2026 url(../images/tra-loading.gif) no-repeat 50% 45%;
+  background-size: 150px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/*第一页*/
+.tra-page-1 > .page-moon {
+  width: 740px;
+  height: 740px;
+  border: 15px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  bottom: -490px;
+  left: 50%;
+  margin-left: -370px;
+  z-index: 2;
+}
+.tra-page-1 > .page-moon:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: url(../images/page1/page1-earth.png) repeat-y 0 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-page-1 > .page-planet-1,
+.tra-page-1 > .page-planet-2,
+.tra-page-1 > .page-planet-3,
+.tra-page-1 > .page-planet-4{
+  background-position: 0 50%;
+  position: absolute;
+  z-index: 1;
+}
+.tra-page-1 > .page-planet-1{
+  width: 180px;
+  height: 565px;
+  background-image: url(../images/page1/page1-planet-1.png);
+  left: 72px;
+  bottom: 50px;
+}
+.tra-page-1 > .page-planet-2{
+  width: 150px;
+  height: 582px;
+  background-image: url(../images/page1/page1-planet-2.png);
+  right: -15px;
+  bottom: 100px;
+}
+.tra-page-1 > .page-planet-3{
+  width: 230px;
+  height: 454px;
+  background-image: url(../images/page1/page1-planet-3.png);
+  left: 5px;
+  bottom: -30px;
+}
+.tra-page-1 > .page-planet-4{
+  width: 240px;
+  height: 355px;
+  background-image: url(../images/page1/page1-planet-4.png);
+  right: -5px;
+  bottom: -30px;
+  z-index: 2;
+}
+.tra-page-1 > .page-astronaut-1,
+.tra-page-1 > .page-astronaut-2{
+  width: 264px;
+  height: 324px;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+}
+.tra-page-1 > .page-astronaut-1:after,
+.tra-page-1 > .page-astronaut-2:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(../images/page1/page1-astronaut.png) no-repeat 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-page-1 > .page-astronaut-1{
+  margin-left: -160px;
+  bottom: 230px;
+}
+.tra-page-1 > .page-astronaut-2{
+  margin-left: -45px;
+  bottom: 270px;
+}
+.tra-page-1 > .page-astronaut-2:after { background-image: url(../images/page1/page1-astronaut-2.png) }
+.tra-page-1 > .tra-btn-touch {
+  left: 50%;
+  bottom: 415px;
+  margin-left: -45px;
+}
+
+
+/*第二页*/
+.tra-page-2 > .page-arm-one,
+.tra-page-2 > .page-arm-two{
+  background-position: 0 0;
+  background-size: 100% auto;
+  position: absolute;
+}
+.tra-page-2 > .page-arm-one {
+  width: 693px;
+  height: 720px;
+  background-image: url(../images/page2/page2-hand-left.png);
+  left: -240px;
+  bottom: -80px;
+  z-index: 10;
+}
+.tra-page-2 > .page-arm-two {
+  width: 729px;
+  height: 756px;
+  right: -230px;
+  bottom: -150px;
+  z-index: 11;
+}
+.tra-page-2 > .page-arm-two:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/page2/page2-hand-right.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/*第三页*/
+.tra-page-3 > .tra-heading {
+  margin: 1.2em auto .5em;
+  width: 274px;
+  text-align: left;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -147px;
+}
+.tra-page-3 > .tra-heading:nth-of-type(2) {
+  width: 200px;
+  margin-left: -106px;
+}
+.tra-page-3 > .tra-heading:nth-of-type(2) > p {
+  opacity: 0;
+}
+.tra-page-3 > .tra-heading > p {
+  margin: 0 35px;
+  letter-spacing: 3px;
+}
+.tra-page-3 > .page-maxBg{
+  width: 6400px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.tra-page-3 > .page-maxBg > li{
+  width: 640px;
+  height: 100%;
+  background: url(../images/tra-rightBG.png) no-repeat 100% 0;
+  background-size: auto 100%;
+  float: left;
+  position: relative;
+  transition: background-color .5s;
+}
+.tra-page-3 > .page-maxBg > li:nth-child(even){
+  background-image:-webkit-linear-gradient(left, #23272f 0%, transparent 50%);
+  background-image:linear-gradient(left, #23272f 0%, transparent 50%);
+}
+.tra-page-3 > .page-maxBg > li:before,
+.tra-page-3 > .page-maxBg > li:after{
+  content: '';
+  position: absolute;
+}
+.tra-page-3 > .page-maxBg > li:before {
+  width: 310px;
+  height: 367px;
+  background-image: url(../images/tra-star-A.png);
+  right: 30px;
+  top: 3%;
+  -webkit-animation: flash 8s linear 0s infinite both;
+          animation: flash 8s linear 0s infinite both;
+}
+.tra-page-3 > .page-maxBg > li:after{
+  width: 570px;
+  height: 578px;
+  background-image: url(../images/tra-star-B.png);
+  background-position: 0 50%;
+  left: 15%;
+  top: 28%;
+  -webkit-animation: flash 6s linear .2s infinite both;
+          animation: flash 6s linear .2s infinite both;
+}
+.tra-page-3 > .page-paperplane-1,
+.tra-page-3 > .page-paperplane-2,
+.tra-page-3 > .page-paperplane-3,
+.tra-page-3 > .page-paperplane-4{
+  background-size: 100% auto;
+  position: absolute;
+  z-index: 11;
+}
+.tra-page-3 > .page-paperplane-1 > span,
+.tra-page-3 > .page-paperplane-1 > span:after,
+.tra-page-3 > .page-paperplane-2:after,
+.tra-page-3 > .page-paperplane-3:after,
+.tra-page-3 > .page-paperplane-4:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.tra-page-3 > .page-paperplane-1 {
+  width: 147px;
+  height: 84px;
+  left: 50%;
+  bottom: 418px;
+  margin-left: -74px;
+}
+.tra-page-3 > .page-paperplane-1 > span:after{ background-image: url(../images/page3/page3-paperplane-1.png);}
+.tra-page-3 > .page-paperplane-2 {
+  width: 99px;
+  height: 57px;
+  left: 180px;
+  bottom: 220px;
+}
+.tra-page-3 > .page-paperplane-2:after{ background-image: url(../images/page3/page3-paperplane-2.png); }
+.tra-page-3 > .page-paperplane-3 {
+  width: 60px;
+  height: 34px;
+  right: 100px;
+  bottom: 380px;
+}
+.tra-page-3 > .page-paperplane-3:after{ background-image: url(../images/page3/page3-paperplane-3.png); }
+.tra-page-3 > .page-paperplane-4 {
+  width: 76px;
+  height: 43px;
+  left: 100px;
+  bottom: 580px;
+}
+.tra-page-3 > .page-paperplane-4:after{ background-image: url(../images/page3/page3-paperplane-4.png); }
+
+/*第四页*/
+.tra-page-4 > .tra-heading{
+  margin-top: 5em;
+}
+.tra-page-4 > .page-moon {
+  width: 372px;
+  height: 368px;
+  background-image: url(../images/page8/page8-moon-left.png);
+  background-position: 0 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-page-4 > .page-building {
+  width: 600px;
+  height: 841px;
+  background-image: url(../images/page4/page4-building.png);
+  background-position: 50% 100%;
+  background-size: 100% auto;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -278px;
+}
+.tra-page-4 .page-table,
+.tra-page-4 .page-miniascape,
+.tra-page-4 .page-computer,
+.tra-page-4 .page-chair,
+.tra-page-4 .page-paper-1,
+.tra-page-4 .page-paper-2,
+.tra-page-4 .page-plan,
+.tra-page-4 .page-clock,
+.tra-page-4 .page-human,
+.tra-page-4 .page-cube-1,
+.tra-page-4 .page-cube-2 {
+  background-position: 50%;
+  background-size: 100% auto;
+  position: absolute;
+}
+.tra-page-4 .page-table {
+  width: 278px;
+  height: 196px;
+  background-image: url(../images/page4/page4-table.png);
+  left: 50%;
+  bottom: 330px;
+  margin-left: -140px;
+}
+.tra-page-4 .page-miniascape {
+  width: 57px;
+  height: 156px;
+  background-image: url(../images/page4/page4-miniascape.png);
+  left: 0px;
+  top: 46px;
+  z-index: 9;
+}
+.tra-page-4 .page-computer {
+  width: 76px;
+  height: 81px;
+  left: 105px;
+  top: -41px;
+  z-index: 21;
+}
+.tra-page-4 .page-computer:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(../images/page4/page4-computer.png) no-repeat 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-page-4 .page-computer:before {
+  content: '';
+  width: 61px;
+  height: 50px;
+  background-color: #c54848;
+  opacity: 0;
+  position: absolute;
+  left: 3px;
+  top: 12px;
+  z-index: 21;
+}
+.tra-page-4 .page-chair {
+  width: 92px;
+  height: 138px;
+  background-image: url(../images/page4/page4-chair.png);
+  right: 0px;
+  top: 38px;
+}
+.tra-page-4 .page-paper-1 {
+  width: 98px;
+  height: 41px;
+  background-image: url(../images/page4/page4-paper-1.png);
+  left: 40px;
+  top: 50px;
+}
+.tra-page-4 .page-paper-2 {
+  width: 83px;
+  height: 51px;
+  background-image: url(../images/page4/page4-paper-2.png);
+  right: 56px;
+  top: 32px;
+}
+.tra-page-4 .page-human {
+  width: 105px;
+  height: 161px;
+  background-image: url(../images/page4/page4-human.png);
+  right: 21px;
+  top: 0;
+  z-index: 10;
+}
+.tra-page-4 .page-clock {
+  width: 66px;
+  height: 70px;
+  background-image: url(../images/page4/page4-clock.png);
+  right: 42px;
+  top: -116px;
+}
+.tra-page-4 .page-plan {
+  width: 78px;
+  height: 126px;
+  background-image: url(../images/page4/page4-plan.png);
+  right: -70px;
+  top: -78px;
+}
+.tra-page-4 .page-cube-1 {
+  width: 112px;
+  height: 112px;
+  left: 10%;
+  bottom: 20%;
+  z-index: 10;
+}
+.tra-page-4 .page-cube-2 {
+  width: 54px;
+  height: 54px;
+  right: 45%;
+  bottom: 6%;
+  z-index: 10;
+}
+.tra-page-4 .page-cube-1:after,
+.tra-page-4 .page-cube-2:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: irregularFloat 14s linear infinite;
+          animation: irregularFloat 14s linear infinite;
+}
+.tra-page-4 .page-cube-1:after {
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  background-image: url(../images/page4/page4-cube-1.png);
+}
+.tra-page-4 .page-cube-2:after {
+  background-image: url(../images/page4/page4-cube-2.png);
+}
+/*第五页*/
+.tra-page-5{ /*background-color: #c54848;*/ }
+.tra-page-5 > .tra-heading { margin-top: 2.5em; }
+.tra-page-5 > .tra-rightBG {
+  /*background-image: url(../images/page5/page5-rightBG.png);*/
+  background-image: none;
+}
+.tra-page-5 > .page-bottomBG {
+  /*background-image: url(../images/page5/page5-bottomBG.png);*/
+  background-position: 50% 100%;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.tra-page-5 > .page-write-area,
+.tra-page-5 .page-write-dot,
+.tra-page-5 .page-write-pen{
+  position: absolute;
+}
+.tra-page-5 > .page-write-area {
+  width: 100%;
+  border-top: 2px solid #fff;
+  top: 48%;
+  left: 0;
+}
+.tra-page-5 .page-write-dot{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid rgba(255,126,0,.6);
+  /*background-color: #fff;*/
+  background-color: #ffd01f;
+  background-clip: content-box;
+  -webkit-box-shadow: 20px 20px 26px rgba(0,0,0,.15);
+          box-shadow: 20px 20px 26px rgba(0,0,0,.15);
+  top: -26px;
+}
+.tra-page-5 .page-write-dot.active {  }
+.tra-page-5 .page-write-dot.dot-1 { left: 10%; }
+.tra-page-5 .page-write-dot.dot-2 { left: 48%; }
+.tra-page-5 .page-write-dot.dot-3 { right: 10%; }
+.tra-page-5 .page-write-pen{
+  width: 200px;
+  height: 225px;
+  left: 13%;
+  bottom: -90px;
+}
+.tra-page-5 .page-write-pen:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(../images/page5/page5-pen.png) no-repeat 0 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-page-5 .page-bottom-area,
+.tra-page-5 .page-goods{
+  background-position: 50% 100%;
+  background-size: 100% auto;
+  position: absolute;
+  bottom: 0;
+}
+.tra-page-5 .page-goods:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-page-5 .page-bottom-area {
+  width: 100%;
+  height: 304px;
+  background-image: url(../images/page5/page5-bottom-areaBG.png);
+  left: 0;
+  z-index: 10;
+}
+.tra-page-5 .page-goods.flowerpot-1 {
+  width: 110px;
+  height: 151px;
+  left: 8px;
+}
+.tra-page-5 .page-goods.flowerpot-2 {
+  width: 101px;
+  height: 214px;
+  right: -28px;
+}
+.tra-page-5 .page-goods.clock {
+  width: 156px;
+  height: 444px;
+  left: 65px;
+}
+.tra-page-5 .page-goods.notebook {
+  width: 241px;
+  height: 186px;
+  left: 70px;
+  z-index: 10;
+}
+.tra-page-5 .page-goods.cup {
+  width: 104px;
+  height: 97px;
+  left: 225px;
+  z-index: 11;
+}
+.tra-page-5 .page-goods.PC {
+  width: 312px;
+  height: 318px;
+  left: 50%;
+  margin-left: -98px;
+}
+.tra-page-5 .page-goods.penholder {
+  width: 103px;
+  height: 147px;
+  right: 96px;
+  z-index: 11;
+}
+.tra-page-5 .page-goods.book {
+  width: 213px;
+  height: 179px;
+  right: -32px;
+  z-index: 10;
+}
+.tra-page-5 .page-goods.flowerpot-1:after { background-image: url(../images/page5/page5-flowerpot-1.png);}
+.tra-page-5 .page-goods.flowerpot-2:after { background-image: url(../images/page5/page5-flowerpot-2.png);}
+.tra-page-5 .page-goods.clock:after { background-image: url(../images/page5/page5-clock.png);}
+.tra-page-5 .page-goods.notebook:after { background-image: url(../images/page5/page5-notebook.png);}
+.tra-page-5 .page-goods.cup:after { background-image: url(../images/page5/page5-cup.png);}
+.tra-page-5 .page-goods.PC:after { background-image: url(../images/page5/page5-PC.png);}
+.tra-page-5 .page-goods.penholder:after { background-image: url(../images/page5/page5-penholder.png);}
+.tra-page-5 .page-goods.book:after { background-image: url(../images/page5/page5-book.png);}
+
+/*第六页*/
+.tra-page-6{ /*background-color: #3497d1;*/ }
+.tra-page-6 > .tra-heading { margin-top: 3.5em; }
+.tra-page-6 > .page-bottomBG,
+.tra-page-6 > .page-book,
+.tra-page-6 > .page-person,
+.tra-page-6 > .page-duvet,
+.tra-page-6 .page-hands {
+  background-size: 100% auto;
+  position: absolute;
+}
+.tra-page-6 > .page-bottomBG{
+  width: 100%;
+  height: 308px;
+  /*background-image: url(../images/page6/page6-bottomBG.png);*/
+  background-position: 0 100%;
+  left: 0;
+  bottom: 0;
+}
+.tra-page-6 > .page-book {
+  width: 500px;
+  height: 755px;
+  background-image: url(../images/page6/page6-book.png);
+  background-position: 0 100%;
+  left: 50%;
+  bottom: 80px;
+  margin-left: -228px;
+}
+.tra-page-6 > .page-person{
+  width: 750px;
+  height: 639px;
+  color: #fff;
+  font-size: 3rem;
+  background-image: url(../images/page6/page6-person.png);
+  background-position: 50% 100%;
+  left: 50%;
+  bottom: 0;
+  margin-left: -375px;
+}
+.tra-page-6 > .page-person > span {
+  position: absolute;
+  left: 52%;
+  bottom: 570px;
+  margin-left: 88px;
+}
+.tra-page-6 > .page-person > span:nth-child(2) {
+  font-size: 1.2em;
+  bottom: 580px;
+  margin-left: 112px;
+}
+.tra-page-6 > .page-person > span:nth-child(3) {
+  font-size: 1.4em;
+  bottom: 589px;
+  margin-left: 140px;
+}
+.tra-page-6 > .page-duvet{
+  width: 100%;
+  height: 220px;
+  background-image: url(../images/page6/page6-duvet.png);
+  background-position: 50% 100%;
+  left: 0;
+  bottom: 0;
+}
+.tra-page-6 .page-hands{
+  width: 100%;
+  height: 307px;
+  background: url(../images/page6/page6-hands.png) no-repeat 50% 0;
+  background-size: auto 100%;
+  left: 0;
+  top: 20px;
+}
+
+.tra-page-6 > .page-dialog-1,
+.tra-page-6 > .page-dialog-2,
+.tra-page-6 > .page-dialog-3{
+  border-radius: 50%;
+  background-color: rgba(255,255,255,.45);
+  box-shadow: 45px 45px 80px rgba(0,0,0,.15);
+  transition: background-color .3s;
+  position: absolute;
+}
+.tra-page-6 > .page-dialog-1 {
+  width: 88px;
+  height: 70px;
+  left: 16%;
+  top: 33%;
+}
+.tra-page-6 > .page-dialog-2 {
+  width: 120px;
+  height: 95px;
+  left: 6%;
+  top: 20%;
+}
+.tra-page-6 > .page-dialog-3 {
+  width: 750px;
+  height: 460px;
+  left: 50%;
+  top: -252px;
+  margin-left: -375px;
+}
+
+
+/*第七页*/
+.tra-page-7 > .page-moon {
+  width: 372px;
+  height: 368px;
+  background-image: url(../images/page8/page8-moon-left.png);
+  background-position: 0 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-page-7 .page-tree,
+.tra-page-7 .page-leaves,
+.tra-page-7 .page-fruit{
+  background-position: 0 100%;
+  position: absolute;
+}
+.tra-page-7 .page-tree{
+  width: 100%;
+  height: 1060px;
+  background-image: url(../images/page7/page7-tree.png);
+  background-position: 58% 100%;
+  background-size: 90% auto;
+  left: 0;
+  bottom: -10px;
+}
+.tra-page-7 .page-leaves {
+  width: 100%;
+  height: 850px;
+  background: url(../images/page7/page7-leaves.png) no-repeat 58% 0;
+  left: 0;
+  bottom: 60px;
+  background-size: 90% auto;
+}
+.tra-page-7 .page-fruit {
+  width: 170px;
+  height: 170px;
+  color: #fff;
+  font-size: 3rem;
+  border-radius: 50%;
+  background-size: 100% auto;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+          box-orient: vertical;
+  -webkit-box-pack: center;
+          box-pack: center;
+  -webkit-box-align: center;
+          box-align: center;
+  overflow: hidden;
+  z-index: 20;
+}
+.tra-page-7 .page-fruit > p{ line-height: 1.4;}
+.tra-page-7 .page-fruit > p:first-child{ padding-top: 15px; }
+.tra-page-7 .page-fruit.fruit-1 {
+  background-color: rgba(74, 204, 211, .75);
+  left: 42px;
+  bottom: 620px;
+}
+.tra-page-7 .page-fruit.fruit-2 {
+  background-color: rgba(71, 168, 224, .75);
+  right: 100px;
+  bottom: 650px;
+}
+.tra-page-7 .page-fruit.fruit-3 {
+  background-color: rgba(222, 91, 91, .75);
+  left: 50%;
+  bottom: 430px;
+  margin-left: -100px;
+}
+.tra-page-7 .page-fruit.fruit-4 {
+  background-color: rgba(90, 176, 133, .75);
+  left: 32px;
+  bottom: 248px;
+}
+.tra-page-7 .page-fruit.fruit-5 {
+  background-color: rgba(222, 165, 91, .75);
+  right: 32px;
+  bottom: 352px;
+}
+
+/*第八页*/
+.tra-page-8{ /*background-color: #1c2026;*/}
+.tra-page-8 > .page-obliqueBG {
+  /*background-image: url(../images/page8/page8-obliqueBG.png);*/
+  background-position: 100% 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.tra-page-8 > .tra-heading{
+  margin: 3em auto 0;
+  width: 48%;
+  text-align: left;
+}
+.tra-page-8 > .tra-heading > p{ margin: 1.5em 0; }
+.tra-page-8 > .page-moon{
+  width: 372px;
+  height: 368px;
+  background-image: url(../images/page8/page8-moon-left.png);
+  background-position: 0 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tra-page-8 > .page-titan{
+  width: 480px;
+  height: 500px;
+  background-image: url(../images/page8/page8-titan.png);
+  background-position: 100% 100%;
+  background-size: auto 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+.tra-page-8 .page-person {
+  width: 285px;
+  height: 340px;
+  background-image: url(../images/page8/page8-person.png);
+  background-position: 50%;
+  background-size: auto 100%;
+  position: absolute;
+  right: 144px;
+  bottom: 140px;
+}
+.tra-page-8 .page-shooting-star{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.tra-page-8 .page-shooting-star > span{
+  height: 1px;
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  display: block;
+  position: absolute;
+}
+.tra-page-8 .page-shooting-star > span:after,
+.tra-page-8 .page-shooting-star > span:before{
+  content: '';
+  position: absolute;
+}
+.tra-page-8 .page-shooting-star > span:before{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,.15);
+  left: -2px;
+  top: -2px;
+}
+.tra-page-8 .page-shooting-star > span:after{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.65);
+  left: 0;
+  top: 0;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(1) {
+  width: 500px;
+  right: -58px;
+  top: 335px;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(2) {
+  width: 250px;
+  right: 0;
+  top: 392px;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(3) {
+  width: 550px;
+  right: 10px;
+  top: 188px;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(4) {
+  width: 400px;
+  right: 50px;
+  top: 260px;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(5) {
+  width: 250px;
+  right: 10px;
+  top: 500px;
+}
+
+/*第九页*/
+.tra-page-9 > .page-obliqueBG {
+  background-image: url(../images/page8/page8-obliqueBG.png);
+  background-position: 100% 0;
+  background-size: auto 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.tra-page-9 > .page-moon{
+  width: 372px;
+  height: 368px;
+  background-image: url(../images/page8/page8-moon-left.png);
+  background-position: 0 0;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.tra-comment{
+  margin: 0;
+  padding: 0 3rem 100px;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12%;
+  bottom: 0;
+  z-index: 21;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.tra-comment > .comment-item{
+  width: 100%;
+  padding: 20px 0;
+  display: table;
+}
+.tra-comment > .comment-item:first-child{ padding-top: 0; }
+.tra-comment .comment-left,
+.tra-comment .comment-right{
+  display: table-cell;
+  border-collapse: separate;
+  position: relative;
+  vertical-align: top;
+  text-align: left;
+}
+.tra-comment .comment-left{
+  width: 56px;
+}
+.tra-comment .comment-right{ padding-left: 40px; }
+.tra-comment .comment-imgbox {
+  width: 100px;
+  height: 100px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.tra-comment .comment-imgbox > img{ max-width: 100%; }
+.tra-comment .comment-body {
+  padding: 2rem;
+  min-width: 60%;
+  min-height: 100px;
+  line-height: 1.5;
+  color: #1c2026;
+  font-size: 2.5rem;
+  border-radius: 12px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+}
+.tra-comment .comment-body:after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 10px 14px;
+  border-style: dashed solid dashed dashed;
+  border-color: transparent #fff transparent transparent;
+  position: absolute;
+  left: -28px;
+  top: 40px;
+}
+.tra-comment-bar{
+  padding: 15px 150px 20px 25px;
+  width: 100%;
+  height: 100px;
+  text-align: left;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.tra-comment-bar + .tra-comment{ padding-bottom: 100px; }
+.tra-comment-bar > .tra-comment-input{
+  display: inline-block;
+  width: 100%;
+  height: 70px;
+  padding: 20px 10px;
+  line-height: 28px;
+  color: #bdbfd1;
+  font-size: 2.8rem;
+  font-weight: normal;
+  border: 1px solid transparent;
+  border-bottom-color: #49aadc;
+  outline: none;
+}
+.tra-comment-bar > .tra-comment-input:focus {
+  color: #333;
+}
+.tra-comment-bar > .tra-comment-btn {
+  display: inline-block;
+  padding: 20px 25px;
+  height: 70px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: normal;
+  border-radius: 8px;
+  border: 1px solid #49aadc;
+  background-color: #49aadc;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-touch-action: manipulation;
+          touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  outline: none;
+  -webkit-appearance: none;
+  transition: all .3s;
+  position: absolute;
+  right: 25px;
+  top: 15px;
+}
+.tra-comment-bar > .tra-comment-btn:hover,
+.tra-comment-bar > .tra-comment-btn:active{ opacity: .75; }
+/*** 各页内容 Ends ******************************************************/
+
+/*** 动画效果 Starts ******************************************************/
+
+.active .tra-heading > p{
+  -webkit-animation: fadeInDown 1s ease-in-out .5s 1 both;
+          animation: fadeInDown 1s ease-in-out .5s 1 both;
+}
+
+.tra-loading.prev{
+  -webkit-animation: fadeOutUp .8s ease-in-out 0s 1 both;
+          animation: fadeOutUp .8s ease-in-out 0s 1 both;
+}
+/* 第一页动画执行时间 Starts */
+.tra-page-1.active{
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.tra-page-1.active .page-moon{
+  -webkit-animation: page-1-moon 1s ease-in-out .3s 1 both;
+          animation: page-1-moon 1s ease-in-out .3s 1 both;
+}
+.tra-page-1 .page-moon:after{
+  -webkit-animation: page-1-moon-animate 15s linear .3s infinite both;
+          animation: page-1-moon-animate 15s linear .3s infinite both;
+}
+.tra-page-1.active > .page-planet-1,
+.tra-page-1.active > .page-planet-2,
+.tra-page-1.active > .page-planet-3,
+.tra-page-1.active > .page-planet-4 {
+  -webkit-animation: fadeInUpBig 1.8s ease-in-out .5s 1 both;
+          animation: fadeInUpBig 1.8s ease-in-out .5s 1 both;
+}
+.tra-page-1.active > .page-planet-1{
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+.tra-page-1.active > .page-planet-2{
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+.tra-page-1.active > .page-planet-3{
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+.tra-page-1.active > .page-planet-4{
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+.tra-page-1.active > .page-astronaut-1{
+  -webkit-animation: fadeInLeft 1.2s ease-in-out 1.6s 1 both;
+          animation: fadeInLeft 1.2s ease-in-out 1.6s 1 both;
+}
+.tra-page-1 > .page-astronaut-1:after{
+  -webkit-animation: page-1-astronaut-float 15s linear 1.5s infinite both;
+          animation: page-1-astronaut-float 15s linear 1.5s infinite both;
+}
+.tra-page-1 > .page-astronaut-2:after{
+  -webkit-animation: page-1-astronaut-float 18s linear 1.8s infinite both;
+          animation: page-1-astronaut-float 18s linear 1.8s infinite both;
+}
+.tra-page-1.active > .page-astronaut-2{
+  -webkit-animation: fadeInRight 1.2s ease-in-out 1.8s 1 both;
+          animation: fadeInRight 1.2s ease-in-out 1.8s 1 both;
+}
+.tra-page-1.active .tra-heading > p:nth-child(1){
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.tra-page-1.active .tra-heading > p:nth-child(2){
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.tra-page-1.active .tra-heading > p:nth-child(3){
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.tra-page-1.active > .tra-btn-touch{
+  -webkit-animation: zoomIn .8s ease-in-out 3s 1 both;
+          animation: zoomIn .8s ease-in-out 3s 1 both;
+}
+/* 第一页动画执行时间 Ends：4.8s */
+
+/* 第一页动画离开时间 Starts */
+.tra-page-1.prev{
+  opacity: 1;
+  -webkit-animation: none;
+          animation: none;
+}
+.tra-page-1.prev.touchOn{ z-index: 12;}
+.tra-page-1.prev > .page-astronaut-1 {
+  -webkit-animation: fadeOutLeft .5s ease-in-out .2s 1 forwards;
+          animation: fadeOutLeft .5s ease-in-out .2s 1 forwards;
+}
+.tra-page-1.prev > .page-astronaut-2 {
+  -webkit-animation: fadeOutRight .5s ease-in-out .4s 1 both;
+          animation: fadeOutRight .5s ease-in-out .4s 1 both;
+}
+.tra-page-1.prev > .page-planet-1,
+.tra-page-1.prev > .page-planet-2,
+.tra-page-1.prev > .page-planet-3,
+.tra-page-1.prev > .page-planet-4 {
+  -webkit-animation: fadeOutDown .5s ease-in-out .6s 1 both;
+          animation: fadeOutDown .5s ease-in-out .6s 1 both;
+}
+.tra-page-1.prev .tra-heading > p {
+  -webkit-animation: fadeOutUp .5s ease-in-out .8s 1 both;
+          animation: fadeOutUp .5s ease-in-out .8s 1 both;
+}
+.tra-page-1.prev .page-moon {
+  -webkit-animation: fadeOutDown .5s ease-in-out 1s 1 both;
+          animation: fadeOutDown .5s ease-in-out 1s 1 both;
+}
+.tra-page-1.prev > .tra-btn-touch {
+  -webkit-animation: zoomOut 1s linear 1.8s 1 both;
+          animation: zoomOut 1s linear 1.8s 1 both;
+}
+.tra-page-1.prev > .tra-btn-touch > span{ font-size: 0; }
+
+/* 第一页动画离开时间 Ends：4.8s(执行) + 1.5s */
+
+/* 第二页动画执行时间 Starts */
+.tra-page-2.active{}
+.tra-page-2.active > .page-arm-one{
+  -webkit-animation: fadeInLeft 1.5s ease-in-out .3s 1 both;
+          animation: fadeInLeft 1.5s ease-in-out .3s 1 both;
+}
+.tra-page-2.active > .page-arm-two{
+  -webkit-animation: fadeIn 1.2s ease-in-out 1.8s 1 both;
+          animation: fadeIn 1.2s ease-in-out 1.8s 1 both;
+}
+.tra-page-2.active .tra-heading > p:nth-child(1){
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.tra-page-2.active .tra-heading > p:nth-child(2){
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.tra-page-2.active .tra-heading > p:nth-child(3){
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+.tra-page-2.active > .page-arm-two:after,
+.tra-page-2.prev > .page-arm-two:after{
+  -webkit-animation: page-2-arm-two 1s ease-in-out 4.2s 1 both;
+          animation: page-2-arm-two 1s ease-in-out 4.2s 1 both;
+}
+/* 第二页动画执行时间 Ends：5.7s */
+/* 第二页动画离开时间 Starts */
+.tra-page-2.prev {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+.tra-page-2.prev > .page-arm-one{
+  -webkit-animation: fadeOutLeft .8s ease-in-out .8s 1 both;
+          animation: fadeOutLeft .8s ease-in-out .8s 1 both;
+}
+.tra-page-2.prev > .page-arm-two{
+  -webkit-animation: fadeOutRight .8s ease-in-out .8s 1 both;
+          animation: fadeOutRight .8s ease-in-out .8s 1 both;
+}
+.tra-page-2.prev .tra-heading > p {
+  -webkit-animation: fadeOutUp .8s ease-in-out .8s 1 both;
+          animation: fadeOutUp .8s ease-in-out .8s 1 both;
+}
+
+/* 第二页动画离开时间 Ends：5.7s(执行) + 1.7s */
+
+
+/* 第三页动画执行时间 Starts */
+.tra-page-3.active{
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+.tra-page-3.active > .page-paperplane-1{
+  -webkit-animation: zoomIn .8s ease-in-out .1s 1 both;
+          animation: zoomIn .8s ease-in-out .1s 1 both;
+}
+.tra-page-3.active > .page-paperplane-1 > span{
+  -webkit-animation: paperplane-1-rotate 1.5s linear 1.5s 1 forwards;
+          animation: paperplane-1-rotate 1.5s linear 1.5s 1 forwards;
+}
+.tra-page-3.active > .page-paperplane-2,
+.tra-page-3.active > .page-paperplane-3,
+.tra-page-3.active > .page-paperplane-4 {
+  -webkit-animation: fadeInLeftBig 2s ease-in-out 2.2s 1 both;
+          animation: fadeInLeftBig 2s ease-in-out 2.2s 1 both;
+}
+.tra-page-3.active > .page-maxBg,
+.tra-page-3.prev > .page-maxBg{
+  -webkit-animation: pape-3-maxBgMove 30s linear 3s infinite both,
+                     fadeIn .5s linear .5s 1 both;
+          animation: pape-3-maxBgMove 30s linear 3s infinite both,
+                     fadeIn .5s linear .5s 1 both;
+}
+.tra-page-3.active > .page-maxBg > li,
+.tra-page-3.prev > .page-maxBg > li {
+  background-color: #1c2026;
+}
+.tra-page-3 > .page-paperplane-1 > span:after,
+.tra-page-3 > .page-paperplane-2:after,
+.tra-page-3 > .page-paperplane-3:after,
+.tra-page-3 > .page-paperplane-4:after {
+  -webkit-animation: paperplaneFly 5.5s linear 3s infinite both;
+          animation: paperplaneFly 5.5s linear 3s infinite both;
+}
+.tra-page-3 > .page-paperplane-2:after{
+  -webkit-animation-duration: 6.5s;
+          animation-duration: 6.5s;
+}
+.tra-page-3 > .page-paperplane-3:after{
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+.tra-page-3 > .page-paperplane-4:after{
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+.tra-page-3.active > .page-paperplane-3{
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.tra-page-3.active > .page-paperplane-4{
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.tra-page-3.active .tra-heading:nth-of-type(1),
+.tra-page-3.prev .tra-heading:nth-of-type(1){
+  -webkit-animation: fadeInDown 1s ease-in-out 3.2s 1 both,
+                     fadeOutLeft 1s ease-in-out 7s 1 both;
+          animation: fadeInDown 1s ease-in-out 3.2s 1 both,
+                     fadeOutLeft 1s ease-in-out 7s 1 both;
+}
+.tra-page-3.active .tra-heading:nth-of-type(1) > p:nth-child(1),
+.tra-page-3.prev .tra-heading:nth-of-type(1) > p:nth-child(1){
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+.tra-page-3.active .tra-heading:nth-of-type(1) > p:nth-child(2),
+.tra-page-3.prev .tra-heading:nth-of-type(1) > p:nth-child(2){
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
+}
+.tra-page-3.active .tra-heading:nth-of-type(1) > p:nth-child(3),
+.tra-page-3.prev .tra-heading:nth-of-type(1) > p:nth-child(3){
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.tra-page-3.active .tra-heading:nth-of-type(2) > p:nth-child(1){
+  -webkit-animation-delay: 7.4s;
+          animation-delay: 7.4s;
+}
+.tra-page-3.active .tra-heading:nth-of-type(2) > p:nth-child(2){
+  -webkit-animation-delay: 7.7s;
+          animation-delay: 7.7s;
+}
+.tra-page-3.active .tra-heading:nth-of-type(2) > p:nth-child(3){
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+/* 第三页动画执行时间 Ends: 4.5s */
+/* 第三页动画离开时间 Starts */
+.tra-page-3.prev {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.tra-page-3.prev > .page-paperplane-1,
+.tra-page-3.prev > .page-paperplane-2,
+.tra-page-3.prev > .page-paperplane-3,
+.tra-page-3.prev > .page-paperplane-4 {
+  -webkit-animation: paperplaneOut 1.2s ease-in-out .8s 1 both;
+          animation: paperplaneOut 1.2s ease-in-out .8s 1 both;
+}
+.tra-page-3.prev .tra-heading > p {
+  -webkit-animation: fadeOutLeft .5s ease-in-out 1s 1 both;
+          animation: fadeOutLeft .5s ease-in-out 1s 1 both;
+}
+
+/* 第三页动画离开时间 Ends：4s(执行) + 1.5s */
+
+
+/* 第四页动画执行时间 Starts */
+.tra-page-4.active {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+.tra-page-4.active > .page-building{
+  -webkit-animation: fadeInUpBig 1.5s ease-in-out .5s 1 both;
+          animation: fadeInUpBig 1.5s ease-in-out .5s 1 both;
+}
+.tra-page-4.active .page-table,
+.tra-page-4.active .page-miniascape,
+.tra-page-4.active .page-computer,
+.tra-page-4.active .page-chair,
+.tra-page-4.active .page-paper-1,
+.tra-page-4.active .page-paper-2,
+.tra-page-4.active .page-clock,
+.tra-page-4.active .page-plan{
+  -webkit-animation: fadeInDown .4s ease-in-out 2.5s 1 both;
+          animation: fadeInDown .4s ease-in-out 2.5s 1 both;
+}
+.tra-page-4.active .page-miniascape{
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.tra-page-4.active .page-paper-1{
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+}
+.tra-page-4.active .page-paper-2{
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+.tra-page-4.active .page-computer{
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+.tra-page-4.active .page-chair{
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+.tra-page-4.active .page-clock{
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
+}
+.tra-page-4.active .page-plan{
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s;
+}
+.tra-page-4.active .page-human{
+  -webkit-animation: bounceIn .8s ease-in-out 4.1s 1 both;
+          animation: bounceIn .8s ease-in-out 4.1s 1 both;
+}
+
+.tra-page-4.active .page-moon{
+  -webkit-animation: fadeInDown 1.5s ease-in-out 4.5s 1 both;
+          animation: fadeInDown 1.5s ease-in-out 4.5s 1 both;
+}
+.tra-page-4.active .tra-heading > p:nth-child(1){
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.tra-page-4.active .page-cube-1{
+  -webkit-animation: fadeInLeft 1.2s ease-in-out 5s 1 both;
+          animation: fadeInLeft 1.2s ease-in-out 5s 1 both;
+}
+.tra-page-4.active .page-cube-2{
+  -webkit-animation: fadeInRight 1.2s ease-in-out 5.2s 1 both;
+          animation: fadeInRight 1.2s ease-in-out 5.2s 1 both;
+}
+
+/* 第四页动画执行时间 Ends：9s */
+/* 第四页动画离开时间 Starts */
+.tra-page-4.prev{
+  -webkit-animation: fadeOutDown .5s ease-in-out 0s 1 both;
+          animation: fadeOutDown .5s ease-in-out 0s 1 both;
+}
+/*.tra-page-4.prev .page-paper-2{
+  z-index: 21;
+  -webkit-animation: page-4-computerOut 1.2s linear 0s 1 both;
+          animation: page-4-computerOut 1.2s linear 0s 1 both;
+}*/
+
+/* 第四页动画离开时间 Ends：4.8s(执行) + 2.8s */
+
+/* 第五页动画执行时间 Starts */
+.tra-page-5.active{
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+.tra-page-5.active .page-bottom-area{
+  -webkit-animation: fadeInUp .5s ease-in-out .5s 1 both;
+          animation: fadeInUp .5s ease-in-out .5s 1 both;
+}
+.tra-page-5.active .page-goods {
+  -webkit-animation: fadeInUpBig 1.5s ease-in-out .8s 1 both;
+          animation: fadeInUpBig 1.5s ease-in-out .8s 1 both;
+}
+.tra-page-5.active .page-goods:nth-child(odd){
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.tra-page-5.active .page-goods:after,
+.tra-page-5.prev .page-goods:after{
+  -webkit-animation: goodsShake 12s linear 1s infinite forwards;
+          animation: goodsShake 12s linear 1s infinite forwards;
+}
+.tra-page-5.active .page-goods:nth-child(odd):after,
+.tra-page-5.prev .page-goods:nth-child(odd):after{
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+.tra-page-5.active .page-goods:nth-child(even):after,
+.tra-page-5.prev .page-goods:nth-child(even):after{
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-duration: 18s;
+          animation-duration: 18s;
+}
+.tra-page-5.active .page-goods:nth-child(2n+2):after,
+.tra-page-5.prev .page-goods:nth-child(2n+2):after{
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  -webkit-animation-duration: 21s;
+          animation-duration: 21s;
+}
+.tra-page-5.active .page-write-area{
+  -webkit-animation: fadeInLeftBig 1.8s ease-in-out 1.5s 1 both;
+          animation: fadeInLeftBig 1.8s ease-in-out 1.5s 1 both;
+}
+.tra-page-5.active .page-write-dot{
+  -webkit-animation: bounceIn 1s ease-in-out 3.2s 1 both;
+          animation: bounceIn 1s ease-in-out 3.2s 1 both;
+}
+.tra-page-5.active .page-write-dot.dot-2{
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+.tra-page-5.active .page-write-dot.dot-3{
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
+}
+.tra-page-5.active .page-write-pen{
+  -webkit-animation: fadeIn 1s ease-in-out 4.2s 1 both;
+          animation: fadeIn 1s ease-in-out 4.2s 1 both;
+}
+.tra-page-5.active .page-write-pen:after,
+.tra-page-5.prev .page-write-pen:after{
+  -webkit-animation: page-5-pen 2.5s linear 5.2s 1 both;
+          animation: page-5-pen 2.5s linear 5.2s 1 both;
+}
+.tra-page-5.active .tra-heading > p:nth-child(1){
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.tra-page-5.active .tra-heading > p:nth-child(2){
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s;
+}
+.tra-page-5.active .tra-heading > p:nth-child(3){
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s;
+}
+/* 第五页动画执行时间 Ends: 7s */
+/* 第五页动画离开时间 Starts */
+.tra-page-5.prev{
+  -webkit-animation: fadeOutLeft .8s ease-in-out 0s 1 both;
+          animation: fadeOutLeft .8s ease-in-out 0s 1 both;
+}
+.tra-page-5.prev .page-bottom-area{
+  -webkit-animation: fadeOutDown .5s ease-in-out 0s 1 both;
+          animation: fadeOutDown .5s ease-in-out 0s 1 both;
+}
+.tra-page-5.prev .tra-heading{
+  -webkit-animation: fadeOutUp .8s ease-in-out 0s 1 both;
+          animation: fadeOutUp .8s ease-in-out 0s 1 both;
+}
+.tra-page-5.prev .page-write-area{
+  -webkit-animation: fadeOut .5s ease-in-out 0s 1 both;
+          animation: fadeOut .5s ease-in-out 0s 1 both;
+}
+
+/* 第五页动画离开时间 Ends：5.5s(执行) + .5s */
+
+/* 第六页动画执行时间 Starts */
+.tra-page-6.active{
+  -webkit-animation: fadeInRight .8s ease-in-out 0s 1 forwards;
+          animation: fadeInRight .8s ease-in-out 0s 1 forwards;
+}
+.tra-page-6.active > .page-bottomBG{
+  -webkit-animation: fadeInUp 1s ease-in-out .5s 1 both;
+          animation: fadeInUp 1s ease-in-out .5s 1 both;
+}
+.tra-page-6.active > .page-book{
+  -webkit-animation: zoomIn .8s ease-in-out .5s 1 both;
+          animation: zoomIn .8s ease-in-out .5s 1 both;
+}
+.tra-page-6.active > .page-person{
+  -webkit-animation: fadeInUp 1.5s ease-in-out 1.6s 1 both;
+          animation: fadeInUp 1.5s ease-in-out 1.6s 1 both;
+}
+.tra-page-6.active > .page-person > span{
+  -webkit-animation: fadeIn 2s linear 3s infinite both;
+          animation: fadeIn 2s linear 3s infinite both;
+}
+.tra-page-6.active > .page-person > span:nth-child(2){
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+.tra-page-6.active > .page-person > span:nth-child(3){
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+.tra-page-6.active > .page-duvet,
+.tra-page-6.prev > .page-duvet{
+  -webkit-animation: fadeInUp 1s ease-in-out 3.8s 1 both;
+          animation: fadeInUp 1s ease-in-out 3.8s 1 both;
+}
+.tra-page-6.active .page-hands,
+.tra-page-6.prev .page-hands{
+  -webkit-animation: fadeOutDown .8s ease-in-out 5s 1 both;
+          animation: fadeOutDown .8s ease-in-out 5s 1 both;
+}
+.tra-page-6.active > .page-dialog-1,
+.tra-page-6.active > .page-dialog-2{
+  -webkit-animation: fadeInUp .8s ease-in-out 5.2s 1 both;
+          animation: fadeInUp .8s ease-in-out 5.2s 1 both;
+}
+.tra-page-6.active > .page-dialog-2{
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+.tra-page-6.active > .page-dialog-3{
+  -webkit-animation: fadeInDown 1s ease-in-out 5.8s 1 both;
+          animation: fadeInDown 1s ease-in-out 5.8s 1 both;
+}
+.tra-page-6.active .tra-heading > p:nth-child(1){
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s;
+}
+.tra-page-6.active .tra-heading > p:nth-child(2){
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s;
+}
+.tra-page-6.active .tra-heading > p:nth-child(3){
+  -webkit-animation-delay: 4.9s;
+          animation-delay: 4.9s;
+}
+
+/* 第六页动画执行时间 Ends: 6s */
+/* 第六页动画离开时间 Starts */
+.tra-page-6.prev{
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+.tra-page-6.prev > .page-dialog-3{
+  z-index: 21;
+  background-color: rgba(0,0,0,.9);
+  -webkit-animation: page-6-dialogOut 1.5s linear 0s 1 both;
+          animation: page-6-dialogOut 1.5s linear 0s 1 both;
+}
+/* 第六页动画离开时间 Ends：6s(执行) + 1.5s */
+
+/* 第七页动画执行时间 Starts */
+.tra-page-7.active{}
+.tra-page-7.active .page-tree{
+  -webkit-animation: fadeInUp 1s ease-in-out .3s 1 both;
+          animation: fadeInUp 1s ease-in-out .3s 1 both;
+}
+.tra-page-7.active .page-leaves,
+.tra-page-7.prev .page-leaves{
+  -webkit-animation: bounceIn .8s ease-in-out 1.5s 1 both,
+                     shake 20s ease-in-out .8s infinite both;
+          animation: bounceIn .8s ease-in-out 1.5s 1 both,
+                     shake 20s ease-in-out .8s infinite both;
+}
+.tra-page-7.active .page-fruit.fruit-1{
+  -webkit-animation: bounceIn .8s ease-in-out 2.2s 1 both,
+                     shake 26s ease-in-out 3s infinite both;
+          animation: bounceIn .8s ease-in-out 2.2s 1 both,
+                     shake 26s ease-in-out 3s infinite both;
+}
+.tra-page-7.active .page-fruit.fruit-2{
+  -webkit-animation: bounceIn .8s ease-in-out 2.4s 1 both,
+                     shake 22s ease-in-out 3s infinite both;
+          animation: bounceIn .8s ease-in-out 2.4s 1 both,
+                     shake 22s ease-in-out 3s infinite both;
+}
+.tra-page-7.active .page-fruit.fruit-3{
+  -webkit-animation: bounceIn .8s ease-in-out 2.6s 1 both,
+                     shake 25s ease-in-out 3s infinite both;
+          animation: bounceIn .8s ease-in-out 2.6s 1 both,
+                     shake 25s ease-in-out 3s infinite both;
+}
+.tra-page-7.active .page-fruit.fruit-4{
+  -webkit-animation: bounceIn .8s ease-in-out 2.8s 1 both,
+                     shake 28s ease-in-out 3s infinite both;
+          animation: bounceIn .8s ease-in-out 2.8s 1 both,
+                     shake 28s ease-in-out 3s infinite both;
+}
+.tra-page-7.active .page-fruit.fruit-5{
+  -webkit-animation: bounceIn .8s ease-in-out 3s 1 both,
+                     shake 28s ease-in-out 3s infinite both;
+          animation: bounceIn .8s ease-in-out 3s 1 both,
+                     shake 28s ease-in-out 3s infinite both;
+}
+.tra-page-7.active > .page-moon{
+  -webkit-animation: fadeInDown 1.2s ease-in-out 3.3s 1 both;
+          animation: fadeInDown 1.2s ease-in-out 3.3s 1 both;
+}
+
+/* 第七页动画执行时间 Ends */
+/* 第七页动画离开时间 Starts */
+.tra-page-7.prev .page-fruit.fruit-1{
+  -webkit-animation: fadeOutDownBig 1.2s linear 0s 1 both;
+          animation: fadeOutDownBig 1.2s linear 0s 1 both;
+}
+.tra-page-7.prev .page-fruit.fruit-2{
+  -webkit-animation: fadeOutDownBig 1.2s linear .2s 1 both;
+          animation: fadeOutDownBig 1.2s linear .2s 1 both;
+}
+.tra-page-7.prev .page-fruit.fruit-3{
+  -webkit-animation: fadeOutDownBig 1.2s linear .4s 1 both;
+          animation: fadeOutDownBig 1.2s linear .4s 1 both;
+}
+.tra-page-7.prev .page-fruit.fruit-4{
+  -webkit-animation: fadeOutDownBig 1.2s linear .6s 1 both;
+          animation: fadeOutDownBig 1.2s linear .6s 1 both;
+}
+.tra-page-7.prev .page-fruit.fruit-5{
+  -webkit-animation: fadeOutDownBig 1.2s linear .8s 1 both;
+          animation: fadeOutDownBig 1.2s linear .8s 1 both;
+}
+.tra-page-7.prev .page-tree{
+  -webkit-animation: fadeOutDownBig 1.2s linear 1s 1 both;
+          animation: fadeOutDownBig 1.2s linear 1s 1 both;
+}
+
+/* 第七页动画离开时间 Ends：4.8s(执行) + 1.5s */
+
+/* 第八页动画执行时间 Starts */
+.tra-page-8.active,
+.tra-page-8.prev{
+  /*-webkit-animation: rotateInDownRight .8s linear 0s 1 both;
+          animation: rotateInDownRight .8s linear 0s 1 both;*/
+}
+.tra-page-8.active > .page-moon{
+  /*-webkit-animation: fadeIn 1s ease-in-out .3s 1 both;
+          animation: fadeIn 1s ease-in-out .3s 1 both;*/
+}
+.tra-page-8.active > .page-titan{
+  -webkit-animation: fadeInUp 1s ease-in-out .8s 1 both;
+          animation: fadeInUp 1s ease-in-out .8s 1 both;
+}
+.tra-page-8.active .page-person{
+  -webkit-animation: fadeIn 1s ease-in-out 1.8s 1 both;
+          animation: fadeIn 1s ease-in-out 1.8s 1 both;
+}
+.tra-page-8.active .tra-heading > p:nth-child(1){
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.tra-page-8.active .tra-heading > p:nth-child(2){
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.tra-page-8.active .tra-heading > p:nth-child(3){
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.tra-page-8.active .page-shooting-star > span,
+.tra-page-8.prev .page-shooting-star > span{
+  -webkit-animation: fadeIn 0s linear 3.5s infinite both;
+          animation: fadeIn 0s linear 3.5s infinite both;
+}
+.tra-page-8 .page-shooting-star > span:before{
+  -webkit-animation: shootingStar-head 1s linear 3.5s infinite both;
+          animation: shootingStar-head 1s linear 3.5s infinite both;
+}
+.tra-page-8 .page-shooting-star > span:after{
+  -webkit-animation: shootingStar-line 1.2s linear 3.5s infinite both;
+          animation: shootingStar-line 1.2s linear 3.5s infinite both;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(1):after,
+.tra-page-8 .page-shooting-star > span:nth-child(1):before{
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(2):after,
+.tra-page-8 .page-shooting-star > span:nth-child(2):before{
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(3):after,
+.tra-page-8 .page-shooting-star > span:nth-child(3):before{
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(4):after,
+.tra-page-8 .page-shooting-star > span:nth-child(4):before{
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+.tra-page-8 .page-shooting-star > span:nth-child(5):after,
+.tra-page-8 .page-shooting-star > span:nth-child(5):before{
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+/* 第八页动画执行时间 Ends: 12s */
+/* 第八页动画离开时间 Starts */
+/*.tra-page-8.prev{
+  opacity: 1;
+}*/
+.tra-page-8.prev .page-shooting-star{
+  -webkit-animation: fadeOut .8s ease-in-out 0s 1 both;
+          animation: fadeOut .8s ease-in-out 0s 1 both;
+}
+.tra-page-8.prev .page-person,
+.tra-page-8.prev .page-titan{
+  -webkit-animation: fadeOut 1s ease-in-out .5s 1 both;
+          animation: fadeOut 1s ease-in-out .5s 1 both;
+}
+.tra-page-8.prev .tra-heading > p {
+  -webkit-animation: fadeOutUp .8s ease-in-out 1s 1 both;
+          animation: fadeOutUp .8s ease-in-out 1s 1 both;
+}
+
+/* 第八页动画离开时间 Ends：12s(执行) + 2.2s */
+
+/* 第九页动画执行时间 Starts */
+.tra-page-9.active{}
+.tra-page-9.active .tra-comment-bar{
+  -webkit-animation: fadeInUp 1s ease-in-out 1.8s 1 both;
+          animation: fadeInUp 1s ease-in-out 1.8s 1 both;
+}
+.tra-page-9.active .tra-comment-bar > .tra-comment-input{
+  -webkit-animation: shake 1.5s linear 3.5s 1 both;
+          animation: shake 1.5s linear 3.5s 1 both;
+}
+.tra-page-9.active .tra-comment-bar > .tra-comment-input:focus{
+  -webkit-animation: none;
+          animation: none;
+}
+.tra-page-9.active .tra-comment{
+  -webkit-animation: fadeIn .3s ease-in-out 2s 1 both;
+          animation: fadeIn .3s ease-in-out 2s 1 both;
+}
+.tra-page-9.active .tra-comment .comment-item{
+  -webkit-animation: fadeInLeft .8s ease-in-out 2.5s 1 both;
+          animation: fadeInLeft .8s ease-in-out 2.5s 1 both;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(2){
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(3){
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(4){
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(5){
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(6){
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(7){
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(8){
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(9){
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+.tra-page-9.active .tra-comment .comment-item:nth-child(10){
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+
+/* 第九页动画执行时间 Ends */
+/* 第九页动画离开时间 Starts */
+
+/* 第九页动画离开时间 Ends：4.8s(执行) + 1.5s */
+
+
+
+/*** 动画效果 Ends ******************************************************/
+
+
+
+/*** 针对 Iphone 4/4s 适配 Starts ******************************************************/
+@media (device-width:320px) and (-webkit-min-device-pixel-ratio:2){
+  .tra-heading {
+    margin: .5em 0;
+    font-size: 2.8rem;
+  }
+  .tra-heading > p { margin: 12px 0;}
+  .tra-page-1 > .tra-btn-touch{ bottom: 270px; }
+  .tra-page-2 > .page-arm-one{ bottom: -250px;}
+  .tra-page-2 > .page-arm-two{ bottom: -316px;}
+  .tra-page-3 > .tra-heading{ writing-mode: horizontal-tb; }
+  .tra-page-3 > .page-paperplane-1{ bottom: 238px; }
+  .tra-page-3 > .page-paperplane-2{ bottom: 40px;}
+  .tra-page-3 > .page-paperplane-3{ bottom: 170px;}
+  .tra-page-3 > .page-paperplane-4{ bottom: 380px;}
+  .tra-page-4 > .tra-heading,
+  .tra-page-5 > .tra-heading{ margin-top: .8em; }
+  .tra-page-4 > .page-building{ bottom: -100px; }
+  .tra-page-5 > .page-write-area{ top: 36%; }
+  .tra-page-5 .page-bottom-area,
+  .tra-page-5 .page-goods{ bottom: -10px; }
+  .tra-page-6 > .tra-heading{ margin-top: .8em; }
+  .tra-page-6 > .page-book{ bottom: -10px; }
+  .tra-page-6 > .page-dialog-1{ left: 12%; }
+  .tra-page-6 > .page-dialog-2{ left: 4%; }
+  .tra-page-6 > .page-dialog-3{ top: -320px; }
+  .tra-page-6 > .page-person,
+  .tra-page-6 > .page-duvet{ bottom: -80px; }
+  .tra-page-6 > .page-person > span { bottom: 500px;}
+  .tra-page-6 > .page-person > span:nth-child(2) { bottom: 510px;}
+  .tra-page-6 > .page-person > span:nth-child(3) { bottom: 519px;}
+  .tra-page-7 .page-tree{ bottom: -200px; }
+  .tra-page-8 > .page-titan{ bottom: -100px; }
+  .tra-page-8 > .tra-heading{ font-size: 3rem; }
+
+}
+/*** 针对 Iphone 4/4s 适配 Ends ******************************************************/
+
+
+/*** 针对 Iphone 6 适配 Starts ******************************************************/
+@media (device-width:375px) and (-webkit-min-device-pixel-ratio:2){
+  .tra-heading > p{ margin: 15px 0; }
+  .tra-page-6 > .tra-heading{ margin-top: 1em; }
+  .tra-page-7 .page-tree{ bottom: -40px; }
+}
+
+/*** 针对 Iphone 6 适配 Ends ******************************************************/
