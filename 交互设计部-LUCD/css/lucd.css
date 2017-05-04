@@ -341,11 +341,11 @@ th {
 
 
    /* 32*32 */
-.lucd-icon-32-edit{ background-image: url(../icon/_32/icon_32_edit_cacaca.png);}
-.lucd-icon-32-top{ background-image: url(../icon/_32/icon_32_arr_ring_up_cacaca.png);}
-.lucd-icon-32-face{ background-image: url(../icon/_32/icon_32_face_b5b5b5.png);}
-.lucd-icon-32-pic{ background-image: url(../icon/_32/icon_32_img_b5b5b5.png);}
-.lucd-icon-32-post{ background-image: url(../icon/_32/icon_32_post_fff.png);}
+.lucd-icon-32-edit{ background-image: url(../icon/32/icon_32_edit_cacaca.png);}
+.lucd-icon-32-top{ background-image: url(../icon/32/icon_32_arr_ring_up_cacaca.png);}
+.lucd-icon-32-face{ background-image: url(../icon/32/icon_32_face_b5b5b5.png);}
+.lucd-icon-32-pic{ background-image: url(../icon/32/icon_32_img_b5b5b5.png);}
+.lucd-icon-32-post{ background-image: url(../icon/32/icon_32_post_fff.png);}
 
 
    /* 48*48 */
@@ -1767,9 +1767,9 @@ select[multiple].lucd-input-lg {
   height: 38px;
 }
 .lucd-form-comment-btngroup .lucd-btn:hover .lucd-icon-32-face,
-.lucd-form-comment-btngroup .lucd-btn:focus .lucd-icon-32-face{  background-image: url(../icon/_32/icon_32_face_fff.png);}
+.lucd-form-comment-btngroup .lucd-btn:focus .lucd-icon-32-face{  background-image: url(../icon/32/icon_32_face_fff.png);}
 .lucd-form-comment-btngroup .lucd-btn:hover .lucd-icon-32-pic,
-.lucd-form-comment-btngroup .lucd-btn:focus .lucd-icon-32-pic{  background-image: url(../icon/_32/icon_32_img_fff.png);}
+.lucd-form-comment-btngroup .lucd-btn:focus .lucd-icon-32-pic{  background-image: url(../icon/32/icon_32_img_fff.png);}
 
 .lucd-has-success .help-block,
 .lucd-has-success .lucd-control-label,
@@ -8433,7 +8433,7 @@ html {
   width:40px;
   height:40px;
   border-bottom-left-radius: 5px;
-  background:#ccc url(../icon/_32/icon_32_close_00a086.png) no-repeat 50%;
+  background:#ccc url(../icon/32/icon_32_close_00a086.png) no-repeat 50%;
   transition: all .3s ease-in-out;
   position:absolute;
   top:-1px;
@@ -8443,7 +8443,7 @@ html {
 }
 .lucd-album-popup-close:hover{
   background-color: #00a086;
-  background-image: url(../icon/_32/icon_32_close_fff.png)
+  background-image: url(../icon/32/icon_32_close_fff.png)
 }
 .lucd-album-popup-content{
   width:1200px;
