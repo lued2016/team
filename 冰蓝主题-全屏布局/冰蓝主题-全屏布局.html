@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>全屏布局</title>
+
+	<link href="style/address_.css" rel="stylesheet">
+	<link href="style/calendar_.css" rel="stylesheet">
+	<link href="style/address_.css" rel="stylesheet">
+	<link href="style/category_.css" rel="stylesheet">
+	<link href="style/common_.css" rel="stylesheet">
+	<link href="style/contextmenu_.css" rel="stylesheet">
+	<link href="style/criteria_.css" rel="stylesheet">
+	<link href="style/dataview_.css" rel="stylesheet">
+	<link href="style/dialog_.css" rel="stylesheet">
+	<link href="style/flowstat.css" rel="stylesheet">
+	<link href="style/form_.css" rel="stylesheet">
+	<link href="style/fullcalendar.css" rel="stylesheet">
+	<link href="style/icon_.css" rel="stylesheet">
+	<link href="style/list_.css" rel="stylesheet">
+	<link href="style/listview_.css" rel="stylesheet">
+	<link href="style/menu_.css" rel="stylesheet">
+	<link href="style/paging_.css" rel="stylesheet">
+	<link href="style/panel_.css" rel="stylesheet">
+	<link href="style/popup_.css" rel="stylesheet">
+	<link href="style/portal_.css" rel="stylesheet">
+	<link href="style/prompt_.css" rel="stylesheet">
+	<link href="style/sns.css" rel="stylesheet">
+	<link href="style/step_.css" rel="stylesheet">
+	<link href="style/toolbar_.css" rel="stylesheet">
+	<link href="style/tree_.css" rel="stylesheet">
+
+	<link href="style/fullscreen.css" rel="stylesheet"> <!-- 主要样式表 -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//左侧栏收缩效果
+			var $objShrink=$("#fullscreenShrink");
+			var $objAside=$(".fullscreen-aside");
+			var $objHeader=$(".fullscreen-header");
+			var $objBody=$(".fullscreen-body");
+			var asideWidth=$objAside.width();
+			var shrinkWidth=50;
+
+			$(".shrink .fullscreen-aside-nav > li > a").hover(function(){
+				$(this).find(".fullscreen-aside-nav-txt").stop(true, false).animate({left:"100%",opacity:"1"},300);
+			},function(){
+				$(this).find(".fullscreen-aside-nav-txt").stop(true, false).animate({left:"0",opacity:"0"},300);
+			});
+
+			$objShrink.bind("click",function(event){
+				if ($(this).hasClass("active")) {
+					$(this).removeClass("active").parents("body").find($objBody).stop().animate({left:asideWidth},300);
+					$(this).parents("body").find($objHeader).removeClass("fixed").stop().animate({left:asideWidth},300);
+					$objAside.stop().animate({width:asideWidth},300,function(){
+						$objAside.removeClass("shrink").find(".fullscreen-logo > .logo").fadeIn(300);
+						$objAside.find(".fullscreen-logo > .logo-shrink").css("display","none");
+					});
+				}else{
+					$(this).addClass("active").parents("body").find($objBody).stop().animate({left:shrinkWidth+"px"},300);
+					$(this).parents("body").find($objHeader).addClass("fixed").stop().animate({left:shrinkWidth+"px"},300);
+					$objAside.stop().animate({width:shrinkWidth+"px"},300,function(){
+						$objAside.addClass("shrink").find(".fullscreen-logo > .logo").fadeOut(300,function(){
+							$objAside.find(".fullscreen-logo > .logo-shrink").fadeIn(300);
+						});
+					});
+				};
+			});
+
+		})
+
+	</script>
+
+</head>
+<body class="fullscreen-protal">
+	<!-- 全屏布局 Starts -->
+		<!-- 左侧栏固定宽 Starts -->
+		<div class="fullscreen-aside">
+			<div class="fullscreen-aside-inner">
+				<!-- Logo Starts -->
+				<div class="fullscreen-logo">
+					<img class="logo" src="images/fullscreen/fullscreen-logo.png" alt="">
+					<img class="logo-shrink" src="images/fullscreen/fullscreen-logo-shrink.png" alt="">
+				</div>
+				<!-- Logo Ends -->
+				<!-- 导航栏 Starts -->
+				<ul class="fullscreen-aside-nav">
+					<li class="active">
+						<a href="#" title="信息门户">
+							<i class="fullscreen-icon fullscreen-icon-nav-1"></i>
+							<span class="fullscreen-aside-nav-txt">信息门户</span>
+							<i class="fullscreen-icon fullscreen-icon-arrowR"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fullscreen-icon fullscreen-icon-nav-2"></i>
+							<span class="fullscreen-aside-nav-txt">工作台</span>
+							<i class="fullscreen-icon fullscreen-icon-arrowR"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fullscreen-icon fullscreen-icon-nav-3"></i>
+							<span class="fullscreen-aside-nav-txt">高管门户</span>
+							<i class="fullscreen-icon fullscreen-icon-arrowR"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fullscreen-icon fullscreen-icon-nav-4"></i>
+							<span class="fullscreen-aside-nav-txt">新员工门户</span>
+							<i class="fullscreen-icon fullscreen-icon-arrowR"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fullscreen-icon fullscreen-icon-nav-5"></i>
+							<span class="fullscreen-aside-nav-txt">瞭望台</span>
+							<i class="fullscreen-icon fullscreen-icon-arrowR"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fullscreen-icon fullscreen-icon-nav-6"></i>
+							<span class="fullscreen-aside-nav-txt">导航门户</span>
+							<i class="fullscreen-icon fullscreen-icon-arrowR"></i>
+						</a>
+					</li>
+				</ul>
+				<!-- 导航栏 Ends -->
+			</div>
+		</div>
+		<!-- 左侧栏固定宽 Ends -->
+		<!-- 右侧内容区 Starts -->
+		<div class="fullscreen-body">
+			<!-- 头部栏 Starts -->
+			<div class="fullscreen-header">
+				<!-- 按钮 Starts -->
+				<button class="fullscreen-btn fullscreen-btn-shrink" id="fullscreenShrink" title="左侧菜单收展"></button>
+				<!-- 按钮 Ends -->
+				<!-- 搜索栏 Starts -->
+				<!-- 搜索栏 Ends -->
+				<!-- 右侧信息栏 Starts -->
+
+				<!-- 右侧信息栏 Ends -->
+			</div>
+			<!-- 头部栏 Ends -->
+			<!-- 中间区域 Starts -->
+			<div class="fullscreen-content">
+
+				<div style="margin: 0px auto;min-width:980px;">
+
+  <table width="100%" style="table-layout: fixed;" data-lui-type="lui/portal!VBox" id="lui-id-16" class="lui-component" data-lui-cid="lui-id-16" data-lui-parse-init="15">
+
+   <tbody>
+    <tr>
+      <td width="77%" valign="top" data-lui-type="lui/portal!Container" id="lui-id-17" class="lui-component" data-lui-cid="lui-id-17" data-lui-parse-init="16">
+        <table width="100%" style="table-layout: fixed;" data-lui-type="lui/portal!VBox" id="lui-id-18" class="lui-component" data-lui-cid="lui-id-18" data-lui-parse-init="17">
+
+         <tbody>
+          <tr>
+           <td width="55%" valign="top" data-lui-type="lui/portal!Container" id="lui-id-19" class="lui-component" data-lui-cid="lui-id-19" data-lui-parse-init="18">
+            <div id="p_704fc69be3212ad9f16e" data-lui-type="lui/panel!NonePanel" style="" class="lui-component" data-lui-cid="p_704fc69be3212ad9f16e" data-lui-parse-init="19">
+
+
+
+            <div class="lui_nonepanel_frame">		<div class="lui_nonepanel_transparent">			<div class="lui_nonepanel_content" data-lui-mark="panel.contents">			<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 299px;"><div data-lui-type="lui/panel!Content" style="min-height: 299px;" id="lui-id-21" class="lui-component lui_panel_ext_padding" data-lui-cid="lui-id-21" data-lui-parse-init="21">
+
+
+              <div data-lui-type="lui/base!DataView" style="" id="lui-id-23" class="lui-component" data-lui-cid="lui-id-23" data-lui-parse-init="23"><div id="lui-id-25-slide"><div class="lui_dataview_slide_content" style="width:527px;height:299px;"><div class="lui_dataview_slide_change lui_dataview_slide_pre"><i></i></div> <div class="lui_dataview_slide_change lui_dataview_slide_next"><i></i></div><div class="lui_dataview_slide_container" style="height: 100%; width: 3689px; left: -1581px;"><div class="lui_dataview_slide_imgDiv" style="height:100%;width:527px"><a href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1555c04ccac9b6d52a39a3d45d793b82" target="_blank"><img src="/sys/attachment/sys_att_main/sysAttMain.do?method=download&amp;fdId=155c817d194e704cad29b904aa9829fe&amp;fileName=W020160629373705196890.jpg" alt="" style="width:100%; height:100%"></a></div><div class="lui_dataview_slide_imgDiv" style="height:100%;width:527px"><a href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1555c583d46653ca5d1b6eb4b1aa9e31" target="_blank"><img src="/sys/attachment/sys_att_main/sysAttMain.do?method=download&amp;fdId=155723eff4bb8e46aae56614f1599c85&amp;fileName=Img432308967_03.jpg" alt="" style="width:100%; height:100%"></a></div><div class="lui_dataview_slide_imgDiv" style="height:100%;width:527px"><a href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1555bbf1f0179e7d3c9922a463bbb11b" target="_blank"><img src="/sys/attachment/sys_att_main/sysAttMain.do?method=download&amp;fdId=1557b4250dc184bbca7cac949e89346a&amp;fileName=504.jpg" alt="" style="width:100%; height:100%"></a></div><div class="lui_dataview_slide_imgDiv" style="height:100%;width:527px"><a href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1555bc2028282a35b175a86400197468" target="_blank"><img src="/sys/attachment/sys_att_main/sysAttMain.do?method=download&amp;fdId=1557752f5da9408ea8e3a31452db3a61&amp;fileName=datu.jpg" alt="" style="width:100%; height:100%"></a></div><div class="lui_dataview_slide_imgDiv" style="height:100%;width:527px"><a href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1555bc097c75e884c24def24dd4b4ab4" target="_blank"><img src="/sys/attachment/sys_att_main/sysAttMain.do?method=download&amp;fdId=1556d2cb3c8c753cdd824fb4964a35f6&amp;fileName=20151012BSKjeP16g6.jpg" alt="" style="width:100%; height:100%"></a></div><div class="lui_dataview_slide_imgDiv" style="height:100%;width:527px"><a href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1555bbffdc689db5f2c562c47f7bdbf7" target="_blank"><img src="/sys/attachment/sys_att_main/sysAttMain.do?method=download&amp;fdId=15572096be0f712cbf6f1db4b7bac57a&amp;fileName=海上特区.jpg" alt="" style="width:100%; height:100%"></a></div><div class="lui_dataview_slide_imgDiv" style="height:100%;width:527px"><a href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1555c04ccac9b6d52a39a3d45d793b82" target="_blank"><img src="/sys/attachment/sys_att_main/sysAttMain.do?method=download&amp;fdId=155c817d194e704cad29b904aa9829fe&amp;fileName=W020160629373705196890.jpg" alt="" style="width:100%; height:100%"></a></div></div><h3 data-index="0" style="display: none;">深圳地铁集团与蓝悦达成战略合作</h3><h3 data-index="1" style="display: none;">蓝悦飞雪品牌转型打造泛户外生态链</h3><h3 data-index="2" style="display: none;">恒大蓝悦强强联合开展地产金融等多领域合作</h3><h3 data-index="3" style="display: inline-block;">蓝悦国际将打造立体化大商贸物流</h3><h3 data-index="4" style="display: none;">改革进入关键阶段，大批地产央企整合</h3><h3 data-index="5" style="display: none;">蓝悦集团建中国首个“海上特区”</h3><div class="lui_dataview_slide_bg"></div><ul><li class=""></li><li class=""></li><li class=""></li><li class="lui_dataview_slide_on"></li><li class=""></li><li class=""></li></ul></div></div></div>
+             </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>		</div>	</div></div>  </td>
+           <td width="0" style="min-width: 0px;"> </td>
+           <td width="45%" valign="top" data-lui-type="lui/portal!Container" id="lui-id-26" class="lui-component" data-lui-cid="lui-id-26" data-lui-parse-init="26">
+            <div id="p_ad64f0a47f6e8d3db43c" data-lui-type="lui/panel!TabPanel" style="" class="lui-component" data-lui-cid="p_ad64f0a47f6e8d3db43c" data-lui-parse-init="27">
+
+
+
+
+
+            <div class="lui_tabpanel_simple_frame">		<div class="lui_tabpanel_simple_navs_l">			<div class="lui_tabpanel_simple_navs_r">				<div class="lui_tabpanel_simple_navs_c clearfloat">					<div style="max-width:33.2%;" class="lui_tabpanel_simple_navs_item_l lui_tabpanel_simple_navs_item_selected" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_simple_navs_item_selected">						<div class="lui_tabpanel_simple_navs_item_r">							<div class="lui_tabpanel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">公司新闻</span></div>						</div>					</div>						<div style="max-width:33.2%;" class="lui_tabpanel_simple_navs_item_l" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_simple_navs_item_selected">						<div class="lui_tabpanel_simple_navs_item_r">							<div class="lui_tabpanel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">集团文化</span></div>						</div>					</div>						<div style="max-width:33.2%;" class="lui_tabpanel_simple_navs_item_l" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_simple_navs_item_selected">						<div class="lui_tabpanel_simple_navs_item_r">							<div class="lui_tabpanel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">经营动态</span></div>						</div>					</div>								</div>			</div>		</div>		<div class="lui_tabpanel_simple_content_l">			<div class="lui_tabpanel_simple_content_r">				<div class="lui_tabpanel_simple_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="height: 210px; overflow: auto;"><div data-lui-type="lui/panel!Content" style="min-height: 190px;" id="lui-id-28" class="lui-component" data-lui-cid="lui-id-28" data-lui-parse-init="29">
+
+
+              <div data-lui-type="lui/base!DataView" style="" id="lui-id-30" class="lui-component" data-lui-cid="lui-id-30" data-lui-parse-init="31">
+
+
+
+
+              <div class="lui_dataview_classic"><div class="lui_dataview_classic_row clearfloat lui_dataview_classic_highlight"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1559b023cdd2fc6e8b15496446198262" target="_blank" title="蓝悦精神： 精诚、敬业、进取、奉献">蓝悦精神： 精诚、敬业、进取、奉献</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1555c04ccac9b6d52a39a3d45d793b82" target="_blank" title="深圳地铁集团与蓝悦达成战略合作">深圳地铁集团与蓝悦达成战略合作</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1557ac7de50cfd571d99dfe44d797f7c" target="_blank" title="蓝悦掌门人拿出10亿 不盖楼都做了什么。“医者”许先生，有“术”，术中见“道”。">蓝悦掌门人拿出10亿 不盖楼都做了什么。“医者”许先...</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=15524b2f0dea22459a0cd30487fad5c3" target="_blank" title="蓝悦集团荣获“中国企业公民最佳责任管理奖”">蓝悦集团荣获“中国企业公民最佳责任管理奖”</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=15524b1b2fe608c3c3d92544c41a419c" target="_blank" title="蓝悦公益基金会荣获2016年中国公益节“责任品牌奖”">蓝悦公益基金会荣获2016年中国公益节“责任品牌奖”</a></div></div></div></div>
+
+
+             </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/sys/news/?categoryId=1550f0c535e95f7f2dc328b432089e74" target="_blank" style="float:right">更多</a><a class="lui_portlet_operation lui_portlet_operation_create" href="javascript:(function(){seajs.use(['sys/news/sys_news_ui/js/create'], function(create) {         create.addDoc('1550f0c535e95f7f2dc328b432089e74');       });})();" target="_self" style="float:right">新建 </a>	</div></div></div><div data-lui-mark="panel.content" style="display: none;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-33" class="lui-component" data-lui-cid="lui-id-33" data-lui-parse-init="34">
+
+
+              <div data-lui-type="lui/base!DataView" style="display:none;" id="lui-id-35" class="lui-component" data-lui-cid="lui-id-35" data-lui-parse-init="36">
+
+
+
+
+              </div>
+
+
+             </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/sys/news/?categoryId=15595bc500be7481950899e4fefbb146" target="_blank" style="float:right">更多</a><a class="lui_portlet_operation lui_portlet_operation_create" href="javascript:(function(){seajs.use(['sys/news/sys_news_ui/js/create'], function(create) {         create.addDoc('15595bc500be7481950899e4fefbb146');       });})();" target="_self" style="float:right">新建 </a>	</div></div></div><div data-lui-mark="panel.content" style="display: none;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-38" class="lui-component" data-lui-cid="lui-id-38" data-lui-parse-init="39">
+
+
+              <div data-lui-type="lui/base!DataView" style="display:none;" id="lui-id-40" class="lui-component" data-lui-cid="lui-id-40" data-lui-parse-init="41">
+
+
+
+
+              </div>
+
+
+             </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/sys/news/?categoryId=1550f20b0b2cbc0fc774a2347f59de29" target="_blank" style="float:right">更多</a><a class="lui_portlet_operation lui_portlet_operation_create" href="javascript:(function(){seajs.use(['sys/news/sys_news_ui/js/create'], function(create) {         create.addDoc('1550f20b0b2cbc0fc774a2347f59de29');       });})();" target="_self" style="float:right">新建 </a>	</div></div></div></div>			</div>		</div>		<div class="lui_tabpanel_simple_footer_l">			<div class="lui_tabpanel_simple_footer_r">				<div class="lui_tabpanel_simple_footer_c">				</div>			</div>		</div>	</div></div>  </td>
+          </tr>
+         </tbody>
+        </table>
+      </td>
+     <td width="1%"> </td>
+     <td width="20%" valign="top" data-lui-type="lui/portal!Container" id="lui-id-43" class="lui-component" data-lui-cid="lui-id-43" data-lui-parse-init="44">
+      <div id="p_6beeedb26d167e1cdb8e" data-lui-type="lui/panel!NonePanel" style="" class="lui-component" data-lui-cid="p_6beeedb26d167e1cdb8e" data-lui-parse-init="45">
+
+
+
+      <div class="lui_nonepanel_frame">		<div class="lui_nonepanel_transparent">			<div class="lui_nonepanel_content" data-lui-mark="panel.contents">			<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 299px;"><div data-lui-type="lui/panel!Content" style="min-height: 299px;" id="lui-id-45" class="lui-component lui_panel_ext_padding" data-lui-cid="lui-id-45" data-lui-parse-init="47">
+
+
+        <div data-lui-type="lui/base!DataView" style="font-size: 0px;" id="lui-id-47" class="lui-component" data-lui-cid="lui-id-47" data-lui-parse-init="49"><iframe width="100%" height="299" src="iceblue-custom/friendLink.html" scrolling="auto" frameborder="0"></iframe></div>
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>		</div>	</div></div>  </td>
+    </tr>
+   </tbody>
+  </table>
+  <div style="height: 10px;">
+  </div>
+  <table width="100%" style="table-layout: fixed;" data-lui-type="lui/portal!VBox" id="lui-id-50" class="lui-component" data-lui-cid="lui-id-50" data-lui-parse-init="52">
+
+   <tbody>
+    <tr>
+     <td width="65%" valign="top" data-lui-type="lui/portal!Container" id="lui-id-51" class="lui-component" data-lui-cid="lui-id-51" data-lui-parse-init="53">
+      <div id="p_08fcb9d17dbf71936c30" data-lui-type="lui/panel!TabPanel" style="" class="lui-component" data-lui-cid="p_08fcb9d17dbf71936c30" data-lui-parse-init="54">
+
+
+
+
+      <div class="lui_tabpanel_vertical_frame">		<div class="lui_tabpanel_vertical_navs_l" style="height:300px">			<div class="lui_tabpanel_vertical_navs_r">				<div class="lui_tabpanel_vertical_navs_c clearfloat">					<div style="max-height:49.9%;height:49.9%" class="lui_tabpanel_vertical_navs_item_l lui_tabpanel_vertical_navs_item_selected" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_vertical_navs_item_selected">						<div class="lui_tabpanel_vertical_navs_item_r">							<div class="lui_tabpanel_vertical_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">待审</span></div>							<span class="lui_tabpanel_vertical_navs_item_refresh" data-lui-mark="panel.nav.refresh"></span>						</div>					</div>						<div style="max-height:49.9%;height:49.9%" class="lui_tabpanel_vertical_navs_item_l" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_vertical_navs_item_selected">						<div class="lui_tabpanel_vertical_navs_item_r">							<div class="lui_tabpanel_vertical_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">待阅</span><span class="com_prompt"><span class="com_prompt_num">18</span><span class="com_prompt_text">/条</span></span></div>							<span class="lui_tabpanel_vertical_navs_item_refresh" data-lui-mark="panel.nav.refresh"></span>						</div>					</div>								</div>			</div>		</div>		<div class="lui_tabpanel_vertical_content_l" style="height:300px">			<div class="lui_tabpanel_vertical_content_r">				<div class="lui_tabpanel_vertical_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-53" class="lui-component" data-lui-cid="lui-id-53" data-lui-parse-init="56">
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-55" class="lui-component" data-lui-cid="lui-id-55" data-lui-parse-init="58"><iframe width="100%" height="100%" src="/sys/notify/sys_notify_todo/sysNotifyTodo.do?method=listByGraphic&amp;home=1&amp;rowsize=6&amp;isShowBtLable=0&amp;LUIID=lui-id-55&amp;dataType=todo&amp;sortType=datetime" scrolling="no" frameborder="0" style="height: 50px;"></iframe></div>
+
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="javascript:(function(){      var dataType = 'todo';     var url = '/sys/notify/index.jsp?dataType=todo';     if(dataType=='todo'){      url = '/sys/notify/index.jsp?dataType=todo#cri.status1.q=fdType:13&amp;cri.status2.q=fdType:13';     }else if(dataType=='toview'){      url = '/sys/notify/index.jsp?dataType=todo#cri.status1.q=fdType:2&amp;cri.status2.q=fdType:2';     }     window.open(url);    })();" target="_self" style="float:right">更多</a>	</div></div></div><div data-lui-mark="panel.content" style="display: none;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-58" class="lui-component" data-lui-cid="lui-id-58" data-lui-parse-init="61">
+
+
+        <div data-lui-type="lui/base!DataView" style="display:none;" id="lui-id-60" class="lui-component" data-lui-cid="lui-id-60" data-lui-parse-init="63">
+
+
+
+
+        </div>
+
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="javascript:(function(){      var dataType = 'toview';     var url = '/sys/notify/index.jsp?dataType=toview';     if(dataType=='todo'){      url = '/sys/notify/index.jsp?dataType=toview#cri.status1.q=fdType:13&amp;cri.status2.q=fdType:13';     }else if(dataType=='toview'){      url = '/sys/notify/index.jsp?dataType=toview#cri.status1.q=fdType:2&amp;cri.status2.q=fdType:2';     }     window.open(url);    })();" target="_self" style="float:right">更多</a>	</div></div></div></div>			</div>		</div>		<div class="lui_tabpanel_vertical_footer_l">			<div class="lui_tabpanel_vertical_footer_r">				<div class="lui_tabpanel_vertical_footer_c">				</div>			</div>		</div>	</div></div>
+      <div style="height: 10px;">
+      </div>
+      <div id="p_d47981c4c43c20dc32aa" data-lui-type="lui/panel!TabPanel" style="" class="lui-component" data-lui-cid="p_d47981c4c43c20dc32aa" data-lui-parse-init="66">
+
+
+
+
+      <div class="lui_tabpanel_simple_frame">		<div class="lui_tabpanel_simple_navs_l">			<div class="lui_tabpanel_simple_navs_r">				<div class="lui_tabpanel_simple_navs_c clearfloat">					<div style="max-width:49.9%;" class="lui_tabpanel_simple_navs_item_l lui_tabpanel_simple_navs_item_selected" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_simple_navs_item_selected">						<div class="lui_tabpanel_simple_navs_item_r">							<div class="lui_tabpanel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">通知公告</span></div>						</div>					</div>						<div style="max-width:49.9%;" class="lui_tabpanel_simple_navs_item_l" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_simple_navs_item_selected">						<div class="lui_tabpanel_simple_navs_item_r">							<div class="lui_tabpanel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">集团文件</span></div>						</div>					</div>								</div>			</div>		</div>		<div class="lui_tabpanel_simple_content_l">			<div class="lui_tabpanel_simple_content_r">				<div class="lui_tabpanel_simple_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 209px;"><div data-lui-type="lui/panel!Content" style="min-height: 189px;" id="lui-id-64" class="lui-component" data-lui-cid="lui-id-64" data-lui-parse-init="68">
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-66" class="lui-component" data-lui-cid="lui-id-66" data-lui-parse-init="70">
+
+
+
+
+        <div class="lui_dataview_classic"><div class="lui_dataview_classic_row clearfloat lui_dataview_classic_highlight"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1557ac7de50cfd571d99dfe44d797f7c" target="_blank" title="蓝悦掌门人拿出10亿 不盖楼都做了什么。“医者”许先生，有“术”，术中见“道”。">蓝悦掌门人拿出10亿 不盖楼都做了什么。“医者”许先生，有“术”，术中见“道”。</a><span class="lui_dataview_classic_created">2016-06-23</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=15524cc175d739ab0ec1cc64164826a9" target="_blank" title="变革并不能动摇蓝悦，反而让我们勇于挑战危机！历经18年的风雨的我们终见彩虹。">变革并不能动摇蓝悦，反而让我们勇于挑战危机！历经18年的风雨的我们终见彩虹。</a><span class="lui_dataview_classic_created">2016-06-06</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=15524cd0ed1a74470b64dc044ceac452" target="_blank" title="蓝悦：共建情谊 欢度五四佳节。砥砺青年勿忘历史，胸怀理想与担当，“以青春之我，创建青春之蓝悦”">蓝悦：共建情谊 欢度五四佳节。砥砺青年勿忘历史，胸怀理想与担当，“以青春之我，创建青春之蓝悦”</a><span class="lui_dataview_classic_created">2016-06-06</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=15524cb851eef32d169ab28427fbeb30" target="_blank" title="安全源于精细，事故出自随意。每一起事故往往都是因为我们的一个疏忽导致。">安全源于精细，事故出自随意。每一起事故往往都是因为我们的一个疏忽导致。</a><span class="lui_dataview_classic_created">2016-06-06</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=15524ce5781efa32b7994754650b8d0d" target="_blank" title="用工政策利好频现，稳岗补贴适时出台。蓝悦争取让更多员工享受稳岗补贴的红利。">用工政策利好频现，稳岗补贴适时出台。蓝悦争取让更多员工享受稳岗补贴的红利。</a><span class="lui_dataview_classic_created">2016-06-06</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/sys/news/sys_news_main/sysNewsMain.do?method=view&amp;fdId=1557ac434811111517c6f7e49bcad44e" target="_blank" title="蓝悦置地发布2015年度十件大事，稳步发展兼顾长远规划，倡导健康生活。">蓝悦置地发布2015年度十件大事，稳步发展兼顾长远规划，倡导健康生活。</a><span class="lui_dataview_classic_created">2016-06-23</span></div></div></div></div>
+
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/sys/news/?categoryId=1550f20431fe9d9053047fa461ca4eb4" target="_blank" style="float:right">更多</a>	</div></div></div><div data-lui-mark="panel.content" style="display: none;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-69" class="lui-component" data-lui-cid="lui-id-69" data-lui-parse-init="73">
+
+
+        <div data-lui-type="lui/base!DataView" style="display:none;" id="lui-id-71" class="lui-component" data-lui-cid="lui-id-71" data-lui-parse-init="75">
+
+
+
+
+        </div>
+
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/km/smissive/?categoryId=13f888e0821c343312fc39e43bd8b288" target="_blank" style="float:right">更多</a>	</div></div></div></div>			</div>		</div>		<div class="lui_tabpanel_simple_footer_l">			<div class="lui_tabpanel_simple_footer_r">				<div class="lui_tabpanel_simple_footer_c">				</div>			</div>		</div>	</div></div>
+      <div style="height: 10px;">
+      </div>
+      <div id="p_a8e82d003920ed45a720" data-lui-type="lui/panel!TabPanel" style="" class="lui-component" data-lui-cid="p_a8e82d003920ed45a720" data-lui-parse-init="78">
+
+
+
+
+      <div class="lui_tabpanel_simple_frame">		<div class="lui_tabpanel_simple_navs_l">			<div class="lui_tabpanel_simple_navs_r">				<div class="lui_tabpanel_simple_navs_c clearfloat">					<div style="max-width:49.9%;" class="lui_tabpanel_simple_navs_item_l lui_tabpanel_simple_navs_item_selected" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_simple_navs_item_selected">						<div class="lui_tabpanel_simple_navs_item_r">							<div class="lui_tabpanel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">最新知识</span></div>						</div>					</div>						<div style="max-width:49.9%;" class="lui_tabpanel_simple_navs_item_l" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_simple_navs_item_selected">						<div class="lui_tabpanel_simple_navs_item_r">							<div class="lui_tabpanel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">论坛新帖</span></div>						</div>					</div>								</div>			</div>		</div>		<div class="lui_tabpanel_simple_content_l">			<div class="lui_tabpanel_simple_content_r">				<div class="lui_tabpanel_simple_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 284px;"><div data-lui-type="lui/panel!Content" style="min-height: 264px;" id="lui-id-75" class="lui-component" data-lui-cid="lui-id-75" data-lui-parse-init="80">
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-77" class="lui-component" data-lui-cid="lui-id-77" data-lui-parse-init="82">
+
+
+
+
+        <div class="lui_dataview_classic"><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_cate_link" href="/km/doc/?categoryId=1550f97cfd9771a3fd71baf405d931da" target="_blank" title="蓝悦集团">[蓝悦集团]</a><a class="lui_dataview_classic_link" href="/km/doc/km_doc_knowledge/kmDocKnowledge.do?method=view&amp;fdId=1559a3f5eb8d9a34bee196941ea9f6ea" target="_blank" title="实用销售技巧-营销策略">实用销售技巧-营销策略</a><span class="lui_dataview_classic_introduced"></span><span class="lui_dataview_classic_created">2016-06-29</span><span class="lui_dataview_classic_creator">胡华清</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_cate_link" href="/km/doc/?categoryId=1550f97cfd9771a3fd71baf405d931da" target="_blank" title="蓝悦集团">[蓝悦集团]</a><a class="lui_dataview_classic_link" href="/km/doc/km_doc_knowledge/kmDocKnowledge.do?method=view&amp;fdId=1559a3e6847dff2fe2604ca4cb8afc23" target="_blank" title="实用的新手销售技巧">实用的新手销售技巧</a><span class="lui_dataview_classic_created">2016-06-29</span><span class="lui_dataview_classic_creator">胡华清</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_cate_link" href="/km/doc/?categoryId=1550f97cfd9771a3fd71baf405d931da" target="_blank" title="蓝悦集团">[蓝悦集团]</a><a class="lui_dataview_classic_link" href="/km/doc/km_doc_knowledge/kmDocKnowledge.do?method=view&amp;fdId=1559a3d08e036051721bb4a4a7192840" target="_blank" title="高端产品销售基本知识">高端产品销售基本知识</a><span class="lui_dataview_classic_created">2016-06-29</span><span class="lui_dataview_classic_creator">胡华清</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_cate_link" href="/km/doc/?categoryId=13f85097fc2003bcc90ee32444a81bd0" target="_blank" title="发展规划">[发展规划]</a><a class="lui_dataview_classic_link" href="/km/doc/km_doc_knowledge/kmDocKnowledge.do?method=view&amp;fdId=1556c812f31d0faa3c65b104d658fe37" target="_blank" title="房地产尾盘销售的最佳方案">房地产尾盘销售的最佳方案</a><span class="lui_dataview_classic_created">2016-06-20</span><span class="lui_dataview_classic_creator">伍河灵</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_cate_link" href="/km/doc/?categoryId=144da03a3faa0bcf565f47f45c881b47" target="_blank" title="信息化系统">[信息化系统]</a><a class="lui_dataview_classic_link" href="/km/doc/km_doc_knowledge/kmDocKnowledge.do?method=view&amp;fdId=1556c710667f8662e615afa4705b3679" target="_blank" title="网络使用">网络使用</a><span class="lui_dataview_classic_created">2016-06-20</span><span class="lui_dataview_classic_creator">伍河灵</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_cate_link" href="/km/doc/?categoryId=144da03a3faa0bcf565f47f45c881b47" target="_blank" title="信息化系统">[信息化系统]</a><a class="lui_dataview_classic_link" href="/km/doc/km_doc_knowledge/kmDocKnowledge.do?method=view&amp;fdId=1556c70c67b3e7a1390274c49739db55" target="_blank" title="扫描仪使用方法">扫描仪使用方法</a><span class="lui_dataview_classic_created">2016-06-20</span><span class="lui_dataview_classic_creator">伍河灵</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_cate_link" href="/km/doc/?categoryId=144da03a3faa0bcf565f47f45c881b47" target="_blank" title="信息化系统">[信息化系统]</a><a class="lui_dataview_classic_link" href="/km/doc/km_doc_knowledge/kmDocKnowledge.do?method=view&amp;fdId=1556c7091e4570cfc59560c41bea0675" target="_blank" title="电脑软件故障">电脑软件故障</a><span class="lui_dataview_classic_created">2016-06-20</span><span class="lui_dataview_classic_creator">伍河灵</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_cate_link" href="/km/doc/?categoryId=144da03a3faa0bcf565f47f45c881b47" target="_blank" title="信息化系统">[信息化系统]</a><a class="lui_dataview_classic_link" href="/km/doc/km_doc_knowledge/kmDocKnowledge.do?method=view&amp;fdId=1556c7064308e2cc712fe4e422ba9f44" target="_blank" title="电脑软件安装">电脑软件安装</a><span class="lui_dataview_classic_created">2016-06-20</span><span class="lui_dataview_classic_creator">伍河灵</span></div></div></div></div>
+
+
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/km/doc/?categoryId=1550f97cfd9771a3fd71baf405d931da" target="_blank" style="float:right">更多</a><a class="lui_portlet_operation lui_portlet_operation_create" href="javascript:(function(){seajs.use(['km/doc/km_doc_ui/js/create'], function(create) {         create.addDoc('1550f97cfd9771a3fd71baf405d931da');       });})();" target="_self" style="float:right">新建 </a>	</div></div></div><div data-lui-mark="panel.content" style="display: none;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-80" class="lui-component" data-lui-cid="lui-id-80" data-lui-parse-init="85">
+
+
+        <div data-lui-type="lui/base!DataView" style="display:none;" id="lui-id-82" class="lui-component" data-lui-cid="lui-id-82" data-lui-parse-init="87">
+
+
+
+
+        </div>
+
+
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/km/forum/indexCriteria.jsp#cri.q=categoryId:" target="_blank" style="float:right">更多</a><a class="lui_portlet_operation lui_portlet_operation_create" href="/km/forum/km_forum/kmForumPost.do?method=add" target="_blank" style="float:right">新建 </a>	</div></div></div></div>			</div>		</div>		<div class="lui_tabpanel_simple_footer_l">			<div class="lui_tabpanel_simple_footer_r">				<div class="lui_tabpanel_simple_footer_c">				</div>			</div>		</div>	</div></div>  </td>
+     <td width="1%"> </td>
+     <td width="34%" valign="top" data-lui-type="lui/portal!Container" id="lui-id-85" class="lui-component" data-lui-cid="lui-id-85" data-lui-parse-init="90">
+      <div id="p_b04fdc901e989fe0e938" data-lui-type="lui/panel!NonePanel" style="" class="lui-component" data-lui-cid="p_b04fdc901e989fe0e938" data-lui-parse-init="91">
+
+
+
+      <div class="lui_nonepanel_frame">		<div class="lui_nonepanel_transparent">			<div class="lui_nonepanel_content" data-lui-mark="panel.contents">			<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 300px;"><div data-lui-type="lui/panel!Content" style="min-height: 300px;" id="lui-id-87" class="lui-component" data-lui-cid="lui-id-87" data-lui-parse-init="93">
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-89" class="lui-component" data-lui-cid="lui-id-89" data-lui-parse-init="95"><div class="lui_dataview_picmenulist"><div class="lui_dataview_picmenu" title="新建知识" style="padding-left: 16px; padding-right: 16px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_24"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">新建知识</div></div></div></div></div><div class="lui_dataview_picmenu" title="任务安排" style="padding-left: 16px; padding-right: 16px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_19"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">任务安排</div></div></div></div></div><div class="lui_dataview_picmenu" title="新建总结" style="padding-left: 16px; padding-right: 16px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_39"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">新建总结</div></div></div></div></div><div class="lui_dataview_picmenu" title="新建纪要" style="padding-left: 16px; padding-right: 16px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_52"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">新建纪要</div></div></div></div></div><div class="lui_dataview_picmenu" title="拟稿新闻" style="padding-left: 16px; padding-right: 16px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_48"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">拟稿新闻</div></div></div></div></div><div class="lui_dataview_picmenu_more" title="更多" data-lui-switch-class="lui_dataview_picmenu_more_on" style="padding-left: 16px; padding-right: 16px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_more"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">更多</div></div></div></div></div></div></div>
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>		</div>	</div></div>
+      <div style="height: 10px;">
+      </div>
+      <div id="p_655e16c41d967a46ebbe" data-lui-type="lui/panel!Panel" style="" class="lui-component" data-lui-cid="p_655e16c41d967a46ebbe" data-lui-parse-init="98">
+
+
+
+      <div class="lui_panel_simple_frame">		<div class="lui_panel_simple_navs_l">			<div class="lui_panel_simple_navs_r">				<div class="lui_panel_simple_navs_c clearfloat" data-lui-mark="panel.nav.frame">					<div class="lui_panel_simple_navs_item_l">						<div class="lui_panel_simple_navs_item_r">							<div class="lui_panel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">标准规范</span></div>						</div>					</div>				</div>			</div>		</div>		<div class="lui_panel_simple_content_l">			<div class="lui_panel_simple_content_r">				<div class="lui_panel_simple_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 209px;"><div data-lui-type="lui/panel!Content" style="min-height: 189px;" id="lui-id-93" class="lui-component" data-lui-cid="lui-id-93" data-lui-parse-init="100">
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-95" class="lui-component" data-lui-cid="lui-id-95" data-lui-parse-init="102">
+
+
+
+
+        <div class="lui_dataview_classic"><div class="lui_dataview_classic_row clearfloat lui_dataview_classic_highlight"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/institution/km_institution_knowledge/kmInstitutionKnowledge.do?method=view&amp;fdId=1554cd463665631d6f2855349afbf0fa" target="_blank" title="蓝悦2016合同及项目文档管理规范--4.8">蓝悦2016合同及项目文档管理规范--4.8</a><span class="lui_dataview_classic_created">2016-06-14</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/institution/km_institution_knowledge/kmInstitutionKnowledge.do?method=view&amp;fdId=1554cd4fd6708302d28d556438387b23" target="_blank" title="蓝悦2016客户服务管理制度">蓝悦2016客户服务管理制度</a><span class="lui_dataview_classic_created">2016-06-14</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/institution/km_institution_knowledge/kmInstitutionKnowledge.do?method=view&amp;fdId=1554cd39f9635a19f6b220c4df38e8ba" target="_blank" title="蓝悦2016采购管理规范（试行）">蓝悦2016采购管理规范（试行）</a><span class="lui_dataview_classic_created">2016-06-14</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/institution/km_institution_knowledge/kmInstitutionKnowledge.do?method=view&amp;fdId=1554cd1a9c3471452acef564cb9841b9" target="_blank" title="蓝悦2016财务管理制度">蓝悦2016财务管理制度</a><span class="lui_dataview_classic_created">2016-06-14</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/institution/km_institution_knowledge/kmInstitutionKnowledge.do?method=view&amp;fdId=15524c8937790e7cc2b11a74050bfe36" target="_blank" title="请休假制度">请休假制度</a><span class="lui_dataview_classic_created">2016-06-06</span></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/institution/km_institution_knowledge/kmInstitutionKnowledge.do?method=view&amp;fdId=15524c8250e40c860e14e0041a0ad7cc" target="_blank" title="离职管理办法">离职管理办法</a><span class="lui_dataview_classic_created">2016-06-06</span></div></div></div></div>
+
+
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/km/institution?categoryId=" target="_blank" style="float:right">更多</a><a class="lui_portlet_operation lui_portlet_operation_create" href="javascript:(function(){seajs.use(['km/institution/km_institution_ui/js/create'], function(create) {         create.addDoc('');       });})();" target="_self" style="float:right">新建 </a>	</div></div></div></div>			</div>		</div>		<div class="lui_panel_simple_footer_l">			<div class="lui_panel_simple_footer_r">				<div class="lui_panel_simple_footer_c">				</div>			</div>		</div>	</div></div>
+      <div style="height: 10px;">
+      </div>
+      <div id="p_0c4c1cea268eb267c895" data-lui-type="lui/panel!Panel" style="" class="lui-component" data-lui-cid="p_0c4c1cea268eb267c895" data-lui-parse-init="105">
+
+
+
+      <div class="lui_panel_simple_frame">		<div class="lui_panel_simple_navs_l">			<div class="lui_panel_simple_navs_r">				<div class="lui_panel_simple_navs_c clearfloat" data-lui-mark="panel.nav.frame">					<div class="lui_panel_simple_navs_item_l">						<div class="lui_panel_simple_navs_item_r">							<div class="lui_panel_simple_navs_item_c" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">常用资料</span></div>						</div>					</div>				</div>			</div>		</div>		<div class="lui_panel_simple_content_l">			<div class="lui_panel_simple_content_r">				<div class="lui_panel_simple_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 284px;"><div data-lui-type="lui/panel!Content" style="min-height: 264px;" id="lui-id-99" class="lui-component" data-lui-cid="lui-id-99" data-lui-parse-init="107">
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-101" class="lui-component" data-lui-cid="lui-id-101" data-lui-parse-init="109">
+
+
+
+
+        <div class="lui_dataview_classic"><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/comminfo/km_comminfo_main/kmComminfoMain.do?method=view&amp;fdId=1555c06eb9ea224703956604d9682e7a" target="_blank" title="汽车系统英文大全">汽车系统英文大全</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/comminfo/km_comminfo_main/kmComminfoMain.do?method=view&amp;fdId=15551a7e1bd12447156ac4f4fbb80a3b" target="_blank" title="顺丰快递联系电话">顺丰快递联系电话</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/comminfo/km_comminfo_main/kmComminfoMain.do?method=view&amp;fdId=1554ce88752bd49a6f91a3e454c9bb4b" target="_blank" title="常用证券名词解释">常用证券名词解释</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/comminfo/km_comminfo_main/kmComminfoMain.do?method=view&amp;fdId=1554ce60b4e9755a91c610b4f4e814df" target="_blank" title="地产基础知识">地产基础知识</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/comminfo/km_comminfo_main/kmComminfoMain.do?method=view&amp;fdId=1554cd633075188947348fe4bfba1f60" target="_blank" title="注意，台风来袭">注意，台风来袭</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/comminfo/km_comminfo_main/kmComminfoMain.do?method=view&amp;fdId=15547609f4961113556572548fdaa160" target="_blank" title="员工管理制度及考勤制度">员工管理制度及考勤制度</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/comminfo/km_comminfo_main/kmComminfoMain.do?method=view&amp;fdId=155474d563f45d438e7837b4a86978de" target="_blank" title="员工绩效考核管理办法">员工绩效考核管理办法</a></div></div><div class="lui_dataview_classic_row clearfloat"><span class="lui_dataview_classic_icon"></span><div class="lui_dataview_classic_textArea clearfloat"><a class="lui_dataview_classic_link" href="/km/comminfo/km_comminfo_main/kmComminfoMain.do?method=view&amp;fdId=15543a56969e4e271bdc9644936ad936" target="_blank" title="温馨提示：关于端午节中钢4楼大门改造的安全提示">温馨提示：关于端午节中钢4楼大门改造的安全提示</a></div></div></div></div>
+
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" href="/km/comminfo" target="_blank" style="float:right">更多</a>	</div></div></div></div>			</div>		</div>		<div class="lui_panel_simple_footer_l">			<div class="lui_panel_simple_footer_r">				<div class="lui_panel_simple_footer_c">				</div>			</div>		</div>	</div></div>  </td>
+    </tr>
+   </tbody>
+  </table>
+
+</div>
+
+
+			</div>
+			<!-- 中间区域 Ends -->
+			<!-- 注脚 Starts -->
+			<div class="fullscreen-footer">
+				<div class="fullscreen-footer-inner">
+					<div class="fullscreen-footer-left">Copyright © 2001-2016 深圳市蓝凌软件股份有限公司 服务热线：4006-222-312</div>
+					<div class="fullscreen-footer-right">
+						<span>语言：</span>
+						<select name="j_lang" class="fullscreen-footer-select">
+							<option value="zh-CN" selected="">中文(简体)</option>
+							<option value="en-US">English</option>
+							<option value="zh-HK">中文繁体(香港)</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<!-- 注脚 Ends -->
+		</div>
+		<!-- 右侧内容区 Ends -->
+	<!-- 全屏布局 Ends -->
+
+	<!-- 右侧固定按钮 Starts -->
+	<div class="demo-guide-affix-btn-group">
+		<a class="demo-guide-affix-btn" href="javascript:void(0);" onclick="window.showGuildIframe('/sys/portal/demo-guide-all/demo-guide.html');"><i class="icon icon-1"></i>行业指引</a>
+		<a class="demo-guide-affix-btn" href="javascript:void(0);" onclick="window.showGuildIframe('/sys/portal/demo-guide/demo-guide-role.html');"><i class="icon icon-2"></i>角色</a>
+	</div>
+	<!-- 右侧固定按钮 Ends -->
+	<div data-lui-type="lui/top!totop" style="" id="lui-id-104" class="lui-component com_goto" data-lui-cid="lui-id-104" data-lui-parse-init="112">
+		<div class="com_gototop" style="visibility: visible; opacity: 1; cursor: pointer; bottom: 0px;"></div>
+	</div>
+</body>
+</html>

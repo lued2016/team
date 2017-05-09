@@ -1,0 +1,165 @@
+﻿
+.lui_menu_frame_ver .lui_item_txt{
+	font-size: 14px;
+}
+.lui_menu_frame_ver .lui_item {
+    cursor: pointer;
+	line-height: 20px;
+	padding: 12px 5px 12px 15px;
+    width: auto;
+    line-height: 16px;
+    color: #8994a6;
+    font-size: 14px;
+    font-weight: normal;
+    border-left: 4px solid transparent;
+    transition: all .2s ease-in-out;
+    display: block;
+    overflow: hidden;
+}
+.lui_menu_frame_ver .lui_item.lui_icon_on{
+	color: #15a4fa;
+	border-left-color: #15a4fa;
+	background-color: #252f40;
+}
+.lui_menu_frame_ver .lui_item_content{
+	pad
+	position: relative;
+}
+.lui_menu_frame_ver .lui_menu_content{
+	padding-left: 0;
+}
+.lui_menu_frame_ver .lui_item_content div {
+    display: inline-block;
+    margin-right: 0;
+    vertical-align: middle;
+}
+.lui_menu_frame_ver .lui_item_content div.lui_icon_s{
+    margin-right: 5px;
+    display: none;
+}
+.lui_menu_frame_ver .lui_item_sign{
+	border-color: transparent transparent transparent #c4c4c4;
+    border-style: dashed dashed dashed solid;
+    border-width: 5px;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    width: 0;
+}
+.lui_menu_frame_ver .lui_icon_on .lui_item_sign{
+	border-color: transparent transparent transparent #15a4fa;
+}
+.lui_menu_frame_nav{
+	background-color: #fff;
+	overflow: hidden;
+	height: 40px;
+	line-height: 40px;
+}
+.lui_menu_content{
+	padding-left: 16px;
+}
+.lui_menu_content:after,
+.lui_menu_content:before{
+	content: '';
+	display: table;
+	visibility: hidden;
+}
+.lui_menu_content:after{
+	clear: both;
+}
+.lui_menu_frame_nav .lui_menu_item_split{
+	margin: 0 3px;
+	text-align: center;
+	font-family: SimSun;
+    padding-top: 13px;
+    line-height: normal;
+    float: left;
+    height: 100%;
+    overflow: visible;
+}
+.lui_menu_frame_nav .lui_item_txt{
+	font-size: 14px;
+}
+.lui_menu_frame_nav .lui_menu_content > div.lui_menu_item_split{
+    overflow: visible;
+}
+.lui_menu_frame_nav .lui_menu_item_split:after {
+	content: '>';
+	display: inline-block;
+	position: relative;
+	/*left: 5px;
+	top: -5px;*/
+}
+
+.lui_form_path_frame .lui_menu_frame_nav .lui_menu_item_split{
+	margin: 0;
+    padding-top: 18px;
+}
+.lui_form_path_frame .lui_menu_frame_nav .lui_item_content{
+	padding: 0;
+}
+.lui_menu_content:after.
+.lui_menu_content:before{
+	content: '';
+	display: table;
+	visibility: hidden;
+}
+.lui_menu_content:after{
+	clear: both;
+}
+.lui_menu_frame_nav .lui_menu_item_last .lui_item_txt{
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.lui_menu_frame_nav .lui_item_content{
+	text-indent: 0;
+}
+.lui_menu_frame_nav .lui_item_content .lui_icon_s_home{
+	margin-right: 2px;
+}
+.lui_menu_frame_nav .lui_item_content .lui_item_sign{
+	margin-right: 3px;
+	width: 8px;
+}
+.lui_menu_frame_nav .lui_item_content .lui_item_txt{
+	padding: 0 3px;
+	font-size: 12px;
+	transition: color .2s ease-in-out;
+}
+.lui_menu_frame_nav .lui_item_content .lui_item_txt:hover{
+	color: #15a4fa;
+}
+
+.lui_menu_frame_ver_pop .lui_menu_content{
+	padding-left: 0;
+}
+.lui_menu_frame_ver_pop .lui_item_content > div{
+	margin-left: 15px;
+}
+.lui_menu_frame_ver_pop .lui_item{
+	cursor: pointer;
+	padding: 5px 0px;
+	min-width: 160px;
+	overflow: hidden;
+}
+.lui_menu_frame_ver_pop .lui_item_txt {
+	min-width: 100px;
+	line-height: 20px;
+	color: #8e8e8e;
+	font-size: 14px;
+	margin-right: 10px;
+	color: #7a7a7a;
+}
+.lui_menu_frame_ver_pop .lui_item.lui_icon_on{
+	color: #333;
+	background-color: #f8f8f8;
+}
+.lui_menu_frame_ver_pop .lui_item.lui_icon_on .lui_item_txt{
+	color: #15a4fa;
+}
+.lui_menu_frame_ver_pop .lui_icon_on .lui_item_sign{
+	border-left-color: #15a4fa;
+}

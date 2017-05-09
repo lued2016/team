@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+/**
+** 代码制作人: xiex
+** 制作时间：2016-06-17
+** 文件内容描述：Demo
+** 修改日期：无
+** 修改内容：无
+**********************************************/
+
+/**
+ * CSS Reset ******************************************************************************************
+ */
+body,div,dl,dt,dd,ul,ol,li,pre,code,legend,button,form,fieldset,input,textarea,p,blockquote,th,td,h1,h2,h3,h4,h5,h6{ padding:0; margin:0;}
+
+
+/* 表格标题及内容居左显示 */
+caption,th {text-align: left;}
+input,img,select {vertical-align:middle;}
+
+/* 输入控件 */
+input,button,textarea,select,optgroup,option{ font-family:inherit; font-size:inherit; font-style:inherit; font-weight:inherit; }
+
+/* 特殊标记的字体和字号 */
+address,caption,cite,code,dfn,th,var{ font-weight:normal; font-style:normal;}
+b,strong { font-weight: bold;}
+dfn{ font-style: italic;}
+small{ font-size:80%;}
+
+/* 鼠标样式 */
+input[type="submit"]{ cursor:pointer;}
+button{ box-sizing:content-box; cursor: pointer;}
+
+/* 标题元素样式 */ 
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+
+/* 清除列表样式 */
+ol,ul{ list-style:none;}
+
+/* 设置表格的边框被合并为一个单一的边框, 指定分隔边框模型中单元格边界之间的距离为0*/
+table{ border-collapse:collapse; border-spacing:0;}
+th,td{ text-align:left;}
+
+/* 缩写，图片等无边框 */
+fieldset,img,abbr,acronym{ border:0;}
+abbr,acronym{ font-variant: normal;}
+img{ max-width: 100%;}
+
+/* 链接样式，颜色可酌情修改 */
+a{
+    color:#333;
+    background-color: transparent;
+    text-decoration:none;
+    transition:all 0.3s ease;
+}
+a:visited{ }
+a:hover,a:active,a:visited{ } 
+
+/* 上下标 */
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+
+/* 主体 */
+html { /*height: 100%;*/}
+body {
+    font-family:"Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+    color: #333;
+    font-size: 12px;
+    background-color: #fff;
+}
+@font-face {
+  font-family: 'xihei';
+  src: url('../font/font.eot?v=4.3.0');
+  src: url('../font/font.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+       url('../font/font.woff?v=4.3.0') format('woff'), 
+       url('../font/font.ttf?v=4.3.0') format('truetype'), 
+       url('../font/font.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*友情链接*/
+.lui_links_wrapper{}
+.lui_links_content ul{}
+.lui_links_content ul li{ border-top: 1px solid #ebebeb; text-align: center; overflow: hidden;}
+.lui_links_content ul li:first-child{ border-top:none;}
+.lui_links_content ul li a,
+.lui_links_content ul li .link_logo{
+	display:block;
+}
+.lui_links_content ul li a{
+	padding: 17px 10px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+}
+.lui_links_content ul li img{ max-width: 100%; max-height: 40px;}
+.lui_links_content ul li a:hover{ background-color: #f8f8f8;}
+.lui_links_tabs{ border-top:1px solid #ebebeb; height:67px; line-height: 67px; text-align: center;}
+.lui_links_tabs li{ cursor: pointer; display: inline-block; width:5px; height:5px; margin:0px 5px; border-radius:50%; background:#b4b4b4;}
+.lui_links_tabs li.active{ background:#15a4fa;}
+
+.lui_links_content ul li a .links-imgbox{
+  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+.lui_links_content ul li a .links-imgbox.icon-1{ background-image: url(../img/icon-1.png);}
+.lui_links_content ul li a .links-imgbox.icon-2{ background-image: url(../img/icon-2.png);}
+.lui_links_content ul li a .links-imgbox.icon-3{ background-image: url(../img/icon-3.png);}
+.lui_links_content ul li a .links-imgbox.icon-4{ background-image: url(../img/icon-4.png);}
+.lui_links_content ul li a .links-info{ }
+
+
+
+
+*任务列表*/
+.lui_task_list{}
+.lui_task_list table{ width: 100%; border:1px solid #ebebeb; table-layout: fixed;}
+.lui_task_list table tr td{ border:1px solid #ebebeb; border-style:solid dashed; table-layout: fixed;  width:90px; height: 38px; cursor: pointer; position:relative; vertical-align: top;}
+.lui_task_list table tr td:first-child{ vertical-align: middle;}
+.lui_task_list table tr th{ vertical-align: bottom; border:1px solid #ebebeb; border-style:solid dashed; height:52px; padding:10px; color:#84899c; font-size: 14px; position: relative;}
+.lui_task_list table tr th.week_num{ width:109px;}
+.week_num .prev,.week_num .next{ display: block; position: absolute; bottom:5px; cursor: pointer; width:0px; height:0px; border:6px solid transparent; }
+.week_num_content{ display: block; width: 100%; height:100%; position:relative;}
+.week_num .prev{border-right-color:#8b90a2; left:0px;}
+.week_num .next{border-left-color:#8b90a2; right:-5px;}
+.week_num_content .week{ position: absolute; width:85px; text-align: center; left:14px; bottom:0px;}
+.week_num_content .week em{ font-family:"xihei","微软雅黑";font-size:36px; position:relative; top:6px; margin: 0px 3px; font-style:normal;}
+.lui_task_list .task_username{ text-align: right;}
+.lui_task_list .task_username span{ padding-right: 20px; font-size: 14px;}
+.lui_task_list tr th .lui_task_month{ padding-right:20px; text-align: right; display: block; position: relative; top:4px;}
+.lui_task_list tr th .lui_task_month em{ font-family: "xihei","微软雅黑"; font-size: 36px;font-style: normal; color:#84899c; font-weight: normal; position: relative; top:4px;}
+.lui_task_list tr th:first-child{ background:#edf5ff; width: 94px;}
+.lui_task_list tr th.cur{ color:#15a4fa;}
+.lui_task_weekname{ position: absolute; left:10px; top:10px;}
+.lui_task_date{ font-family:"xihei","微软雅黑"; position: absolute; right:10px; bottom:4px; font-size: 36px;}
+
+/*进度条*/
+.task_chartBar{display: block; width: 100%; height:20px; line-height: 20px; background: #7ae7bf; cursor: pointer; position: relative; z-index: 11; border: 1px solid #fff; left:0px; top:0px; color:#fff; font-size: 12px; overflow: hidden; white-space: nowrap;
+text-overflow: ellipsis;}
+.task_chartBar.day3{ width: 300%;}
+.task_chartBar.day4{ width: 400%;}
+.task_chartBar span{ display:block; padding:0px 5px; overflow: hidden; white-space: nowrap;
+text-overflow: ellipsis;}
+.task_chartBar.color_1{ background:#c19c53;}/* 我的日历 */
+.task_chartBar.color_2{ background:#a5bfda;}/* 会议管理 */
+.task_chartBar.color_3{ background:#7ae7bf;}/*任务管理*/
+/*KPI列表*/
+.lui_kpi_wrapper{ padding: 10px 20px;}
+.lui_kpi_item{ display: inline-block; width:218px; }
+.lui_kpi_item li{ margin-bottom: 5px;}
+.lui_kpi_item p,.lui_kpi_item em{ font-size: 14px; color:#636879; font-style: normal;}
+.lui_kpi_item .title p{ font-size: 16px; color:#636879; padding-top:10px;}
+.kpi_chart_bar{ height: 12px; width:130px; position: relative;}
+.kpi_chart_bar .chart{ position: absolute; left:0px; top:0px; height:100%; display: inline-block; width:0%; background: #0cc78c;} 
+.lui_kpi_item.item01 .kpi_chart_bar .chart{ background:#0cc78c;}
+.lui_kpi_item.item02 .kpi_chart_bar .chart{ background:#ff6600;}
+.lui_kpi_item.item03 .kpi_chart_bar .chart{ background:#feaf05;}
+.lui_kpi_item.item04 .kpi_chart_bar .chart{ background:#86db00;}
+.lui_kpi_item.item05 .kpi_chart_bar .chart{ background:#3ebfef;}
+
+.lui_kpi_operations .lui_portlet_operation_more{}
+
+

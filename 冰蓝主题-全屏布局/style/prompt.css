@@ -1,0 +1,19 @@
+﻿.prompt_frame {
+    background-color: #fff;
+    width: 400px;
+    border: 1px solid #15a4fa;
+    margin: 40px auto;
+    font-size: 12px;
+    font-family: Microsoft YaHei, Geneva, "sans-serif", SimSun;
+}
+.prompt_frame .prompt_content_error{
+	background-color: #15a4fa;
+}
+.prompt_container{
+	padding: 1px 0;
+	background-color: #fff;
+}
+.prompt_container .msgtitle,
+.errortitle{
+	color: #15a4fa;
+}

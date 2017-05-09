@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+/** 代码制作人: 马泽棉
+** 制作时间：2015-08-20
+** 文件内容描述：框架说明页 样式
+** 修改日期：
+** 修改内容：
+**********************************************/
+
+.doc-example{
+    /*background-color: #f1f2f6;*/
+}
+.doc-example-heading{ }
+.doc-example-subheading{}
+.doc-example-body{
+    margin-top: -71px;
+    /*padding-top: 60px;*/
+    padding-left: 310px;
+    padding-right: 20px;
+    position: relative;
+}
+.doc-example-content{
+    padding-top: 60px;
+    position: relative;
+}
+.doc-example-innerbar{
+    margin: 0 10px 10px;
+}
+
+
+/* 侧边导航栏 Starts
+   ========================================================================== */
+.doc-slide-nav{
+	width: 12%;
+	position: fixed;
+	left: 30px;
+	top:70px;
+	z-index: 1;
+}
+.doc-slide-nav .list-group-item{
+	padding: 5px 15px;
+}
+.doc-container-fluid-R{
+	margin: 0 auto;
+	width: 95%;
+}
+.doc-subheader{
+	margin-top: 20px;
+	padding: 10px 0;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+}
+.doc-scrollspy-example {
+    position: relative;
+    height: 200px;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.doc-side-area{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 260px;
+	height: 540px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.35);
+    overflow: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 70px;
+    left: 15px;
+    z-index: 998;
+}
+.doc-side-area a {
+    font-size: 14px;
+    font-weight: normal!important;
+    display: block;
+    padding: 5px 15px;
+    position: relative;
+}
+.doc-side-area a:hover{
+    background-color: #f8f8f8;
+}
+.doc-side-area .active {
+    border: 0;
+}
+.doc-side-area .active > a {
+    color: #00a5e0;
+    border-right: 3px solid #337ab7;
+    background-color: #eee;
+}
+/* 侧边导航栏 Ends ========================================================== */
+
+
+/* 色块样本 Starts
+   ========================================================================== */
+.doc-example .demo-color-swatches{ }   
+.doc-example .demo-color-swatches .demo-swatches {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #FFF;
+    margin: 0 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.doc-example .demo-color-swatches .dark,
+.doc-example .demo-color-swatches .light {
+    width: 50%;
+    height: 70px;
+}
+.doc-example .demo-color-swatches .light {
+    -webkit-border-radius: 4px 0 0;
+    -moz-border-radius: 4px 0 0;
+    border-radius: 4px 0 0;
+}
+.doc-example .demo-color-swatches .dark {
+    -webkit-border-radius: 0 4px 0 0;
+    -moz-border-radius: 0 4px 0 0;
+    border-radius: 0 4px 0 0;
+}
+.doc-example .demo-color-swatches .infos {
+    padding: 5px 10px;
+}
+.doc-example .demo-color-swatches .infos h4,
+.doc-example .demo-color-swatches .infos p {
+    margin: 0;
+}
+.doc-example .demo-color-swatches .infos h4 {
+    margin-bottom: 3px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.doc-example .demo-color-swatches .infos p {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+/* 色块样本 Ends ============================================================ */
+
+
+#buttons .demo-btn-group-inline,
+#buttons .demo-btn-group{
+    margin-bottom: 10px;
+}
+.demo-table td.type-info{
+    vertical-align: middle;
+}
+.doc-brick-box{
+    font-size: 0;
+    *white-space: -1px;
+}
+.doc-brick{
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    background-color: #ccc;
+    display: inline-block;
+}
+#dropdownMenus .demo-dropdown{
+    margin-bottom: 150px;
+}
+#dropdownMenus .demo-dropdown-menu{
+    display: block;
+}
+
+.doc-icheck-demo ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    white-space: nowrap;
+}
+.doc-icheck-demo ul:first-child {
+    float: left;
+}

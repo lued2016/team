@@ -1,0 +1,201 @@
+﻿
+
+/*日历部分 Starts*/
+@font-face {
+  font-family: 'xihei';
+  src: url('../font/font.eot?v=4.3.0');
+  src: url('../font/font.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+       url('../font/font.woff?v=4.3.0') format('woff'), 
+       url('../font/font.ttf?v=4.3.0') format('truetype'), 
+       url('../font/font.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lui_calendar_portlet_header .lui_calendar_portlet_left{
+	font-family: "xihei","微软雅黑";
+	position: relative;
+	top: 7px;
+}
+
+.lui_calendar_portlet .lui_calendar_portlet_table *{
+	font-size: 14px;
+}
+.lui_calendar_portlet .lui_calendar_portlet_date > span {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+}
+.lui_calendar_portlet .lui_calendar_portlet_dot{
+	position: absolute;
+	background-color: red;
+	width: 4px;
+	height: 4px;
+	display: inline-block;
+	border-radius: 50%;
+	bottom: 7px;
+	left: 50%;
+	margin-left: -2px;
+}
+
+@-webkit-keyframes refresh-rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes refresh-rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.refresh-rotate {
+  -webkit-animation-name: refresh-rotate;
+          animation-name: refresh-rotate;
+}
+.lui_calendar_portlet .lui_calendar_portlet_refresh {
+	width: 25%;
+	padding: 0;
+	border: 0;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	position: relative;
+}
+.lui_calendar_portlet .lui_calendar_portlet_refresh:after{
+	content: '';
+	display: block;
+	width: 16px;
+	height: 24px;
+	background: url(../images/paging/view_icon_list_refresh.png) no-repeat 50%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -8px;
+}
+.lui_calendar_portlet .lui_calendar_portlet_refresh:hover{
+	border-color: #15a4fa;
+}
+.lui_calendar_portlet .lui_calendar_portlet_refresh:hover:after{
+	-webkit-animation: refresh-rotate .8s linear 0s infinite;
+		 -moz-animation: refresh-rotate .8s linear 0s infinite;
+	  	 -o-animation: refresh-rotate .8s linear 0s infinite;
+	  	-ms-animation: refresh-rotate .8s linear 0s infinite;
+	  	    animation: refresh-rotate .8s linear 0s infinite;
+	-webkit-animation-fill-mode: both;
+					animation-fill-mode: both;
+	background: url(../images/paging/view_icon_list_refresh_hover.png) no-repeat 50%;
+}
+.lui_calendar_portlet .lui_calendar_portlet_today:hover{
+	color: #15a4fa;
+	border-color: #15a4fa;
+}
+
+.lui_calendar_portlet .lui_calendar_portlet_opt > * {
+	display: inline-block;
+	border: 1px solid #ebebeb;
+	padding: 1px 3px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+.lui_calendar_portlet .lui_calendar_opt_pre,
+.lui_calendar_portlet .lui_calendar_opt_next {
+	font-size: 16px;
+	font-family: "Segoe UI", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	position: relative;
+	top: -2px;
+}
+.lui_calendar_portlet .lui_calendar_opt_pre:hover,
+.lui_calendar_portlet .lui_calendar_opt_next:hover{
+	color: #15a4fa;
+}
+.lui_calendar_portlet .lui_calendar_portlet_tbody > tr > td{
+	padding: 2px 0;
+}
+.lui_calendar_portlet .lui_calendar_portlet_footer{
+	margin-bottom: 0;
+    height: 220px;
+    overflow-y: auto;
+}
+.lui_calendar_portlet .lui_calendar_portlet_footer_ul{
+	padding: 0 15px;
+}
+.lui_calendar_portlet .lui_calendar_portlet_footer_ul > li{
+	margin: 12px 0;
+	/*padding: 0 8px;
+	border-left: 4px solid #b3b3b3;*/
+}
+/*日历部分 Ends*/
+.lui_dialog_content_question, .lui_dialog_content_warn, .lui_dialog_content_dollar {
+    float: left;
+    width: 96px;
+	height: auto; 
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+}
+.lui_dialog_content_question {
+	background: #15a4fa url(/sys/ui/extend/theme/default/images/dialog/unsure.png) no-repeat center;
+}
+.lui_dialog_content_warn {
+	background: #15a4fa url(/sys/ui/extend/theme/default/images/dialog/oops.png) no-repeat center;
+}
+
+.lui_dialog_content_dollar {
+	background: #15a4fa url(/sys/ui/extend/theme/default/images/dialog/dollar.png) no-repeat center;
+}
+
+/*模态弹出窗 Starts*/
+.lui_dialog_frame {
+	background-color: #fff;
+	border: 1px solid #15a4fa;
+}
+.lui_dialog_head {
+    border-bottom: none;
+    height: 40px;
+    line-height: 40px;
+    background-color: #15a4fa;
+    color: #fff;
+    font-size: 16px;
+}
+.lui_dialog_head_left {
+    font-size: inherit;
+    float: left;
+    padding-left: 10px;
+}
+.lui_dialog_head_right {
+    float: right;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(../images/dialog/closeDiv.png);
+    width: 20px;
+    height: 20px;
+    margin: 10px 10px 0px 0px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.lui_dialog_head_right:hover{
+	background-color:#008de2;
+}
+.lui_dialog_container {
+    position: relative;
+    border: 0;
+}
+/*模态弹出窗 Ends*/

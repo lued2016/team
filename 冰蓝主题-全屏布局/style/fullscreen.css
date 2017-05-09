@@ -1,0 +1,305 @@
+
+/*=== 全局布局 Starts ==================================================================*/
+.fullscreen-protal{}
+.fullscreen-wrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.fullscreen-aside{
+	width: 210px;
+	height: 100%;
+	background-color: #323e50;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+.fullscreen-aside-inner{}
+
+.fullscreen-body{
+	padding-top: 51px;
+	min-width: 960px;
+	background: #e4dcd6 url(../images/blur-bg.png) no-repeat 50% 0;
+	background-size: cover;
+	overflow-x: auto;
+	position: absolute;
+	left: 210px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+
+.fullscreen-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: inline-block;
+}
+.fullscreen-icon-arrowR{ background-image: url(../images/fullscreen/fullscreen-icon-arrowR.png);}
+.fullscreen-icon-slide{ background-image: url(../images/fullscreen/fullscreen-icon-slide.png);}
+.fullscreen-icon-nav-1{ background-image: url(../images/fullscreen/fullscreen-icon-nav-1.png);}
+.fullscreen-icon-nav-2{ background-image: url(../images/fullscreen/fullscreen-icon-nav-2.png);}
+.fullscreen-icon-nav-3{ background-image: url(../images/fullscreen/fullscreen-icon-nav-3.png);}
+.fullscreen-icon-nav-4{ background-image: url(../images/fullscreen/fullscreen-icon-nav-4.png);}
+.fullscreen-icon-nav-5{ background-image: url(../images/fullscreen/fullscreen-icon-nav-5.png);}
+.fullscreen-icon-nav-6{ background-image: url(../images/fullscreen/fullscreen-icon-nav-6.png);}
+
+.fullscreen-btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	outline: none;
+	box-sizing:content-box;
+	transition: all 0.3s ease-in-out;
+}
+
+
+.fullscreen-logo{
+	padding: 5px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #4fbdff;
+	transition: all .3s linear;
+	overflow: hidden;
+}
+.fullscreen-logo > img{
+	max-height: 100%;
+	vertical-align: middle;
+	transition: all .3s linear;
+}
+.fullscreen-logo > .logo-shrink{ display: none;}
+.fullscreen-aside-nav{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.fullscreen-aside-nav > li{}
+.fullscreen-aside-nav > li > a{
+	padding: 15px 28px 15px 42px;
+	height: 20px;
+	line-height: 20px;
+	color: #acbdd7;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+}
+.fullscreen-aside-nav > li.active,
+.fullscreen-aside-nav > li.active > a:hover{
+	background-color: #2a3442;
+}
+.fullscreen-aside-nav > li > a:hover{
+	background-color: #435268;
+}
+.fullscreen-aside-nav > li.active > a{
+	box-shadow: inset 0 0 8px rgba(0,0,0,.35);
+}
+.fullscreen-aside-nav > li .fullscreen-icon{
+	position: absolute;
+	left: 17px;
+	top: 50%;
+	margin-top: -8px;
+	transition: all .3s ease-in-out;
+}
+.fullscreen-aside-nav > li .fullscreen-icon.fullscreen-icon-arrowR{
+	left: auto;
+	right: 12px;
+}
+.fullscreen-aside-nav-txt{
+	display: inline-block;
+	max-width: 100%;
+	opacity: 1;
+}
+
+.fullscreen-aside.shrink .fullscreen-aside-nav > li > a{
+	padding: 15px;
+	height: 20px;
+	overflow: visible;
+	position: relative;
+}
+.fullscreen-aside.shrink .fullscreen-aside-nav-txt{
+	display: none;
+	margin-left: 8px;
+	padding: 10px 15px;
+	min-width: 70px;
+	background-color: rgba(50,62,80,.82);
+	background-color: #435268\9;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -20px;
+	z-index: 2;
+	opacity: 0;
+}
+.fullscreen-aside.shrink .fullscreen-aside-nav-txt:before{
+	content: '';
+	width: 0;
+	height: 0;
+	border-width: 8px 6px;
+	border-style: dashed solid dashed dashed;
+	border-color: transparent #435268 transparent transparent;
+	position: absolute;
+	left: -12px;
+	top: 50%;
+	margin-top: -8px;
+}
+.fullscreen-aside.shrink .fullscreen-icon{
+	z-index: 3;
+}
+.fullscreen-aside.shrink .fullscreen-icon.fullscreen-icon-arrowR{ display: none;}
+.fullscreen-aside.shrink .fullscreen-aside-nav > li > a:hover .fullscreen-aside-nav-txt{
+	display: block;
+	opacity: 1;
+	left: 100%;
+
+}
+
+.fullscreen-header{
+	padding-left: 45px;
+	height: 50px;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	box-shadow: 0 0 3px rgba(0,0,0,.15);
+	position: relative;
+	position: fixed;
+	left: 210px;
+	right: 0;
+	top: 0;
+	z-index: 5;
+}
+.fullscreen-header.fixed{
+	position: fixed;
+	left: 210px;
+	right: 0;
+	top: 0;
+	z-index: 5;
+}
+
+.fullscreen-header > .fullscreen-btn-shrink{
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	background: url(../images/fullscreen/fullscreen-icon-slide.png) no-repeat 50%;
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	margin-top: -8px;
+}
+.fullscreen-header > .fullscreen-btn-shrink:hover{
+	background-image: url(../images/fullscreen/fullscreen-icon-slide-hover.png);
+}
+.fullscreen-header > .fullscreen-btn-shrink.active{
+	background-image: url(../images/fullscreen/fullscreen-icon-slide-on.png);
+}
+.fullscreen-header > .fullscreen-btn-shrink.active:hover{
+	background-image: url(../images/fullscreen/fullscreen-icon-slide-on-hover.png);
+}
+
+
+.fullscreen-header:after,
+.fullscreen-header:before{
+	content: '';
+	display: table;
+	visibility: hidden;
+}
+.fullscreen-header:after{
+	clear: both;
+}
+
+.fullscreen-footer{
+	/*margin-top: 15px;*/
+	height: 41px;
+	overflow: hidden;
+}
+.fullscreen-footer-inner{
+	padding: 10px 15px;
+	line-height: 20px;
+	color: #636879;
+	font-size: 12px;
+	border-top: 1px solid #d9dfe1;
+	background-color: rgba(242,242,242,.75);
+	background-color: #f2f2f2\9;
+	/*position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;*/
+}
+.fullscreen-footer:after,
+.fullscreen-footer:before,
+.fullscreen-footer-inner:after,
+.fullscreen-footer-inner:before{
+	content: '';
+	display: table;
+	visibility: hidden;
+}
+.fullscreen-footer:after,
+.fullscreen-footer-inner:after{
+	clear: both;
+}
+.fullscreen-footer-left{
+	max-width: 60%;
+	font-size: 12px;
+	float: left;
+}
+.fullscreen-footer-right{
+	max-width: 40%;
+	font-size: 12px;
+	float: right;
+}
+.fullscreen-footer-select{
+	padding-left: 2px;
+	padding-right: 2px;
+	/*width: 90px;*/
+	color: #15a4fa;
+	outline: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+
+.fullscreen-content{
+	padding: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=== 全局布局 Ends ====================================================================*/

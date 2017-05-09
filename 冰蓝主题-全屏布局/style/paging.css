@@ -1,0 +1,164 @@
+﻿.lui_paging_box {
+	text-align: center;
+	font-size: 14px;
+	padding: 30px 10px;
+	background-color: #fff;
+}
+.lui_paging_contentBox a {
+	margin-left: -1px;
+	padding: 4px 10px;
+	line-height: 20px;
+	color: #484848;
+	font-size: 12px;
+	border: 1px solid #ebebeb;
+	display: block;
+}
+
+.lui_paging_contentBox li a.lui_paging_btn {
+	padding-left: 8px;
+	padding-right: 8px;
+	color:#fff;
+	border: 1px solid #c8c8c8;
+	background: #c8c8c8;
+	position: relative;
+	top: 0;
+}
+.lui_paging_contentBox li a.lui_paging_btn:hover{
+	color: #fff!important;
+	border-color: #15a4fa;
+	background: #15a4fa!important;
+}
+.lui_paging_contentBox li a.lui_paging_btn:hover{
+	background:#f8f8f8;
+	color:#fd7708;
+}
+.lui_paging_contentBox .lui_paging_num_left{
+	background-color: #fff;
+}
+
+.lui_paging_contentBox .lui_paging_num_left:hover,
+.lui_paging_contentBox .lui_paging_num_left.selected {
+	color: #fff;
+	background: #15a4fa;
+}
+.lui_paging_contentBox .lui_paging_num_left:hover a,
+.lui_paging_contentBox .lui_paging_num_left.selected a{
+	color: #fff;
+	border-color: #15a4fa;
+}
+.lui_paging_contentBox .lui_paging_num_left.selected a{ cursor:default;}
+.lui_paging_contentBox li.lui_paging_next a:hover{
+	color: #fff;
+	border-color: #15a4fa;
+	background-color: #15a4fa;
+}
+
+
+
+.lui_paging_contentBox li span {
+	line-height: 30px;
+	font-size: 12px;
+}
+.lui_paging_contentBox li span input {
+	width: 28px; text-align:center;
+	padding: 4px;
+	margin: 0 4px;
+	border: 1px solid #ccc;
+	color:#9e9e9e;
+	font-size: 12px;
+	position: relative;
+	top: 0;
+}
+.lui_paging_contentBox li span select.lui_paging_amount {
+	padding: 4px;
+	margin: 0 4px;
+}
+
+.lui_paging_t_content_box .lui_icon_s{
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	position: relative;
+	top: -2px;
+}
+.lui_paging_t_page_info_current {
+    color: #15a4fa;
+}
+.lui_paging_t_notpre {
+	cursor: default;
+	background: url(../images/paging/view_icon_list_Dnor.png) no-repeat 0 -32px!important;
+}
+.lui_paging_t_notnext{
+	cursor: default!important;
+	background: url(../images/paging/view_icon_list_Dnor.png) no-repeat -16px -32px!important;
+}
+.lui_paging_t_hasnext {
+	background: url(../images/paging/view_icon_list_Dnor.png) no-repeat -16px 0!important;
+}
+.lui_paging_t_hasnext:hover{
+	background-position: -16px -16px!important;
+}
+.lui_paging_t_haspre {
+	background: url(../images/paging/view_icon_list_Dnor.png) no-repeat 0 0!important;
+}
+.lui_paging_t_haspre:hover{
+	background-position: 0 -16px!important;
+}
+.lui_paging_t_refresh_l{
+	padding: 0 4px;
+	border: 1px solid #ebebeb;
+	height: 22px;
+	line-height: 22px;
+	background-color: #fff;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+.lui_paging_t_refresh_l:hover{
+	border-color: #15a4fa;
+}
+.lui_paging_t_refresh {
+	background: url(../images/paging/view_icon_list_refresh.png) no-repeat 50%;
+	transition: all 0.2s ease-in-out;
+	position: relative;
+	top: -1px!important;
+}
+
+@-webkit-keyframes refresh-rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes refresh-rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.refresh-rotate {
+  -webkit-animation-name: refresh-rotate;
+          animation-name: refresh-rotate;
+}
+
+.lui_paging_t_refresh_l:hover .lui_paging_t_refresh,
+.lui_paging_t_refresh:hover{
+	-webkit-animation: refresh-rotate .8s linear 0s infinite;
+		 -moz-animation: refresh-rotate .8s linear 0s infinite;
+	  	 -o-animation: refresh-rotate .8s linear 0s infinite;
+	  	-ms-animation: refresh-rotate .8s linear 0s infinite;
+	  	    animation: refresh-rotate .8s linear 0s infinite;
+	-webkit-animation-fill-mode: both;
+					animation-fill-mode: both;
+	background: url(../images/paging/view_icon_list_refresh_hover.png) no-repeat 50%;
+}

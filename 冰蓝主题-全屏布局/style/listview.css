@@ -1,0 +1,167 @@
+﻿.lui_listview_rowtable_summary_content_box {
+	padding: 15px 20px;
+	border-bottom: 1px solid #ebebeb;
+	background-color: #fff;
+	transition: background-color .2s ease-in-out;
+}
+.lui_listview_rowtable_summary_content_box:hover{
+	background-color: #f4f4f4;
+}
+.lui_listview_rowtable_summary_content_box input[type='checkbox']{
+	display: inline-block;
+	vertical-align: middle!important;
+	position: relative;
+	top: -2px;
+}
+.lui_listview_rowtable_summary_content_box .lui_listview_rowtable_summary_content_serial{
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	margin: 0; 
+	text-align: center;
+	display: inline-block;
+}
+.lui_listview_rowtable_summary_content_box > dl{
+	margin-left: 50px;
+}
+.lui_listview_rowtable_summary_box > div:last-child {
+	border-bottom: 1px solid #ebebeb;
+}
+.lui_listview_rowtable_summary_content_box:hover dt a{
+	color: #15a4fa;
+}
+
+.lui_listview_rowtable_summary_content_box dt a{
+	display:block;
+	width: auto;
+	max-width: 99%;
+	color: #333;
+	position: relative; 
+	right: 0; 
+	left: 0;
+	top: -2px;
+	font-size: 14px;
+	vertical-align: middle!important;
+}
+.lui_listview_rowtable_summary_content_box dt a:hover{
+	color: #15a4fa!important;
+	text-decoration: none;
+}
+.lui_listview_rowtable_summary_content_box dd{
+	padding: 0;
+}
+.lui_listview_rowtable_summary_content_box_foot_info{
+	margin-top: 5px;
+	color: #999;
+	font-size: 12px;
+}
+.lui_listview_rowtable_summary_content_box_foot_info a.com_author{
+	color: #999;
+}
+
+.lui_listview_columntable_table{
+	border-bottom: 0;
+}
+.lui_listview_columntable_table thead th{
+	font-weight: normal;
+}
+.lui_listview_columntable_table tbody tr{
+	transition: background-color .2s ease-in-out;
+}
+.lui_listview_columntable_table tbody tr:last-child{
+	border-bottom: 1px dotted #ccc;
+}
+.lui_listview_columntable_table tbody tr:hover .com_subject{
+	color:#008de2!important;
+	/*text-decoration: underline;*/
+}
+.lui_listview_columntable_table tr input[type='checkbox']{
+	margin-left: 12px;
+}
+.lui_listview_columntable_listtable thead th{
+	padding: 8px 2px;
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: 1px dotted #ccc;
+	color: #999;
+	font-weight: normal;
+}
+.lui_list_cate_all.lui_list_cate_toggle_up .lui_list_cate_toggle{
+	float: right;
+	background: url(../images/dataview/toggle1.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 30px;
+	height: 30px;
+} 
+.lui_list_cate_all .lui_list_cate_toggle {
+	float: right;
+	cursor: pointer;
+	background: url(../images/dataview/toggle2.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+}
+
+.lui_listview_gridtable_main_body{
+	background-color: #fff;
+}
+.lui_listview_gridtable_table{
+	margin: 0 auto;
+	width: 96%;
+}
+.lui_listview_gridtable_content {
+    width: auto;
+    margin: 0 2px;
+    border: 1px solid transparent;
+    padding: 10px 0;
+    transition: border-color.3s ease-in-out;
+}
+.lui_listview_gridtable_content:hover {
+	margin: 0;
+	border: 1px solid #15a4fa;
+}
+.lui_listview_gridtable_table tbody tr:last-child{
+	border-bottom: 0;
+}
+.lui_listview_gridtable_content h1 {
+    margin: 0 auto;
+    padding: 6px 0 0 20px;
+    height: 34px;
+    text-align: left;
+    position: relative;
+    font-size: 100%;
+    font-weight: normal;
+}
+.lui_listview_gridtable_content .lui_listview_gridtable_content_docSubject {
+    text-align: left;
+    display: inline-block;
+    word-wrap: break-word;
+    min-height: 0;
+}
+.lui_listview_gridtable_content .lui_listview_gridtable_content_docSubject:hover{
+	text-decoration: underline;
+}
+.lui_listview_gridtable_content .txtBox .txtBox_label{
+	width: auto;
+	max-width: 55px;
+	text-align: right;
+	float: left;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.lui_listview_gridtable_content .txtBox .txtBox_info_readCount,
+.lui_listview_gridtable_content .txtBox .txtBox_info_score{
+    width: 60px;
+    padding-left: 20px;
+    float: left;
+}
+.lui_listview_gridtable_content .txtBox .txtBox_info_readCount {
+    background: url(/sys/ui/extend/theme/default/images/listview/grid_read_count.png) no-repeat 0 50%;
+}
+.lui_listview_gridtable_content .txtBox .txtBox_info_score {
+    background: url(/sys/ui/extend/theme/default/images/listview/grid_score.png) no-repeat 0 50%;
+}

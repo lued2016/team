@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+/** 代码制作人: xiex
+** 制作时间：2016-05-19
+** 文件内容描述：框架外的 样式
+** 修改日期：
+** 修改内容：
+**********************************************/
+body{ background:#c8beb7; color:#636879;}
+ul,li,div,a{ color:#636879;}
+
+.demo-icon-fresh{ background:url(../icon/_16/icon_fresh.png);}
+.active .demo-icon-fresh{ background:url(../icon/_16/icon_fresh_cur.png);}
+.status-new{ display: inline-block; width:24px; height:12px; background:url(../icon/_16/status_news.png) no-repeat left top; text-indent:-999em;}
+
+/*待办待阅*/
+.demo-todo-area{ width:700px; height:380px;}
+.demo-todo-area:after{ display: table; content:""; clear: both;}
+
+.demo-todo-tab-heading{ float: left; width:140px;}
+.demo-todo-tabs{ margin:0; padding:0;}
+.demo-todo-tabs li{ height:160px; padding:15px; background-color:#f3f3f3; list-style: none;  position:relative;}
+.demo-todo-tabs li a{ display: block; height:100%;}
+.demo-todo-tabs li.active{ background-color: #4fbdff;}
+.demo-todo-tabs li.active:after{ display: block; content:""; position:absolute; left:140px; top:80px; width:0; height:0; border:14px solid transparent; border-left-color:#4fbdff;}
+.demo-todo-tabs .demo-todo-nums{ font-size:14px; color:#354052; position: absolute; right:15px; bottom:138px;}
+.demo-todo-tabs .demo-todo-nums em{ font-size:36px; color:#15a4fa; font-style:normal}
+.demo-todo-tabs li.active .demo-todo-nums em{ color:#fff; border-bottom:2px solid #fff;}
+.demo-todo-tabs li .demo-todo-title{ color:#354052; font-size:20px; position:absolute; bottom:15px; left:15px;}
+.demo-todo-tabs .demo-todo-title .demo-icon{ vertical-align: middle; position:relative; top:-3px;}
+
+.demo-todo-pend{ background:url(../images/todo/tabs_todo_bg.png) no-repeat right top;}
+.demo-todo-read{ background:url(../images/todo/tabs_toread_bg.png) no-repeat right top;}
+
+.demo-meta-info > span.demo-label-sort{ color:#2ec5a3;}
+
+.demo-todo-tab-content{ margin-left:140px; /*width:560px;*/ background:#fff; height:380px;}
+.demo-todo-tab-content .demo-tab-pane{ padding:30px; display: none;}
+.demo-todo-tab-content > .demo-tab-pane.active{ display: block;}
+
+.demo-list-has-date li{ position: relative; height:35px; padding-left:45px; margin-bottom:20px;}
+.demo-list-has-date li .demo-avatar{ position: absolute; left:0; top:0;}
+.demo-list-has-date li .demo-title{ line-height: 20px;}
+.demo-list-has-date li .demo-title .status-new{ position: relative; top:4px; margin-left:5px;}
+.demo-todo-tab-content .demo-list-multi > li a.demo-text-nowrap{ width:90%; max-width:100%;}
+
+.demo-list-has-date .demo-badge{width:23px; height:16px; text-indent:-999em; margin-left:0; padding:0; border-radius: 0;}
+.demo-icon-eager{ background:url(../icon/_16/icon-eager.png) no-repeat center;} /*急*/
+.demo-icon-urgen{ background:url(../icon/_16/icon-urgen.png) no-repeat center;} /*紧急*/
+.demo-icon-pend{ background:url(../icon/_16/icon-pend.png) no-repeat center;} /*暂挂*/
+
+/*日历*/
+.demo-calendar-area{ background:#fff; width:280px;}
+.demo-calendar-tableContent{border-top:1px solid #ebebeb; border-bottom:1px solid #ebebeb; padding:15px;}
+.demo-calendar-tableContent table{ width:100%;}
+.demo-calendar-tableContent th{ color:#84899c; font-weight: normal; width:14%; text-align: center;}
+.demo-calendar-tableContent td{ padding:10px 0; width:14%; cursor: pointer;}
+.demo-calendar-tableContent td a{ position:relative; display: inline-block; border-radius:50%; width:28px; height:28px; line-height:28px; color:#84899c; text-align: center; }
+
+td.demo-calendar-other-month a{ color:#d9dce8;}
+td.demo-calendar-cur a{ background:#15a4fa; color:#fff;}
+td.demo-calendar-event a:after{ display: block; content:""; position:absolute; bottom:0px; left:12px; width:5px; height:5px; background:#f44; border-radius:50%;}
+
+
+
+

@@ -1,0 +1,213 @@
+﻿.lui_form_body {
+	background: url(../images/blur-bg.png) no-repeat 50% 0;
+	background-size: cover;
+}
+.lui_form_spacing {
+    border-top: 1px dashed #bbb;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.lui_form_subhead {
+    padding: 0px 5px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.tempTB{
+	background-color: #fff;
+}
+.tempTB > tbody > tr > td:nth-child(2){
+	border-left: 1px solid #d7d7d7;
+}
+
+.lui_form_content{
+	padding: 20px;
+}
+.lui_form_content .criteria-extra{
+	background:#fff;
+}
+.lui_form_sidebar{
+	padding: 0 20px!important;
+}
+
+.lui_form_sidebar .lui_accordionpanel_header_l:hover,
+.lui_form_sidebar .lui_accordionpanel_header_c:hover{
+	background-color: transparent;
+}
+.lui_form_sidebar .lui_accordionpanel_nav_c .lui_accordionpanel_toggle_down,
+.lui_form_sidebar .lui_accordionpanel_nav_c .lui_accordionpanel_toggle_up{
+	right: 0;
+}
+.lui_form_sidebar .lui_accordionpanel_nav_c .lui_accordionpanel_nav_text{
+	padding-left: 0;
+	color: #333;
+}
+.lui_form_sidebar .lui_accordionpanel_header_l{
+	border-bottom: 1px solid #d7d7d7;
+}
+.lui_form_sidebar .lui_wiki_baseInfo_ul,
+.lui_form_sidebar .simdoc_not_found{
+	padding: 5px 0;
+}
+.lui_form_sidebar .lui_accordionpanel_content_l{
+	background-color: transparent;
+}
+.lui_form_sidebar .lui_accordionpanel_nav_c
+.lui_form_sidebar .lui_accordionpanel_nav_c .lui_accordionpanel_nav_text{
+	padding-left: 0;
+	color: #333;
+}
+.lui_form_sidebar .eval_doc_score{
+	padding: 20px 0 30px;
+	text-align: center;
+}
+.lui_form_sidebar .eval_doc_score span.eval_score_mark{
+	color: #ffb644;
+	display: block;
+}
+.lui_form_sidebar .eval_score,
+.lui_form_sidebar .eval_score_val{
+	position: absolute;
+	left: 102px;
+	top: 52px;
+}
+
+.lui_form_sidebar .lui_accordionpanel_frame .lui_accordionpanel_content_frame{
+	border-bottom: 0;
+	background-color: transparent;
+}
+.lui_form_content_frame{
+	padding: 0;
+}
+
+.lui_form_subject {
+	text-align: center;
+	color: #333;
+	font-size: 24px;
+	line-height: 30px;
+	padding: 12px 5px 5px;
+}
+
+.lui_form_path_frame{
+	width: 100%!important;
+	min-width: 980px;
+	max-width: 100%!important;
+	margin: 0px auto;
+    height: auto;
+    background: transparent;
+    border-bottom: 0;
+}
+.lui_form_path_frame .lui_menu_frame_nav{
+	background-color: #fff;
+	width: 90%;
+	min-width: 980px;
+	max-width: 1200px;
+	margin: 0px auto;
+	overflow: visible;
+    height: 42px;
+    line-height: 42px;
+}
+.lui_form_path_frame .lui_menu_left{}
+.lui_form_path_frame .lui_menu_frame_nav .lui_menu_content{ }
+.lui_form_body > div[style='height:20px;']{
+	display: none;
+}
+
+
+
+/*论坛相关*/
+ /*.lui_portal_header ~ .lui_form_path_frame  .lui_menu_frame_nav{
+ 	width:980px;
+ }
+ .lui_portal_header ~ .lui_form_path_frame .lui_menu_frame_nav .lui_menu_content{
+ 	top: 0;
+// }
+// .criterions .lui_menu_frame_nav{ position:static; margin-left: 0; background:#fff; width:80px;}
+// #kmForumPost input[name="docSubject"]{ width:684px!important;}
+// #forumPost .lui_form_body{ background:#fff;}
+// #forum_quickPost iframe{ height: 496px!important;}
+#lui_validate_message~.tempTB{ background:transparent;}*/
+/*.muilti_eng .lui_forum_userinfo .qucik_alink{ padding-bottom:28px;}
+iframe#quickReplyContent{ min-height: 480px!important; height: 480px!important;}*/
+
+.forum_list_w{ min-height: 100px;}
+
+.lui_form_body .lui_menu_frame_nav .lui_menu_item_split:after{
+	left: 0;
+	top: -4px;
+}
+.lui_form_body .lui_tabpage_float_content_c{
+	padding: 0;
+}
+.lui_form_body [data-lui-type='lui/panel!Content'] {
+	padding: 8px 0; 
+}
+.lui_form_body .lui_tabpage_float_content_c .eval_button,
+.lui_form_body .lui_tabpage_float_content_c .intr_button,
+.process_review_panel .process_review_button,
+.lui_form_body .lui_tabpage_float_content_c .process_review_button {
+	width: 80px;
+	height: 80px;
+	border: 1px solid #15a4fa;
+	background: #15a4fa;
+	color: #fff;
+	font-size: 18px;
+	font-weight: normal;
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+}
+.lui_form_body .lui_tabpage_float_content_c .eval_button:hover,
+.lui_form_body .lui_tabpage_float_content_c .intr_button:hover,
+.process_review_panel .process_review_button:hover,
+.lui_form_body .lui_tabpage_float_content_c .process_review_button:hover{
+	border-color: #008de2;
+	background-color: #008de2;
+}
+.tb_noborder .swfuploadbutton{ background: #15a4fa;}
+.tb_noborder .swfuploadbutton:hover{ background: #008de2;}
+
+.lui_forum_userinfo .qucik_alink .p2{ text-align: center;}
+
+.lui_form_title_frame{
+	margin-bottom: 20px;
+}
+.lui_form_title_frame .lui_form_baseinfo{
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	margin: 0px 0px 5px;
+}
+
+/*知识专辑不在主题包，form中特殊处理*/
+.kms_subject_navToolbar{ background:#fff!important; margin-bottom: 0px!important;}
+.kmtopic_catelog_tip{ white-space: nowrap;}
+
+
+.td_label0 {
+    vertical-align: baseline!important;
+    font-size: 2px!important;
+    padding: 0px!important;
+    border: 0px!important;
+    height: 29px;
+    border-bottom: 1px solid #15a4fa!important;
+}
+/*论坛模块，form中特殊处理*/
+.forum_readPost_body .lui_validate_message{ width:90%!important;}
+.forum_readPost_table{ width:90%!important;}
+.forum_readPost_table .forum_readPost_w{ width:100%!important;}
+.forum_readPost_body .forum_titleBar_fixed .main_body{ width:90%; min-width:980px;max-width:1200px;}
+.forum_readPost_w{ width:100%!important;}
+
+/*项目管理模块 form中单独处理*/
+
+/*工作总结  form中单独处理*/
+.lui_form_content_frame .subTitle:before,
+.lui_form_content_frame .subTitle:after,
+.lui_form_content_frame div:before,
+.lui_form_content_frame div:after{
+	display: table;
+	content:"";
+	clear: both;
+}
+.lui_form_content_frame .subTitle{ padding-top:0px; margin-top:20px; margin-bottom: 20px;}

@@ -1,0 +1,34 @@
+@charset "utf-8";
+.lui_popup_border_stroke {
+	background-color: #3ca0d6; 
+}
+.lui_popup_border_content {
+	border-color: #3ca0d6;
+	border-style: solid;
+}
+
+/*************当前主题***************/
+.lui_popup_border_content{
+	border: 1px solid #ebebeb!important;
+	box-shadow: 0 0 7px rgba(0,0,0,.15);
+}
+.lui_popup_border_content table td:nth-child(1){
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+.lui_popup_border_content table td > div,
+.lui_popup_border_content table td > span{
+	font-weight: normal!important;
+	font-size: 12px;
+}
+.lui_popup_border_content table td .com_btn_link{
+	font-size: 14px;
+}
+.lui_popup_border_content .lui_menu_content{
+	padding-left: 0;
+}
+.lui_popup_border_stroke {
+	background-color: transparent!important; 
+}

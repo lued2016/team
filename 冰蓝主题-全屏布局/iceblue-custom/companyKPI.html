@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>高管门户</title>
+		<link type="text/css" href="css/common.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	</head>
+
+	<body>
+		<!--公司KPI Starts-->
+		<div class="lui_kpi_wrapper">
+			<div class="lui_kpi_content">
+				<div class="lui_kpi_item item01">
+					<ul>
+						<li>
+							<p>研发<em>60%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>设计<em>80%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>设计<em>70%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li class="title">
+							<p>技术能力</p>
+						</li>
+					</ul>
+				</div>
+				<div class="lui_kpi_item item02">
+					<ul>
+						<li>
+							<p>发明专利<em>60%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>外观设计<em>80%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>实用新型<em>70%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li class="title">
+							<p>专利数量</p>
+						</li>
+					</ul>
+				</div>
+				<div class="lui_kpi_item item03">
+					<ul>
+						<li>
+							<p>华南<em>60%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>华中<em>80%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>华北<em>70%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li class="title">
+							<p>市场份额</p>
+						</li>
+					</ul>
+				</div>
+				<div class="lui_kpi_item item04">
+					<ul>
+						<li>
+							<p>KK产品<em>60%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>EKP产品<em>80%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>KMS产品<em>70%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li class="title">
+							<p>销售收入</p>
+						</li>
+					</ul>
+				</div>
+				<div class="lui_kpi_item item05">
+					<ul>
+						<li>
+							<p>本科生<em>60%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>研究生<em>80%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li>
+							<p>博士<em>70%</em></p>
+							<div class="kpi_chart_bar"><span class="chart"></span></div>
+						</li>
+						<li class="title">
+							<p>员工素质</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		$(function(){
+			$(".kpi_chart_bar").each(function(){
+				var num=parseInt($(this).siblings("p").find("em").html())+"%";
+				$(this).find(".chart").animate({width:num});
+				
+			});
+		});
+		</script>
+		<!--公司KPI Ends-->
+		<br /><br />
+	</body>
+	</html

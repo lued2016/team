@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>高管门户</title>
+		<link type="text/css" href="css/common.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+	</head>
+
+	<body>
+		<!--友情链接 Starts-->
+		<div class="lui_links_wrapper">
+			<div class="lui_links_content">
+				<ul>
+					<li class="links_logo_1">
+						<a href="http://www.quanshi.com/" target="_blank"><span class="link_logo"><img src="img/links_logo_1.png" alt="" /></span>
+						</a>
+					</li>
+					<li class="links_logo_2">
+						<a href="http://www.finereport.com/company" target="_blank"><span class="link_logo"><img src="img/links_logo_2.png" alt="" /></span>
+						</a>
+					</li>
+					<li class="links_logo_3">
+						<a href="http://es.xiaojukeji.com/" target="_blank"><span class="link_logo"><img src="img/links_logo_3.png" alt="" /></span>
+						</a>
+					</li>
+					<li class="links_logo_4">
+						<a href="http://www.ctrip.com/" target="_blank"><span class="link_logo"><img src="img/links_logo_4.png" alt="" /></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--友情链接 Ends-->
+		<script type="text/javascript">
+			$(function() {
+				var iframe = $("iframe[src='/ui-ext/iceblue/iceblue-custom/friendLink.html']", parent.document);
+				console.log(iframe);
+				iframe && iframe.parent(".lui-component").css({
+					"font-size": "0",
+					"*white-space": "-1px"
+				});
+			});
+		</script>
+	</body>
+
+</html>

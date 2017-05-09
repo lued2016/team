@@ -1,0 +1,163 @@
+﻿.lui_category_gcategory_select_box label a {
+	margin-left: 10px;
+	color: #15a4fa;
+	text-decoration: none;
+}
+.lui_category_gcategory_select_box label a:hover{
+	text-decoration: underline;
+}
+.lui_category_location {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+.lui_category_header .lui_category_qsearch .lui_category_search_box {
+	position: relative;
+	display: inline-block;
+	margin-right: 1px;
+	padding-left: 0;
+	padding-right: 24px;
+	width: 215px;
+	height: 24px;
+	border: 1px solid #cecece;
+}
+.lui_category_search_box input {
+	width: 96%;
+	height: auto;
+	line-height: 20px;
+	padding: 2px 2%;
+	color: #7d7d7d;
+	border: 1px solid #ccc;
+	outline: none;
+	font-family: Microsoft YaHei, Geneva, "sans-serif", SimSun;
+}
+.lui_category_header .lui_category_qsearch input {
+	border: 0;
+	width: 96%;
+}
+.lui_category_header .lui_category_qsearch a {
+  margin-left: 0;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	display: inline-block;
+	border: none;
+	text-indent: -9999em;
+	width: 24px;
+	height: 24px;
+	background: url(../images/category/search_btn.png) no-repeat 50%;
+}
+.lui_category_header .lui_category_qsearch a:hover{
+	background-color: #f8f8f8;
+	background-image: url(../images/category/search_btn_on.png);
+}
+
+
+.lui_category_frame .lui_category_frame_item{
+	float: left;
+	width: 234px;
+	height: 280px;
+	border: 0;
+	border-right: 1px solid #ebebeb;
+	background-color: #f8f8f8;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-top: 0;
+	display: inline-block;
+}
+.lui_category_content{
+	padding: 8px 0;
+}
+.lui_category_content li{
+	border: 0;
+	padding: 0 5px;
+	transition: all .3s ease-in-out;
+}
+.lui_category_content li.lui_category_li_on,
+.lui_category_content li:hover	{
+	margin: 0;
+	border: 0;
+	color: #15a4fa;
+    background-color: rgba(255,255,255,.75);
+}
+.lui_category_content li.lui_category_li_on {
+    background-color: #fff;
+}
+.lui_category_content li.lui_category_li_on .lui_category_itemLink_single{
+	color: #15a4fa;
+}
+.lui_category_content li .lui_category_itemLink_single {
+    width: 90%;
+    height: 26px;
+    margin: 1px;
+    padding: 0 4px;
+    line-height: 26px;
+    color: #333;
+    display: block;
+    float: left;
+    position: relative;
+}
+.lui_category_qsearch_content .lui_category_qsearch_close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transition: all .3s ease-in-out;
+}
+.lui_category_qsearch_content .lui_category_qsearch_close.lui_icon_s_close_x:hover {
+    background-image: url(../icon/s-on/close_x.png);
+    background-color: #15a4fa;
+}
+.lui_category_gcategory_select_box select{
+	width: 200px;
+	height: 24px;
+	padding: 2px 5px;
+	color: #999;
+	vertical-align: middle;
+	outline: none;
+	-webkit-appearance:none;
+}
+
+
+	/*左右滑动按钮*/
+.lui_category_frame .lui_category_aleft,
+.lui_category_frame .lui_category_aright {
+	width: 27px;
+	height: 280px;
+	cursor: not-allowed;
+	transition: all .3s ease-in-out;
+}
+.lui_category_frame .lui_category_aleft {
+	border-right: 1px solid #ebebeb;
+	background: #ecf0f1 url(../images/category/hotpic_nav_prev.png) no-repeat 50%;
+	float: left;
+}
+.lui_category_frame .lui_category_aright {
+  border-left: 1px solid #ebebeb;
+	background: #ecf0f1 url(../images/category/hotpic_nav_next.png) no-repeat 50%;
+	float: right;
+}
+.lui_category_frame .lui_category_aleft.validity,
+.lui_category_frame .lui_category_aright.validity{
+	cursor: pointer;
+}
+.lui_category_frame .lui_category_aleft.validity:hover,
+.lui_category_frame .lui_category_aright.validity:hover{
+	background-color: #15a4fa;
+}
+.lui_category_frame .lui_category_aleft.validity {
+	background: #ecf0f1 url(../images/category/hotpic_nav_prev.png) no-repeat 50%;
+}
+.lui_category_frame .lui_category_aleft.validity:hover {
+	background-image: url(../images/category/hotpic_nav_prev_on.png);
+}
+.lui_category_frame .lui_category_aright.validity {
+	background: #ecf0f1 url(../images/category/hotpic_nav_next.png) no-repeat 50%;
+}
+.lui_category_frame .lui_category_aright.validity:hover {
+	background-image: url(../images/category/hotpic_nav_next_on.png);
+}
