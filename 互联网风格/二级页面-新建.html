@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>新建页面</title>
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE =Edge,chrome =1" />
+    <link rel="stylesheet" type="text/css" href="css/bmp.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <script type="text/javascript" language="javascript" src="scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/ns.js"></script>
+
+    <script type="text/javascript" language="javascript" src="scripts/jquery.nav.js"></script>
+</head>
+<body>
+    <div class="bmp-toolbar-frame-float">
+        <div class="bmp-frame-main">
+            <!-- 选项卡 Starts-->
+            <div class="bmp-tabpage-frame">
+                <ul id="toolbarFrame">
+                    <li class="active"><a href="#offic01">正文</a></li>
+                    <li><a href="#offic02">基本信息</a></li>
+                    <li><a href="#offic03">流程处理</a></li>
+                    <li><a href="#offic04">发布</a></li>
+                    <li><a href="#offic05">权限</a></li>
+                </ul>
+            </div>
+            <!-- 选项卡 Ends-->
+            <!-- 按钮 Starts-->
+            <div class="bmp-toolbar-frame">
+                <a class="bmp-btn btn01">暂存</a>
+                <a class="bmp-btn btn02" href="二级页面.html">提交</a>
+                <a class="bmp-btn btn03">更多<i class="bmp-caret-down"></i></a>
+            </div>
+            <!-- 按钮 Ends-->
+        </div>
+    </div>
+    <!-- 主体开始 -->
+    <div class="lui_modules_offic_doc_content bmp-frame-main" id="content">
+        <!-- 当前路径 Starts-->
+        <div class="bmp-breadcrumb newPage">
+            <ul>
+                <li class="first"><a>首页</a><i class="bmp-arrowR"></i></li>
+                <li><a>公文管理</a><i class="bmp-arrowR"></i></li>
+                <li><a>分公司公告</a><i class="bmp-arrowR"></i></li>
+                <li><a>蓝锐公司</a><i class="bmp-arrowR"></i></li>
+                <li><a>承揽项目</a><i class="bmp-arrowR"></i></li>
+                <li><a>蓝锐公告</a></li>
+            </ul>
+        </div>
+        <!-- 当前路径 Ends-->
+        <h2 class="title">公司公告</h2>
+        <!-- 正文 -->
+        <div id="offic01">
+            <img src="images/new_page01.png" /></div>
+        <!-- 基本信息 -->
+        <div id="offic02">
+            <img src="images/new_page02.png" />
+        </div>
+        <!-- 流程处理 -->
+        <div id="offic03">
+            <img src="images/new_page03.png" />
+        </div>
+        <!-- 发布 -->
+        <div id="offic04">
+            <img src="images/new_page04.png" />
+        </div>
+        <!-- 权限 -->
+        <div id="offic05">
+            <img src="images/new_page05.png" />
+        </div>
+    </div>
+    <!-- 主体结束 -->
+    <script type="text/javascript">
+        $(function () {
+            $('#toolbarFrame').onePageNav({
+                currentClass: 'active',
+                changeHash: false,
+                scrollSpeed: 350,
+                scrollThreshold: 0.5,
+                filter: '',
+                easing: 'swing',
+                begin: function () {
+                    //$('#nav').css({ "positon": "fixed", "top": "0" });
+                    //I get fired when the animation is starting
+                },
+                end: function () {
+                    //I get fired when the animation is ending
+                },
+                scrollChange: function ($currentListItem) {
+                    //I get fired when you enter a section and I pass the list item of the section
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

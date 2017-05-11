@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Note there is no responsive meta tag here -->
+    <!--<link rel="icon" href="images/favicon.ico">-->
+    <title>导航门户</title>
+
+    <link href="css/ns.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/ns.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.nav.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+</head>
+
+<body>
+    <!--页面头部栏 Starts-->
+    <div class="lui-header" id="headerNavBar">
+        <div class="lui-navbar">
+            <div class="lui-container">
+                <!-- 左侧LOGO Starts -->
+                <div class="lui-navbar-header">
+                    <a class="lui-navbar-brand" href="index.html">
+                        <div class="brand-inner">
+                            <span class="logo"><img src="images/bmp_logo_blue.png"></span>
+                            <span class="logo-vice"><img src="images/bmp_logo.png"></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- 左侧LOGO Ends -->
+                <!-- 导航 Starts -->
+                <ul class="lui-nav lui-navbar-nav lui-navbar-left">
+                    <li><a href="index.html" title="工作门户">工作门户</a></li>
+                    <li><a href="营销门户.html" title="营销门户">营销门户</a></li>
+                    <li><a href="信息门户.html" title="信息门户">信息门户</a></li>
+                    <li class="active"><a href="javascript:void(0);" title="导航门户">导航门户</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="lui-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<i class="lui-icon lui-icon-arrLineDn"></i></a>
+                        <ul class="lui-dropdown-menu lui-dropdown-menu-right">
+                            <li><a href="服务门户.html" title="服务门户">服务门户</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 导航 Ends -->
+                <!-- 右侧内容 Starts -->
+                <ul class="lui-nav-info lui-navbar-right lui-clearfix">
+                    <li class="lui-dropdown lui-header-personInfo">
+                        <a href="javascript:void(0);" class="lui-dropdown-toggle lui-avatar lui-avatar-xm lui-avatar-round" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/bmp_avatar_01.gif"></a>
+                        <div class="lui-dropdown-menu">
+                            <i class="lui-caret-up"></i>
+                            <i class="lui-caret-up-cover"></i>
+                            <div class="lui-header-toptip-card">
+                                <ul class="operationLink">
+                                    <li class="borderR"><a href="javascript:void(0)" title="个人设置">个人设置</a></li>
+                                    <li><a href="javascript:void(0)" title="个人空间">个人空间</a></li>
+                                    <li class="borderR"><a href="javascript:void(0)" title="我的订阅">我的订阅</a></li>
+                                    <li><a href="javascript:void(0)" title="退出系统">退出系统</a></li>
+                                </ul>
+                                <div class="position"><span>视觉设计师</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);" title="关注数"><i class="lui-icon lui-icon-eye-vice"></i>12</a></li>
+                    <li><a href="javascript:void(0);" title="阅读数"><i class="lui-icon lui-icon-edit-vice"></i>24</a></li>
+                </ul>
+                <!-- 右侧内容 Ends -->
+                <!-- 搜索栏 Starts -->
+                <form class="lui-navbar-form lui-navbar-right" role="search">
+                    <div class="lui-form-group">
+                        <input type="text" class="lui-form-control" placeholder="云服务">
+                    </div>
+                    <button type="submit" class="lui-form-btn lui-btn"><i class="lui-icon lui-icon-search"></i></button>
+                </form>
+                <!-- 搜索栏 Ends -->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 0) {
+                    $("#headerNavBar").find(".lui-navbar").addClass("lui-navbar-fixed-top");
+                } else {
+                    $("#headerNavBar").find(".lui-navbar").removeClass("lui-navbar-fixed-top");
+                }
+            });
+        });
+    </script>
+    <!--页面头部栏 Ends-->
+
+    <!-- 系统导航 Starts-->
+    <div class="lui-portal-navigation lui-clearfix">
+        <div class="lui-portal-navigation-bgGray"></div>
+        <div class="lui-container">
+            <div class="lui-portal-navigation-box">
+                <!-- 系统导航侧栏 Starts-->
+                <div class="lui-portal-navigation-slider">
+                    <ul class="lui-portal-navigation-navSlider lui-navSlider-fixed" id="portalNavSlider">
+                        <li class="active"><a href="#portalNav-common" title="常用导航">常用导航<i class="lui-caret-right"></i></a></li>
+                        <li><a href="#portalNav-sys" title="系统导航">系统导航<i class="lui-caret-right"></i></a></li>
+                        <li><a href="#portalNav-taste" title="新建体验区">新建体验区<i class="lui-caret-right"></i></a></li>
+                        <li><a href="#portalNav-application" title="应用导航">应用导航<i class="lui-caret-right"></i></a></li>
+                        <li><a href="#portalNav-culture" title="历史文化专题">历史文化专题<i class="lui-caret-right"></i></a></li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#portalNavSlider').onePageNav({
+                            currentClass: 'active',
+                            changeHash: false,
+                            scrollSpeed: 350,
+                            scrollThreshold: 0.5,
+                            filter: '',
+                            easing: 'swing',
+                            begin: function () {
+                                //$('#nav').css({ "positon": "fixed", "top": "0" });
+                                //I get fired when the animation is starting
+                            },
+                            end: function () {
+                                //I get fired when the animation is ending
+                            },
+                            scrollChange: function ($currentListItem) {
+                                //I get fired when you enter a section and I pass the list item of the section
+                            }
+                        });
+                    });
+                </script>
+                <!-- 系统导航侧栏 Ends-->
+                <!-- 系统导航内容区 Starts-->
+                <div class="lui-portal-navigation-article">
+                    <!-- 面板 Starts-->
+                    <div class="lui-panel lui-panel-primary" id="portalNav-common">
+                        <div class="lui-panel-heading">
+                            <h3 class="lui-panel-title">常用导航</h3>
+                        </div>
+                        <div class="lui-panel-body">
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">演示产品</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="二级页面.html" title="二级页面" target="_blank">二级页面测试</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 面板 Ends-->
+                    <!-- 面板 Starts-->
+                    <div class="lui-panel lui-panel-primary" id="portalNav-sys">
+                        <div class="lui-panel-heading">
+                            <h3 class="lui-panel-title">系统导航</h3>
+                        </div>
+                        <div class="lui-panel-body">
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">二级页面</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="二级页面">二级页面</a>
+                                    <a href="javascript:void(0);" title="二级页面-会议模块">二级页面-会议模块</a>
+                                    <a href="javascript:void(0);" title="二级页面-搜索没有找到">二级页面-搜索没有找到</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 面板 Ends-->
+
+                    <!-- 面板 Starts-->
+                    <div class="lui-panel lui-panel-primary" id="portalNav-taste">
+                        <div class="lui-panel-heading">
+                            <h3 class="lui-panel-title">新建体验区</h3>
+                        </div>
+                        <div class="lui-panel-body">
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">费控管理</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="费用事前申请">费用事前申请</a>
+                                </div>
+                            </div>
+
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">HR模块</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="招聘管理">招聘管理</a>
+                                    <a href="javascript:void(0);" title="薪资管理">薪资管理</a>
+                                    <a href="javascript:void(0);" title="意见反馈">意见反馈</a>
+                                </div>
+                            </div>
+
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">其他</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="管理时钟">管理时钟</a>
+                                    <a href="javascript:void(0);" title="表单控件定义">表单控件定义</a>
+                                    <a href="javascript:void(0);" title="流程分析平台">流程分析平台</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 面板 Ends-->
+                    <!-- 面板 Starts-->
+                    <div class="lui-panel lui-panel-primary" id="portalNav-application">
+                        <div class="lui-panel-heading">
+                            <h3 class="lui-panel-title">应用导航</h3>
+                        </div>
+                        <div class="lui-panel-body">
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">BMP管理</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="客户管理">客户管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="合同管理">合同管理</a>
+                                    <a href="javascript:void(0);" title="应收应付">应收应付</a>
+                                    <a href="javascript:void(0);" title="派工管理">派工管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="个人&团队周报">个人&团队周报</a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">BMP管理</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="客户管理">客户管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="合同管理">合同管理</a>
+                                    <a href="javascript:void(0);" title="应收应付">应收应付</a>
+                                    <a href="javascript:void(0);" title="派工管理">派工管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="个人&团队周报">个人&团队周报</a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">BMP管理</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="客户管理">客户管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="合同管理">合同管理</a>
+                                    <a href="javascript:void(0);" title="应收应付">应收应付</a>
+                                    <a href="javascript:void(0);" title="派工管理">派工管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="个人&团队周报">个人&团队周报</a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">BMP管理</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="客户管理">客户管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="合同管理">合同管理</a>
+                                    <a href="javascript:void(0);" title="应收应付">应收应付</a>
+                                    <a href="javascript:void(0);" title="派工管理">派工管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="个人&团队周报">个人&团队周报</a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">BMP管理</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="客户管理">客户管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="合同管理">合同管理</a>
+                                    <a href="javascript:void(0);" title="应收应付">应收应付</a>
+                                    <a href="javascript:void(0);" title="派工管理">派工管理</a>
+                                    <a href="javascript:void(0);" title="产能管理">产能管理</a>
+                                    <a href="javascript:void(0);" title="个人&团队周报">个人&团队周报</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 面板 Ends-->
+                    <!-- 面板 Starts-->
+                    <div class="lui-panel lui-panel-primary" id="portalNav-culture">
+                        <div class="lui-panel-heading">
+                            <h3 class="lui-panel-title">历史文化专题</h3>
+                        </div>
+                        <div class="lui-panel-body">
+                            <div class="lui-portal-navigation-list">
+                                <div class="lui-portal-navigation-list-heading">
+                                    <h6 class="lui-portal-navigation-list-heading-title">2015年</h6>
+                                </div>
+                                <div class="lui-portal-navigation-list-content">
+                                    <a href="javascript:void(0);" title="15年年会">15年年会</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 面板 Ends-->
+
+                </div>
+                <!-- 系统导航内容区 Ends-->
+            </div>
+
+        </div>
+    </div>
+    <!-- 系统导航 Ends-->
+
+    <!--页面注脚 Starts-->
+    <div class="lui-footer">
+        <div class="lui-footer-innerbox">
+            <div class="lui-container">
+                <p>蓝凌软件  版权所有</p>
+                <p>粤ICP备11017824号-4 / 粤ICP证130164号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市公安局南山分局备案编号:110105000501</p>
+                <p>Copyright&nbsp;©&nbsp;2001-2015</p>
+            </div>
+        </div>
+    </div>
+    <!--页面注脚 Ends-->
+    <!--固定侧边工具栏 Starts-->
+    <div class="lui-fixed-toolbar">
+        <a href="javascript:void(0);" class="lui-btn lui-btn-default" id="scrollTop" title="置顶">
+            <div class="innerbar">
+                <i class="lui-icon lui-icon-lg lui-icon-32-top"></i>
+                <span class="text-top">置顶</span>
+            </div>
+        </a>
+    </div>
+    <!--固定侧边工具栏 Ends-->
+    <!--意见反馈栏 Starts-->
+    <div class="lui-feedback-box" style="right: -312px;">
+        <div class="lui-feedback-heading">
+            <button class="lui-btn lui-btn-default" type="button">
+                <i class="lui-icon lui-icon-words"></i>
+                帮助&amp;意见反馈
+                <i class="lui-icon lui-icon-arrDotL"></i>
+            </button>
+        </div>
+        <div class="lui-feedback-content">
+            <form class="lui-form-comment lui-form-horizontal">
+                <div class="lui-form-group">
+                    <textarea class="lui-form-control" rows="10" placeholder="有任何意见或建议，请告诉我们！"></textarea>
+                </div>
+                <!--<div class="lui-alert lui-alert-warning">使用遇到问题？请先进入<a class="lui-text-primary" href="javascript:void(0);" title="帮助中心">帮助中心</a></div>-->
+                <div class="lui-form-group lui-form-comment-footer">
+                    <button class="lui-btn lui-btn-mute" type="button" id="feedback-close">关闭</button>
+                    <button class="lui-btn lui-btn-primary" type="button">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--意见反馈栏 Ends-->
+</body>
+</html>

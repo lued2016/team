@@ -1,0 +1,1047 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Note there is no responsive meta tag here -->
+    <!--<link rel="icon" href="images/favicon.ico">-->
+    <title>工作门户</title>
+
+    <link href="css/ns.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/ns.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.nav.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+</head>
+
+<body>
+    <!--页面头部栏 Starts-->
+    <div class="lui-header lui-absolute-top lui-header-primary" id="headerNav">
+        <div class="lui-navbar">
+            <div class="lui-container">
+                <!-- 左侧LOGO Starts -->
+                <div class="lui-navbar-header">
+                    <a class="lui-navbar-brand" href="index.html">
+                        <div class="brand-inner">
+                            <span class="logo"><img src="images/bmp_logo_blue.png"></span>
+                            <span class="logo-vice"><img src="images/bmp_logo.png"></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- 左侧LOGO Ends -->
+                <!-- 导航 Starts -->
+                <ul class="lui-nav lui-navbar-nav lui-navbar-left">
+                    <li class="active"><a href="javascript:void(0);" title="工作门户">工作门户</a></li>
+                    <li><a href="营销门户.html" title="营销门户">营销门户</a></li>
+                    <li><a href="信息门户.html" title="信息门户">信息门户</a></li>
+                    <li><a href="服务门户.html" title="服务门户">服务门户</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="lui-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<i class="lui-icon lui-icon-arrLineDn"></i></a>
+                        <ul class="lui-dropdown-menu lui-dropdown-menu-right">
+                            <li><a href="导航门户.html" title="导航门户">导航门户</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 导航 Ends -->
+                <!-- 右侧内容 Starts -->
+                <ul class="lui-nav-info lui-navbar-right lui-clearfix">
+                    <li class="lui-dropdown lui-header-personInfo">
+                        <a href="javascript:void(0);" class="lui-dropdown-toggle lui-avatar lui-avatar-xm lui-avatar-round" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/bmp_avatar_01.gif"></a>
+                        <div class="lui-dropdown-menu">
+                            <i class="lui-caret-up"></i>
+                            <i class="lui-caret-up-cover"></i>
+                            <div class="lui-header-toptip-card">
+                                <ul class="operationLink">
+                                    <li class="borderR"><a href="javascript:void(0)" title="个人设置">个人设置</a></li>
+                                    <li><a href="javascript:void(0)" title="个人空间">个人空间</a></li>
+                                    <li class="borderR"><a href="javascript:void(0)" title="我的订阅">我的订阅</a></li>
+                                    <li><a href="javascript:void(0)" title="退出系统">退出系统</a></li>
+                                </ul>
+                                <div class="position"><span>视觉设计师</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);" title="关注数"><i class="lui-icon lui-icon-eye-vice"></i>12</a></li>
+                    <li><a href="javascript:void(0);" title="阅读数"><i class="lui-icon lui-icon-edit-vice"></i>24</a></li>
+                </ul>
+                <!-- 右侧内容 Ends -->
+                <!-- 搜索栏 Starts -->
+                <form class="lui-navbar-form lui-navbar-right" role="search">
+                    <div class="lui-form-group">
+                        <input type="text" class="lui-form-control" placeholder="云服务">
+                    </div>
+                    <button type="submit" class="lui-form-btn lui-btn"><i class="lui-icon lui-icon-search"></i></button>
+                </form>
+                <!-- 搜索栏 Ends -->
+            </div>
+        </div>
+    </div>
+    <!--页面头部栏 Ends-->
+
+    <!--页面顶部展览区 Starts-->
+    <div class="lui-exhibition-area">
+        <!--展览区选项卡头部 Starts-->
+        <ul class="lui-exhibition-tabs" id="exhibitTabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#exhibitContent-todo" role="tab" id="exhibitTabs-todo" data-toggle="tab" aria-controls="exhibitContent-todo" aria-expanded="true"><i class="lui-icon lui-icon-l icon-1"></i>待办待阅</a>
+            </li>
+            <li role="presentation">
+                <a href="#exhibitContent-flow" role="tab" id="exhibitTabs-flow" data-toggle="tab" aria-controls="exhibitContent-flow" aria-expanded="false"><i class="lui-icon lui-icon-l icon-2"></i>流程动态<span class="badge-new"></span></a>
+            </li>
+            <li role="presentation">
+                <a href="#exhibitContent-forum" role="tab" id="exhibitTabs-forum" data-toggle="tab" aria-controls="exhibitContent-forum" aria-expanded="false"><i class="lui-icon lui-icon-l icon-3"></i>论坛帖子</a>
+            </li>
+            <li role="presentation">
+                <a href="#exhibitContent-search" role="tab" id="exhibitTabs-search" data-toggle="tab" aria-controls="exhibitContent-search" aria-expanded="false"><i class="lui-icon lui-icon-l icon-4"></i>我的搜索</a>
+            </li>
+        </ul>
+        <!--展览区选项卡头部 Ends-->
+        <!--展览区选项卡内容 Starts-->
+        <div id="exhibitContent" class="lui-tab-content">
+            <!-- 待办待阅 Starts -->
+            <div role="tabpanel" class="lui-workPlatform lui-tab-pane lui-fade active in" id="exhibitContent-todo" aria-labelledby="exhibitTabs-todo">
+                <div class="lui-workPlatform-content">
+                    <!-- 待办待阅区域 Starts -->
+                    <div class="lui-workPlatform-note">
+                        <div class="lui-workPlatform-note-content">
+                            <ul class="lui-workPlatform-note-tabHead">
+                                <li class="active" id="workNote1" onclick="setTab('workNote', 1, 3)">
+                                    <div class="partB">
+                                        <div class="partC">待办</div>
+                                    </div>
+                                </li>
+                                <li id="workNote2" onclick="setTab('workNote', 2, 3)">
+                                    <div class="partB">
+                                        <div class="partC">待阅<span class="warn"></span></div>
+                                    </div>
+                                </li>
+                                <li id="workNote3" onclick="setTab('workNote', 3, 3)">
+                                    <div class="partB">
+                                        <div class="partC">邮件<span class="warn"></span></div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="lui-workPlatform-note-inner">
+                                <div class="partT"></div>
+                                <div class="partML">
+                                    <div class="partMR">
+                                        <div class="partMC">
+                                            <div class="lui-workPlatform-note-tabBody">
+                                                <div id="con_workNote_1">
+                                                    <div class="lui-workPlatform-note-header">
+                                                        <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                                        <span class="info">你有<span class="lui-badge lui-badge-warning"><span class="partR"><span class="partC">105</span></span></span>条</span>
+                                                        <span class="lui-text-blue">待办事项</span>
+                                                    </div>
+                                                    <ul class="lui-list lui-list-icon">
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被特权人终审通过：公有标签测试公有标...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被审批通过，请查阅：测试会议能否取消..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被审批通过，请查阅：测试会议能否取消...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被特权人终审通过：公有标签测试公有标...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="爱问：“测试回复上传附件”还剩3天即将结束,请手动结..."><i class="lui-icon lui-icon-arrow-light"></i>爱问：“测试回复上传附件”还剩3天即将结束,请手动结...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您的文档已被温红娟点评：地产产品研发设计管理资料。"><i class="lui-icon lui-icon-arrow-light"></i>您的文档已被温红娟点评：地产产品研发设计管理资料。您的文档已被温红娟点评：地产产品研发设计管理资料。您的文档已被温红娟点评：地产产品研发设计管理资料。</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="con_workNote_2" style="display:none;">
+                                                    <div class="lui-workPlatform-note-header">
+                                                        <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                                        <span class="info">你有<span class="lui-badge lui-badge-warning"><span class="partR"><span class="partC">125</span></span></span>条</span>
+                                                        <span class="lui-text-blue">待阅事项</span>
+                                                    </div>
+                                                    <ul class="lui-list lui-list-icon">
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被特权人终审通过：公有标签测试公有标...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="爱问：“测试回复上传附件”还剩3天即将结束,请手动结..."><i class="lui-icon lui-icon-arrow-light"></i>爱问：“测试回复上传附件”还剩3天即将结束,请手动结...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您的文档已被温红娟点评：地产产品研发设计管理资料。"><i class="lui-icon lui-icon-arrow-light"></i>您的文档已被温红娟点评：地产产品研发设计管理资料。您的文档已被温红娟点评：地产产品研发设计管理资料。您的文档已被温红娟点评：地产产品研发设计管理资料。</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被特权人终审通过：公有标签测试公有标...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被审批通过，请查阅：测试会议能否取消..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被审批通过，请查阅：测试会议能否取消...</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="con_workNote_3" style="display:none;">
+                                                    <div class="lui-workPlatform-note-header">
+                                                        <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                                        <span class="info">你有<span class="lui-badge lui-badge-warning"><span class="partR"><span class="partC">125</span></span></span>条</span>
+                                                        <span class="lui-text-blue">邮件</span>
+                                                    </div>
+                                                    <ul class="lui-list lui-list-icon">
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您的文档已被温红娟点评：地产产品研发设计管理资料。"><i class="lui-icon lui-icon-arrow-light"></i>您的文档已被温红娟点评：地产产品研发设计管理资料。您的文档已被温红娟点评：地产产品研发设计管理资料。您的文档已被温红娟点评：地产产品研发设计管理资料。</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被特权人终审通过：公有标签测试公有标...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被审批通过，请查阅：测试会议能否取消..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被审批通过，请查阅：测试会议能否取消...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标..."><i class="lui-icon lui-icon-arrow-light"></i>您提交的流程已被特权人终审通过：公有标签测试公有标...</a></li>
+                                                        <li><a class="lui-text-nowrap" href="javascript:void(0);" title="爱问：“测试回复上传附件”还剩3天即将结束,请手动结..."><i class="lui-icon lui-icon-arrow-light"></i>爱问：“测试回复上传附件”还剩3天即将结束,请手动结...</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="partB"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 待办待阅区域 Ends -->
+                    <!-- 我的日程 Starts -->
+                    <div class="lui-workPlatform-schedule">
+                        <div class="lui-workPlatform-schedule-content">
+                            <div class="partL"></div>
+                            <div class="partR"></div>
+                            <h6 class="header"><span class="headR"><span class="headC">我的日程</span></span></h6>
+                            <ul class="lui-workPlatform-schedule-tabHead lui-clearfix">
+                                <li id="workSchedule1" onclick="setTab('workSchedule', 1, 3)"><span>日</span></li>
+                                <li class="active" id="workSchedule2" onclick="setTab('workSchedule', 2, 3)"><span>周</span></li>
+                                <li id="workSchedule3" onclick="setTab('workSchedule', 3, 3)"><span>月</span></li>
+                            </ul>
+                            <div class="lui-workPlatform-schedule-tabBody">
+                                <div id="con_workSchedule_1" style="display:none;"><img src="images/bmp_workPlatform_schedule_img_1.jpg"></div>
+                                <div id="con_workSchedule_2"><img src="images/bmp_workPlatform_schedule_img_2.jpg"></div>
+                                <div id="con_workSchedule_3" style="display:none;"><img src="images/bmp_workPlatform_schedule_img_3.jpg"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- 我的日程 Ends -->
+                </div>
+            </div>
+            <!-- 待办待阅 Ends -->
+            <!-- 流程动态 Starts -->
+            <div role="tabpanel" class="lui-flow-dynamic lui-tab-pane lui-fade" id="exhibitContent-flow" aria-labelledby="exhibitTabs-flow">
+                <div class="lui-flow-dynamic-area">
+                    <!-- 选项卡头部 Starts -->
+                    <ul class="lui-flow-dynamic-tabs" id="flowDyTabs" role="tablist">
+                        <li role="presentation" class="tabs-item-1 active">
+                            <a href="#flowDyContent-1" role="tab" id="flowDyTabs-1" data-toggle="tab" aria-controls="flowDyContent-1" aria-expanded="true">已审未完结</a>
+                        </li>
+                        <li role="presentation" class="tabs-item-2">
+                            <a href="#flowDyContent-2" role="tab" id="flowDyTabs-2" data-toggle="tab" aria-controls="flowDyContent-2" aria-expanded="false">发起未完结</a>
+                        </li>
+
+                    </ul>
+                    <!-- 选项卡头部 Ends -->
+                    <!-- 选项卡内容 Starts -->
+                    <div class="lui-tab-content" id="flowDyContent">
+                        <div class="contentL">
+                            <div class="contentR">
+                                <div class="contentC">
+                                    <div role="tabpanel" class="lui-tab-pane lui-fade active in" id="flowDyContent-1" aria-labelledby="flowDyTabs-1">
+                                        <div class="lui-flow-dynamic-heading">
+                                            <h4 class="lui-flow-dynamic-heading-title">发起未完结</h4>
+                                            <div class="lui-btn-group-inline lui-text-right">
+                                                <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建">新建<i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                                <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                            </div>
+                                        </div>
+                                        <ul class="lui-list lui-list-icon">
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数...</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div role="tabpanel" class="lui-tab-pane lui-fade" id="flowDyContent-2" aria-labelledby="flowDyTabs-2">
+                                        <div class="lui-flow-dynamic-heading">
+                                            <h4 class="lui-flow-dynamic-heading-title">发起未完结</h4>
+                                            <div class="lui-btn-group-inline lui-text-right">
+                                                <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建">新建<i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                                <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                            </div>
+                                        </div>
+                                        <ul class="lui-list lui-list-icon">
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数字数...</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" title="您提交的流程已被特权人终审通过：公有标签测试公有标字数"><i class="lui-icon lui-icon-arrow-o"></i>您提交的流程已被特权人终审通过：公有标签测试公有标字数</a>
+                                                <div class="lui-list-footer lui-meta-info">
+                                                    <span>当前处理人：张一鸣,刘湘</span>
+                                                    <span>创建时间：2015-08-19</span>
+                                                    <span>处理节点：结束节点</span>
+                                                    <span>行政类</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footerL"></div>
+                    </div>
+                    <!-- 选项卡内容 Ends -->
+                </div>
+            </div>
+            <!-- 流程动态 Ends -->
+            <!-- 论坛帖子 Starts -->
+            <div role="tabpanel" class="lui-forum-postings lui-tab-pane lui-fade" id="exhibitContent-forum" aria-labelledby="exhibitTabs-forum">
+                <div class="lui-forum-PArea">
+                    <div class="partL"></div>
+                    <div class="partR"></div>
+                    <div class="lui-forum-PArea-content">
+                        <!-- 按钮组 Starts -->
+                        <div class="lui-forum-PArea-btn-group">
+                            <div class="btn-item">
+                                <div class="btn-bg-R">
+                                    <div class="btn-bg-C">
+                                        <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-item">
+                                <div class="btn-bg-R">
+                                    <div class="btn-bg-C">
+                                        <a href="javascript:void(0);" class="lui-btn lui-btn-xs lui-btn-link" title="发帖">发帖<i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 按钮组 Ends -->
+                        <!-- 列表 Starts -->
+                        <ul class="lui-forum-PArea-list">
+                            <li class="barL">
+                                <div class="itembar title"><a href="javascript:void(0)" title="关于产品体验的一点小意见"><img src="images/icon_lastest.png" alt="new">关于产品体验的一点小意见</a></div>
+                                <div class="itembar info">产品建议区</div>
+                                <div class="itembar msg"><span class="icon">317</span></div>
+                                <div class="itembar fav"><span class="icon">317</span></div>
+                                <div class="itembar time">发帐：42秒前</div>
+                                <i class="arrow"></i>
+                            </li>
+                            <li class="barR">
+                                <div class="itembar title"><a href="javascript:void(0)" title="还有没加微信”蓝凌集结号“的吗？请进~~"><img src="images/icon_lastest.png" alt="new">还有没加微信”蓝凌集结号“的吗？请进~~</a></div>
+                                <div class="itembar info">文化讨论和建议</div>
+                                <div class="itembar msg"><span class="icon">317</span></div>
+                                <div class="itembar fav"><span class="icon">317</span></div>
+                                <div class="itembar time">发帖：6分钟前</div>
+                                <i class="arrow"></i>
+                            </li>
+                            <li class="barL">
+                                <div class="itembar title"><a href="javascript:void(0)" title="【中标喜讯】北京一公司曹金波PK掉泛微，用友，致远等强劲...">【中标喜讯】北京一公司曹金波PK掉泛微，用友，致远等强劲...</a></div>
+                                <div class="itembar info">签单中标祝贺区</div>
+                                <div class="itembar msg"><span class="icon">32517</span></div>
+                                <div class="itembar fav"><span class="icon">32517</span></div>
+                                <div class="itembar time">发帖：16小时前</div>
+                                <i class="arrow"></i>
+                            </li>
+                            <li class="barR">
+                                <div class="itembar title"><a href="javascript:void(0)" title="《我有话说》--“聊聊和互联网公司一起工作的哪些事儿”">《我有话说》--“聊聊和互联网公司一起工作的哪些事儿”</a></div>
+                                <div class="itembar info">外贸借鉴与行业信息</div>
+                                <div class="itembar msg"><span class="icon">425</span></div>
+                                <div class="itembar fav"><span class="icon">5874</span></div>
+                                <div class="itembar time">发帐：16小时前</div>
+                                <i class="arrow"></i>
+                            </li>
+                            <li class="barL">
+                                <div class="itembar title"><a href="javascript:void(0)" title="【★八一八★】聊聊在互联网公司啪啪啪的哪些事儿">【★八一八★】聊聊在互联网公司啪啪啪的哪些事儿</a></div>
+                                <div class="itembar info">外贸借鉴与行业信息</div>
+                                <div class="itembar msg"><span class="icon">30</span></div>
+                                <div class="itembar fav"><span class="icon">120</span></div>
+                                <div class="itembar time">发帐：1天前</div>
+                                <i class="arrow"></i>
+                            </li>
+                            <li class="barR">
+                                <div class="itembar title"><a href="javascript:void(0)" title="啦啦啦，新版的BMP已经上线啦。。。可以打可以骂，但不能...">啦啦啦，新版的BMP已经上线啦。。。可以打可以骂，但不能...</a></div>
+                                <div class="itembar info">IT建议区</div>
+                                <div class="itembar msg"><span class="icon">48</span></div>
+                                <div class="itembar fav"><span class="icon">92</span></div>
+                                <div class="itembar time">发帐：2天前</div>
+                                <i class="arrow"></i>
+                            </li>
+                            <li class="barL">
+                                <div class="itembar title"><a href="javascript:void(0)" title="【重大利好】KMS门户改版完成，更具针对性，独特性，方便...">【重大利好】KMS门户改版完成，更具针对性，独特性，方便...</a></div>
+                                <div class="itembar info">产品动态</div>
+                                <div class="itembar msg"><span class="icon">8</span></div>
+                                <div class="itembar fav"><span class="icon">15</span></div>
+                                <div class="itembar time">发帐：3天前</div>
+                                <i class="arrow"></i>
+                            </li>
+                            <li class="barR">
+                                <div class="itembar title"><a href="javascript:void(0)" title="【中标喜讯】北京一公司曹金波PK掉泛微，用友，致远等强劲...">【中标喜讯】北京一公司曹金波PK掉泛微，用友，致远等强劲...</a></div>
+                                <div class="itembar info">签单中标祝贺区</div>
+                                <div class="itembar msg"><span class="icon">0</span></div>
+                                <div class="itembar fav"><span class="icon">15</span></div>
+                                <div class="itembar time">发帐：3天前</div>
+                                <i class="arrow"></i>
+                            </li>
+                        </ul>
+                        <!-- 列表 Ends -->
+                    </div>
+                </div>
+            </div>
+            <!-- 论坛帖子 Ends -->
+            <!-- 我的搜索 Starts -->
+            <div role="tabpanel" class="lui-exhibit-search-area lui-tab-pane lui-fade" id="exhibitContent-search" aria-labelledby="exhibitTabs-search">
+                <form class="lui-global-search-panel">
+                    <ul class="lui-global-search-heading">
+                        <li class="active">标题<i class="lui-caret-up"></i></li>
+                        <li>图片<i class="lui-caret-up"></i></li>
+                        <li>姓名<i class="lui-caret-up"></i></li>
+                    </ul>
+                    <div class="lui-global-search-body">
+                        <div class="lui-global-search-cell">
+                            <div class="lui-input-group">
+                                <input type="text" class="lui-form-control" placeholder="请输入搜索">
+                                <span class="lui-input-group-btn">
+                                    <a class="lui-btn lui-btn-warning lui-btn-search" href="javascript:void(0);"><i class="lui-icon lui-icon-l lui-icon-32-search"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="lui-global-search-cell">
+                            <button type="submit" class="lui-btn lui-btn-warning lui-btn-global-search">高级搜索</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 我的搜索 Ends -->
+        </div>
+        <!--展览区选项卡内容 Ends-->
+    </div>
+    <!--页面顶部展览区 Ends-->
+
+    <!--常用流程 Starts-->
+    <div class="lui-portal-page">
+        <div class="lui-container">
+            <h2 class="lui-portal-page-heading">
+                <span class="lui-portal-page-heading-title">快捷工作</span>
+                <span class="lui-portal-page-heading-subhead">QUICK WORK</span>
+            </h2>
+            <div class="lui-portal-page-body">
+                <ul class="lui-fastBtn-list lui-clearfix">
+                    <li>
+                        <a class="innerbar" href="javascript:void(0);" title="新建帖子">
+                            <div class="fastBtn-1"></div>
+                            <div class="txt">新建帖子</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="innerbar" href="javascript:void(0);" title="工作总结">
+                            <div class="fastBtn-2"></div>
+                            <div class="txt">工作总结</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="innerbar" href="javascript:void(0);" title="请假">
+                            <div class="fastBtn-3"></div>
+                            <div class="txt">请假</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="innerbar" href="javascript:void(0);" title="费用报销">
+                            <div class="fastBtn-4"></div>
+                            <div class="txt">费用报销</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="innerbar" href="javascript:void(0);" title="项目经理申请">
+                            <div class="fastBtn-5"></div>
+                            <div class="txt">项目经理申请</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="innerbar" href="javascript:void(0);" title="更多">
+                            <div class="fastBtn-6"></div>
+                            <div class="txt">更多</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--常用流程 Ends-->
+
+    <!--工作台&项目&知识库 Starts-->
+    <div class="lui-portal-page lui-bg-gray">
+        <div class="lui-container">
+            <div class="lui-row-col-4">
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-default">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_4.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">工作台</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">WORKBENCH</div>
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-clearfix">
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="我的工作"><i class="lui-icon lui-icon-list"></i>我的工作</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="我的总结"><i class="lui-icon lui-icon-list"></i>我的总结</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-clearfix">
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的报销"><i class="lui-icon lui-icon-list"></i>我的报销</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的订阅"><i class="lui-icon lui-icon-list"></i>我的订阅</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的订阅"><i class="lui-icon lui-icon-list"></i>我的订阅</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的收藏"><i class="lui-icon lui-icon-list"></i>我的收藏</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的知识"><i class="lui-icon lui-icon-list"></i>我的知识</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的积分"><i class="lui-icon lui-icon-list"></i>我的积分</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="工作案例"><i class="lui-icon lui-icon-list"></i>工作案例</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的信息"><i class="lui-icon lui-icon-list"></i>我的信息</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的项目"><i class="lui-icon lui-icon-list"></i>我的项目</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="我的专家申请"><i class="lui-icon lui-icon-list"></i>我的专家申请</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-default">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_5.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">项目</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">PROJECT</div>
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-clearfix">
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="项目制度"><i class="lui-icon lui-icon-list"></i>项目制度</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="里程碑审计及奖金核算"><i class="lui-icon lui-icon-list"></i>里程碑审计及奖金核算</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-clearfix">
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="工程立项"><i class="lui-icon lui-icon-list"></i>工程立项</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="计划和预算"><i class="lui-icon lui-icon-list"></i>计划和预算</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="项目实施指引"><i class="lui-icon lui-icon-list"></i>项目实施指引</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="项目实施指引"><i class="lui-icon lui-icon-list"></i>项目实施指引</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="合同查询"><i class="lui-icon lui-icon-list"></i>合同查询</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="开发周报"><i class="lui-icon lui-icon-list"></i>开发周报</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="开票流程"><i class="lui-icon lui-icon-list"></i>开票流程</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="团队周报"><i class="lui-icon lui-icon-list"></i>团队周报</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="坏账流程"><i class="lui-icon lui-icon-list"></i>坏账流程</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="服务交接"><i class="lui-icon lui-icon-list"></i>服务交接</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-default">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_6.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">知识库</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">KNOWLEDGE BASE</div>
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-clearfix">
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="知识中心"><i class="lui-icon lui-icon-list"></i>知识中心</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="模板样例库"><i class="lui-icon lui-icon-list"></i>模板样例库</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-clearfix">
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="工作案例库"><i class="lui-icon lui-icon-list"></i>工作案例库</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="代码共享库"><i class="lui-icon lui-icon-list"></i>代码共享库</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="项目资产库"><i class="lui-icon lui-icon-list"></i>项目资产库</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="UED资产库"><i class="lui-icon lui-icon-list"></i>UED资产库</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="节目主题包"><i class="lui-icon lui-icon-list"></i>节目主题包</a></li>
+                                <li class="lui-col-6"><a class="lui-text-nowrap" href="javascript:void(0);" title="产品百科"><i class="lui-icon lui-icon-list"></i>产品百科</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--工作台&项目&知识库 Ends-->
+
+    <!--公司新闻&知识问答 Starts-->
+    <div class="lui-portal-page">
+        <div class="lui-container">
+            <div class="lui-row-col-2">
+                <div class="lui-col-6">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-primary">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">公司新闻</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">COMPANY NEWS</div>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">2015-08-23</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="微服务 大平台——2015年华南老客户培训交流活动[深圳站]圆..."><i class="lui-icon lui-icon-list"></i>微服务 大平台——2015年华南老客户培训交流活动[深圳站]圆...</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">2015-08-23</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="【邀请函】2015年华东老客户培训-上海站"><i class="lui-icon lui-icon-list"></i>【邀请函】2015年华东老客户培训-上海站</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">2015-08-20</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="共描绘 齐努力 在一起——西南大区2015年合伙人年中会议"><i class="lui-icon lui-icon-list"></i>共描绘 齐努力 在一起——西南大区2015年合伙人年中会议</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">2015-08-20</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="【培训通知】7月9日（周四）门户规划及案例分享"><i class="lui-icon lui-icon-list"></i>【培训通知】7月9日（周四）门户规划及案例分享</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">2015-08-20</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="喜讯！2015年蓝凌秋季老客户培训交流会（深圳站）火热报名..."><i class="lui-icon lui-icon-list"></i>喜讯！2015年蓝凌秋季老客户培训交流会（深圳站）火热报名...</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">2015-08-20</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="EKP多语言目前有什么潜在的问题，有哪些项目上了..."><i class="lui-icon lui-icon-list"></i>EKP多语言目前有什么潜在的问题，有哪些项目上了...</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-6">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-primary">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">知识问答</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">QUESTIONS AND ANSWERS</div>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <table class="lui-table lui-table-condensed lui-table-noborder">
+                                <tbody>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i><span class="lui-text-warning">10</span></td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“EKP12中的报表中心大家谁有EKP12中的报表中心大家谁有EKP12中的报表中心大家谁有详细的介绍？或...”" target="_blank">EKP12中的报表中心大家谁有EKP12中的报表中心大家谁有EKP12中的报表中心大家谁有详细的介绍？或...</a></td>
+                                        <td><span class="lui-text-primary">已解决</span></td>
+                                        <td class="lui-table-date lui-text-right">2015-08-20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i><span class="lui-text-warning">200</span></td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“EKP12中的报表中心大家谁有详细的介绍？或...”" target="_blank">EKP12中的报表中心大家谁有详细的介绍？或...</a></td>
+                                        <td><span class="lui-text-warning">待解决</span></td>
+                                        <td class="lui-table-date lui-text-right">2015-08-20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i><span class="lui-text-warning">200</span></td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“EKP12中的报表中心大家谁有详细的介绍？或...”" target="_blank">EKP12中的报表中心大家谁有详细的介绍？或...</a></td>
+                                        <td><span class="lui-text-primary">已解决</span></td>
+                                        <td class="lui-table-date lui-text-right">2015-08-20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i><span class="lui-text-warning">200</span></td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“EKP12中的报表中心大家谁有详细的介绍？或...”" target="_blank">EKP12中的报表中心大家谁有详细的介绍？或...</a></td>
+                                        <td><span class="lui-text-warning">待解决</span></td>
+                                        <td class="lui-table-date lui-text-right">2015-08-20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i><span class="lui-text-warning">200</span></td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“EKP12中的报表中心大家谁有详细的介绍？或...”" target="_blank">EKP12中的报表中心大家谁有详细的介绍？或...</a></td>
+                                        <td><span class="lui-text-warning">待解决</span></td>
+                                        <td class="lui-table-date lui-text-right">2015-08-20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i><span class="lui-text-warning">200</span></td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“EKP12中的报表中心大家谁有详细的介绍？或...”" target="_blank">EKP12中的报表中心大家谁有详细的介绍？或...</a></td>
+                                        <td><span class="lui-text-warning">待解决</span></td>
+                                        <td class="lui-table-date lui-text-right">2015-08-20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--公司新闻&知识问答 Ends-->
+
+    <!--关键绩效&蓝凌四库 Starts-->
+    <div class="lui-portal-page lui-bg-gray">
+        <div class="lui-container">
+            <div class="lui-row-col-2">
+                <div class="lui-col-6">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-simple">
+                        <div class="lui-portal-panel-heading">
+                            <h4 class="lui-portal-panel-heading-title">关键绩效<span class="lui-portal-panel-heading-subhead">KEY PERFORMANCE</span></h4>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <div class="lui-magnet-link-group lui-clearfix">
+                                <div class="lui-col-6">
+                                    <a class="lui-magnet-link" href="javascript:void(0)" title="">
+                                        <div class="iconbox icon-1"></div>
+                                        <h4 class="title">季度产能</h4>
+                                    </a>
+                                </div>
+                                <div class="lui-col-6">
+                                    <a class="lui-magnet-link" href="javascript:void(0)" title="">
+                                        <div class="iconbox icon-2"></div>
+                                        <h4 class="title">销售毛利</h4>
+                                    </a>
+                                </div>
+                                <div class="lui-col-6">
+                                    <a class="lui-magnet-link" href="javascript:void(0)" title="">
+                                        <div class="iconbox icon-3"></div>
+                                        <h4 class="title">当月已收</h4>
+                                    </a>
+                                </div>
+                                <div class="lui-col-6">
+                                    <a class="lui-magnet-link" href="javascript:void(0)" title="">
+                                        <div class="iconbox icon-4"></div>
+                                        <h4 class="title">应收总览</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-6">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-simple">
+                        <div class="lui-portal-panel-heading">
+                            <h4 class="lui-portal-panel-heading-title">蓝凌四库<span class="lui-portal-panel-heading-subhead">FOUR STOREHOUSE</span></h4>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <div class="lui-magnet-link-group lui-clearfix">
+                                <div class="lui-col-6">
+                                    <a class="lui-magnet-link" href="javascript:void(0)" title="">
+                                        <div class="iconbox icon-5"></div>
+                                        <h4 class="title">知识仓库</h4>
+                                    </a>
+                                </div>
+                                <div class="lui-col-6">
+                                    <a class="lui-magnet-link" href="javascript:void(0)" title="">
+                                        <div class="iconbox icon-6"></div>
+                                        <h4 class="title">项目资产</h4>
+                                    </a>
+                                </div>
+                                <div class="lui-col-6">
+                                    <a class="lui-magnet-link" href="javascript:void(0)" title="">
+                                        <div class="iconbox icon-7"></div>
+                                        <h4 class="title">代码共享库</h4>
+                                    </a>
+                                </div>
+                                <div class="lui-col-6">
+                                    <a class="lui-magnet-link" href="javascript:void(0)" title="">
+                                        <div class="iconbox icon-8"></div>
+                                        <h4 class="title">员工黄页</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--关键绩效&蓝凌四库 Ends-->
+
+    <!--工作手册&公司公告&公司规范 Starts-->
+    <div class="lui-portal-page">
+        <div class="lui-container">
+            <div class="lui-row-col-4">
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-vice">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_1.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">工作手册</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">WORKBENCH</div>
+                            <ul class="lui-list lui-list-condensed lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a href="javascript:void(0);" title="产品集成发布过程."><i class="lui-icon lui-icon-new"></i>产品集成发布过程.</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="RDM关键任务填写规范..."><i class="lui-icon lui-icon-list"></i>RDM关键任务填写规范...</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="产品开发测试操作流程（20150..."><i class="lui-icon lui-icon-list"></i>产品开发测试操作流程（20150...</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="Redmine操作流程"><i class="lui-icon lui-icon-list"></i>Redmine操作流程</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="产品Version填写规范"><i class="lui-icon lui-icon-list"></i>产品Version填写规范</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="产品Version填写规范"><i class="lui-icon lui-icon-list"></i>产品Version填写规范产品Version填写规范产品Version填写规范产品Version填写规范</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-vice">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_2.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">公司公告</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">ANNOUNCEMENT</div>
+                            <ul class="lui-list lui-list-condensed lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项"><i class="lui-icon lui-icon-new"></i>中航物业管理有限公司OA协同办公系统项</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项"><i class="lui-icon lui-icon-list"></i>中航物业管理有限公司OA协同办公系统项</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项"><i class="lui-icon lui-icon-list"></i>中航物业管理有限公司OA协同办公系统项</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项"><i class="lui-icon lui-icon-list"></i>中航物业管理有限公司OA协同办公系统项</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项"><i class="lui-icon lui-icon-list"></i>中航物业管理有限公司OA协同办公系统项</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项"><i class="lui-icon lui-icon-list"></i>中航物业管理有限公司OA协同办公系统项</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-vice">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_3.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">公司规范</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">SPECIFICATION</div>
+                            <ul class="lui-list lui-list-condensed lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a href="javascript:void(0);" title="深圳市蓝凌软件股份有限公司财务管理..."><i class="lui-icon lui-icon-new"></i>深圳市蓝凌软件股份有限公司财务管理...</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="深圳市蓝凌软件股份有限公司财务管理..."><i class="lui-icon lui-icon-list"></i>深圳市蓝凌软件股份有限公司财务管理...</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="深圳市蓝凌软件股份有限公司财务管理..."><i class="lui-icon lui-icon-list"></i>深圳市蓝凌软件股份有限公司财务管理...</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="深圳市蓝凌软件股份有限公司财务管理..."><i class="lui-icon lui-icon-list"></i>深圳市蓝凌软件股份有限公司财务管理...</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="深圳市蓝凌软件股份有限公司财务管理..."><i class="lui-icon lui-icon-list"></i>深圳市蓝凌软件股份有限公司财务管理...</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="深圳市蓝凌软件股份有限公司财务管理..."><i class="lui-icon lui-icon-list"></i>深圳市蓝凌软件股份有限公司财务管理...</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--工作手册&公司公告&公司规范 Ends-->
+
+    <!--页面注脚 Starts-->
+    <div class="lui-footer">
+        <div class="lui-footer-innerbox">
+            <div class="lui-container">
+                <p>蓝凌软件  版权所有</p>
+                <p>粤ICP备11017824号-4 / 粤ICP证130164号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市公安局南山分局备案编号:110105000501</p>
+                <p>Copyright&nbsp;©&nbsp;2001-2015</p>
+            </div>
+        </div>
+    </div>
+    <!--页面注脚 Ends-->
+
+    <!--固定侧边工具栏 Starts-->
+    <div class="lui-fixed-toolbar">
+        <a href="javascript:void(0);" class="lui-btn lui-btn-default" id="scrollTop" title="置顶">
+            <div class="innerbar">
+                <i class="lui-icon lui-icon-lg lui-icon-32-top"></i>
+                <span class="text-top">置顶</span>
+            </div>
+        </a>
+    </div>
+    <!--固定侧边工具栏 Ends-->
+
+    <!--意见反馈栏 Starts-->
+    <div class="lui-feedback-box" style="right: -312px;">
+        <div class="lui-feedback-heading">
+            <button class="lui-btn lui-btn-default" type="button">
+                <i class="lui-icon lui-icon-words"></i>
+                帮助&amp;意见反馈
+                <i class="lui-icon lui-icon-arrDotL"></i>
+            </button>
+        </div>
+        <div class="lui-feedback-content">
+            <form class="lui-form-comment lui-form-horizontal">
+                <div class="lui-form-group">
+                    <textarea class="lui-form-control" rows="10" placeholder="有任何意见或建议，请告诉我们！"></textarea>
+                </div>
+                <!--<div class="lui-alert lui-alert-warning">使用遇到问题？请先进入<a class="lui-text-primary" href="javascript:void(0);" title="帮助中心">帮助中心</a></div>-->
+                <div class="lui-form-group lui-form-comment-footer">
+                    <button class="lui-btn lui-btn-mute" type="button" id="feedback-close">关闭</button>
+                    <button class="lui-btn lui-btn-primary" type="button">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--意见反馈栏 Ends-->
+</body>
+</html>

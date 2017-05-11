@@ -1,0 +1,784 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Note there is no responsive meta tag here -->
+    <!--<link rel="icon" href="images/favicon.ico">-->
+    <title>服务门户</title>
+
+    <link href="css/ns.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/ns.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+</head>
+
+<body>
+    <!--页面头部栏 Starts-->
+    <div class="lui-header lui-header-primary lui-absolute-top" id="headerNav-service">
+        <div class="lui-navbar">
+            <div class="lui-container">
+                <!-- 左侧LOGO Starts -->
+                <div class="lui-navbar-header">
+                    <a class="lui-navbar-brand" href="index.html">
+                        <div class="brand-inner">
+                            <span class="logo"><img src="images/bmp_logo_blue.png"></span>
+                            <span class="logo-vice"><img src="images/bmp_logo.png"></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- 左侧LOGO Ends -->
+                <!-- 导航 Starts -->
+                <ul class="lui-nav lui-navbar-nav lui-navbar-left">
+                    <li><a href="index.html" title="工作门户">工作门户</a></li>
+                    <li><a href="营销门户.html" title="营销门户">营销门户</a></li>
+                    <li><a href="信息门户.html" title="信息门户">信息门户</a></li>
+                    <li class="active"><a href="javascript:void(0);" title="服务门户">服务门户</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="lui-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<i class="lui-icon lui-icon-arrLineDn"></i></a>
+                        <ul class="lui-dropdown-menu lui-dropdown-menu-right">
+                            <li><a href="导航门户.html" title="导航门户">导航门户</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 导航 Ends -->
+                <!-- 右侧内容 Starts -->
+                <ul class="lui-nav-info lui-navbar-right lui-clearfix">
+                    <li class="lui-dropdown lui-header-personInfo">
+                        <a href="javascript:void(0);" class="lui-dropdown-toggle lui-avatar lui-avatar-xm lui-avatar-round" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/bmp_avatar_01.gif"></a>
+                        <div class="lui-dropdown-menu">
+                            <i class="lui-caret-up"></i>
+                            <i class="lui-caret-up-cover"></i>
+                            <div class="lui-header-toptip-card">
+                                <ul class="operationLink">
+                                    <li class="borderR"><a href="javascript:void(0)" title="个人设置">个人设置</a></li>
+                                    <li><a href="javascript:void(0)" title="个人空间">个人空间</a></li>
+                                    <li class="borderR"><a href="javascript:void(0)" title="我的订阅">我的订阅</a></li>
+                                    <li><a href="javascript:void(0)" title="退出系统">退出系统</a></li>
+                                </ul>
+                                <div class="position"><span>视觉设计师</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);" title="关注数"><i class="lui-icon lui-icon-eye-vice"></i>12</a></li>
+                    <li><a href="javascript:void(0);" title="阅读数"><i class="lui-icon lui-icon-edit-vice"></i>24</a></li>
+                </ul>
+                <!-- 右侧内容 Ends -->
+                <!-- 搜索栏 Starts -->
+                <form class="lui-navbar-form lui-navbar-right" role="search">
+                    <div class="lui-form-group">
+                        <input type="text" class="lui-form-control" placeholder="云服务">
+                    </div>
+                    <button type="submit" class="lui-form-btn lui-btn"><i class="lui-icon lui-icon-search"></i></button>
+                </form>
+                <!-- 搜索栏 Ends -->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 240) {
+                    $("#headerNav-service").removeClass("lui-header-primary").find(".lui-navbar").addClass("lui-navbar-fixed-top");
+                } else {
+                    $("#headerNav-service").addClass("lui-header-primary").find(".lui-navbar").removeClass("lui-navbar-fixed-top");
+                }
+            });
+        });
+    </script>
+    <!--页面头部栏 Ends-->
+
+    <!--顶部内容区域 Starts-->
+    <div class="lui-portal-service">
+        <div class="lui-container">
+            <div class="lui-col-4">
+                <div class="lui-staff-card">
+                    <div class="lui-staff-card-left">
+                        <div class="lui-avatar lui-avatar-xlg lui-avatar-round"><img src="images/bmp_avatar_07.gif"></div>
+                    </div>
+                    <div class="lui-staff-card-right">
+                        <h5 class="lui-staff-card-title">刘梅梅</h5>
+                        <div class="lui-staff-card-txt"><i class="lui-icon lui-icon-staff-dep"></i>交互设计部</div>
+                        <div class="lui-staff-card-txt"><i class="lui-icon lui-icon-staff-words"></i>早起的鸟儿有虫吃~~</div>
+                    </div>
+                </div>
+            </div>
+            <div class="lui-col-4">
+                <div style="text-align:center;"><img src="images/服务门户_img_03.png" /></div>
+            </div>
+            <div class="lui-col-4">
+                <div style="text-align:center;"><img src="images/服务门户_img_04.png" /></div>
+            </div>
+        </div>
+    </div>
+    <!--顶部内容区域 Ends-->
+
+    <!--快捷操作区域 Starts-->
+    <div class="lui-bg-gray lui-nimble-operation">
+        <div class="lui-container">
+            <div class="lui-nimble-operBox" id="nimbleOperation">
+                <div class="lui-nimble-heading">
+                    <a class="next"></a>
+                    <a class="prev"></a>
+                </div>
+                <div class="lui-nimble-content">
+                    <ul class="lui-nimble-list">
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-green"><i class="lui-icon lui-icon-l lui-icon-32-nimble-1"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-blue"><i class="lui-icon lui-icon-l lui-icon-32-nimble-2"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-orange"><i class="lui-icon lui-icon-l lui-icon-32-nimble-3"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-purple"><i class="lui-icon lui-icon-l lui-icon-32-nimble-4"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-green"><i class="lui-icon lui-icon-l lui-icon-32-nimble-5"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-blue"><i class="lui-icon lui-icon-l lui-icon-32-nimble-6"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-orange"><i class="lui-icon lui-icon-l lui-icon-32-nimble-7"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-green"><i class="lui-icon lui-icon-l lui-icon-32-nimble-8"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-blue"><i class="lui-icon lui-icon-l lui-icon-32-nimble-9"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-green"><i class="lui-icon lui-icon-l lui-icon-32-nimble-1"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-blue"><i class="lui-icon lui-icon-l lui-icon-32-nimble-2"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-orange"><i class="lui-icon lui-icon-l lui-icon-32-nimble-3"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-purple"><i class="lui-icon lui-icon-l lui-icon-32-nimble-4"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-green"><i class="lui-icon lui-icon-l lui-icon-32-nimble-5"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-blue"><i class="lui-icon lui-icon-l lui-icon-32-nimble-6"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-orange"><i class="lui-icon lui-icon-l lui-icon-32-nimble-7"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-green"><i class="lui-icon lui-icon-l lui-icon-32-nimble-8"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" title="客户问题">
+                                <div class="lui-nimble-imgbox lui-nimble-bg-blue"><i class="lui-icon lui-icon-l lui-icon-32-nimble-9"></i></div>
+                                <div class="title">客户问题</div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var ary = location.href.split("&");
+        jQuery("#nimbleOperation").slide({ titCell: ".lui-nimble-heading ul", mainCell: ".lui-nimble-content ul", autoPage: true, effect: "left", vis: 10, easing: "easeOutCirc", trigger: "click" });
+    </script>
+    <!--快捷操作区域 Ends-->
+
+    <!--问题处理数据区域 Starts-->
+    <div class="lui-portal-article lui-portal-dataMap">
+        <div class="lui-container">
+            <div class="lui-tabs-box">
+                <div class="lui-tabs-heading">
+                    <ul class="lui-nav lui-nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="javascript:void(0);" id="" role="tab" data-toggle="tab" aria-controls="" aria-expanded="true">个人处理中问题</a></li>
+                        <li role="presentation" class=""><a href="" role="tab" id="" data-toggle="tab" aria-controls="" aria-expanded="false">地图炮</a></li>
+                        <li role="presentation" class=""><a href="" role="tab" id="" data-toggle="tab" aria-controls="" aria-expanded="false">团队处理中问题</a></li>
+                        <li role="presentation" class=""><a href="" role="tab" id="" data-toggle="tab" aria-controls="" aria-expanded="false">2015年客户问题量</a></li>
+                        <li role="presentation" class=""><a href="" role="tab" id="" data-toggle="tab" aria-controls="" aria-expanded="false">2015年问题类型</a></li>
+                        <li role="presentation" class=""><a href="" role="tab" id="" data-toggle="tab" aria-controls="" aria-expanded="false">最近12个月各大区问题数</a></li>
+                        <li role="presentation" class=""><a href="" role="tab" id="" data-toggle="tab" aria-controls="" aria-expanded="false">客户连接统计</a></li>
+                    </ul>
+                </div>
+                <div id="servTabContent-1" class="lui-tab-content">
+                    <div role="tabpanel" class="lui-tab-pane lui-fade active in" id="reward-1" aria-labelledby="reward-tab-1">
+                        <img src="images/服务门户_img_01.jpg" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--问题处理数据区域 Ends-->
+
+    <!--内容区域 Starts-->
+    <div class="lui-bg-gray lui-portal-article">
+        <div class="lui-container">
+            <div class="lui-col-8">
+                <!--选项卡 Starts-->
+                <div class="lui-tabs-box">
+                    <div class="lui-tabs-heading">
+                        <ul id="servTabs-1" class="lui-nav lui-nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#reward-1" id="reward-tab-1" role="tab" data-toggle="tab" aria-controls="reward-1" aria-expanded="true">悬赏榜</a></li>
+                            <li role="presentation" class=""><a href="#question-1" role="tab" id="question-tab-1" data-toggle="tab" aria-controls="question-1" aria-expanded="false">上帝的问题</a></li>
+                        </ul>
+                        <div class="lui-btn-group-inline lui-text-right">
+                            <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-primary" title="新建">新建<i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                            <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                        </div>
+                    </div>
+                    <div id="servTabContent-1" class="lui-tab-content">
+                        <div role="tabpanel" class="lui-tab-pane lui-fade active in" id="reward-1" aria-labelledby="reward-tab-1">
+                            <table class="lui-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="lui-tab-pane lui-fade" id="question-1" aria-labelledby="question-tab-1">
+                            <table class="lui-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--选项卡 Ends-->
+            </div>
+            <div class="lui-portal-article-col-right">
+                <!--服务专员通讯录 Starts-->
+                <div class="lui-specialist-address">
+                    <div class="lui-specialist-address-heading">
+                        <span class="badge-1"></span>
+                        <span class="badge-2"></span>
+                        <h3 class="lui-specialist-address-title">服务专员通讯录</h3>
+                    </div>
+                    <div class="lui-specialist-address-content">
+                        <table class="lui-table">
+                            <tbody>
+                                <tr>
+                                    <td>重庆分公司</td>
+                                    <td>唐小印</td>
+                                    <td>136 7769 7144</td>
+                                </tr>
+                                <tr>
+                                    <td>重庆分公司</td>
+                                    <td>唐小印</td>
+                                    <td>136 7769 7144</td>
+                                </tr>
+                                <tr>
+                                    <td>重庆分公司</td>
+                                    <td>唐小印</td>
+                                    <td>136 7769 7144</td>
+                                </tr>
+                                <tr>
+                                    <td>重庆分公司</td>
+                                    <td>唐小印</td>
+                                    <td>136 7769 7144</td>
+                                </tr>
+                                <tr>
+                                    <td>重庆分公司</td>
+                                    <td>唐小印</td>
+                                    <td>136 7769 7144</td>
+                                </tr>
+                                <tr>
+                                    <td>重庆分公司</td>
+                                    <td>唐小印</td>
+                                    <td>136 7769 7144</td>
+                                </tr>
+                                <tr>
+                                    <td>重庆分公司</td>
+                                    <td>唐小印</td>
+                                    <td>136 7769 7144</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="lui-specialist-address-footer">
+                        <li class="active"><a href="javascript:void(0);">1</a></li>
+                        <li><a href="javascript:void(0);">2</a></li>
+                    </ul>
+                </div>
+                <!--服务专员通讯录 Ends-->
+             </div>
+        </div>
+    </div>
+    <!--内容区域 Ends-->
+
+    <!--内容区域 Starts-->
+    <div class="lui-portal-article">
+        <div class="lui-container">
+            <div class="lui-col-8">
+                <!--选项卡 Starts-->
+                <div class="lui-tabs-box">
+                    <div class="lui-tabs-heading">
+                        <ul id="servTabs-2" class="lui-nav lui-nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#problem-2" id="problem-tab-2" role="tab" data-toggle="tab" aria-controls="problem-2" aria-expanded="true">服务问题</a></li>
+                            <li role="presentation" class=""><a href="#praise-2" role="tab" id="praise-tab-2" data-toggle="tab" aria-controls="praise-2" aria-expanded="false">表扬</a></li>
+                            <li role="presentation" class=""><a href="#suggest-2" role="tab" id="suggest-tab-2" data-toggle="tab" aria-controls="suggest-2" aria-expanded="false">建议</a></li>
+                            <li role="presentation" class=""><a href="#complain-2" role="tab" id="complain-tab-2" data-toggle="tab" aria-controls="complain-2" aria-expanded="false">投诉</a></li>
+
+                        </ul>
+                        <div class="lui-btn-group-inline lui-text-right">
+                            <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-primary" title="新建">新建<i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                            <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                        </div>
+                    </div>
+                    <div id="servTabContent-2" class="lui-tab-content">
+                        <div role="tabpanel" class="lui-tab-pane lui-fade active in" id="problem-2" aria-labelledby="problem-tab-2">
+                            <table class="lui-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="lui-tab-pane lui-fade" id="praise-2" aria-labelledby="praise-tab-2">
+                            <table class="lui-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="lui-tab-pane lui-fade" id="suggest-2" aria-labelledby="suggest-tab-2">
+                            <table class="lui-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="lui-tab-pane lui-fade" id="complain-2" aria-labelledby="complain-tab-2">
+                            <table class="lui-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>120</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lui-table-icon"><i class="lui-icon lui-icon-coin"></i>100</td>
+                                        <td class="lui-table-suject"><a href="javascript:void(0);" title="“工行小e插件导致表单选择慢”" target="_blank">工行小e插件导致表单选择慢</a><i class="lui-icon lui-icon-help"></i></td>
+                                        <td class="lui-table-date lui-text-right">2014/12/22</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--选项卡 Ends-->
+            </div>
+            <div class="lui-portal-article-col-right">
+                <!--面板 Starts-->
+                <div class="lui-panel lui-panel-vice">
+                    <div class="lui-panel-heading">
+                        <h3 class="lui-panel-title">服务公告</h3>
+                        <div class="lui-btn-group-inline lui-text-right">
+                            <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                        </div>
+                    </div>
+                    <div class="lui-panel-body">
+                        <ul class="lui-list lui-list-condensed lui-list-icon">
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="温情冬季，欢迎回家！"><i class="lui-icon lui-icon-list"></i>温情冬季，欢迎回家！</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="阿里钉钉+蓝凌，一个移动工作、学习.."><i class="lui-icon lui-icon-list"></i>阿里钉钉+蓝凌，一个移动工作、学习..</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="蓝凌基于Domino平台全系列版本软件.."><i class="lui-icon lui-icon-list"></i>蓝凌基于Domino平台全系列版本软件..</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="【邀请函】2015年蓝凌秋季系统性能.."><i class="lui-icon lui-icon-list"></i>【邀请函】2015年蓝凌秋季系统性能..</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="服务平台停机维护公告（10月22日）"><i class="lui-icon lui-icon-list"></i>服务平台停机维护公告（10月22日）</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="【邀请函】蓝凌秋季系统管理员高级运.."><i class="lui-icon lui-icon-list"></i>【邀请函】蓝凌秋季系统管理员高级运..</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="2015年国庆蓝凌放假安排"><i class="lui-icon lui-icon-list"></i>2015年国庆蓝凌放假安排</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="服务平台停机维护公告（9月11日）"><i class="lui-icon lui-icon-list"></i>服务平台停机维护公告（9月11日）</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="云服务平台KK短信充值入口已开放，.."><i class="lui-icon lui-icon-list"></i>云服务平台KK短信充值入口已开放，..</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="蓝凌基于Domino平台全系列版本软件.."><i class="lui-icon lui-icon-list"></i>蓝凌基于Domino平台全系列版本软件..</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="【邀请函】2015年蓝凌秋季系统性能.."><i class="lui-icon lui-icon-list"></i>【邀请函】2015年蓝凌秋季系统性能..</a></li>
+                            <li><a class="lui-text-nowrap" href="javascript:void(0);" title="服务平台停机维护公告（10月22日）"><i class="lui-icon lui-icon-list"></i>服务平台停机维护公告（10月22日）</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--面板 Ends-->
+            </div>
+        </div>
+    </div>
+    <!--内容区域 Ends-->
+
+    <!--服务工作导航区域 Starts-->
+    <div class="lui-bg-gray">
+        <div class="lui-container">
+            <dl class="lui-portal-service-navgation-simple">
+                <dt class="heading">
+                    <span class="heading-top"></span>
+                    <span class="heading-content">服务工作导航</span>
+                    <span class="heading-bottom"></span>
+                </dt>
+                <dd class="content">
+                    <a href="javascript:void(0);" title="外部服务网站">外部服务网站</a>
+                    <a href="javascript:void(0);" title="服务交接流程NEW">服务交接流程NEW</a>
+                    <a href="javascript:void(0);" title="现场服务单下载">现场服务单下载</a>
+                    <a href="javascript:void(0);" title="客户服务延期申请">客户服务延期申请</a>
+                    <a href="javascript:void(0);" title="专家派工单">专家派工单</a>
+                    <a href="javascript:void(0);" title="每月应续签客户">每月应续签客户</a>
+                    <a href="javascript:void(0);" title="售后服务合同模版">售后服务合同模版</a>
+                    <a href="javascript:void(0);" title="服务白皮书">服务白皮书</a>
+                    <a href="javascript:void(0);" title="服务交接流程（备查）">服务交接流程（备查）</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--服务工作导航区域 Ends-->
+
+    <!--页面注脚 Starts-->
+    <div class="lui-footer lui-footer-primary">
+        <div class="lui-footer-innerbox">
+            <div class="lui-container">
+                <p>蓝凌软件  版权所有</p>
+                <p>粤ICP备11017824号-4 / 粤ICP证130164号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市公安局南山分局备案编号:110105000501</p>
+                <p>Copyright&nbsp;©&nbsp;2001-2015</p>
+            </div>
+        </div>
+    </div>
+    <!--页面注脚 Ends-->
+
+    <!--固定侧边工具栏 Starts-->
+    <div class="lui-fixed-toolbar">
+        <a href="javascript:void(0);" class="lui-btn lui-btn-default" id="scrollTop" title="置顶">
+            <div class="innerbar">
+                <i class="lui-icon lui-icon-lg lui-icon-32-top"></i>
+                <span class="text-top">置顶</span>
+            </div>
+        </a>
+    </div>
+    <!--固定侧边工具栏 Ends-->
+
+    <!--意见反馈栏 Starts-->
+    <div class="lui-feedback-box" style="right: -312px;">
+        <div class="lui-feedback-heading">
+            <button class="lui-btn lui-btn-default" type="button">
+                <i class="lui-icon lui-icon-words"></i>
+                帮助&amp;意见反馈
+                <i class="lui-icon lui-icon-arrDotL"></i>
+            </button>
+        </div>
+        <div class="lui-feedback-content">
+            <form class="lui-form-comment lui-form-horizontal">
+                <div class="lui-form-group">
+                    <textarea class="lui-form-control" rows="10" placeholder="有任何意见或建议，请告诉我们！"></textarea>
+                </div>
+                <!--<div class="lui-alert lui-alert-warning">使用遇到问题？请先进入<a class="lui-text-primary" href="javascript:void(0);" title="帮助中心">帮助中心</a></div>-->
+                <div class="lui-form-group lui-form-comment-footer">
+                    <button class="lui-btn lui-btn-mute" type="button" id="feedback-close">关闭</button>
+                    <button class="lui-btn lui-btn-primary" type="button">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--意见反馈栏 Ends-->
+</body>
+</html>

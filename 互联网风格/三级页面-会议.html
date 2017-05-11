@@ -1,0 +1,764 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Note there is no responsive meta tag here -->
+    <!--<link rel="icon" href="images/favicon.ico">-->
+    <title>三级页面-会议</title>
+
+    <link href="css/ns.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/ns.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+</head>
+
+<body>
+    <!--头部区域 Starts-->
+    <div class="lui-paging-header-imgbox">
+        <img src="images/meetin_header_img.jpg" />
+        <div class="lui-paging-header-body">
+            <div class="lui-container">
+                <div class="lui-paging-header-top lui-row">
+                    <div class="lui-col-6 lui-paging-header-top-title">
+                        <span><i class="lui-icon lui-icon-location"></i>部门会议</span>
+                        <span>会议编号： HY201506-004</span>
+                    </div>
+                    <div class="lui-col-6 lui-text-right">
+                        <div class="lui-btn-group operateBar">
+                            <button type="button" class="lui-btn lui-btn-default lui-page-header-msg"><i class="lui-icon lui-icon-l lui-icon-32-paper-plane"></i>任务安排</button>
+                            <div class="lui-btn-group">
+                                <button data-toggle="dropdown" class="lui-btn lui-btn-default lui-page-header-tool lui-dropdown-toggle" aria-expanded="false" title="更多"><i class="lui-icon lui-icon-l lui-icon-32-tool"></i> <span class="lui-caret"></span></button>
+                                <ul class="lui-dropdown-menu lui-dropdown-menu-right">
+                                    <li class="lui-page-header-msg"><a href="#" title="留言">留言</a></li>
+                                    <li class="lui-page-header-laud"><a href="#" title="点赞">点赞</a></li>
+                                    <li><a href="#" title="收藏">收藏</a></li>
+                                    <li><a href="#" title="发布">发布</a></li>
+                                    <li><a href="#" title="生成链接">生成链接</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lui-paging-header-content">
+                    <div class="lui-paging-header-head">
+                        <div class="imgbox"><img src="images/bmp_avatar_08.png" /></div>
+                        <div class="title">部门会议</div>
+                    </div>
+                    <h1 class="lui-paging-header-title"><span class="lui-label lui-label-info">未召开</span>2015年产品中心半年会议<span class="times">[4小时]</span></h1>
+                    <div class="lui-paging-header-txtbox">
+                        <div class="txtbox-left">
+                            <i class="lui-icon lui-icon-paging-1"></i>刘丽娜
+                            <span class="stitch-line"></span>
+                        </div>
+                        <div class="txtbox-right">
+                            <div class="txtbox-inner-item"><i class="lui-icon lui-icon-paging-2"></i>2015-07-14 13:00 ~ 2015-07-14 17:00</div>
+                            <div class="txtbox-inner-item"><i class="lui-icon lui-icon-paging-3"></i>总部4楼培训教室</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--头部区域 Ends-->
+
+    <!--目录导航 Starts-->
+    <div class="lui-catalog-nav">
+        <div class="lui-row">
+            <div class="lui-container">
+                <div class="lui-nimble-operBox" id="catalog">
+                    <div class="lui-nimble-heading">
+                        <a class="next"></a>
+                        <a class="prev"></a>
+                    </div>
+                    <div class="lui-nimble-content">
+                        <ul class="lui-nimble-list" id="catalogNav">
+                            <li class="catalog-location active"><a href="#page-article">正文</a></li>
+                            <li><a href="#page-attachment">附件</a></li>
+                            <li><a href="#page-reply">回复<span class="num">2</span></a></li>
+                            <li><a href="#page-recommend">推荐<span class="num">5</span></a></li>
+                            <li><a href="#page-read">阅读<span class="num">20</span></a></li>
+                            <li><a href="#page-version">版本</a></li>
+                            <li><a href="#page-authority">权限</a></li>
+                            <li><a href="#page-flow">流程处理</a></li>
+
+                            <li><a href="#">流程处理</a></li>
+                            <li><a href="#">流程处理</a></li>
+                            <li><a href="#">流程处理</a></li>
+                            <li><a href="#">流程处理</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var ary = location.href.split("&");
+                    jQuery("#catalog").slide({ titCell: ".lui-nimble-heading ul", mainCell: ".lui-nimble-content ul", autoPage: true, effect: "left", vis: 10, easing: "easeOutCirc", trigger: "click" });
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#catalogNav').onePageNav({
+                currentClass: 'active',
+                changeHash: false,
+                scrollSpeed: 350,
+                scrollThreshold: 0.5,
+                filter: '',
+                easing: 'swing',
+                begin: function () {
+                    //$('#nav').css({ "positon": "fixed", "top": "0" });
+                    //I get fired when the animation is starting
+                },
+                end: function () {
+                    //I get fired when the animation is ending
+                },
+                scrollChange: function ($currentListItem) {
+                    //I get fired when you enter a section and I pass the list item of the section
+                }
+            });
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 510) {
+                    $(".lui-catalog-nav").find(".lui-row").addClass("lui-fixed");
+                    $(".operateBar").addClass("lui-fixed");
+                } else {
+                    $(".lui-catalog-nav").find(".lui-row").removeClass("lui-fixed");
+                    $(".operateBar").removeClass("lui-fixed");
+                }
+            });
+
+        });
+    </script>
+    <!--目录导航 Ends-->
+
+    <!--主体内容 Starts-->
+    <div class="lui-container">
+
+        <div class="lui-catalog-navside-content" id="page-article">
+            <!--正文 Starts-->
+            <div class="lui-page-container">
+                <!--正文头部 Starts-->
+                <div class="lui-page-header">
+                    <div class="lui-page-header-nav">
+                        <div class="lui-container lui-clearfix">
+                            <div class="lui-page-header-left">
+                                <h1 class="lui-page-header-title">关于windows7_64位系统下安装打印机的方法</h1>
+                                <div class="lui-meta-info">
+                                    <span class="lui-avatar lui-avatar-round"><img src="images/avatar_02.gif"></span>
+                                    <span>发表于 2011-06-07 10:38</span>
+                                    <span><i class="lui-icon lui-icon-msg"></i>2</span>
+                                    <span><i class="lui-icon lui-icon-laud"></i>5</span>
+                                    <span><i class="lui-icon lui-icon-eye"></i>20</span>
+                                </div>
+                            </div>
+                            <div class="lui-page-header-right">
+                                <div class="lui-btn-group lui-page-header-operateBar">
+                                    <button type="button" class="lui-btn lui-btn-default lui-page-header-msg"><i class="lui-icon lui-icon-l lui-icon-32-msg"></i></button>
+                                    <button type="button" class="lui-btn lui-btn-default lui-page-header-laud"><i class="lui-icon lui-icon-l lui-icon-32-laud"></i></button>
+                                    <div class="lui-btn-group">
+                                        <button data-toggle="dropdown" class="lui-btn lui-btn-default lui-page-header-tool lui-dropdown-toggle" aria-expanded="false" title="更多"><i class="lui-icon lui-icon-l lui-icon-32-tool"></i> <span class="lui-caret"></span></button>
+                                        <ul class="lui-dropdown-menu lui-dropdown-menu-right">
+                                            <li class="lui-page-header-msg"><a href="#" title="留言">留言</a></li>
+                                            <li class="lui-page-header-laud"><a href="#" title="点赞">点赞</a></li>
+                                            <li><a href="#" title="收藏">收藏</a></li>
+                                            <li><a href="#" title="发布">发布</a></li>
+                                            <li><a href="#" title="生成链接">生成链接</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--正文头部 Starts-->
+                <p class="p-header">
+                    一. 事件背景
+                </p>
+                <p>
+                    随着硬件升级及软件的内存消耗量与日剧增，看到公司用64位win7的同事越来越多。用的久了，于是大家发现出问题来了。以前32位的XP连接打印机多么方便，输入打印服务器的ip地址，双击共享的打印机就可以安装了，直接打印多方便！可自从使用了64位的win7后，连接打印机却怎么也都不好使了，搞的大家办公相当的郁闷，很多时候只好将文件拷到优盘到打印服务器那边去打印。一份两份的文件也就算了，可忙的时候，文件一多，这种办法显然是不太理智的。
+                </p>
+                <p>
+                    之前钟伟波出了一份知识文档，教大家如何在64位win7下安装打印机的（详见：64位WIN7 操作系统怎样安装网络打印机），该文档确实给大家在64位win7下安装打印机指出了一条新路。这篇文档的主要思路是先添加一个ip地址的端口，然后再此端口上安装相应打印机的驱动。因为这篇文档当时针对的是五楼的HP 3005打印机，安装的驱动是利用windows update中的驱动，且使用的是3050系列打印机驱动替代的（考虑到3000系列的，即同一系列的打印机驱动的通用性，可能3050驱动也适用于3005打印机驱动）。但自从我们搬到四楼办公后，这种办法却不可行了。
+                </p>
+                <p>
+                    那么有人要问了，该怎么办呢？
+                </p>
+
+                <p class="p-header">
+                    二. 处理方法
+                </p>
+                <p>
+                    我在五楼的时候试了直接去惠普网站下载最新的驱动，输入打印机型号：3005，可出来的64位win7的驱动标题却是：适用于 Windows x64 的 HP 通用打印驱动程序 PCL6 。怎么说通用驱动呢？也许是惠普觉得每个打印机都得为它开发一个针对各个系统的驱动，这样的工作量太大了，且容易混淆，所以才开发了这个通用的驱动吧！我对比了一下：四楼的4100、5200和五楼的3005的通用驱动的大小和文件名完全一样，这样看来，只用下载任意一个就可以了！
+                </p>
+                <p>
+                    最开始在五楼的时候我安装了这个通用驱动，可怎么也安装不上那台3005，后来我放弃了，用了钟伟波的方法安装上了，也很好用。可搬到四楼后，这种方法对5200却不好用了。
+                </p>
+                <p>
+                    对于没有网络功能的5200，这种方法就不好使了。我在网站上查询了相关的资料，发现了一种方法可以解决。
+                </p>
+                <p>
+                    1、点击开始\控制面板\打印机；
+                </p>
+                <p>
+                    2、选择“添加打印机”；
+                </p>
+                <p>
+                    1、点击开始\控制面板\打印机；
+                </p>
+                <p>
+                    3、选择 “添加本地打印机”，按一下步；
+                </p>
+                <p>
+                    4、选择“创建新端口”\ 选择“local port” 这一项，按下一步，提示输入端口名称，输入共享打印机的绝对路径，格式为：\\XXX(共享打印机的计算机名或IP地址)\xxx(共享打印机的共享名称)，如 \\192.168.4.9\hp_5200，按确定；
+                </p>
+                <p>
+                    5、选择好自己的网络打印机“厂商”、“型号”，按下一步。（如果列表中没有，官方也没提供相应的版本驱动下载，请在列表中选择型号相近的代替，一般情况下都是可以的，如HP5200lx 选择HP5200l系列）
+                </p>
+                <p>
+                    6、添加成功，打印测试页试试。
+                </p>
+            </div>
+            <!--正文 Ends-->
+        </div>
+
+
+
+        <div class="lui-catalog-navside-content" id="page-attachment">
+            <!--附件 正文面板 Starts-->
+            <div class="lui-page-panel lui-attchement">
+                <div class="lui-page-panel-heading">
+                    <h5 class="lui-page-panel-title">附件<span class="num lui-text-primary">4</span></h5>
+                </div>
+                <div class="lui-page-panel-body">
+                    <table class="lui-table">
+                        <tbody>
+                            <tr class="heading">
+                                <td><input type="checkbox"></td>
+                                <td colspan="6" class="lui-text-left">全选<button type="button" class="lui-btn lui-btn-sm lui-btn-default">批量下载</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td class="suject" width="76%">
+                                    <a href="#" title="蓝凌JAVA产品部RTC使用指南.doc"><img src="icon/_16/icon_16_word.png">蓝凌JAVA产品部RTC使用指南蓝凌JAVA产品部RTC使用指南蓝凌JAVA产品部RTC使用指南蓝凌JAVA产品部RTC使用指南.doc</a>
+                                    <span class="lui-text-highlight">[4.38MB]</span>
+                                </td>
+                                <td><a href="#"><img src="icon/_16/icon_16_read.png"></a></td>
+                                <td><a href="#"><img src="icon/_16/icon_16_download.png"></a></td>
+                                <td><a href="#"><img src="icon/_16/icon_16_edit.png"></a></td>
+                                <td><a href="#"><img src="icon/_16/icon_16_print.png"></a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td class="suject" width="76%">
+                                    <a href="#" title="IMG_1418955722.jpg"><img src="icon/_16/icon_16_img.png">IMG_1418955722.jpg<span class="lui-text-highlight">[3.34KB]</span></a>
+                                </td>
+                                <td><a href="#"><img src="icon/_16/icon_16_read.png"></a></td>
+                                <td><a href="#"><img src="icon/_16/icon_16_download.png"></a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td class="suject" width="76%">
+                                    <a href="#" title="IMG_1418955722.jpg"><img src="icon/_16/icon_16_img.png">IMG_1418955722.jpg<span class="lui-text-highlight">[3.34KB]</span></a>
+                                </td>
+                                <td><a href="#"><img src="icon/_16/icon_16_read.png"></a></td>
+                                <td><a href="#"><img src="icon/_16/icon_16_download.png"></a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td class="suject" width="76%">
+                                    <a href="#" title="IMG_1418955722.jpg"><img src="icon/_16/icon_16_img.png">IMG_1418955722.jpg<span class="lui-text-highlight">[3.34KB]</span></a>
+                                </td>
+                                <td><a href="#"><img src="icon/_16/icon_16_read.png"></a></td>
+                                <td><a href="#"><img src="icon/_16/icon_16_download.png"></a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td class="suject" width="76%">
+                                    <a href="#" title="IMG_1418955722.jpg"><img src="icon/_16/icon_16_img.png">IMG_1418955722.jpg<span class="lui-text-highlight">[3.34KB]</span></a>
+                                </td>
+                                <td><a href="#"><img src="icon/_16/icon_16_read.png"></a></td>
+                                <td><a href="#"><img src="icon/_16/icon_16_download.png"></a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--附件 正文面板 Ends-->
+        </div>
+
+        <div class="lui-catalog-navside-content" id="page-reply">
+            <!--回复 正文面板 Starts-->
+            <div class="lui-page-panel">
+                <div class="lui-page-panel-heading">
+                    <h5 class="lui-page-panel-title">回复<span class="num lui-text-primary">2</span></h5>
+                    <div class="lui-pull-right">
+                        <button type="button" class="lui-btn lui-btn-sm lui-btn-primary">回复</button>
+                    </div>
+                </div>
+                <div class="lui-page-panel-body">
+                    <ul class="lui-comment-list">
+                        <li class="lui-media">
+                            <div class="lui-media-left">
+                                <span class="lui-avatar lui-avatar-round"><img src="images/avatar_02.gif"></span>
+                            </div>
+                            <div class="lui-media-body">
+                                <div class="lui-media-heading lui-clearfix">
+                                    <div class="lui-col-10">
+                                        <span class="comment-name">贾宝玉</span>
+                                        <span class="comment-tip">发表于 2015-10-25 13:28:35</span>
+                                    </div>
+                                    <div class="lui-col-2 lui-text-right">
+                                        <span class="comment-tip-right">沙发</span>
+                                    </div>
+                                </div>
+                                <p class="lui-media-depict">我觉得应该顶...</p>
+                                <ul class="lui-comment-reply-list">
+                                    <li><span class="comment-name">林黛玉：</span>支持。</li>
+                                </ul>
+                                <div class="lui-meta-info lui-text-right">
+                                    <a href="#">回复</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="lui-media">
+                            <div class="lui-media-left">
+                                <span class="lui-avatar lui-avatar-round"><img src="images/avatar_02.gif"></span>
+                            </div>
+                            <div class="lui-media-body">
+                                <div class="lui-media-heading lui-clearfix">
+                                    <div class="lui-col-10">
+                                        <span class="comment-name">贾宝玉</span>
+                                        <span class="comment-tip">发表于 2015-10-25 13:28:35</span>
+                                    </div>
+                                    <div class="lui-col-2 lui-text-right">
+                                        <span class="comment-tip-right">板凳</span>
+                                    </div>
+                                </div>
+                                <p class="lui-media-depict">我觉得应该顶...</p>
+                                <div class="lui-meta-info lui-text-right">
+                                    <a href="#">回复</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="lui-form-comment lui-form-horizontal">
+                        <div class="lui-form-comment-btngroup">
+                            <button class="lui-btn lui-btn-default" type="button"><i class="lui-icon lui-icon-l lui-icon-32-face"></i></button>
+                            <button class="lui-btn lui-btn-default" type="button"><i class="lui-icon lui-icon-l lui-icon-32-pic"></i></button>
+                        </div>
+                        <div class="lui-form-group">
+                            <textarea class="lui-form-control" rows="6" placeholder="我觉得应该顶..."></textarea>
+                        </div>
+                        <div class="lui-form-group lui-form-comment-footer">
+                            <div class="lui-col-6 lui-text-left">
+                                <div class="lui-checkbox">
+                                    <label>
+                                        <input type="checkbox"> 回帖后跳转到最后一页
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="lui-col-6 lui-text-right">
+                                <button class="lui-btn lui-btn-primary" type="button">发表回复</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--回复 正文面板 Ends-->
+        </div>
+
+        <div class="lui-catalog-navside-content" id="page-recommend">
+            <!--推荐 正文面板 Starts-->
+            <div class="lui-page-panel">
+                <div class="lui-page-panel-heading">
+                    <h5 class="lui-page-panel-title">推荐<span class="num lui-text-primary">5</span></h5>
+                </div>
+                <div class="lui-page-panel-body">
+                    <form class="lui-input-group lui-page-recommend-from">
+                        <input type="text" class="lui-form-control" placeholder="说句推荐话语吧...">
+                        <div class="lui-input-group-btn">
+                            <button type="button" class="lui-btn lui-btn-selected"><i class="lui-icon lui-icon-people"></i>选择</button>
+                        </div>
+                        <div class="lui-input-group-btn">
+                            <button type="submit" class="lui-btn lui-btn-primary">推荐</button>
+                        </div>
+                    </form>
+
+                    <dl class="lui-page-recommend lui-clearfix">
+                        <dt>推荐记录:</dt>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="innerbar">
+                                <div class="lui-avatar lui-avatar-m lui-avatar-round"><img src="images/avatar_02.gif"></div>
+                                <div class="txt">贾宝玉</div>
+                            </div>
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+            <!--推荐 正文面板 Ends-->
+        </div>
+
+        <div class="lui-catalog-navside-content" id="page-read">
+            <!--阅读记录 正文面板 Starts-->
+            <div class="lui-page-panel">
+                <div class="lui-page-panel-heading">
+                    <h5 class="lui-page-panel-title">阅读记录<span class="num lui-text-primary">20</span></h5>
+                </div>
+                <div class="lui-page-panel-body">
+                    <table class="lui-table lui-table-list">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table class="lui-table lui-table-condensed lui-table-noborder">
+                                        <tbody>
+                                            <tr>
+                                                <td class="lui-text-nowrap">已阅人员:</td>
+                                                <td>张三； 李四； 王二麻子； 贾宝玉； 林黛玉； 薛宝钗； 宋江； 武松；  孙行者；  猪悟能； 曹操； 张三； 李四； 王二麻子； 贾宝玉； 林黛玉； 薛宝钗； 宋江； 武松；  孙行者.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table class="lui-table lui-table-condensed lui-table-noborder lui-text-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="lui-text-left">版本记录:</th>
+                                                <th>序号</th>
+                                                <th>阅读人</th>
+                                                <th>阅读时间</th>
+                                                <th>部门</th>
+                                                <th>阅读阶段</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>张三</td>
+                                                <td>2012-12-03 14:23</td>
+                                                <td>效能提升部</td>
+                                                <td>发布</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>张三</td>
+                                                <td>2012-12-03 14:23</td>
+                                                <td>效能提升部</td>
+                                                <td>发布</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>张三</td>
+                                                <td>2012-12-03 14:23</td>
+                                                <td>效能提升部</td>
+                                                <td>发布</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>张三</td>
+                                                <td>2012-12-03 14:23</td>
+                                                <td>效能提升部</td>
+                                                <td>发布</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!--阅读记录 正文面板 Ends-->
+        </div>
+
+        <div class="lui-catalog-navside-content" id="page-version">
+            <!--版本 正文面板 Starts-->
+            <div class="lui-page-panel">
+                <div class="lui-page-panel-heading">
+                    <h5 class="lui-page-panel-title">版本</h5>
+                    <div class="lui-pull-right">
+                        <div class="currentVersion">当前版本1.0</div>
+                    </div>
+                </div>
+                <div class="lui-page-panel-body">
+                    <table class="lui-table lui-table-condensed lui-table-noborder lui-text-center">
+                        <thead>
+                            <tr>
+                                <th class="lui-text-left">版本记录:</th>
+                                <th>序号</th>
+                                <th>主题</th>
+                                <th>创建人</th>
+                                <th>版本</th>
+                                <th>创建时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>1</td>
+                                <td>关于windows7_64位系统下安装打印机...</td>
+                                <td>张毅</td>
+                                <td>1.0</td>
+                                <td>2012-12-03 14:23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--版本 正文面板 Ends-->
+        </div>
+
+        <div class="lui-catalog-navside-content" id="page-authority">
+            <!--权限 正文面板 Starts-->
+            <div class="lui-page-panel">
+                <div class="lui-page-panel-heading">
+                    <h5 class="lui-page-panel-title">权限</h5>
+                </div>
+                <div class="lui-page-panel-body">
+                    <table class="lui-table lui-table-list">
+                        <tbody>
+                            <tr>
+                                <td class="title">可阅读者</td>
+                                <td>所有用户</td>
+                            </tr>
+                            <tr>
+                                <td class="title">可编辑者</td>
+                                <td>只有<span class="lui-text-highlight">相关人员</span>可以编辑</td>
+                            </tr>
+                            <tr>
+                                <td class="title">可阅读者</td>
+                                <td>所有用户</td>
+                            </tr>
+                            <tr>
+                                <td class="title">可阅读者</td>
+                                <td>
+                                    <div>可拷贝者：未限制</div>
+                                    <div>可下载者：未限制</div>
+                                    <div>可打印者：未限制</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--权限 正文面板 Ends-->
+        </div>
+
+        <div class="lui-catalog-navside-content" id="page-flow">
+            <!--流程处理 正文面板 Starts-->
+            <div class="lui-page-panel">
+                <div class="lui-page-panel-heading">
+                    <h5 class="lui-page-panel-title">流程处理</h5>
+                </div>
+                <div class="lui-page-panel-body">
+                    <table class="lui-table lui-table-bordered lui-table-text-left">
+                        <tbody>
+                            <tr>
+                                <td class="lui-table-bg-gray">流程说明</td>
+                                <td>市场做的活动宣传、高峰论坛宣传、知味发刑</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="lui-table-bg-gray">
+                                    <div class="lui-checkbox">
+                                        <label><input type="checkbox" id="checkboxSuccess" value="option1">显示审批记录</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <table class="lui-table lui-table-condensed lui-table-bordered">
+                                        <thead>
+                                            <tr class="lui-table-bg-gray">
+                                                <th>时间</th>
+                                                <th>节点名称</th>
+                                                <th>操作者</th>
+                                                <th>操作</th>
+                                                <th>处理意见</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2015-09-18 16:46</td>
+                                                <td>起草节点</td>
+                                                <td>郑文丽</td>
+                                                <td>提交文档</td>
+                                                <td><i>[隐藏]</i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2015-09-24 10:13</td>
+                                                <td>部门审核</td>
+                                                <td>品牌推广_负责人(张俊寿)</td>
+                                                <td>通过</td>
+                                                <td><i>[隐藏]</i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2015-09-24 10:41</td>
+                                                <td>发布审核</td>
+                                                <td>徐霞</td>
+                                                <td>通过</td>
+                                                <td><i>[隐藏]</i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="lui-table-bg-gray">
+                                    <div class="lui-checkbox">
+                                        <label><input type="checkbox" id="checkboxSuccess" value="option1">流程图</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="lui-table-bg-gray">
+                                    <div class="lui-checkbox">
+                                        <label><input type="checkbox" id="checkboxSuccess" value="option1">更多信息</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--流程处理 正文面板 Ends-->
+        </div>
+
+    </div>
+    <!--主体内容 Ends-->
+
+    <!--页面注脚 Starts-->
+    <div class="lui-footer lui-mt-20">
+        <div class="lui-footer-innerbox">
+            <div class="lui-container">
+                <p>蓝凌软件  版权所有</p>
+                <p>粤ICP备11017824号-4 / 粤ICP证130164号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市公安局南山分局备案编号:110105000501</p>
+                <p>Copyright&nbsp;©&nbsp;2001-2015</p>
+            </div>
+        </div>
+    </div>
+    <!--页面注脚 Ends-->
+
+    <!--固定侧边工具栏 Starts-->
+    <div class="lui-fixed-toolbar">
+        <a href="javascript:void(0);" class="lui-btn lui-btn-default" id="scrollTop" title="置顶">
+            <div class="innerbar">
+                <i class="lui-icon lui-icon-lg lui-icon-32-top"></i>
+                <span class="text-top">置顶</span>
+            </div>
+        </a>
+    </div>
+    <!--固定侧边工具栏 Ends-->
+
+    <!--意见反馈栏 Starts-->
+    <div class="lui-feedback-box" style="right: -312px;">
+        <div class="lui-feedback-heading">
+            <button class="lui-btn lui-btn-default" type="button">
+                <i class="lui-icon lui-icon-words"></i>
+                帮助&amp;意见反馈
+                <i class="lui-icon lui-icon-arrDotL"></i>
+            </button>
+        </div>
+        <div class="lui-feedback-content">
+            <form class="lui-form-comment lui-form-horizontal">
+                <div class="lui-form-group">
+                    <textarea class="lui-form-control" rows="10" placeholder="有任何意见或建议，请告诉我们！"></textarea>
+                </div>
+                <!--<div class="lui-alert lui-alert-warning">使用遇到问题？请先进入<a class="lui-text-primary" href="#" title="帮助中心">帮助中心</a></div>-->
+                <div class="lui-form-group lui-form-comment-footer">
+                    <button class="lui-btn lui-btn-mute" type="button" id="feedback-close">关闭</button>
+                    <button class="lui-btn lui-btn-primary" type="button">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--意见反馈栏 Ends-->
+</body>
+</html>

@@ -1,0 +1,818 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>二级页面-筛选</title>
+    <link rel="stylesheet" type="text/css" href="css/bmp.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <script type="text/javascript" language="javascript" src="scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/common.js"></script>
+
+</head>
+<body>
+    <!--头部 Starts-->
+    <div class="bmp-header bmp-subHeader">
+        <div class="bmp-header-toptip">
+            <div class="bmp-frame-main">
+                <h1 class="bmp-logo"></h1>
+                <!--个人信息 Starts-->
+                <ul class="bmp-toptip-personInfo-box">
+                    <li class="itembar bmp-dropdown">
+                        <div class="bmp-avatar-s toggle">
+                            <img src="images/bmp_avatar_01.gif" />
+                        </div>
+                        <div class="bmp-dropdown-meun">
+                            <i class="bmp-caret-up"></i>
+                            <i class="bmp-caret-up-cover"></i>
+                            <div class="bmp-header-toptip-card">
+                                <ul class="operationLink">
+                                    <li class="borderR"><a href="javascript:void(0)" title="个人设置">个人设置</a></li>
+                                    <li><a href="javascript:void(0)" title="个人空间">个人空间</a></li>
+                                    <li class="borderR"><a href="javascript:void(0)" title="我的订阅">我的订阅</a></li>
+                                    <li><a href="javascript:void(0)" title="退出系统">退出系统</a></li>
+                                </ul>
+                                <div class="position"><span>视觉设计师</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="itembar"><a class="toread hot" href="javascript:void(0)" title="待阅">0</a></li>
+                    <li class="itembar"><a class="todo hot" href="javascript:void(0)" title="待办">12</a></li>
+                </ul>
+                <!--个人信息 Ends-->
+                <!-- 搜索 Starts-->
+                <form class="lui-navbar-form lui-navbar-right" role="search">
+                    <div class="lui-form-group" style="margin-left: 210px;">
+                        <input type="text" class="lui-form-control" placeholder="云服务" />
+                    </div>
+                    <button type="submit" class="lui-form-btn lui-btn"><i class="lui-icon lui-icon-search"></i></button>
+                </form>
+                <!-- 搜索 Ends-->
+                <!--导航栏 Starts-->
+                <ul class="bmp-navbar">
+                    <li class="nav-item"><a class="active" href="index.html" title="工作门户">工作门户</a></li>
+                    <li class="nav-item"><a href="营销门户.html" title="营销门户">营销门户</a></li>
+                    <li class="nav-item"><a href="信息门户.html" title="信息门户">信息门户</a></li>
+                    <li class="nav-item"><a href="服务门户.html" title="服务门户">服务门户</a></li>
+                    <li class="nav-item bmp-dropdown">
+                        <span class="toggle">更多</span>
+                        <div class="bmp-dropdown-meun">
+                            <i class="bmp-caret-up"></i>
+                            <i class="bmp-caret-up-cover"></i>
+                            <ul class="bmp-navbar-dropList">
+                                <li><a href="导航门户.html" title="导航门户">导航门户</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!--导航栏 Ends-->
+            </div>
+        </div>
+    </div>
+    <!--头部 Ends-->
+    <!-- 二级页面主体内容 Starts-->
+    <!-- 标题 Starts-->
+    <div class="bmp-listPage-header">
+        <div class="bmp-frame-main">
+            <div class="bmp-frame-col-2-L"><h2>公文管理</h2><em>|</em><span>财务·行政·运营·产品</span></div>
+            <div class="bmp-frame-col-2-R">
+                <div class="bmp-assortment bmp-btn">所有分类<i class="bmp-caret-down"></i></div>
+                <a class="bmp-btn-create bmp-btn"><span class="bmp-icon bmp-icon-s icon-bumf"></span>发公文</a>
+            </div>
+        </div>
+    </div>
+    <!-- 标题 End-->
+    <div class="bmp-container">
+        <!-- 查询 Starts-->
+        <div class="bmp-quiry">
+            <div class="bmp-frame-main">
+                <div class="bmp-fl">
+                    <h3>常用查询</h3>
+                    <ul>
+                        <li><a>所有公文</a></li>
+                        <li><a>我起草的</a></li>
+                        <li><a>待我审的</a></li>
+                        <li><a>我已审的</a></li>
+                    </ul>
+                </div>
+                <div class="bmp-fr">
+                    <h3>常用分类<i class="bmp-icon icon-settings"></i></h3>
+                    <ul>
+                        <li><a>IT服务公告</a></li>
+                        <li><a>IT产品公告</a></li>
+                        <li><a>蓝锐公司</a></li>
+                        <li><a>华南大区</a></li>
+                        <li><a>华北大区</a></li>
+                        <li><a>项目任免公告</a></li>
+                        <li><a>项目变更公告</a></li>
+                        <li><a>项目验收公告</a></li>
+                        <li><a>行政公告</a></li>
+                        <li><a>新人公告</a></li>
+                        <li><a>华东大区</a></li>
+                        <li><a>西南大区</a></li>
+                        <li><a>项目管理公告</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 查询 Ends-->
+        <!-- 列表 Starts -->
+        <div class="bmp-viewdata-area">
+            <div class="bmp-viewdata-heading">
+                <!-- 当前路径 Starts-->
+                <div class="bmp-breadcrumb">
+                    <ul>
+                        <li><a>公文管理</a><i class="bmp-arrowR"></i></li>
+                        <li><a>公司公告</a><i class="bmp-arrowR"></i></li>
+                        <li><a>IT产品公告</a></li>
+                    </ul>
+                    <a class="bmp-btn btn-filter">筛选</a> 
+                </div> 
+                <!-- 当前路径 Ends-->
+                <!-- 搜索 Starts-->
+                <div class="bmp-searchbar">
+                    <span class="bmp-icon"></span><input type="text" placeholder="请输入关键词搜索" /><a>搜索</a>
+                </div>
+                    <!-- 搜索 Ends-->
+                </div>
+            <!--条件筛选区域 Starts-->
+            <div class="bmp-selector-area">
+                <!--内容 Starts-->
+                <div class="bmp-selector-content">
+                    <!-- 一行 Starts-->
+                    <div class="bmp-selector-item conditionBar">
+                        <div class="bmp-selector-item-titile">已选条件</div>
+                        <div class="bmp-selector-item-value">
+                            <ul class="bmp-selector-list">
+                                <li><a href="javascript:void(0)" title="发布"><b>文档重要度：</b><em>发布<span class="bmp-caret"></span></em><i class="bmp-icon bmp-icon-close-s"></i></a></li>
+                                <li><a href="javascript:void(0)" title="李信"><b>作者：</b><em>李信<span class="bmp-caret"></span></em><i class="bmp-icon bmp-icon-close-s"></i></a></li>
+                                <li><a href="javascript:void(0)" title="新闻"><b>来源：</b><em>新闻<span class="bmp-caret"></span></em><i class="bmp-icon bmp-icon-close-s"></i></a></li>
+                                <li><a href="javascript:void(0)" title="公告"><b>类型：</b><em>公告<span class="bmp-caret"></span></em><i class="bmp-icon bmp-icon-close-s"></i></a></li>
+                                <li><a href="javascript:void(0)" title="公告"><b>类型：</b><em>公告<span class="bmp-caret"></span></em><i class="bmp-icon bmp-icon-close-s"></i></a></li>
+                            </ul>
+                            <button type="button" class="bmp-btn bmp-btn-sm bmp-btn-primary bmp-selector-multiToggle">多选</button>
+                        </div>
+                    </div>
+                    <!-- 一行 Ends-->
+                    <!-- 一行 Starts-->
+                    <div class="bmp-selector-item">
+                        <div class="bmp-selector-item-titile">文档重要度</div>
+                        <div class="bmp-selector-item-value">
+                            <ul class="bmp-selector-list">
+                                <li class="nolimited active"><a href="javascript:void(0)" title="不限">不限</a></li>
+                                <li><a href="javascript:void(0)" title="非常重要">非常重要</a></li>
+                                <li><a href="javascript:void(0)" title="重要">重要</a></li>
+                                <li><a href="javascript:void(0)" title="非常重要">普通</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 一行 Ends-->
+                    <!-- 一行 Starts-->
+                    <div class="bmp-selector-item">
+                        <div class="bmp-selector-item-titile">发布时间</div>
+                        <div class="bmp-selector-item-value">
+                            <ul class="bmp-selector-list">
+                                <li class="nolimited active"><a href="javascript:void(0)" title="不限">不限</a></li>
+                                <li>
+                                    <form class="bmp-form-group-date">
+                                        <div class="bmp-form-group bmp-has-icon">
+                                            <input type="text" class="bmp-form-control bmp-input-sm" value="2015-09-30" />
+                                            <i class="bmp-icon bmp-icon-date"></i>
+                                        </div>
+                                        <div class="link">--</div>
+                                        <div class="bmp-form-group bmp-has-icon">
+                                            <input type="text" class="bmp-form-control bmp-input-sm" value="2015-10-11" />
+                                            <i class="bmp-icon bmp-icon-date"></i>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 一行 Ends-->
+                    <!-- 一行 Starts-->
+                    <div class="bmp-selector-item">
+                        <div class="bmp-selector-item-titile">状态</div>
+                        <div class="bmp-selector-item-value">
+                            <ul class="bmp-selector-list">
+                                <li class="nolimited"><a href="javascript:void(0)" title="不限">不限</a></li>
+                                <li class="active"><a href="javascript:void(0)" title="非常重要">非常重要</a></li>
+                                <li><a href="javascript:void(0)" title="重要">重要</a></li>
+                                <li><a href="javascript:void(0)" title="非常重要">普通</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 一行 Ends-->
+                    <!-- 一行 Starts-->
+                    <div class="bmp-selector-item">
+                        <div class="bmp-selector-item-titile">作者</div>
+                        <div class="bmp-selector-item-value">
+                            <ul class="bmp-selector-list">
+                                <li class="nolimited"><a href="javascript:void(0)" title="不限">不限</a></li>
+                                <li><a href="javascript:void(0)" title="李信">李信</a></li>
+                                <li><a href="javascript:void(0)" title="林炳宁">林炳宁</a></li>
+                                <li class="active"><a href="javascript:void(0)" title="马泽棉">马泽棉</a></li>
+                                <li><a href="javascript:void(0)" title="王光明">王光明</a></li>
+                                <li><a href="javascript:void(0)" title="韦猛">韦猛</a></li>
+                                <li><a href="javascript:void(0)" title="谢幸">谢幸</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 一行 Ends-->
+                    <!-- 一行 Starts-->
+                    <div class="bmp-selector-item">
+                        <div class="bmp-selector-item-titile">部门</div>
+                        <div class="bmp-selector-item-value">
+                            <ul class="bmp-selector-list">
+                                <li class="nolimited"><a href="javascript:void(0)" title="不限">不限</a></li>
+                                <li><a href="javascript:void(0)" title="产品运营中心">产品运营中心<span class="bmp-caret"></span></a></li>
+                                <li><a href="javascript:void(0)" title="交互设计部">交互设计部</a></li>
+                                <li><a href="javascript:void(0)" title="质量运营">质量运营</a></li>
+                                <li><a href="javascript:void(0)" title="效能提升部">效能提升部</a></li>
+                                <li class="active"><a href="javascript:void(0)" title="产品推广部">产品推广部</a></li>
+                                <li><a href="javascript:void(0)" title="质量运营">质量运营</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 一行 Ends-->
+                </div>
+                <!--内容 Ends-->
+            </div>
+            <!--条件筛选区域 Ends-->
+            <div class="bmp-view-operationBar">
+                <!--排序按钮组 Starts-->
+                <div class="bmp-btn-group-inline bmp-viewdata-btnGroup-sort">
+                    <span class="bmp-btn " title="默认">默认</span>
+                    <span class="bmp-btn active" title="最新">拟稿时间<i class="bmp-icon icon-rank-arrowU"></i></span>
+                    <span class="bmp-btn" title="发布时间">发布时间<i class="bmp-icon icon-rank-arrowU"></i></span>
+                </div>
+                <!--排序按钮组 Ends-->
+                <!--简易翻页 Starts-->
+                <ul class="bmp-pagination-simply">
+                    <li class="btnPre"><a href="javascript:void(0);"></a></li>
+                    <li class="page"><span class="current">1</span>/<span>55</span></li>
+                    <li class="btnNext"><a href="javascript:void(0);"></a></li>
+                </ul>
+                <!--简易翻页 Ends-->
+                <!--视图切换按钮 Starts-->
+                <ul id="viewdataTabs" class="bmp-viewdata-btnGroup-switch" role="tablist">
+                    <li class="bmp-dropdown active" title="列表">
+                        <i class="bmp-icon icon-list"></i><a href="javascript:void(0);" class="">列表</a>
+                    </li>
+                    <li class="bmp-dropdown" title="图文">
+                        <i class="bmp-icon icon-graphic"></i><a href="javascript:void(0);" class="">图文</a>
+                    </li>
+                </ul>
+                <!--视图切换按钮 Ends-->
+                <!--右侧按钮组 Starts-->
+                <div class="bmp-btn-group-inline right bmp-viewdata-btnGroup-function">
+                    <div class="bmp-btn-group">
+                        <button class="bmp-btn bmp-dropdown-toggle">操作 <span class="bmp-caret"></span></button>
+                        <div class="bmp-dropdown-menu bmp-dropdown-menu-right">
+                            <button type="button" class="bmp-btn bmp-btn-sm bmp-btn-block bmp-btn-default">编辑</button>
+                            <button type="button" class="bmp-btn bmp-btn-sm bmp-btn-block bmp-btn-default">收藏</button>
+                            <button type="button" class="bmp-btn bmp-btn-sm bmp-btn-block bmp-btn-default">删除</button>
+                        </div>
+                    </div>
+                </div>
+                <!--右侧按钮组 Ends-->
+               
+            </div>
+
+            <div class="bmp-viewdata-content bmp-tab-content">
+                <!--列表视图 Starts-->
+                <div role="tabpanel" class="bmp-tab-pane bmp-fade active in" id="viewdataList" aria-labelledby="viewdataList-tab">
+                    <table class="bmp-table bmp-table-hover">
+                        <thead>
+                            <tr data-href="三级-新闻管理.html">
+                                <th class="th1"><input type="checkbox" /></th>
+                                <th class="th2">序号</th>
+                                <th class="th3">标题</th>
+                                <th class="th4">文件编号</th>
+                                <th class="th5">拟稿人</th>
+                                <th class="th6">发文单位</th>
+                                <th class="th7">发布时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>1</td>
+                                <td class="subject"><i class="bmp-status status-top">置顶</i><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”" target="_blank">产品资产管理规则</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>管理者</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>2</td>
+                                <td class="subject"><i class="bmp-status status-elite">精华</i><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识”" target="_blank">“2014中国最受尊敬的知识”</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>管理者</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>3</td>
+                                <td class="subject"><a href="三级-新闻管理.html" title="2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识" target="_blank">产品资产管理规则</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>管理者</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>4</td>
+                                <td class="subject"><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”" target="_blank">关于停止蓝凌Domino平台全系列版本软件产品的 标准服务支持公告</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>管理者</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>5</td>
+                                <td class="subject"><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”" target="_blank">“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>管理者</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>6</td>
+                                <td class="subject"><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”" target="_blank">“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>王芳</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>7</td>
+                                <td class="subject"><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”" target="_blank">“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>叶中奇</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>8</td>
+                                <td class="subject"><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”" target="_blank">“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>管理者</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>9</td>
+                                <td class="subject"><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”" target="_blank">“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>管理者</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>10</td>
+                                <td class="subject"><a href="三级-新闻管理.html" title="“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”" target="_blank">“2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识2014中国最受尊敬的知识”</a></td>
+                                <td class="bmp-text-vice">蓝凌IT服务公告[2015]23号</td>
+                                <td>管理者</td>
+                                <td>信息管理部</td>
+                                <td class="">15-09-10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="center">
+                        <ul class="bmp-pagination center">
+                            <li class="prev"><a href="javascript:void(0);" aria-label="Previous">上一页</a></li>
+                            <li class="active"><a href="javascript:void(0);">1</a></li>
+                            <li><a href="javascript:void(0);">2</a></li>
+                            <li><a href="javascript:void(0);">3</a></li>
+                            <li><a href="javascript:void(0);">4</a></li>
+                            <li><a href="javascript:void(0);">5</a></li>
+                            <li class="next"><a href="javascript:void(0);" aria-label="Next">下一页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--列表视图 Ends-->
+                <!--摘要视图 Starts-->
+                <div role="tabpanel" style="display:none" class="bmp-tab-pane bmp-fade" id="viewdataSummary" aria-labelledby="viewdataSummary-tab">
+                    <ul class="bmp-media-list">
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />1
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />2
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />3
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />4
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />5
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />6
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />7
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />8
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />9
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="bmp-media">
+                            <div class="bmp-media-left">
+                                <input type="checkbox" />10
+                            </div>
+                            <div class="bmp-media-body">
+                                <h4 class="bmp-media-heading"><a href="三级-新闻管理.html" title="南极圈极创营走进蓝凌，问道互联网转型" target="_blank">南极圈极创营走进蓝凌，问道互联网转型</a></h4>
+                                <p>9月23日，由“第e律师”尤佳丽总裁领衔南极圈创营的二十多位年轻创客们汇聚蓝凌，与蓝凌公司总裁徐霞一起，就互联网时代下传统 企业的转型以及创客们如何顺应互联网...</p>
+                                <ul class="bmp-meta-info">
+                                    <li>作者：<span class="bmp-text-yellow">古志豪</span></li>
+                                    <li>所属部门：<span>外联合作部</span></li>
+                                    <li>发布时间：<span>2015-09-25</span></li>
+                                    <li>重要度：<span>普通</span></li>
+                                    <li>点击率：<span class="bmp-text-green">104</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="bmp-pagination center">
+                        <li class="disabled"><a href="javascript:void(0);" aria-label="Previous"><span aria-hidden="true">上一页</span></a></li>
+                        <li class="active"><a href="javascript:void(0);">1</a></li>
+                        <li><a href="javascript:void(0);">2</a></li>
+                        <li><a href="javascript:void(0);">3</a></li>
+                        <li><a href="javascript:void(0);">4</a></li>
+                        <li><a href="javascript:void(0);">5</a></li>
+                        <li><a href="javascript:void(0);" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
+                        <li class="bmp-ml-20">共<em class="count">817</em>条</li>
+                        <li>到第<input class="inputbar" type="text" value="1" />页</li>
+                        <li>显示<input class="inputbar" type="text" value="15" />条</li>
+                        <li><button type="button" class="bmp-btn bmp-btn-default">GO</button></li>
+                    </ul>
+                </div>
+                <!--摘要视图 Ends-->
+                <!--图文视图 Starts-->
+                <div role="tabpanel" style="display:none;" class="bmp-tab-pane bmp-fade" id="viewdataGraphic" aria-labelledby="viewdataGraphic-tab">
+                    <div class="bmp-row bmp-viewdata-graphic">
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_1.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_2.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_3.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_4.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--换一行-->
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_3.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_4.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_1.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_2.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--换一行-->
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_1.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_2.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_3.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmp-grid-col-4">
+                            <div class="bmp-thumbnail">
+                                <div class="imgbox"><img src="images/view_graphic_img_4.jpg" /></div>
+                                <div class="bmp-caption">
+                                    <h4 class="title"><a href="三级-新闻管理.html" title="IOS企业证书相关知识" target="_blank">IOS企业证书相关知识</a></h4>
+                                    <div>分类：商务常识</div>
+                                    <div>作者：范月明</div>
+                                    <ul class="bmp-meta-info">
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-heart"></i>浏览(<span class="bmp-text-green">9</span>)</a></li>
+                                        <li><a href="javascript:void(0);"><i class="bmp-icon bmp-icon-viewdata-edit"></i>评分(<span class="bmp-text-green">0</span>)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="bmp-pagination center">
+                        <li class="disabled"><a href="javascript:void(0);" aria-label="Previous"><span aria-hidden="true">上一页</span></a></li>
+                        <li class="active"><a href="javascript:void(0);">1 <span class="bmp-sr-only">(current)</span></a></li>
+                        <li><a href="javascript:void(0);">2</a></li>
+                        <li><a href="javascript:void(0);">3</a></li>
+                        <li><a href="javascript:void(0);">4</a></li>
+                        <li><a href="javascript:void(0);">5</a></li>
+                        <li><a href="javascript:void(0);" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
+                        <li class="bmp-ml-20">共<em class="count">817</em>条</li>
+                        <li>到第<input class="inputbar" type="text" value="1" />页</li>
+                        <li>显示<input class="inputbar" type="text" value="15" />条</li>
+                        <li><button type="button" class="bmp-btn bmp-btn-default">GO</button></li>
+                    </ul>
+                </div>
+                <!--图文视图 Ends-->
+            </div>
+
+        </div>
+        <!-- 列表 Ends -->
+    </div>
+    <!-- 二级页面主体内容 Ends-->
+    <!--页面注脚 Starts-->
+    <div class="bmp-footer">
+        <p>蓝凌软件  版权所有</p>
+        <p>粤ICP备11017824号-4 / 粤ICP证130164号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市公安局南山分局备案编号:110105000501</p>
+        <p>Copyright&nbsp;&copy;&nbsp;2001-2015</p>
+    </div>
+    <!--页面注脚 Ends-->
+    <!--页面固定操作栏 Starts-->
+    <div class="bmp-fixed-toolbar">
+        <a href="javascript:void(0)" class="bmp-btn-default scrollToTop" id="ScrollToTop" title="置顶">
+            <div class="innerbar">
+                <i class="bmp-icon bmp-icon-32-top"></i>
+                <span class="text-top">置顶</span>
+            </div>
+        </a>
+    </div>
+    <!--页面固定操作栏 Ends-->
+    <!--意见反馈栏 Starts-->
+    <div class="bmp-feedback-box">
+        <div class="bmp-feedback-heading">
+            <button class="bmp-btn bmp-btn-default" type="button">
+                <i class="bmp-icon bmp-icon-words"></i>
+                帮助&amp;意见反馈
+                <i class="bmp-icon bmp-icon-arrDotL"></i>
+            </button>
+        </div>
+        <div class="bmp-feedback-content">
+            <form class="bmp-form-comment bmp-form-horizontal">
+                <div class="bmp-form-group">
+                    <textarea class="bmp-form-control" rows="10" placeholder="有任何意见或建议，请告诉我们！"></textarea>
+                </div>
+                <!--<div class="bmp-alert bmp-alert-warning">使用遇到问题？请先进入<a class="bmp-text-primary" href="javascript:void(0);" title="帮助中心">帮助中心</a></div>-->
+                <div class="bmp-form-group bmp-form-comment-footer">
+                    <button class="bmp-btn bmp-btn-mute" type="button" id="feedback-close">关闭</button>
+                    <button class="bmp-btn bmp-btn-primary" type="button">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--意见反馈栏 Ends-->
+</body>
+</html>

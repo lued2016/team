@@ -1,0 +1,1406 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Note there is no responsive meta tag here -->
+    <!--<link rel="icon" href="images/favicon.ico">-->
+    <title>营销门户</title>
+
+    <link href="css/ns.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/ns.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.nav.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+</head>
+
+<body>
+    <!--页面头部栏 Starts-->
+    <div class="lui-header lui-absolute-top lui-header-primary" id="headerNav">
+        <div class="lui-navbar">
+            <div class="lui-container">
+                <!-- 左侧LOGO Starts -->
+                <div class="lui-navbar-header">
+                    <a class="lui-navbar-brand" href="index.html">
+                        <div class="brand-inner">
+                            <span class="logo"><img src="images/bmp_logo_blue.png"></span>
+                            <span class="logo-vice"><img src="images/bmp_logo.png"></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- 左侧LOGO Ends -->
+                <!-- 导航 Starts -->
+                <ul class="lui-nav lui-navbar-nav lui-navbar-left">
+                    <li><a href="index.html" title="工作门户">工作门户</a></li>
+                    <li class="active"><a href="javascript:void(0);" title="营销门户">营销门户</a></li>
+                    <li><a href="信息门户.html" title="信息门户">信息门户</a></li>
+                    <li><a href="服务门户.html" title="服务门户">服务门户</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="lui-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<i class="lui-icon lui-icon-arrLineDn"></i></a>
+                        <ul class="lui-dropdown-menu lui-dropdown-menu-right">
+                            <li><a href="导航门户.html" title="导航门户">导航门户</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 导航 Ends -->
+                <!-- 右侧内容 Starts -->
+                <ul class="lui-nav-info lui-navbar-right lui-clearfix">
+                    <li class="lui-dropdown lui-header-personInfo">
+                        <a href="javascript:void(0);" class="lui-dropdown-toggle lui-avatar lui-avatar-xm lui-avatar-round" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/bmp_avatar_01.gif"></a>
+                        <div class="lui-dropdown-menu">
+                            <i class="lui-caret-up"></i>
+                            <i class="lui-caret-up-cover"></i>
+                            <div class="lui-header-toptip-card">
+                                <ul class="operationLink">
+                                    <li class="borderR"><a href="javascript:void(0)" title="个人设置">个人设置</a></li>
+                                    <li><a href="javascript:void(0)" title="个人空间">个人空间</a></li>
+                                    <li class="borderR"><a href="javascript:void(0)" title="我的订阅">我的订阅</a></li>
+                                    <li><a href="javascript:void(0)" title="退出系统">退出系统</a></li>
+                                </ul>
+                                <div class="position"><span>视觉设计师</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);" title="关注数"><i class="lui-icon lui-icon-eye-vice"></i>12</a></li>
+                    <li><a href="javascript:void(0);" title="阅读数"><i class="lui-icon lui-icon-edit-vice"></i>24</a></li>
+                </ul>
+                <!-- 右侧内容 Ends -->
+                <!-- 搜索栏 Starts -->
+                <form class="lui-navbar-form lui-navbar-right" role="search">
+                    <div class="lui-form-group">
+                        <input type="text" class="lui-form-control" placeholder="云服务">
+                    </div>
+                    <button type="submit" class="lui-form-btn lui-btn"><i class="lui-icon lui-icon-search"></i></button>
+                </form>
+                <!-- 搜索栏 Ends -->
+            </div>
+        </div>
+    </div>
+    <!--页面头部栏 Ends-->
+
+    <!--页面顶部展览区 Starts-->
+    <div class="lui-exhibition-area">
+        <!--展览区选项卡头部 Starts-->
+        <ul class="lui-exhibition-tabs" id="exhibitTabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#exhibitContent-direct" role="tab" id="exhibitTabs-direct" data-toggle="tab" aria-controls="exhibitContent-direct" aria-expanded="true"><i class="lui-icon lui-icon-l icon-5"></i>销售指引</a>
+            </li>
+            <li role="presentation">
+                <a href="#exhibitContent-progress" role="tab" id="exhibitTabs-progress" data-toggle="tab" aria-controls="exhibitContent-progress" aria-expanded="false"><i class="lui-icon lui-icon-l icon-6"></i>销售标准历程<span class="badge-new"></span></a>
+            </li>
+            <li role="presentation">
+                <a href="#exhibitContent-cream" role="tab" id="exhibitTabs-cream" data-toggle="tab" aria-controls="exhibitContent-cream" aria-expanded="false"><i class="lui-icon lui-icon-l icon-7"></i>销售精英</a>
+            </li>
+            <li role="presentation">
+                <a href="#exhibitContent-goodnews" role="tab" id="exhibitTabs-goodnews" data-toggle="tab" aria-controls="exhibitContent-goodnews" aria-expanded="false"><i class="lui-icon lui-icon-l icon-8"></i>签单喜讯</a>
+            </li>
+        </ul>
+        <!--展览区选项卡头部 Ends-->
+        <!--展览区选项卡内容 Starts-->
+        <div id="exhibitContent" class="lui-tab-content">
+            <!-- 销售指引 业务岗位地图 Starts -->
+            <div role="tabpanel" class="bmp_BPostMap_wrap lui-tab-pane lui-fade active in" id="exhibitContent-direct" aria-labelledby="exhibitTabs-direct">
+                <div class="bmp_BPostMap" id="slider">
+                    <ul class="bmp_BPostMap_slideBox">
+                        <!-- 合伙人 Starts -->
+                        <li class="bmp_BPostMap_slideItem copartner">
+                            <!-- 地图 Starts -->
+                            <div class="bmp_BPostMap_area">
+                                <!-- 业务驻点一 Starts -->
+                                <div class="bmp_BPostMap_point_1">
+                                    <img src="images/BPostMap_point_1.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">团队客户</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/crm/index.jsp" target="_blank" title="客户信息">客户信息</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/crm/opportunity/index.jsp" target="_blank" title="商机信息">商机信息</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/crm/visit/index.jsp" target="_blank" title="拜访记录">拜访记录</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/crm/project/index.jsp#cri.q=docStatus:30" target="_blank" title="销售立项">销售立项</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点一 Ends -->
+                                <!-- 业务驻点二 Starts -->
+                                <div class="bmp_BPostMap_point_2">
+                                    <img src="images/BPostMap_point_2.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">团队合同</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_main/kmEcontractMain.do?method=add" target="_blank" title="团队的合同信息">合同申请</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/index.jsp#cri.q=mydoc:approval" target="_blank" title="合同审批">合同审批</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/index.jsp#cri.q=docStatus:20" target="_blank" title="合同查询">合同查询</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_bad_debt/index.jsp#cri.q=docStatus:30" target="_blank" title="坏帐记录">坏帐记录</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_over_amount/index.jsp" target="_blank" title="超标记录">超标记录</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点二 Ends -->
+                                <!-- 业务驻点三 Starts -->
+                                <div class="bmp_BPostMap_point_3">
+                                    <img src="images/BPostMap_point_3.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">团队项目</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_execu_plan/index.jsp#&cri.q=docStatus:30" target="_blank" title="合同执行计划">合同执行计划</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_main/index.jsp#&cri.q=docStatus:30" target="_blank" title="工程立项申请">工程立项申请</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_maintain/index.jsp" target="_blank" title="项目信息">项目信息</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_payable/index.jsp#&cri.q=docStatus:30" target="_blank" title="项目开票">项目开票</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_receivable/index.jsp#&cri.q=docStatus:30" target="_blank" title="项目回款">项目回款</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_product_out/index.jsp#cri.q=docStatus:30" target="_blank" title="产品出库记录">产品出库记录</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点三 Ends -->
+                                <!-- 业务驻点四 Starts -->
+                                <div class="bmp_BPostMap_point_4">
+                                    <img src="images/BPostMap_point_4.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">团队业绩</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="javascript:void(0)" target="_blank" title="团队合同总额">团队合同总额</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="团队销售毛利">团队销售毛利</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="业绩完成率">业绩完成率</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="团队已收款">团队已收款</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="团队应收款">团队应收款</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点四 Ends -->
+                                <!-- 旗子 Starts -->
+                                <div class="bmp_BPostMap_flag"><img src="images/BPostMap_flag.png" /></div>
+                                <!-- 旗子 Ends -->
+                                <!-- 指向箭头与车子 Starts -->
+                                <div class="bmp_BPostMap_navArrow"><img src="images/BPostMap_navArrow.png" /></div>
+                                <div class="bmp_BPostMap_car_1"></div>
+                                <!-- 指向箭头与车子 Ends -->
+                            </div>
+                            <!-- 地图 Ends -->
+                            <!-- 云 Starts -->
+                            <div class="bmp_BPostMap_cloud_1"><img src="images/BPostMap_cloud_1.png" /></div>
+                            <div class="bmp_BPostMap_cloud_2"><img src="images/BPostMap_cloud_2.png" /></div>
+                            <div class="bmp_BPostMap_cloud_3"><img src="images/BPostMap_cloud_3.png" /></div>
+                            <div class="bmp_BPostMap_cloud_4"><img src="images/BPostMap_cloud_4.png" /></div>
+                            <!-- 云 Ends -->
+                        </li>
+                        <!-- 合伙人 Ends -->
+                        <!-- 销售人员 Starts -->
+                        <li class="bmp_BPostMap_slideItem sales">
+                            <!-- 地图 Starts -->
+                            <div class="bmp_BPostMap_area">
+                                <!-- 业务驻点一 Starts -->
+                                <div class="bmp_BPostMap_point_1">
+                                    <img src="images/BPostMap_point_1.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的客户</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/crm/index.jsp" target="_blank" title="客户信息">客户信息</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/crm/opportunity/index.jsp" target="_blank" title="商机信息">商机信息</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/crm/visit/index.jsp" target="_blank" title="拜访记录">拜访记录</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/crm/project/index.jsp#cri.q=docStatus:30" target="_blank" title="销售立项">销售立项</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点一 Ends -->
+                                <!-- 业务驻点二 Starts -->
+                                <div class="bmp_BPostMap_point_2">
+                                    <img src="images/BPostMap_point_2.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的合同</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_main/kmEcontractMain.do?method=add" target="_blank" title="我要起草合同">我要起草合同</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/index.jsp#cri.q=docStatus:20" target="_blank" title="我要查询合同">我要查询合同</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点二 Ends -->
+                                <!-- 业务驻点三 Starts -->
+                                <div class="bmp_BPostMap_point_3">
+                                    <img src="images/BPostMap_point_3.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的项目</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_main/index.jsp#&cri.q=mydoc:create" target="_blank" title="我要申请工程立项">我要申请工程立项</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_maintain/index.jsp" target="_blank" title="我的项目信息">我的项目信息</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_payable/index.jsp#&cri.q=mydoc:create" target="_blank" title="我的项目开票">我的项目开票</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_receivable/index.jsp#&cri.q=mydoc:create" target="_blank" title="我的项目回款">我的项目回款</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_product_out/index.jsp#cri.q=docStatus:30" target="_blank" title="我的产品出库记录">我的产品出库记录</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点三 Ends -->
+                                <!-- 业务驻点四 Starts -->
+                                <div class="bmp_BPostMap_point_4">
+                                    <img src="images/BPostMap_point_4.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的业绩</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="javascript:void(0)" target="_blank" title="我的合同额">我的合同额</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="我的毛利额">我的毛利额</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="业绩完成率">业绩完成率</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="我的已收款">我的已收款</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="我的应收款">我的应收款</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点四 Ends -->
+                                <!-- 旗子 Starts -->
+                                <div class="bmp_BPostMap_flag"><img src="images/BPostMap_flag.png" /></div>
+                                <!-- 旗子 Ends -->
+                                <!-- 指向箭头与车子 Starts -->
+                                <div class="bmp_BPostMap_navArrow"><img src="images/BPostMap_navArrow.png" /></div>
+                                <div class="bmp_BPostMap_car_1"></div>
+                                <!-- 指向箭头与车子 Ends -->
+                            </div>
+                            <!-- 地图 Ends -->
+                            <!-- 云 Starts -->
+                            <div class="bmp_BPostMap_cloud_1"><img src="images/BPostMap_cloud_1.png" /></div>
+                            <div class="bmp_BPostMap_cloud_2"><img src="images/BPostMap_cloud_2.png" /></div>
+                            <div class="bmp_BPostMap_cloud_3"><img src="images/BPostMap_cloud_3.png" /></div>
+                            <div class="bmp_BPostMap_cloud_4"><img src="images/BPostMap_cloud_4.png" /></div>
+                            <!-- 云 Ends -->
+                        </li>
+                        <!-- 销售人员 Ends -->
+                        <!-- 项目经理 Starts -->
+                        <li class="bmp_BPostMap_slideItem project">
+                            <!-- 地图 Starts -->
+                            <div class="bmp_BPostMap_area">
+                                <!-- 业务驻点一 Starts -->
+                                <div class="bmp_BPostMap_point_1">
+                                    <img src="images/BPostMap_point_1.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的项目</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_plan_budget/index.jsp#&cri.q=mydoc:create" target="_blank" title="我的项目信息">我的项目信息</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/main/km_eproject_plan_budget/index.jsp#&cri.q=mydoc:create" target="_blank" title="我的项目计划和预算">我的项目计划和预算</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/econtract/km_econtract_product_out/index.jsp#cri.q=docStatus:30" target="_blank" title="我的产品出库申请记录">我的产品出库申请记录</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_finish_confirm/kmEprojectFinishConfirm.do?method=add&s_css=default" target="_blank" title="我要上传完工证明">我要上传完工证明</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_apply_out/kmEprojectApplyOut.do?method=add&s_css=default" target="_blank" title="我要发包">我要发包</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_apply_dispatch/kmEprojectApplyDispatch.do?method=add&s_css=default" target="_blank" title="我要派工">我要派工</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eaccount/km_eaccount_payable/index.jsp#&cri.q=mydoc:create" target="_blank" title="我要开票">我要开票</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点一 Ends -->
+                                <!-- 业务驻点二 Starts -->
+                                <div class="bmp_BPostMap_point_2">
+                                    <img src="images/BPostMap_point_2.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的产能</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/capacity/index.jsp#" target="_blank" title="我的产能填报">我的产能填报</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_weekly/kmEprojectWeekly.do?method=add&s_css=default" target="_blank" title="我要提项目周报">我要提项目周报</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点二 Ends -->
+                                <!-- 业务驻点四 Starts -->
+                                <div class="bmp_BPostMap_point_4">
+                                    <img src="images/BPostMap_point_4.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的业绩</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="javascript:void(0)" target="_blank" title="我的产能">我的产能</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="我的应收款">我的应收款</a></li>
+                                                <li><a href="javascript:void(0)" target="_blank" title="我的已收款">我的已收款</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点四 Ends -->
+                                <!-- 旗子 Starts -->
+                                <div class="bmp_BPostMap_flag"><img src="images/BPostMap_flag.png" /></div>
+                                <!-- 旗子 Ends -->
+                                <!-- 指向箭头与车子 Starts -->
+                                <div class="bmp_BPostMap_navArrow"><img src="images/BPostMap_navArrow.png" /></div>
+                                <div class="bmp_BPostMap_car_1"></div>
+                                <!-- 指向箭头与车子 Ends -->
+                            </div>
+                            <!-- 地图 Ends -->
+                            <!-- 云 Starts -->
+                            <div class="bmp_BPostMap_cloud_1"><img src="images/BPostMap_cloud_1.png" /></div>
+                            <div class="bmp_BPostMap_cloud_2"><img src="images/BPostMap_cloud_2.png" /></div>
+                            <div class="bmp_BPostMap_cloud_3"><img src="images/BPostMap_cloud_3.png" /></div>
+                            <div class="bmp_BPostMap_cloud_4"><img src="images/BPostMap_cloud_4.png" /></div>
+                            <!-- 云 Ends -->
+                        </li>
+                        <!-- 项目经理 Ends -->
+                        <!-- 专家 Starts -->
+                        <li class="bmp_BPostMap_slideItem project">
+                            <!-- 地图 Starts -->
+                            <div class="bmp_BPostMap_area">
+                                <!-- 业务驻点二 Starts -->
+                                <div class="bmp_BPostMap_point_2">
+                                    <img src="images/BPostMap_point_2.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的工作安排</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/eproject/info/km_eproject_apply_dispatch/index.jsp#cri.q=mydoc:create" target="_blank" title="我的产能">我的派工单</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点二 Ends -->
+                                <!-- 业务驻点三 Starts -->
+                                <div class="bmp_BPostMap_point_3">
+                                    <img src="images/BPostMap_point_3.png" />
+                                    <div class="bmp_BPostMap_point_brand">
+                                        <div class="brandBox_TL">
+                                            <div class="brandBox_TR">
+                                                <div class="brandBox_TC"></div>
+                                            </div>
+                                        </div>
+                                        <!-- 内容 Starts -->
+                                        <div class="brandBox_content">
+                                            <h4 class="bmp_BPostMap_point_brand_header">
+                                                <span class="arr_L"></span>
+                                                <span class="arr_C">我的产能</span>
+                                                <span class="arr_R"></span>
+                                            </h4>
+                                            <ul class="bmp_BPostMap_point_list">
+                                                <li><a href="http://bmp.landray.com.cn/km/capacity/index.jsp#" target="_blank" title="产能填报">产能填报</a></li>
+                                                <li><a href="http://bmp.landray.com.cn/km/capacity/km_capacity_detail/index.jsp#cri.q=mydoc:create" target="_blank" title="产能查询">产能查询</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 内容 Ends -->
+                                        <div class="brandBox_BL">
+                                            <div class="brandBox_BR">
+                                                <div class="brandBox_BC"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 业务驻点三 Ends -->
+                                <!-- 旗子 Starts -->
+                                <div class="bmp_BPostMap_flag"><img src="images/BPostMap_flag.png" /></div>
+                                <!-- 旗子 Ends -->
+                                <!-- 指向箭头与车子 Starts -->
+                                <div class="bmp_BPostMap_navArrow"><img src="images/BPostMap_navArrow.png" /></div>
+                                <div class="bmp_BPostMap_car_1"></div>
+                                <!-- 指向箭头与车子 Ends -->
+                            </div>
+                            <!-- 地图 Ends -->
+                            <!-- 云 Starts -->
+                            <div class="bmp_BPostMap_cloud_1"><img src="images/BPostMap_cloud_1.png" /></div>
+                            <div class="bmp_BPostMap_cloud_2"><img src="images/BPostMap_cloud_2.png" /></div>
+                            <div class="bmp_BPostMap_cloud_3"><img src="images/BPostMap_cloud_3.png" /></div>
+                            <div class="bmp_BPostMap_cloud_4"><img src="images/BPostMap_cloud_4.png" /></div>
+                            <!-- 云 Ends -->
+                        </li>
+                        <!-- 专家 Ends -->
+
+                    </ul>
+
+                    <!-- 顶端链接组 Starts -->
+                    <!--<ul class="bmp_BPostMap_topLink_group">
+            <li><a href="http:/ekp.landray.net.cn/lks4/koa/lks_bargainmng.nsf" target="_blank" title="原直销合同"><span class="innerR"><span class="innerC">原直销合同</span></span></a></li>
+            <li><a href="http:/ekp.landray.net.cn/lks4/yj/lks_bargainmng.nsf" target="_blank" title="原渠道合同"><span class="innerR"><span class="innerC">原渠道合同</span></span></a></li>
+            <li><a href="http://service.landray.com.cn/lks/koa/lks_prohourmng.nsf" target="_blank" title="原工时管理"><span class="innerR"><span class="innerC">原工时管理</span></span></a></li>
+        </ul>-->
+                    <!-- 顶端链接组 Ends -->
+                    <!-- 侧边切换按钮 Starts -->
+                    <ul class="bmp_BPostMap_slideNav">
+                        <li class="top"><span class="on">合伙人</span></li>
+                        <li><span>销售人员</span></li>
+                        <li><span>项目经理</span></li>
+                        <li class="bottom"><span>专家</span></li>
+                    </ul>
+                    <!-- 侧边切换按钮 Ends -->
+                </div>
+            </div>
+            <!-- 销售指引 业务岗位地图 Ends -->
+            <!-- 销售标准历程 Starts -->
+            <div role="tabpanel" class="lui-B-progress lui-tab-pane lui-fade" id="exhibitContent-progress" aria-labelledby="exhibitTabs-progress">
+                <div class="top-part">
+                    <div class="building">
+                        <div class="plane"></div>
+                        <div class="cloud-1"></div>
+                        <div class="cloud-2"></div>
+                        <div class="cloud-3"></div>
+                        <div class="cloud-4"></div>
+                    </div>
+                </div>
+                <ul class="progressMap">
+                    <li class="partDn">
+                        <a class="post" href="javascript:void(0)">
+                            <div class="post-imgbox">
+                                <img src="images/bmp_Bprogress_postBG_1.png" />
+                                <h6 class="post-title">客户开拓</h6>
+                            </div>
+                            <div class="post-num">A</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="post" href="javascript:void(0)">
+                            <div class="post-imgbox">
+                                <img src="images/bmp_Bprogress_postBG_2.png" />
+                                <h6 class="post-title">客户培育</h6>
+                            </div>
+                            <div class="post-num">B</div>
+                        </a>
+                    </li>
+                    <li class="partDn">
+                        <a class="post" href="javascript:void(0)">
+                            <div class="post-imgbox">
+                                <img src="images/bmp_Bprogress_postBG_3.png" />
+                                <h6 class="post-title">需求引导</h6>
+                            </div>
+                            <div class="post-num">C</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="post" href="javascript:void(0)">
+                            <div class="post-imgbox">
+                                <img src="images/bmp_Bprogress_postBG_4.png" />
+                                <h6 class="post-title">演示投标</h6>
+                            </div>
+                            <div class="post-num">D</div>
+                        </a>
+                    </li>
+                    <li class="partDn">
+                        <a class="post" href="javascript:void(0)">
+                            <div class="post-imgbox">
+                                <img src="images/bmp_Bprogress_postBG_5.png" />
+                                <h6 class="post-title">商务谈判</h6>
+                            </div>
+                            <div class="post-num">E</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="post" href="javascript:void(0)">
+                            <div class="post-imgbox">
+                                <img src="images/bmp_Bprogress_postBG_6.png" />
+                                <h6 class="post-title">正式签约</h6>
+                            </div>
+                            <div class="post-num">F</div>
+                        </a>
+                    </li>
+                    <li class="partDn">
+                        <a class="post" href="javascript:void(0)">
+                            <div class="post-imgbox">
+                                <img src="images/bmp_Bprogress_postBG_7.png" />
+                                <h6 class="post-title">客户维护</h6>
+                            </div>
+                            <div class="post-num">G</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 销售标准历程 Ends -->
+            <!-- 销售精英 Starts -->
+            <div role="tabpanel" class="lui-B-elite-wrap lui-tab-pane lui-fade" id="exhibitContent-cream" aria-labelledby="exhibitTabs-cream">
+                <!--人员列表 气球 Starts-->
+                <ul class="lui-B-elite-list">
+                    <li class="balloon-1">
+                        <a class="innerbar" href="javascript:void(0)">
+                            <div class="lui-B-eliteballoon">
+                                <div class="lui-avatar">
+                                    <img src="images/bmp_avatar_02.gif" />
+                                </div>
+                            </div>
+                            <div class="name"><span>许晴</span></div>
+                            <div class="position">销售二部</div>
+                        </a>
+                    </li>
+                    <li class="balloon-2">
+                        <a class="innerbar" href="javascript:void(0)">
+                            <div class="lui-B-eliteballoon">
+                                <div class="lui-avatar">
+                                    <img src="images/bmp_avatar_03.gif" />
+                                </div>
+                            </div>
+                            <div class="name"><span>刘先</span></div>
+                            <div class="position">销售二部</div>
+                        </a>
+                    </li>
+                    <li class="balloon-3">
+                        <a class="innerbar" href="javascript:void(0)">
+                            <div class="lui-B-eliteballoon">
+                                <div class="lui-avatar">
+                                    <img src="images/bmp_avatar_04.gif" />
+                                </div>
+                            </div>
+                            <div class="name"><span>王力</span></div>
+                            <div class="position">销售二部</div>
+                        </a>
+                    </li>
+                    <li class="balloon-2">
+                        <a class="innerbar" href="javascript:void(0)">
+                            <div class="lui-B-eliteballoon">
+                                <div class="lui-avatar">
+                                    <img src="images/bmp_avatar_05.gif" />
+                                </div>
+                            </div>
+                            <div class="name"><span>艾维尔</span></div>
+                            <div class="position">销售二部</div>
+                        </a>
+                    </li>
+                    <li class="balloon-1">
+                        <a class="innerbar" href="javascript:void(0)">
+                            <div class="lui-B-eliteballoon">
+                                <div class="lui-avatar">
+                                    <img src="images/bmp_avatar_06.gif" />
+                                </div>
+                            </div>
+                            <div class="name"><span>许晴</span></div>
+                            <div class="position">销售二部</div>
+                        </a>
+                    </li>
+
+                </ul>
+                <!--人员列表 气球 Ends-->
+            </div>
+            <!-- 销售精英 Ends -->
+            <!-- 签单喜讯 Starts -->
+            <div role="tabpanel" class="lui-B-signing lui-tab-pane lui-fade" id="exhibitContent-goodnews" aria-labelledby="exhibitTabs-goodnews">
+                <div class="lui-B-signing-slider" id="signingSlider">
+                    <ul class="lui-B-signing-list">
+                        <li>
+                            <a class="lui-B-signing-databox" href="javascript:void(0)">
+                                <h4 class="panel-head">
+                                    <span class="title"><span class="titleR"><span class="titleC">恭喜</span></span></span>
+                                    <i class="star-top-left"></i>
+                                    <i class="star-bottom-right"></i>
+                                </h4>
+                                <div class="panel-content">
+                                    <div class="lui-avatar">
+                                        <img src="images/bmp_avatar_03.gif" />
+                                    </div>
+                                    <div class="name">刘先</div>
+                                    <p class="txt">美的知识管理一期工程顺利签约长文本长文本长文本长文本。</p>
+                                    <div class="badge_million"><img src="images/bmp_badge_million.png" /></div>
+                                    <div class="date">2015-08-14</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="lui-B-signing-databox" href="javascript:void(0)">
+                                <h4 class="panel-head">
+                                    <span class="title"><span class="titleR"><span class="titleC">恭喜</span></span></span>
+                                    <i class="star-top-left"></i>
+                                    <i class="star-bottom-right"></i>
+                                </h4>
+                                <div class="panel-content">
+                                    <div class="lui-avatar">
+                                        <img src="images/bmp_avatar_03.gif" />
+                                    </div>
+                                    <div class="name">刘先</div>
+                                    <p class="txt">美的知识管理一期工程顺利签约长文本长文本长文本长文本。</p>
+                                    <!--<div class="badge_million"><img src="images/bmp_badge_million.png" /></div>-->
+                                    <div class="date">2015-08-14</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a class="lui-B-signing-databox" href="javascript:void(0)">
+                                <h4 class="panel-head">
+                                    <span class="title"><span class="titleR"><span class="titleC">恭喜</span></span></span>
+                                    <i class="star-top-left"></i>
+                                    <i class="star-bottom-right"></i>
+                                </h4>
+                                <div class="panel-content">
+                                    <div class="lui-avatar">
+                                        <img src="images/bmp_avatar_03.gif" />
+                                    </div>
+                                    <div class="name">刘先</div>
+                                    <p class="txt">美的知识管理一期工程顺利签约长文本长文本长文本长文本。</p>
+                                    <div class="badge_million"><img src="images/bmp_badge_million.png" /></div>
+                                    <div class="date">2015-08-14</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="lui-B-signing-databox" href="javascript:void(0)">
+                                <h4 class="panel-head">
+                                    <span class="title"><span class="titleR"><span class="titleC">恭喜</span></span></span>
+                                    <i class="star-top-left"></i>
+                                    <i class="star-bottom-right"></i>
+                                </h4>
+                                <div class="panel-content">
+                                    <div class="lui-avatar">
+                                        <img src="images/bmp_avatar_03.gif" />
+                                    </div>
+                                    <div class="name">刘先</div>
+                                    <p class="txt">美的知识管理一期工程顺利签约长文本长文本长文本长文本。</p>
+                                    <!--<div class="badge_million"><img src="images/bmp_badge_million.png" /></div>-->
+                                    <div class="date">2015-08-14</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="lui-B-signing-databox" href="javascript:void(0)">
+                                <h4 class="panel-head">
+                                    <span class="title"><span class="titleR"><span class="titleC">恭喜</span></span></span>
+                                    <i class="star-top-left"></i>
+                                    <i class="star-bottom-right"></i>
+                                </h4>
+                                <div class="panel-content">
+                                    <div class="lui-avatar">
+                                        <img src="images/bmp_avatar_03.gif" />
+                                    </div>
+                                    <div class="name">刘先</div>
+                                    <p class="txt">美的知识管理一期工程顺利签约长文本长文本长文本长文本。</p>
+                                    <!--<div class="badge_million"><img src="images/bmp_badge_million.png" /></div>-->
+                                    <div class="date">2015-08-14</div>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="bottom-bg"></div>
+            </div>
+            <!-- 签单喜讯 Ends -->
+        </div>
+        <!--展览区选项卡内容 Ends-->
+    </div>
+    <!--页面顶部展览区 Ends-->
+
+    <!--营销报表 Starts-->
+    <div class="lui-portal-page">
+        <div class="lui-container">
+            <h2 class="lui-portal-page-heading">
+                <span class="lui-portal-page-heading-title">营销报表</span>
+                <span class="lui-portal-page-heading-subhead">MARKING REPORT</span>
+                <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+            </h2>
+            <div class="lui-portal-page-body">
+                <div class="lui-reportForms-tab-content">
+                    <div class="lui-reportForms-dataBox" id="con_reportFtab_1">
+                        <!--营销数据 Starts-->
+                        <div class="lui-reportTips">
+                            <div class="lui-reportHeader">
+                                <i class="lui-reportL"></i>
+                                <h4 class="title">营销数据</h4>
+                                <i class="lui-reportR"></i>
+                            </div>
+                            <div class="lui-reportContent">
+                                <ul>
+                                    <li><span class="title">本月销售预测</span><span class="num">39,124,254.25 元</span></li>
+                                    <li><span class="title">本月收款预测</span><span class="num"> 84,254.25 元</span></li>
+                                </ul>
+                                <ul>
+                                    <li><span class="title">本月归档毛利</span><span class="num"><em>39,124,254.25</em> 元</span></li>
+                                    <li><span class="title">本月收款毛利</span><span class="num"> <em>84,254.25 元</em></span></li>
+                                </ul>
+                                <ul>
+                                    <li><span class="title">销售目标差额</span><span class="num"><em>39,124,254.25</em> 元</span></li>
+                                    <li><span class="title">当前在建项目</span><span class="num"> <em>84,254.25 元</em></span></li>
+                                </ul>
+                                <ul>
+                                    <li><span class="title">本月销售预测</span><span class="num">39,124,254.25 元</span></li>
+                                    <li><span class="title">本月收款预测</span><span class="num"> 84,254.25 元</span></li>
+                                </ul>
+                                <ul>
+                                    <li><span class="title">收款目标差额</span><span class="num">15个</span></li>
+                                    <li><span class="title">当前项目盈利</span><span class="num">72%</span></li>
+                                </ul>
+                                <div class="lui-reportContentB"></div>
+                            </div>
+                        </div>
+                        <!--营销数据 Ends-->
+                        <div class="lui-reportForms-dataBox-content"><img src="images/bmp_reportForms_img.jpg"></div>
+                    </div>
+
+                    <ul class="lui-reportForms-list lui-clearfix" id="con_reportFtab_2" style="display:none">
+                        <li>
+                            <a class="innerbar" href="javascript:void(0)">
+                                <div class="countbar-1">20个</div>
+                                <div class="txt">合同个数</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="innerbar" href="javascript:void(0)">
+                                <div class="countbar-2">350.24万</div>
+                                <div class="txt">当前收款额</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="innerbar" href="javascript:void(0)">
+                                <div class="countbar-3">45个</div>
+                                <div class="txt">当前归档数</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="innerbar" href="javascript:void(0)">
+                                <div class="countbar-4">19个</div>
+                                <div class="txt">当前客户量</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lui-reportForms-tab lui-text-center">
+                    <span class="active" id="reportFtab1" onclick="setTab('reportFtab', 1, 2)"><a class="lui-btn lui-btn-default" href="javascript:void(0)" title="部门">部门</a></span>
+                    <span id="reportFtab2" onclick="setTab('reportFtab', 2, 2)" class=""><a class="lui-btn lui-btn-default" href="javascript:void(0)" title="个人">个人</a></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--营销报表 Ends-->
+
+    <!--招标&营销&风采 Starts-->
+    <div class="lui-portal-page lui-bg-gray">
+        <div class="lui-container">
+            <div class="lui-row-col-4">
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-vice">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_7.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">招标</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">BIDDING</div>
+                            <ul class="lui-list lui-list-condensed lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">12-23</span>
+                                    <a href="javascript:void(0);" title="上海烟草集团有限责任公司集团 知识管理咨询招标"><i class="lui-icon lui-icon-new"></i>上海烟草集团有限责任公司集团 知识管理咨询招标</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">12-21</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="方兴地产知识管理系统项目招标"><i class="lui-icon lui-icon-list"></i>国信证券开发平台与新OA项目方案建议书</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">12-04</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="国信证券开发平台与新OA项目方案建议书"><i class="lui-icon lui-icon-list"></i>方兴地产知识管理系统项目招标</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">11-25</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="中国汽研知识管理项目招标"><i class="lui-icon lui-icon-list"></i>中国汽研知识管理项目招标</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">11-20</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="国控移动协同项目招标"><i class="lui-icon lui-icon-list"></i>国控移动协同项目招标</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">11-18</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项目招(议)标"><i class="lui-icon lui-icon-list"></i>中航物业管理有限公司OA协同办公系统项目招(议)标</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-vice">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_8.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">营销</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">MARKETING</div>
+                            <ul class="lui-list lui-list-condensed lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">06-29</span>
+                                    <a href="javascript:void(0);" title="【签单喜讯】牛！牛！牛！恭喜广州分公司黄坤伟签下600多万大单！.."><i class="lui-icon lui-icon-new"></i>【签单喜讯】牛！牛！牛！恭喜广州分公司黄坤伟签下600多万大单！..</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">12-24</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="【中标喜讯】祝贺昆明分公司成功中标近两百万项目"><i class="lui-icon lui-icon-list"></i>【中标喜讯】祝贺昆明分公司成功中标近两百万项目</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">12-23</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项"><i class="lui-icon lui-icon-list"></i>中航物业管理有限公司OA协同办公系统项</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">12-20</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="签名那点事儿~常见问题汇总，不定时更新"><i class="lui-icon lui-icon-list"></i>签名那点事儿~常见问题汇总，不定时更新</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">12-02</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="【demo优化】喜大普奔~~制造业门户和技术交流demo都出来啦~~ "><i class="lui-icon lui-icon-list"></i>【demo优化】喜大普奔~~制造业门户和技术交流demo都出来啦~~ </a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">11-26</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="钉钉企业认证第一轮数据汇报（215家注册），大伙继续顶!"><i class="lui-icon lui-icon-list"></i>钉钉企业认证第一轮数据汇报（215家注册），大伙继续顶!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-4">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-vice">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-imgbox"><img src="images/bmp_panel_img_9.jpg"></div>
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">风采</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">ELEGANT DEMEANOR</div>
+                            <ul class="lui-list lui-list-condensed lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">12-20</span>
+                                    <a href="javascript:void(0);" title="【十五周年】15周年大狂欢即将来袭，都憋睡了，起来嗨！"><i class="lui-icon lui-icon-new"></i>【十五周年】15周年大狂欢即将来袭，都憋睡了，起来嗨！</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon lui-list-multi">
+                                <li>
+                                    <span class="lui-list-date">12-18</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="【十五周年】融·He 蓝凌十五周年系列活动--融·合 寻宝活动"><i class="lui-icon lui-icon-list"></i>【十五周年】融·He 蓝凌十五周年系列活动--融·合 寻宝活动</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">12-02</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="冬至不端饺子碗，冻破耳朵没人管，冬至到啦，南昌基地欢聚过节吃饺子.."><i class="lui-icon lui-icon-list"></i>冬至不端饺子碗，冻破耳朵没人管，冬至到啦，南昌基地欢聚过节吃饺子..</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">11-24</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="温暖的是平安夜，快乐的是圣诞节，祝大家平安、快乐！"><i class="lui-icon lui-icon-list"></i>温暖的是平安夜，快乐的是圣诞节，祝大家平安、快乐！</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">11-18</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="【节日气氛躁起来！！！】"><i class="lui-icon lui-icon-list"></i>【节日气氛躁起来！！！】</a>
+                                </li>
+                                <li>
+                                    <span class="lui-list-date">10-29</span>
+                                    <a class="lui-text-nowrap" href="javascript:void(0);" title="签名那点事儿~常见问题汇总，不定时更新"><i class="lui-icon lui-icon-list"></i>签名那点事儿~常见问题汇总，不定时更新</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--招标&营销&风采 Ends-->
+
+    <!--知识地图 Starts-->
+    <div class="lui-portal-page">
+        <div class="lui-container">
+            <h2 class="lui-portal-page-heading">
+                <span class="lui-portal-page-heading-title">知识地图</span>
+                <span class="lui-portal-page-heading-subhead">KNOWLEDGE MAP</span>
+                <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+            </h2>
+            <div class="lui-portal-page-body">
+                <div class="lui-knowledge-map" id="featureCarousel">
+                    <div class="itembar">
+                        <a href="javascript:void(0)"><img src="images/knowledgeMap_01.jpg" alt="" /></a>
+                    </div>
+                    <div class="itembar">
+                        <a href="javascript:void(0)"><img src="images/knowledgeMap_02.jpg" alt="" /></a>
+                    </div>
+                    <div class="itembar">
+                        <a href="javascript:void(0)"><img src="images/knowledgeMap_03.jpg" alt="" /></a>
+                    </div>
+                    <div class="itembar">
+                        <a href="javascript:void(0)"><img src="images/knowledgeMap_04.jpg" alt="" /></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" language="javascript" src="js/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.featureCarousel.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#featureCarousel").featureCarousel({
+                // include options like this:
+                // (use quotes only for string values, and no trailing comma after last option)
+                // option: value,
+                // option: value
+            });
+        });
+    </script>
+
+    <!--知识地图 Ends-->
+
+    <!--实践案例&专项案例&商务文件&行业解决方案 Starts-->
+    <div class="lui-portal-page lui-bg-gray">
+        <div class="lui-container">
+            <div class="lui-row-col-3">
+                <div class="lui-col-3">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-primary">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">实践案例库</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">PARCTICE CASE</div>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon">
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="成都市规划设计院知识管理项目案.."><i class="lui-icon lui-icon-list"></i>成都市规划设计院知识管理项目案..</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="美的地产知识管理范围定位报告"><i class="lui-icon lui-icon-list"></i>美的地产知识管理范围定位报告</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="【金融售前】李雅莹-交银施罗德金融行业解决方案"><i class="lui-icon lui-icon-list"></i>【金融售前】李雅莹-交银施罗德金融行业解决方案</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="九洲电器中央研究院知识管理"><i class="lui-icon lui-icon-list"></i>九洲电器中央研究院知识管理</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="重庆农商行新协同办公系统"><i class="lui-icon lui-icon-list"></i>重庆农商行新协同办公系统</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="中原集团商业中心知识管理建设项目"><i class="lui-icon lui-icon-list"></i>中原集团商业中心知识管理建设项目</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-3">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-primary">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">专项案例库</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">SPECIAL CASE</div>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon">
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="【中标喜讯】祝贺昆明分公司成功中标近两百万项目"><i class="lui-icon lui-icon-list"></i>【中标喜讯】祝贺昆明分公司成功中标近两百万项目</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="中航物业管理有限公司OA协同办公系统项"><i class="lui-icon lui-icon-list"></i>中航物业管理有限公司OA协同办公系统项</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="签名那点事儿~常见问题汇总，不定时更新"><i class="lui-icon lui-icon-list"></i>签名那点事儿~常见问题汇总，不定时更新</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="【demo优化】喜大普奔~~制造业门户和技术交流demo都出来啦~~ "><i class="lui-icon lui-icon-list"></i>【demo优化】喜大普奔~~制造业门户和技术交流demo都出来啦~~ </a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="钉钉企业认证第一轮数据汇报（215家注册），大伙继续顶!"><i class="lui-icon lui-icon-list"></i>钉钉企业认证第一轮数据汇报（215家注册），大伙继续顶!</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="中原集团商业中心知识管理建设项目"><i class="lui-icon lui-icon-list"></i>中原集团商业中心知识管理建设项目</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-3">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-primary">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">商务文件库</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-built lui-btn lui-btn-xs lui-btn-line-default" title="新建"><i class="lui-icon lui-icon-right lui-icon-plus"></i></a>
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">BUSINESS DOCUMENTS</div>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon">
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="【十五周年】15周年大狂欢即将来袭，都憋睡了，起来嗨！..."><i class="lui-icon lui-icon-list"></i>【十五周年】15周年大狂欢即将来袭，都憋睡了，起来嗨！...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="冬至不端饺子碗，冻破耳朵没人管，冬至到啦，南昌基地欢聚过节吃饺子....."><i class="lui-icon lui-icon-list"></i>冬至不端饺子碗，冻破耳朵没人管，冬至到啦，南昌基地欢聚过节吃饺子.....</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="温暖的是平安夜，快乐的是圣诞节，祝大家平安、快乐！..."><i class="lui-icon lui-icon-list"></i>温暖的是平安夜，快乐的是圣诞节，祝大家平安、快乐！...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="【节日气氛躁起来！！！】..."><i class="lui-icon lui-icon-list"></i>【节日气氛躁起来！！！】...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="签名那点事儿~常见问题汇总，不定时更新..."><i class="lui-icon lui-icon-list"></i>签名那点事儿~常见问题汇总，不定时更新...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="上海烟草集团有限责任公司集团 知识管理咨询招标..."><i class="lui-icon lui-icon-list"></i>上海烟草集团有限责任公司集团 知识管理咨询招标...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+                <div class="lui-col-3">
+                    <!--面板 Starts-->
+                    <div class="lui-portal-panel lui-portal-panel-primary">
+                        <div class="lui-portal-panel-heading">
+                            <div class="lui-portal-panel-titleBar">
+                                <h4 class="lui-portal-panel-heading-title">行业解决方案</h4>
+                                <div class="lui-btn-group-inline lui-text-right">
+                                    <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+                                </div>
+                            </div>
+                            <div class="lui-portal-panel-heading-subhead">INDUSTRY SOLUTIONS</div>
+                        </div>
+                        <div class="lui-portal-panel-body">
+                            <ul class="lui-list lui-list-condensed lui-list-icon">
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="蓝凌地产行业整体解决方案..."><i class="lui-icon lui-icon-list"></i>蓝凌地产行业整体解决方案...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="金蝶证券行业解决方案eas..."><i class="lui-icon lui-icon-list"></i>金蝶证券行业解决方案eas...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="青啤营销项目成果分享、蓝凌快消行业案例分享和快消行业解决方案..."><i class="lui-icon lui-icon-list"></i>青啤营销项目成果分享、蓝凌快消行业案例分享和快消行业解决方案...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="蓝凌KM咨询实施标准化百宝箱计划..."><i class="lui-icon lui-icon-list"></i>蓝凌KM咨询实施标准化百宝箱计划...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="泛微行业解决方案_房地产行业知识解决方案..."><i class="lui-icon lui-icon-list"></i>泛微行业解决方案_房地产行业知识解决方案...</a></li>
+                                <li><a class="lui-text-nowrap" href="javascript:void(0);" title="国家电网公司知识管理分包投标..."><i class="lui-icon lui-icon-list"></i>国家电网公司知识管理分包投标...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--面板 Ends-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--实践案例&实践案例&商务文件&行业解决方案 Ends-->
+
+    <!--营销工具 Starts-->
+    <div class="lui-portal-page">
+        <div class="lui-container">
+            <h2 class="lui-portal-page-heading">
+                <span class="lui-portal-page-heading-title">营销工具</span>
+                <span class="lui-portal-page-heading-subhead">MARKING TOOLS</span>
+                <a href="javascript:void(0);" class="lui-btn-more lui-btn lui-btn-xs lui-btn-link" title="更多">More<i class="lui-icon lui-icon-right lui-icon-arrRt"></i></a>
+            </h2>
+            <div class="lui-portal-page-body lui-clearfix">
+                <div class="lui-col-4">
+                    <a class="lui-magnet-link-vice" href="javascript:void(0);" title="">
+                        <div class="header">
+                            <div class="iconbox icon-9"></div>
+                            <h4 class="title">参观观察</h4>
+                            <div class="subtitle">Visit observation</div>
+                        </div>
+                        <div class="infobar">
+                            <span class="date">2014-07-27</span>
+                            <span>刘向华：转型移动互联实践分享（崔牛会走进蓝凌）ppt+速记</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="lui-col-4">
+                    <a class="lui-magnet-link-vice" href="javascript:void(0);" title="">
+                        <div class="header">
+                            <div class="iconbox icon-10"></div>
+                            <h4 class="title">报价策略</h4>
+                            <div class="subtitle">Visit observation</div>
+                        </div>
+                        <div class="infobar">
+                            <span class="date">2014-07-27</span>
+                            <span>KK5.0产品介绍及销售商务策略</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="lui-col-4">
+                    <a class="lui-magnet-link-vice" href="javascript:void(0)" title="">
+                        <div class="header">
+                            <div class="iconbox icon-11"></div>
+                            <h4 class="title">产品报价</h4>
+                            <div class="subtitle">Visit observation</div>
+                        </div>
+                        <div class="infobar">
+                            <span class="date">2014-07-27</span>
+                            <span>2015年蓝凌产品标准报价模版（7月10日更新）</span>
+                        </div>
+                        <div class="lui-badge-new-L"></div>
+                    </a>
+                </div>
+                <div class="lui-col-4">
+                    <a class="lui-magnet-link-vice" href="javascript:void(0)" title="">
+                        <div class="header">
+                            <div class="iconbox icon-12"></div>
+                            <h4 class="title">报价策略</h4>
+                            <div class="subtitle">Visit observation</div>
+                        </div>
+                        <div class="infobar">
+                            <span class="date">2014-07-27</span>
+                            <span>KK5.2015蓝凌移动互联方案发布会西安站资料-经发集团EKP分享交流...</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="lui-col-4">
+                    <a class="lui-magnet-link-vice" href="javascript:void(0)" title="">
+                        <div class="header">
+                            <div class="iconbox icon-13"></div>
+                            <h4 class="title">报价策略</h4>
+                            <div class="subtitle">Visit observation</div>
+                        </div>
+                        <div class="infobar">
+                            <span class="date">2014-07-27</span>
+                            <span>KK5.2015蓝凌移动互联方案发布会西安站资料-移动互联下企业知识管理2.0项目思...</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--营销工具 Ends-->
+
+    <!--页面注脚 Starts-->
+    <div class="lui-footer">
+        <div class="lui-footer-innerbox">
+            <div class="lui-container">
+                <p>蓝凌软件  版权所有</p>
+                <p>粤ICP备11017824号-4 / 粤ICP证130164号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市公安局南山分局备案编号:110105000501</p>
+                <p>Copyright&nbsp;©&nbsp;2001-2015</p>
+            </div>
+        </div>
+    </div>
+    <!--页面注脚 Ends-->
+
+    <!--固定侧边工具栏 Starts-->
+    <div class="lui-fixed-toolbar">
+        <a href="javascript:void(0);" class="lui-btn lui-btn-default" id="scrollTop" title="置顶">
+            <div class="innerbar">
+                <i class="lui-icon lui-icon-lg lui-icon-32-top"></i>
+                <span class="text-top">置顶</span>
+            </div>
+        </a>
+    </div>
+    <!--固定侧边工具栏 Ends-->
+
+    <!--意见反馈栏 Starts-->
+    <div class="lui-feedback-box" style="right: -312px;">
+        <div class="lui-feedback-heading">
+            <button class="lui-btn lui-btn-default" type="button">
+                <i class="lui-icon lui-icon-words"></i>
+                帮助&amp;意见反馈
+                <i class="lui-icon lui-icon-arrDotL"></i>
+            </button>
+        </div>
+        <div class="lui-feedback-content">
+            <form class="lui-form-comment lui-form-horizontal">
+                <div class="lui-form-group">
+                    <textarea class="lui-form-control" rows="10" placeholder="有任何意见或建议，请告诉我们！"></textarea>
+                </div>
+                <!--<div class="lui-alert lui-alert-warning">使用遇到问题？请先进入<a class="lui-text-primary" href="javascript:void(0);" title="帮助中心">帮助中心</a></div>-->
+                <div class="lui-form-group lui-form-comment-footer">
+                    <button class="lui-btn lui-btn-mute" type="button" id="feedback-close">关闭</button>
+                    <button class="lui-btn lui-btn-primary" type="button">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--意见反馈栏 Ends-->
+</body>
+</html>
