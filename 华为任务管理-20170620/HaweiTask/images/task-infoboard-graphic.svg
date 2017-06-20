@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="114px" viewBox="0 0 114 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="0%" cy="50%" fx="0%" fy="50%" r="81.3810892%" id="radialGradient-1">
+            <stop stop-color="#FF53EE" offset="0%"></stop>
+            <stop stop-color="#1398F1" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="切图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-396.000000, -285.000000)">
+            <g id="Group" transform="translate(401.000000, 290.000000)">
+                <circle id="Oval-13" stroke="#E0F3FF" stroke-width="8" cx="52" cy="52" r="52"></circle>
+                <path d="M0,52 C0,80.718807 23.281193,104 52,104 L52,104 C80.718807,104 104,80.718807 104,52 C104,23.281193 80.718807,0 52,0" id="Oval-13" stroke="url(#radialGradient-1)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                <text id="66%" font-family=".PingFangSC-Regular, .PingFang SC" font-size="30" font-weight="normal" letter-spacing="-0.878571451" fill="#F855EE">
+                    <tspan x="20.2728572" y="63">66%</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

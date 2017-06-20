@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>项目基本信息与平台建设</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link rel="stylesheet" type="text/css" href="HaweiTask/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="HaweiTask/css/font-mui.css">
+  <link rel="stylesheet" type="text/css" href="HaweiTask/css/primarycss.css">
+
+  <script src="HaweiTask/js/zepto.min.js"></script>
+  <script src="HaweiTask/js/frozen.js"></script>
+
+</head>
+<body class="mui-ht-bg-gray">
+  <!-- 头部标题栏 Starts -->
+  <header class="mui-ht-header">
+    <div class="mui-ht-left-group">
+      <a class="mui-ht-btn mui-ht-return" href="02-secondaryPage.html"><i class="mui mui-back"></i></a>
+      <a class="mui-ht-btn mui-ht-logo" href="index.html"></a>
+    </div>
+    <h1 class="mui-ht-header-title">
+      <span class="mui-ht-mainpage-title">基本信息与平台项目建设</span>
+    </h1>
+  </header>
+  <!-- 头部标题栏 Ends -->
+
+  <!-- 主体内容 Starts -->
+  <section class="mui-ht-container">
+    <!-- 人员信息卡片 Starts -->
+    <div class="mui-ht-staff-infocard">
+      <div class="mui-ht-avatar">陈雄斌</div>
+      <div class="mui-ht-staff-info">
+        <span class="name">陈雄斌</span>
+        <span class="station">IT组组长</span>
+      </div>
+    </div>
+    <!-- 人员信息卡片 Ends -->
+    <!-- 操作栏 Starts -->
+    <ul class="mui-ht-operation mui-ht-mb-10 mui-ht-border-b">
+      <li data-href="04-call-for-staffCard.html">
+        <i class="mui mui-ht-icon-msg"></i>
+        <span class="txt">消息</span>
+      </li>
+      <li>
+        <i class="mui mui-mail"></i>
+        <span class="txt">邮件</span>
+      </li>
+      <li>
+        <i class="mui mui-ht-icon-tel"></i>
+        <span class="txt">电话</span>
+      </li>
+      <li>
+        <i class="mui mui-evaluation"></i>
+        <span class="txt">短信</span>
+      </li>
+    </ul>
+    <!-- 操作栏 Ends -->
+    <!-- 面板 Starts -->
+    <section class="mui-ht-panel mui-ht-panel-primary">
+      <div class="mui-ht-panel-heading mui-ht-border-b">
+        <h2 class="mui-ht-panel-heading-title">Ta的任务</h2>
+        <div class="mui-ht-panel-heading-btn" data-href="03-staffMember-for-staffCard.html">参与者</div>
+      </div>
+      <div class="mui-ht-panel-body">
+        <!-- 任务列表 Starts -->
+        <ul class="mui-ht-task-list">
+          <li>
+            <h4 class="mui-ht-task-list-title">项目管理能力中心测试任务A</h4>
+            <div class="stop-point">
+              <span>截止<span class="date">2017-06-30</span></span>
+            </div>
+            <div class="mui-ht-avatar">曾倩</div>
+          </li>
+          <li class="warning">
+            <h4 class="mui-ht-task-list-title">COA规则确认</h4>
+            <div class="stop-point">
+              <span>明天截止</span>
+            </div>
+            <div class="mui-ht-avatar">曾倩</div>
+          </li>
+          <li>
+            <h4 class="mui-ht-task-list-title">IPO组合管理软件包预研月报解读...</h4>
+            <div class="stop-point">
+              <span>截止<span class="date">2017-05-04</span></span>
+            </div>
+            <div class="mui-ht-avatar">曾倩</div>
+          </li>
+        </ul>
+        <!-- 任务列表 Ends -->
+      </div>
+    </section>
+    <!-- 面板 Ends -->
+
+  </section>
+  <!-- 主体内容 Ends -->
+
+  <script type="text/javascript">
+
+    $('*[data-href]').click(function () {
+      location.href = $(this).data('href');
+    });
+
+  </script>
+
+</body>
+</html>

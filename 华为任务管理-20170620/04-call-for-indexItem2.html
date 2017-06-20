@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>项目基本信息与平台建设</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link rel="stylesheet" type="text/css" href="HaweiTask/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="HaweiTask/css/font-mui.css">
+  <link rel="stylesheet" type="text/css" href="HaweiTask/css/primarycss.css">
+
+  <script src="HaweiTask/js/zepto.min.js"></script>
+  <script src="HaweiTask/js/frozen.js"></script>
+
+</head>
+<body class="mui-ht-bg-gray">
+  <!-- 头部标题栏 Starts -->
+  <header class="mui-ht-header">
+    <div class="mui-ht-left-group">
+      <a class="mui-ht-btn mui-ht-return" href="index.html"><i class="mui mui-back"></i></a>
+      <a class="mui-ht-btn mui-ht-logo" href="index.html"></a>
+    </div>
+    <h1 class="mui-ht-header-title"></h1>
+    <div class="mui-ht-group">
+      <a class="mui-ht-btn mui-ht-add" href="03-attachmentPage.html"><i class="mui mui-ht-icon-filelist"></i></a>
+    </div>
+  </header>
+  <!-- 头部标题栏 Ends -->
+  <!-- 主体内容 Starts -->
+  <section class="mui-ht-container">
+    <!-- 进度信息面板 Starts -->
+    <section class="mui-ht-task-infoboard mui-ht-border-b">
+      <embed class="graphic-box" src="HaweiTask/images/task-infoboard-graphic.svg"></embed>
+      <h2 class="heading-title">COA规则确认</h2>
+      <div class="progress-time">
+        <span class="progress-time-start">2017/05/21</span>
+        <span class="progress-time-divide">-</span>
+        <span class="progress-time-end">2017/06/30</span>
+      </div>
+      <div class="task-master">发起人：易祖炜</div>
+      <div class="opertion-bar">
+        <span><i class="mui mui-praise"></i>赞</span>
+      </div>
+    </section>
+    <!-- 进度信息面板 Starts -->
+    <!-- 面板 Starts -->
+    <section class="mui-ht-panel mui-ht-panel-primary mui-ht-border-tb">
+      <div class="mui-ht-panel-heading mui-ht-border-b">
+        <h2 class="mui-ht-panel-heading-title">参与(3人)</h2>
+      </div>
+      <div class="mui-ht-panel-body">
+        <ul class="mui-ht-staff-list" style="margin-bottom: 1rem;">
+          <li class="master">
+            <div class="mui-ht-avatar">刘勇</div>
+            <p class="txt">发起人</p>
+          </li>
+          <li>
+            <div class="mui-ht-avatar">曾倩</div>
+            <p class="txt">视觉设计</p>
+          </li>
+          <li>
+            <div class="mui-ht-avatar">赵启</div>
+            <p class="txt">后端开发</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 面板 Ends -->
+    <!-- 面板 Starts -->
+    <section class="mui-ht-panel mui-ht-panel-primary mui-ht-border-tb">
+      <div class="mui-ht-panel-heading mui-ht-border-b">
+        <h2 class="mui-ht-panel-heading-title">动态</h2>
+      </div>
+      <div class="mui-ht-panel-body">
+        <!-- 任务列表 Starts -->
+        <ul class="mui-ht-task-list">
+          <li>
+            <h4 class="mui-ht-task-list-title" data-href="03-taskDetail.html">完成会议管理模块功能测试</h4>
+            <div class="stop-point">
+              <span>反馈时间:<span class="date">2017-05-03 13:30</span></span>
+            </div>
+            <div class="mui-ht-avatar" data-href="03-staffCard.html">曾倩</div>
+          </li>
+          <li>
+            <h4 class="mui-ht-task-list-title" data-href="03-taskDetail.html">完成车辆管理功能测试</h4>
+            <div class="stop-point">
+              <span>反馈时间:<span class="date">2017-05-03 13:30</span></span>
+            </div>
+            <div class="mui-ht-avatar" data-href="03-staffCard.html">曾倩</div>
+          </li>
+        </ul>
+        <!-- 任务列表 Ends -->
+        <!-- <div class="mui-ht-inputbar">
+          <div class="mui-ht-btn-group">
+            <button class="mui-ht-btn" type="button" id="btn-create"><i class="mui mui-plus"></i>创建新任务</button>
+          </div>
+          <div class="mui-ht-commentbar">
+            <input class="mui-ht-form-control" type="text" name="" placeholder="请输入任务名称">
+            <div class="mui-ht-btn-group mui-ht-text-right">
+              <button class="mui-ht-btn mui-ht-btn-muted" type="button">取消</button>
+              <button class="mui-ht-btn mui-ht-btn-primary" type="button">创建</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!-- 面板 Ends -->
+  </section>
+  <!-- 主体内容 Ends -->
+
+  <script type="text/javascript">
+
+    $('*[data-href]').click(function () {
+      location.href = $(this).data('href');
+    });
+
+    $("#btn-create").click(function(){
+      $(this).parent().next(".mui-ht-commentbar").show();
+
+    });
+
+  </script>
+
+</body>
+</html>
